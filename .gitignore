@@ -1,0 +1,8 @@
+/src/Online/bin/*
+/src/Online/obj/*
+/src/Online/.vs/*
+/src/Online/*.user
+/src/Online/posts/*
+/src/Online/wwwroot/Scripts/*
+/src/Online/wwwroot/Content/*
+/src/Online/wwwroot/assets/.gitkeep
