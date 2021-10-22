@@ -6,7 +6,11 @@
 /src/Online/wwwroot/Scripts/*
 /src/Online/wwwroot/Content/*
 /src/Online/wwwroot/assets/.gitkeep
-/_template/node_modules/**
-/_template/public/**
+/src/Online/wwwroot/js/Dynamic.*
+/_template/node_modules/*
+/_template/public/*
 /_template/src/.gitignore
+/src/.vs/*
+/src/Dynamic/bin/*
+/src/Dynamic/obj/*
 

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Online", "Online\Online.fsproj", "{58782DC8-0C71-427F-9F71-EBAFF6CE6FDB}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Dynamic", "Dynamic\Dynamic.fsproj", "{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58782DC8-0C71-427F-9F71-EBAFF6CE6FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58782DC8-0C71-427F-9F71-EBAFF6CE6FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58782DC8-0C71-427F-9F71-EBAFF6CE6FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58782DC8-0C71-427F-9F71-EBAFF6CE6FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7CE44FE-6A86-4B4D-AB81-DDF9B97D62B0}
+	EndGlobalSection
+EndGlobal

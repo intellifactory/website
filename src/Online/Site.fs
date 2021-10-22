@@ -439,12 +439,18 @@ module Site =
     let PLAIN html =
         div [Attr.Create "ws-preserve" ""] [Doc.Verbatim html]
 
+    let private head() =
+        __SOURCE_DIRECTORY__ + "/../Online/wwwroot/js/Dynamic.head.html"
+        |> File.ReadAllText
+        |> Doc.Verbatim
+
     let ArticlePage (config: Config) articles (article: Article) =
+        let head = head()
         PostTemplate()
 //#if !DEBUG
 //            .ReleaseMin(".min")
 //#endif
-////            .Head(head)
+            .Head(head)
             .MenubarPlaceholder(
                 PostTemplate.Menubar()
                     .Doc()
