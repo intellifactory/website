@@ -16,6 +16,7 @@ type EndPoint =
     | [<EndPoint "GET /post">] Article of slug:string
     // UserArticle: if slug is empty, we go to the user's home page
     | [<EndPoint "GET /user">] UserArticle of user:string * slug:string
+    | [<EndPoint "GET /refresh">] Refresh
 
 type PostTemplate = Template<"post.html", clientLoad=ClientLoad.FromDocument, serverLoad=ServerLoad.WhenChanged>
 
@@ -506,4 +507,12 @@ module Site =
                 //    <| fun (u, _) _ -> user = u
             | UserArticle (user, p) ->
                 ARTICLE (user, p)
+            | Refresh ->
+                // Reload the master configs and the article cache
+                config := ReadConfig()
+                let _info, _articles = ReadArticles (!config)
+                info := _info
+                articles := _articles
+                identities1 := ComputeIdentities1 articles.Value
+                Content.Text "Articles/configs reloaded."
         )

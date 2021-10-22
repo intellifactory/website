@@ -6,3 +6,7 @@
 /src/Online/wwwroot/Scripts/*
 /src/Online/wwwroot/Content/*
 /src/Online/wwwroot/assets/.gitkeep
+/_template/node_modules/**
+/_template/public/**
+/_template/src/.gitignore
+
