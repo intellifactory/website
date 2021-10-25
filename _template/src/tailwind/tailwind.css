@@ -305,16 +305,19 @@
 
 .markdown p {
     @apply mb-6 text-left text-xl text-gray-200;
+    font-family: "DM Sans";
 }
 
 .markdown ol {
     @apply mb-6 text-left text-xl text-gray-200;
+    font-family: "DM Sans";
     list-style: decimal !important;
     padding: unset;
 }
 
 .markdown ul {
     @apply mb-6 text-left text-xl text-gray-200;
+    font-family: "DM Sans";
     list-style: disc !important;
     padding: unset;
 }
