@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Parsing with active patterns</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">May 23, 2009</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>I was giving an F# warm-up a couple days ago at <a href="http://www.inf.elte.hu/english/conf/tfp_cefp_2009/Lapok/index.aspx">CEFP 2009</a>, and one of the examples I was giving was on active patterns and their application for Parsing Expression Grammars (PEGs). In short, PEGs are a way to specify grammars using functions that either succeed or fail, and combining them to form a recursive-descent parser.</p>
+<p>The cool thing about active patterns is that they provide the perfect mechanism to implement PEGs - and at the same time allowing you to quickly prototype even complex grammars using a statically typed approach and without the need to resort to lexer and parser generators.</p>
+<p>If you are interested in parsing with active patterns, there are some great articles <a href="http://devhawk.net/2008/01/29/Practical+F+Parsing+Recursion+And+Predicate+Functions.aspx">here</a> (be sure to check out DewHawk's other articles on this topic) and <a href="http://langexplr.blogspot.com/2008/11/using-mgrammar-parser-from-f.html">here</a> (Luis has some other great F# posts also).</p>
+<pre><code class="language-fsharp">    open System
+    open System.Text.RegularExpressions
+
+    let matchToken pattern s =
+        Regex.Match(s, pattern |&gt; sprintf &quot;\A(%s)((?s).*)&quot;, RegexOptions.Multiline)
+        |&gt; fun mtch -&gt;
+            if mtch.Success then
+                (mtch.Groups.[1].Value, mtch.Groups.[2].Value) |&gt; Some
+            else
+                None
+</code></pre>
+<p>This defines a <code>matchToken</code> function that takes a regex pattern and an input string and tries to apply the regex on that input. Note that you are wrapping the regex pattern into two groups - one for the input pattern (%s) and another for the remaining input string ((?s).*). (\A specifies that you are matching from the beginning of the input string, and (?s) instructs the matcher to match irrespective of new line characters.)</p>
+<p>You can now express whitespace and one-line comments (just to be different we use # for these) easily:</p>
+<pre><code class="language-fsharp">    let (|WS|_|) s =
+        matchToken &quot;[ |\t|\n|\r\n]+&quot; s
+    
+    let (|COMMENT|_|) s =
+        matchToken &quot;#.*[\n|\r\n]&quot; s
+</code></pre>
+<p>Using these you can define whitespace as:</p>
+<pre><code class="language-fsharp">    let (|WHITESPACE|_|) s =
+        match s with
+        | WS rest -&gt;
+            rest |&gt; Some
+        | COMMENT rest -&gt;
+            rest |&gt; Some
+        | _ -&gt;
+            None
+</code></pre>
+<p>This says that a WHITESPACE is either whitespace (space, tab, LF, or CR+LF) or a comment. Note that you defined whitespace (WS) with a regex that matches any number of whitespace characters, but even with that WHITESPACE won't match things like &quot; # one-line comment \n &quot; (whitespace and comments following each other), simply because WHITESPACE will either match a WS <em>or</em> a COMMENT. (Remember that this is why active patterns are great to develop PEGs - there is no ambiguity in parsing: once a match is made, all other choices are ignored.)</p>
+<p>What you need is the * operator from ordinary BNF syntax: this matches zero or more occurences of something.</p>
+<pre><code class="language-fsharp">    let rec (|Star|_|) f acc s =
+        match f s with
+        | Some (res, rest) -&gt;
+            (|Star|_|) f (res :: acc) rest
+        | None -&gt;
+            (acc, s) |&gt; Some
+</code></pre>
+<p>The way you accomplish this is trying to parse a new symbol (via f), and if you succeed you recurse on the remaining input string with the matched input accumulated. If matching fails you simply return what you accumulated in preceeding calls. (Note that this function never fails - if you need &quot;one or more&quot; matches you need to modify the None clause to return None if the first match was unsuccessful.) Normally, you would want to call (|Star|_|) with an empty list at first:</p>
+<pre><code class="language-fsharp">    let (|WhiteSpace|_|) s = (|Star|_|) (|WHITESPACE|_|) [] s
+</code></pre>
+<p>This just says that WhiteSpace matches zero or more WHITESPACEs and will return a string list of these whitespace blocks and the remaining input string.
+Armed with WhiteSpace you can implement your basic &quot;tokenizer.&quot; For most grammars whitespace is ignored (a notable exception here is F# where indentation does matter), and in general it is much more tedious to treat whitespace as separate tokens.</p>
+<pre><code class="language-fsharp">    let rec MatchTokenNoWS wspattern s pattern =
+        match (|WhiteSpace|_|) s with
+        | Some (_, rest) -&gt;
+            rest |&gt; matchToken pattern
+        | None -&gt;
+            s |&gt; matchToken pattern
+</code></pre>
+<p>This function simply removes any leading whitespace before matching a regex pattern. You can now write a function that parses a token for a given regex as:</p>
+<pre><code class="language-fsharp">    let MatchToken s f pattern =
+        pattern |&gt; MatchTokenNoWS s |&gt; Option.bind f
+</code></pre>
+<p>Here the parameter f carries the function that is executed on the match - which, has type (string * string), where the first value in the tuple is the string matched, the second is the remaining input string.</p>
+<p>For tokens where you don't need the matched string (operators, keywords, etc.) you can write a function that returns only the rest of the input:</p>
+<pre><code class="language-fsharp">    let MatchSymbol s pattern =
+        pattern |&gt; MatchToken s (fun (_, rest) -&gt; rest |&gt; Some)
+</code></pre>
+<p>Now you have all the primitives to start building your parsers. Consider a simple language of arithmetic expressions:</p>
+<ul>
+<li>Numbers</li>
+<li>Arithmetic (addition, subtraction, multiplication, division)</li>
+<li>Functions (sin, cos, etc.)</li>
+</ul>
+<p>A straightforward translation of this small language into F# types would be:</p>
+<pre><code class="language-fsharp">module Ast =
+    type var = string
+
+    type Expr =
+    | Number   of float
+    | Sum      of Expr * Expr
+    | Diff     of Expr * Expr
+    | Prod     of Expr * Expr
+    | Ratio    of Expr * Expr
+    | Var      of var
+    | FunApply of var * Expr list
+</code></pre>
+<p>The parser is strikingly straightforward as well:</p>
+<pre><code class="language-fsharp">    let (|NUMBER|_|) s =
+        &quot;[0-9]+\.?[0-9]*&quot; |&gt; MatchToken s
+            (fun (n, rest) -&gt; (n |&gt; Double.Parse, rest) |&gt; Some)
+
+    let (|ID|_|) s =
+        &quot;[a-zA-Z]+&quot; |&gt; MatchToken s (fun res -&gt; res |&gt; Some)
+
+    let (|PLUS|_|)   s = &quot;\+&quot; |&gt; MatchSymbol s
+    let (|MINUS|_|)  s = &quot;-&quot;  |&gt; MatchSymbol s
+    let (|MUL|_|)    s = &quot;\*&quot; |&gt; MatchSymbol s
+    let (|DIV|_|)    s = &quot;/&quot;  |&gt; MatchSymbol s
+    let (|LPAREN|_|) s = &quot;\(&quot; |&gt; MatchSymbol s
+    let (|RPAREN|_|) s = &quot;\)&quot; |&gt; MatchSymbol s
+    
+    let rec (|Factor|_|) = function
+    | NUMBER (n, rest) -&gt;
+        (Ast.Expr.Number n, rest) |&gt; Some
+    | ID (f, LPAREN (Star (|Expression|_|) [] (args, RPAREN rest))) -&gt;
+        (Ast.Expr.FunApply (f, args), rest) |&gt; Some
+    | ID (v, rest) -&gt;
+        (Ast.Expr.Var v, rest) |&gt; Some
+    | _ -&gt;
+        None
+        
+    and (|Term|_|) = function
+    | Factor (e1, MUL (Term (e2, rest))) -&gt;
+        (Ast.Expr.Prod (e1, e2), rest) |&gt; Some
+    | Factor (e1, DIV (Term (e2, rest))) -&gt;
+        (Ast.Expr.Ratio (e1, e2), rest) |&gt; Some
+    | Factor (e, rest) -&gt;
+        (e, rest) |&gt; Some
+    | _ -&gt;
+        None
+
+    and (|Sum|_|) = function
+    | Term (e1, PLUS (Sum (e2, rest))) -&gt;
+        (Ast.Expr.Sum (e1, e2), rest) |&gt; Some
+    | Term (e1, MINUS (Sum (e2, rest))) -&gt;
+        (Ast.Expr.Diff (e1, e2), rest) |&gt; Some
+    | Term (e, rest) -&gt;
+        (e, rest) |&gt; Some
+    | _ -&gt;
+        None
+
+    and (|Expression|_|) = (|Sum|_|)
+</code></pre>
+<p>One last bit that you will need for practical parsing is checking for EOFs - afterall full programs are only valid if the entire input string was consumed.</p>
+<pre><code class="language-fsharp">    let (|Eof|_|) s =
+        if s |&gt; String.IsNullOrEmpty then
+            () |&gt; Some
+        else
+            match s with
+            | WhiteSpace (_, rest) when rest |&gt; String.IsNullOrEmpty -&gt;
+                () |&gt; Some
+            | _ -&gt;
+                None
+</code></pre>
+<p>You can quickly test your code in F# Interactive:</p>
+<pre><code class="language-fsharp">&gt; match &quot;sin(1 + 2 * 3)&quot; with
+    | Expression (e, Eof) -&gt;
+        e |&gt; printf &quot;Match – AST: %A\n&quot;
+    | _ -&gt;
+        printf &quot;No match\n”;;
+
+&gt; Match – AST: FunApply (&quot;sin&quot;,[Sum (Integer 1,Prod (Integer 2,Integer 3))])
+</code></pre>
+<p>You can also call active pattern recognizers directly and this can be tremenedously useful when debugging your parser rules:</p>
+<pre><code class="language-fsharp">&gt; (|Expression|_|) &quot;cos(1+2*3-4)&quot;;;
+val it : (Ast.Expr * string) option =
+  Some
+    (FunApply
+       (&quot;cos&quot;,
+        [Sum (Number 1.0,Diff (Prod (Number 2.0,Number 3.0),Number 4.0))]), &quot;&quot;)
+</code></pre>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

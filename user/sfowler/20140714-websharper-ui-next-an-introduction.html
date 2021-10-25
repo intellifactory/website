@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper.UI.Next: An Introduction</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Simon Fowler</h4>
+                            <p class="text-white">Jul 14, 2014</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>Here at <a href="http://www.intellifactory.com">IntelliFactory</a>, we've been working on a new way of constructing single-page applications.</p>
+<p>We're using <a href="http://www.websharper.com">WebSharper</a>, which is a framework for writing web applications entirely in F#, without the need to write separate JavaScript, PHP and SQL code: if you haven't used it before, I encourage you to have a play around!</p>
+<p>The main idea behind this library is centered around data sources. These data sources, which we call <code>Var</code>s or <em>reactive variables</em>, can be linked to form components, or set by remote server calls, for example. We then have <em>views</em>, which provide a way of observing these changing variables, which then can be embedded directly into the DOM in such a way that they automatically update whenever the data source changes. On top of this, we use a functional style, and take steps in the dataflow layer to ensure that memory leaks don't occur.</p>
+<p>Firstly, if you want to see everything in action, you can find a live examples site (itself written using the framework, of course!), along with the source code for the examples, on <a href="https://websharper-samples.github.io/ui/">GitHub</a>.</p>
+<p>Briefly, WebSharper.UI.Next consists of two layers: a dataflow layer, made up of variables and views, and a reactive DOM layer making use of this, allowing time-varying elements to be embedded in the DOM. In the simplest case, it's possible to create a reactive variable (which can be thought of as a <em>data source</em>), bind this to a DOM element, and have the DOM element update automatically whenever the data changes. This removes the need to write separate DOM handling code for whenever the data changes: you just specify the view once, and the updates happen automatically.</p>
+<p>In this sense, the library is a bit like libraries such as <a href="http://facebook.github.io/react/">Facebook React</a>. Firstly though, everything's in F#, so we get all of the advantages of a strong, static type system, including the ability to catch errors sooner and make use of such a type system for structuring applications. It's also easier for us to make use of traditional, powerful functional abstractions when writing code. React is built on a virtual DOM system, which efficiently propagates updates via a diff algorithm against the &quot;real&quot; DOM. While we do some diff'ing, too, this is purely an optimisation step: we update the DOM by re-linking from the desired position, much as we do in the Formlets library for WebSharper.</p>
+<h2 id="an-example">An example</h2>
+<p>Perhaps the best way to demonstrate the library is via an example. Say we have an input box, and we want to use this as an input to multiple different functions, each doing something different with the data. In this case, it should be possible to write something in a box, and then display the entered text, the input text but capitalised, the input text but reversed, the number of words, and whether the word count is odd or even.</p>
+<p>Let's dive right in. The actual code for this example contains a bit more styling than I have here, so I'm just going to talk about the interesting bits. Firstly, we create a reactive variable to store the input text.</p>
+<pre><code class="language-fsharp">let rvText = Var.Create &quot;&quot;
+</code></pre>
+<p>This creates a variable <code>rvText</code> of type <code>Var&lt;string&gt;</code>, which is essentially a 'cell' containing a string.</p>
+<p>The next step is to create an input box, which is linked with this variable. Whenever a user types into this box, the variable will be updated, and anything which depends on it will be updated automatically. In addition to this, if something else updates the variable, the text in the box will be updated accordingly. Achieving this is simple:</p>
+<pre><code class="language-fsharp">Doc.Input [] rvText
+</code></pre>
+<p>(aside: the empty list parameter specifies attributes, which may themselves be backed by reactive variables).</p>
+<p>Now we have the data input part, we need to have a look at how to display it. In order to do this, we create a reactive <em>view</em>. Views can be thought of a way to &quot;peer into&quot; a variable as it varies with time, and it's views that we attach to the DOM. It's also worth saying that views are, as their name would suggest, read-only. We can also chain different views together using applicative and monadic combinators, allowing a dynamic dataflow graph to be constructed.</p>
+<p>Constructing a view from a variable is simple:</p>
+<pre><code class="language-fsharp">let view = View.FromVar rvText
+</code></pre>
+<p>The <code>view</code> variable then has the type <code>View&lt;string&gt;</code>. We can then embed this into the DOM by creating a text node inside a <code>&lt;div&gt;</code> tag:</p>
+<pre><code class="language-fsharp">Doc.Element &quot;div&quot; [] [
+    Doc.TextView view
+]
+</code></pre>
+<p>With this view, it's then possible to create the other views we want by using the <code>View.Map : ('A -&gt; 'B) -&gt; View&lt;'A&gt; -&gt; View&lt;'B&gt;</code> function. <code>Map</code> simply creates a new view, with the function applied. Using this, we can easily implement all of the other ways of looking at the input:</p>
+<pre><code class="language-fsharp">let viewCaps = 
+    view |&gt; View.Map (fun s -&gt; s.ToUpper () )
+
+let viewReverse = 
+    view |&gt; View.Map (fun s -&gt; new string ((s.ToCharArray ()) |&gt; Array.rev))
+
+let viewWordCount = 
+    view |&gt; View.Map (fun s -&gt; s.Split([| ' ' |]).Length)
+
+let viewWordCountStr = 
+    View.Map string viewWordCount
+
+let viewWordOddEven = 
+    View.Map (fun i -&gt; if i % 2 = 0 then &quot;Even&quot; else &quot;Odd&quot;) viewWordCount
+</code></pre>
+<p>...and these can simply be embedded into the DOM as before.</p>
+<h2 id="whats-next">What's next?</h2>
+<p>We think that the experiment so far has gone quite well, and that we've demonstrated that this sort of dataflow structure works nicely with WebSharper and the DOM. Building on this, we're currently working on two different things: adding support for animation, and incorporating and using this framework to build on existing functional web abstractions.</p>
+<p>For the animation side of things, we're hoping to find an intuitive, idiomatic, but powerful way to declaratively encode animations: we're looking at D3 for inspiration, but hope to improve the interface somewhat! This should mean that it's possible to use the dataflow layer to drive powerful visual, interactive documents in a pleasant, functional manner.</p>
+<p>The second thing we're trying to do is to use UI.Next alongside different functional abstractions, making it easier to create interactive web applications. We've done some work on porting flowlets to the new system, which are an extension of formlets with a monadic binding operation to allow for dynamic composition. In particular, this means that it's possible to setout a &quot;flow&quot; for an application, showing how data from one stage of an application is used in a different part. More details are to come in a later blog post, but you can see the code for one example <a href="https://github.com/websharper-samples/ui/blob/master/src/ContactFlow.fs">here</a>.</p>
+<p>In particular, the main part of this example is as follows:</p>
+<pre><code class="language-fsharp">let exampleFlow =
+    Flow.Do {
+        let! person = personFlowlet
+        let! ct = contactTypeFlowlet
+        let! contactDetails = contactFlowlet ct
+        return! Flow.Static (finalPage person contactDetails)
+    }
+    |&gt; Flow.Embed
+</code></pre>
+<p>We firstly get some user information from the <code>personFlowlet</code> page, determine which type of contact information to get using the <code>contactTypeFlowlet</code> page, use this to get the required information, and finally display all of these on the final, static page.</p>
+<p>In addition to this, we're hoping to see how this approach integrates with Piglets, our library for pluggable UIs.</p>
+<p>Thanks for reading, and stay tuned for more! If you have any comments, we'd love to hear them.</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

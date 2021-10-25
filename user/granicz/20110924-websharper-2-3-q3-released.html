@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper 2.3 Q3 released</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Sep 24, 2011</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p><a href="http://websharper.com/latest/ws2">This release</a> (2.3.62+) ships the preliminary support for mobile devices, a new WebSharper component we call WebSharper Mobile (WM). (Be sure to update your extensions to their matching versions from the <a href="http://websharper.com/extensions">Extensions page</a>.) WM consists of the following:</p>
+<ul>
+<li>The tooling for packaging applications for various mobile platforms. This component assumes the presence of the appropriate SDKs present on your system (see below for a summary).</li>
+<li>Visual Studio templates for online (with server-side) and offline (without) mobile applications. These provide a convenient and fast way to get started and provide a short sample application for reference.</li>
+<li>A mobile layer that exposes device-specific functionality to JavaScript. This is the core component of WM, and we use the name interchangeably or as &quot;WM layer&quot; when we talk about this component.</li>
+</ul>
+<p>The WM layer is designed in two parts: a general API meant to convey core mobile functionality such as supplying accelerometer and GPS data or accessing the camera capabilities, and various platform-specific APIs. In this first iteration, only the core API is shipped. Subsequent releases will include an increasing number of platform-specific capabilities for each major platform, such as Bluetooth communication, calling API, etc.</p>
+<img src="/assets/figure3.jpg">
+<p>A jQuery Mobile formlet application running on Android is depicted on the figure to the left. You can follow through building this application in <a href="http://www.infoq.com/articles/WebSharper">this InfoQ article</a>.</p>
+<h3 id="prerequisites-for-android-development">Prerequisites for Android development</h3>
+<p>If you are planning to use WebSharper Mobile for Android development, you will need the following in place:</p>
+<ul>
+<li>JDK: from version 1.5 to 1.7 (which match Java 5 to 7). Note: must be the 32-bit version, since the Android SDK does not recognize the 64-bit versions.</li>
+<li>Android SDK. When asked what packages to install, only install the platforms you wish to develop/test for. Installing a platform means that you can specify its API level later and that you can create an emulator for it. We recommend Android 2.2, optionally with Android 3.2. Tested: Android 2.x and Android 3.x. Android 1.x does not work, because WM is using functionality available for the 2.x+ series only. Note: You must not put the SDK in a folder whose path include spaces.</li>
+<li>Adding the equivalents of <code>C:\Program Files\Java\jdk1.6.0_27\bin</code>, <code>C:\android-sdk\tools</code> and <code>C:\android-sdk\platform-tools</code> to the system path. You also have to set either the environment variable <code>ANDROID_HOME</code> or <code>ANDROID_SDK</code> to the equivalent of <code>C:\android-sdk\tools</code>.</li>
+</ul>
+<h4 id="running-android-applications-in-the-emulator">Running Android applications in the emulator</h4>
+<p>The sequence of steps closely follows those normally done, with a couple minor additions:</p>
+<ul>
+<li>Start the Android SDK and AVD Manager. If you do not know how, run android.bat from command line prompt (its path must be in scope as mentioned earlier).</li>
+<li>Create a new AVD (Android Virtual Device). We recommend either Android 2.2 or 3.0, 512MB of RAM. You should enable camera (it is “off” by default). Run it. Note: Android 2.3.x emulators are broken, just ignore them.</li>
+<li>First, Android apps are not built by default. This is because you need to specify more information for them. Start by finding out which SDK version you are developing to (you can find it from the Android SDK and AVD Manager window).</li>
+<li>Copy your <code>.keystore</code> file (read below) to the project’s folder (that is, the mobile project itself, where your <code>mobile.config</code> is).</li>
+<li>Open <code>mobile.config</code>, uncomment one of the build elements (there are two sample elements that you can use). Change the name of the output and the SDK version. Note: for this release of WebSharper mobile, you can only build for SDK 7, and it will work on both the 2.x and 3.x series. Note: the SDK version is sometimes also referred to as Android API level.</li>
+<li>Configure the information about the <code>.keystore</code> (read below).</li>
+<li>Build!</li>
+<li>Browse with the command line to <code>bin\html</code>, run <code>adb install –r .apk</code>. Note: this will fail if the version of the device is lower than the version you specified, or if there are several emulators running.</li>
+<li>The application is now in the application list.</li>
+<li>Note: Sometimes, even though the emulator is running and all seems to be fine - the command <code>adb install ...</code> will fail and say the device is offline. This can be solved by running <code>adb kill-server</code> and then installing again.</li>
+</ul>
+<h4 id="setting-geolocation-on-android">Setting geolocation on Android</h4>
+<p>You can use the following to &quot;hardcode&quot; a given GPS coordinate into your Android emulator as your current position.</p>
+<ul>
+<li><p>Enable the telnet client (skip if you are using Windows XP):</p>
+<ul>
+<li>Open Control Panel.</li>
+<li>In the Programs category, there is Turn Windows features on or off. Enable Telnet Client.</li>
+</ul>
+</li>
+<li><p>Find out which port your emulator is using by looking at the window’s title. For example, your emulator might be on port 5556, so the title is 5556:.</p>
+</li>
+<li><p>Run (command line) <code>telnet localhost</code>.</p>
+</li>
+<li><p>After the application has started (geolocation works on listeners, so it must be after the application registered its listener) enter: <code>geo fix</code>. Notice the order of arguments. The command might fail, just retype it.</p>
+</li>
+</ul>
+<h4 id="keystore-files"><code>.keystore</code> files</h4>
+<p>You can create one using a tool called keytool. You can just run it, if you correctly set up your system path in an earlier step.</p>
+<ul>
+<li>Type <code>keytool -genkey -v -keystore .keystore -alias -keyalg RSA -validity 10000</code> to generate a new one.</li>
+<li>Just follow the instruction (it is an interactive tool). Note: if you started by working with a debug key, and then will try to use a “release” key, you will not be able to install the application with the new key on devices which have the previous version installed. You must uninstall the old version first.</li>
+</ul>
+<h3 id="requirements-for-wp7-development">Requirements for WP7 development</h3>
+<p>You will need the following:</p>
+<ul>
+<li>Windows Vista or Windows 7 (but not Starter Edition). Windows Server 2008 (also R2) was reported to sometimes work if you apply this trick: <a href="http://blogs.msdn.com/b/astebner/archive/2010/05/02/10005980.aspx">http://blogs.msdn.com/b/astebner/archive/2010/05/02/10005980.aspx</a>. We can confirm that this works for some 2008 R2's.</li>
+<li>VS2010 has to be installed, although doesn’t have to be used (if you really like VS2008 – which can happen if you have many extensions which are not compatible with VS2010).</li>
+<li>Windows Phone SDK. If you have VS2010 without SP1 then SDK for WP7, if you have it with SP1 then SDK for WP7.1.</li>
+</ul>
+<h3 id="online-vs-offline-applications">Online vs offline applications</h3>
+<p>When starting a new WebSharper Visual Studio project you might wonder what the offline vs online application templates are. As mentioned earlier, online applications have a server-side, offline ones don't. For instance, a simple static HTML application can be modeled as an offline sitelet project. For online mobile applications, the following apply:</p>
+<ul>
+<li>Create a new Visual Studio project based on a WebSharper online mobile template. In general, online applications work like regular sitelets with the limitations of offline sitelets (e.g. finite number of pages).</li>
+<li>Your RPC server (the WebApplication’s output) must be hosted on a publicly accessible location, and that location must be set in the <code>mobile.config</code> file. (The online projects have a mobile.config with a sample server location, this needs to be overridden).</li>
+</ul>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

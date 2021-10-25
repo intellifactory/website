@@ -1,0 +1,888 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebScheme</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Vladimir Matveev</h4>
+                            <p class="text-white">Nov 02, 2010</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>Generally speaking if you abstract away from the visual part, WebSharper applications are not so different from usual F# libraries. Knowing this fact we can make our life much easier, and we can get away with simply: creating and testing basic components as a part of console application and later converting them to a WebSharper library. So, shall we begin?</p>
+<p>Our little Scheme (an actual subset of real Scheme) interpreter will consist of three parts:</p>
+<ul>
+<li><strong>Lexer</strong> - transforms source text (sequence of chars) into a sequence of tokens</li>
+<li><strong>Parser</strong> - produces language expressions based on a given token stream</li>
+<li><strong>Runtime</strong> – generic name for the remaining part, that includes an execution engine and a standard library (in our case few builtin functions)</li>
+</ul>
+<p>As I already mentioned, all these pieces are UI agnostic so they can be put into separate assembly that will be referenced from both the test console host and the front end WebSharper application.</p>
+<p>Lexer comes first. Step 1: define <code>Token</code> type and implement lexical analyzer:</p>
+<pre><code class="language-fsharp">type Token = 
+    | Identifier of string
+    | Quote      of Token
+    | Number     of int
+    | Boolean    of bool
+    | String     of string
+    | List       of Token list
+module Lexer = 
+     let private toString (chars : char list) = 
+        chars |&gt; List.fold (fun acc s -&gt; string s + acc) &quot;&quot;
+
+    let isDigit c = c &gt;= '0' &amp;&amp; c &lt;= '9' 
+    let isWhiteSpace c = c = ' ' || c = '\t' || c = '\r' || c = '\n'
+
+    let getTokens (source : string) = 
+        let rec getToken inList = function
+            | [] -&gt; 
+                if inList 
+                then failwith &quot;syntax error (missing close bracket)&quot; 
+                else None, []
+            | ')'::rest -&gt; 
+                if inList 
+                then None, rest 
+                else failwith &quot;syntax error (missing open bracket)&quot; 
+            | '('::rest -&gt;
+                let l, rest = getList true rest
+                Some (List l), rest
+            | '\''::rest -&gt;
+                let t, rest = getToken inList rest
+                match t with
+                | Some t -&gt; Some (Quote t), rest
+                | None -&gt; failwith &quot;syntax error (invalid quotation)&quot;
+            | c::rest when isWhiteSpace c -&gt; getToken inList rest
+            | '-'::((c::_) as rest) when isDigit c -&gt;
+                let num, rest = getNumber rest
+                Some (Number -num), rest
+            | (c::_) as rest when isDigit c -&gt;
+                let num, rest = getNumber rest
+                Some (Number num), rest
+            | '#'::'t'::rest -&gt;
+                Some (Boolean true), rest                
+            | '#'::'f'::rest -&gt;
+                Some (Boolean false), rest                
+            | '&quot;'::rest -&gt;
+                let s, rest = getString rest
+                Some (String s), rest
+            | rest -&gt;
+                let identifier, rest = getIdentifier rest
+                Some (Identifier identifier), rest
+        
+        and getList counter l = 
+            let rec impl acc (rest : char list) l = 
+                match getToken counter l with
+                | Some t, rest -&gt; impl (t::acc) [] rest
+                | None, rest -&gt; List.rev acc, rest
+            impl [] [] l
+        
+        and getNumber l = 
+            let rec impl acc = function
+                | c::rest when isDigit c -&gt;
+                    let value = int c - int '0'
+                    impl (acc * 10 + value) rest
+                | rest -&gt; acc, rest
+            impl 0 l
+        
+        and getString l = 
+            let rec impl acc = function
+                | [] -&gt; failwith &quot;syntax error (malformed string)&quot;
+                | '\\'::'&quot;'::rest -&gt; impl ('&quot;'::acc) rest
+                | '&quot;'::rest -&gt; (toString acc, rest)
+                | x::rest -&gt; impl (x::acc) rest
+            impl [] l
+
+        and getIdentifier l = 
+            let rec impl acc = function
+                | [] -&gt; toString acc, []
+                | (('('::_) as rest)
+                | ((')'::_) as rest) -&gt; toString acc, rest
+                | c::rest when isWhiteSpace c -&gt; toString acc, rest
+                | c::rest -&gt; impl (c::acc) rest
+            impl [] l
+        
+        let rec impl l = 
+            [
+                match getToken false l with
+                | Some t, r -&gt; 
+                    yield t
+                    match r with
+                    | [] -&gt; ()
+                    | rest -&gt; yield! impl rest
+                | None, _ -&gt; ()
+            ]
+        source 
+            |&gt; fun s -&gt; s.ToCharArray()
+            |&gt; List.ofSeq
+            |&gt; impl
+</code></pre>
+<ul>
+<li>For simplicity our implementation will support only integers (floats are out of the boat for now)</li>
+<li>Lexer results are slightly more than just conversion from chars to tokens, final sequence is already folded on brackets (lists are represented not as sequence of tokens like <code>LEFT_BRACKET</code>, <code>NUMBER</code>...<code>RIGHT_BRACKET</code>, but as one token <strong>List</strong> containing nested tokens with brackets omitted).</li>
+<li><code>getTokens</code> internally consists of several smaller functions: <code>getList</code> repeatadly reads a sequence of tokens containing within '(' and ')' and <code>getToken</code> tries to read next the token. If this attempt is successful - it returns the token and the remaining part of the stream.</li>
+</ul>
+<p>Watch the doors, next stop: <strong>parser</strong>. With pattern matching its creation becomes a straightforward task:</p>
+<pre><code class="language-fsharp">type Expr = 
+    | Bool      of bool
+    | Number    of int
+    | String    of string
+    | Atom      of string
+    | List      of Expr list
+    | Var       of string
+    | Apply     of Expr * Expr list
+    | Lambda    of string list * Expr
+    | If        of Expr * Expr * Expr option
+    | Assign    of string * Expr
+    | Cond      of (Expr * Expr) list * Expr option
+    | Let       of (string * Expr) list * Expr
+    | LetRec    of (string * Expr) list * Expr
+    | Sequence  of Expr list
+    | CallCC    of Expr
+
+module Parser = 
+    let rec private parse tokens = 
+        match tokens with
+        | Token.Identifier s -&gt; Expr.Var s
+        | Token.Number n -&gt; Expr.Number n
+        | Token.Boolean b -&gt; Expr.Bool b 
+        | Token.String s -&gt; Expr.String s
+        | Token.Quote t -&gt; parseQuote t
+        | Token.List(tokens) -&gt; parseList tokens
+
+    and private parseQuote = function
+        | Token.Number n -&gt; Expr.Number n
+        | Token.Boolean b -&gt; Expr.Bool b
+        | Token.String s -&gt; Expr.String s
+        | Token.Quote _ -&gt; failwith &quot;quoted quotes not supported yet&quot;
+        | Token.Identifier id -&gt; Expr.Atom id
+        | Token.List l -&gt; l |&gt; List.map parseQuote |&gt; Expr.List
+    
+    and private parseCond tokens = 
+        let rec impl acc = function
+            | [] -&gt; List.rev acc, None 
+            | [Token.List([Token.Identifier &quot;else&quot;; body])] -&gt; 
+                List.rev acc, Some(parse body)
+            | Token.List([cond; body])::rest -&gt; 
+                let cond = parse cond
+                let body = parse body
+                impl ((cond, body)::acc) rest
+            | x -&gt; failwith &quot;invalid 'cond' syntax&quot;
+        impl [] tokens
+    
+    and private parseList = function
+        | Token.Identifier &quot;begin&quot;::rest -&gt; 
+            rest 
+            |&gt; List.map parse 
+            |&gt; Sequence        
+        | Token.Identifier &quot;cond&quot;::body -&gt; 
+            parseCond body 
+            |&gt; Expr.Cond
+        | [Token.Identifier &quot;callcc&quot;; body] -&gt;
+            parse body
+            |&gt; Expr.CallCC
+        | Token.Identifier &quot;lambda&quot;::Token.List(formals)::body -&gt; 
+            let formals = parseFormals formals
+            Lambda(formals, Sequence(parseMain body))
+        | Token.Identifier &quot;let&quot;::Token.List(bindings)::body -&gt; 
+            parseLet bindings body Let
+        | Token.Identifier &quot;letrec&quot;::Token.List(bindings)::body -&gt; 
+            parseLet bindings body LetRec
+        | [Token.Identifier &quot;if&quot;; cond; ifTrue] -&gt; 
+            let cond = parse cond
+            let ifTrue = parse ifTrue
+            Expr.If(cond, ifTrue, None)
+        | [Token.Identifier &quot;if&quot;; cond; ifTrue; ifFalse] -&gt;
+            let cond = parse cond
+            let ifTrue = parse ifTrue
+            let ifFalse = parse ifFalse
+            Expr.If(cond, ifTrue, Some ifFalse)        
+        | [Token.Identifier &quot;set!&quot;; Token.Identifier(var); value] -&gt; 
+            Expr.Assign(var, parse value)
+        | proc::args -&gt; 
+            Expr.Apply(parse proc, List.map parse args)
+        | x -&gt; 
+            failwith &quot;unrecognized token sequence&quot;
+    and private parseFormals formals = 
+        formals 
+            |&gt; List.map parse 
+            |&gt; List.map(function 
+                | Expr.Var s -&gt; s 
+                | x -&gt; failwith &quot;formal parameter should be var&quot;
+                )
+    and private parseLet bindings body f =
+        let bindings = 
+            bindings
+            |&gt; List.map(function 
+                | Token.List([Token.Identifier name; value]) -&gt; name, parse value 
+                | x -&gt; failwith &quot;invalid binding structure&quot;
+                )
+        let body = parseMain body
+        f(bindings, Sequence body)
+     
+    and parseMain tokens = 
+        [
+            match tokens with
+            | Token.List
+                (
+                [Token.Identifier &quot;define&quot;; Token.Identifier var; body]
+                )::xs -&gt;
+                yield Assign(var, parse body)
+                yield! parseMain xs
+            | Token.List
+                (
+                Token.Identifier &quot;define&quot;
+                ::Token.List(Token.Identifier var::formals)
+                ::body
+                )::xs -&gt;
+                let f = parseFormals formals
+                let b = parseMain body |&gt; Sequence
+                yield Assign(var ,Lambda(f, b)
+                yield! parseMain xs
+            | x::xs -&gt; 
+                yield parse x
+                yield! parseMain xs
+            | [] -&gt; ()
+        ]
+</code></pre>
+<ul>
+<li><code>Bool</code>, <code>Number</code> and <code>String</code> corresponds to literals found in source text</li>
+<li><code>List</code> contains values wrapped in a quoted list in the source such as <code>'(...)</code></li>
+<li><code>Apply</code> denotes function application. First parameter should be a function, second - list of arguments</li>
+<li><code>If</code> - simple if-then expression with optional 'else' part</li>
+<li><code>Cond</code> - similar to if-elseif-elseif-else expression where 'else' can be omitted</li>
+<li><code>Assign</code> - corresponds to a 'setq' expression: it evaluates the value and stores it in the environment under the given name</li>
+<li><code>Var</code> - references a variable within the environment</li>
+<li><code>Let</code> and <code>LetRec</code> contains list of pairs (bindings from name to value) and <code>body</code>. Bindings are evaluated and stored in a newly created environment. Afterwards this environment is used to evaluate the <code>body</code>. Difference between <code>let</code> and <code>letrec</code> lies in fact that <code>letrec</code> bindings can be recursively defined (refer to themselves in their definition).</li>
+<li><code>Sequence</code> - just a list of expressions</li>
+<li><code>CallCC</code> - Special higher-order magic: argument should be procedure with one parameter. Runtime will evaluate this procedure with a current continuation as a parameter value</li>
+</ul>
+<p>Final step: runtime. It is basically the heart of our implementation and thus I'd like to devote slightly more attention to this stage.</p>
+<p>The execution environment will be represented as list of Frames, every frame stores its own set of values. Name lookup is performed in a hierarchical manner: if name is not found in a child frame → try search in parent.</p>
+<pre><code class="language-fsharp">    type EnvFrame = Dictionary&lt;string, obj&gt; // System.Collections.Generic...
+    type Env = EnvFrame list
+
+    let private tryFindFrame name (d : EnvFrame) =
+        if d.ContainsKey name 
+        then Some (d, d.[name])
+        else None
+    
+    let makeEnv prevEnv content  =
+        let d = new Dictionary&lt;_, _&gt;()
+        for (name, value) in content do
+            d.Add(name, value)
+        d::prevEnv 
+
+    let private get name (env : Env) = 
+        match List.tryPick (tryFindFrame name) env with
+        | Some(_, value) -&gt; value
+        | None -&gt; failwith (&quot;name '&quot; + name + &quot;' not found&quot;)
+
+    let private set name value (env : Env) = 
+        match List.tryPick (tryFindFrame name) env with
+        | Some (frame, _) -&gt; frame.[name] &lt;- value
+        | None -&gt;
+            match env with
+            | h::_ -&gt; 
+                h.[name] &lt;- value
+            | [] -&gt; failwith &quot;empty env.&quot;
+</code></pre>
+<p>Programming in Scheme heavily relies on recursion, but unfortunately our target platform (JavaScript) doesn't support optimization of tail calls. As a solution we can utilize 'trampolines' - a technique when every step returns delayed next step, so recursion is automagically converted to using loops. Main characters:</p>
+<ul>
+<li><code>Step</code> – a function that returns the next Step as its evaluation result.</li>
+<li><code>Cont</code> - represents the computation process at given point</li>
+<li><code>Function</code> - function representation, accepts argument values and continuation to proceed with execution.</li>
+</ul>
+<pre><code class="language-fsharp">    type Step = Step of (unit -&gt; Step) option // None - stop 
+    type Cont = obj -&gt; Step
+    type Function = obj list -&gt; Cont -&gt; Step
+</code></pre>
+<p>This is top level evaluation loop. Here we start the evaluation of some specified expression with respect to the given environment. <code>finalCont</code> will receive final result of computation and store it in a local variable.</p>
+<pre><code class="language-fsharp">    let evaluate env expr = 
+        let result = ref null
+        let ok = ref true
+        let finalCont = fun o -&gt; result := o; Step None
+        
+        let step = ref (evaluateExpression expr env finalCont)
+        
+        while !ok do
+            let (Step s) = !step
+            match s with
+            | Some f -&gt; // has next step
+                step := f()
+            | None -&gt;   // completed!
+                ok := false
+        !result
+</code></pre>
+<p>Let's examine the computation process on the sample of a simple <code>(+)</code> function. In an ideal world the expression <code>x + y</code> (where <code>x</code> and <code>y</code> can be complex expressions themselves) will be transformed to the following sequence of continuations:</p>
+<pre><code class="language-fsharp">let rec eval (e : Expression) (k : Continuation) = ...
+// finalCont - continuation that will accept the result
+eval a (fun valueOfA -&gt; 
+    eval b (fun valueOfB -&gt; 
+        finalCont (valueOfA + valueOfB)))
+</code></pre>
+<p>This will work in F# but not in JavaScript (due to lack of tail call optimization). So instead of running subsequent computations in continuations we'll delay evaluation by wrapping them in thunks.</p>
+<pre><code class="language-fsharp">let thunk f = ... something that wraps f with fun () -(fun () -&gt; f())
+
+eval a (fun valueOfA -&gt; // k1
+    thunk(fun () -&gt; eval b (fun valueOfB -&gt; // k2 
+        thunk(fun () -&gt; finalCont (valueOfA + valueOfB)))))
+</code></pre>
+<p>Now result of every continuation will not be the value itself but rather a function that returns value. This is how the trampoline works: first you jump (by calling the eval a → forward to continuation k1) then you land (because k1 returns delayed computation). The evaluation loop makes one more iteration and you jump and land again (running eval b → continuation k2 → delayed computation). We repeat this process until evaluation is completed. Everything works nicely but explicit managing of continuation looks awful from the internal sense of constructive laziness – too much manual work. Can we do something to make continuation passing ambient? Surely yes! Computation expressions to the rescue.</p>
+<pre><code class="language-fsharp">module Scheme = 
+    open System.Collections.Generic
+
+    type Step = Step of (unit -&gt; Step) option
+    type Cont = obj -&gt; Step
+    type Function = obj list -&gt; Cont -&gt; Step
+    
+    type EnvFrame = Dictionary&lt;string, obj&gt;
+    type Env = EnvFrame list
+
+    let private tryFindFrame name (d : EnvFrame) =
+        if d.ContainsKey name 
+        then Some (d, d.[name])
+        else None
+    
+    let makeEnv prevEnv content  =
+        let d = new Dictionary&lt;_, _&gt;()
+        for (name, value) in content do
+            d.Add(name, value)
+        d::prevEnv 
+
+    let private get name (env : Env) = 
+        match List.tryPick (tryFindFrame name) env with
+        | Some(_, value) -&gt; value
+        | None -&gt; failwith (&quot;name '&quot; + name + &quot;' not found&quot;)
+
+    let private set name value (env : Env) = 
+        match List.tryPick (tryFindFrame name) env with
+        | Some (frame, _) -&gt; frame.[name] &lt;- value
+        | None -&gt;
+            match env with
+            | h::_ -&gt; 
+                h.[name] &lt;- value
+            | [] -&gt; failwith &quot;empty env.&quot;
+    
+    let thunk f = f |&gt; Some |&gt; Step
+    
+    type ContBuilder () = 
+
+        member inline this.Return (v) = fun (k : Cont) -&gt; thunk (fun() -&gt; k v)
+
+        member inline this.ReturnFrom (v : Cont -&gt; Step ) = v
+        
+        member this.Bind(c : Cont -&gt; Step, f : obj -&gt; Cont -&gt; Step)  = 
+            fun (rk : Cont) -&gt;
+                let c1 (v : obj) = 
+                    let c2 = f v
+                    thunk (fun() -&gt; c2 rk)
+                thunk(fun() -&gt; c c1)
+
+    let K = ContBuilder()
+    let private callCC (f : Function) : Cont -&gt; Step =
+        fun (extK : Cont) -&gt;
+            let exit : Function = fun [arg] _ -&gt; K.Return arg extK
+            f [exit] extK
+    
+    let rec private evaluateExpression expr (env : Env) = 
+        match expr with
+            | Expr.List(values) -&gt; 
+                let rec impl acc l = 
+                    match l with
+                    | [] -&gt;  K { return List.rev acc }
+                    | v::rest -&gt; K { 
+                        let! res = evaluateExpression v env
+                        return! impl (res::acc) rest 
+                        }
+                impl [] values
+            | Expr.Atom atom -&gt; 
+                K { return atom }
+            | Expr.Bool v -&gt; 
+                K { return v }
+            | Expr.Number n -&gt; 
+                K { return n }
+            | Expr.String s -&gt; 
+                K { return s }
+            | Expr.CallCC proc -&gt;
+                K { 
+                    let! func = evaluateExpression proc env
+                    match func with
+                    | :? Function as f -&gt; return! callCC f
+                    | x -&gt; return! failwith &quot;callCC argument should be function&quot;
+                }
+            | Expr.Assign (name, v) -&gt; 
+                K {
+                    let! value = evaluateExpression v env
+                    set name value env
+                    return null
+                }
+            | Expr.Cond (clauses, elseCase) -&gt;
+                let rec evalCond = function
+                    | (cond, body)::xs, _ -&gt; 
+                        K { 
+                            let! v = evaluateExpression cond env
+                            if unbox v 
+                            then return! evaluateExpression body env
+                            else return! evalCond(xs, elseCase)
+                        }
+                    | [], Some(c) -&gt; K { return! evaluateExpression c env}
+                    | _ -&gt; K { return null }
+                K { return! evalCond (clauses, elseCase)}
+            | Expr.Apply(f, args) -&gt;
+                K { 
+                    let! boxedFunc = evaluateExpression f env
+                    match boxedFunc with
+                    | :? Function as f -&gt;
+                        let rec evalArgs acc = function
+                            | [] -&gt; K { return! f (List.rev acc) }
+                            | x::xs -&gt;  K { 
+                                let! value = evaluateExpression x env
+                                return! evalArgs (value::acc) xs
+                                }
+                        return! evalArgs [] args
+                    | _ -&gt; return! failwith &quot;function expected&quot;    
+                }
+            | Expr.If (cond, ifTrue, ifFalse) -&gt;
+                K { 
+                    let! v = evaluateExpression cond env
+                    if unbox v 
+                    then return! evaluateExpression ifTrue env
+                    else 
+                        match ifFalse with
+                        | Some f -&gt; return! evaluateExpression f env
+                        | None -&gt; return null
+                }
+            | Expr.Lambda(formals, body) -&gt;
+                let apply args= 
+                    let newEnv = 
+                        List.zip formals args
+                        |&gt; makeEnv env
+                    K { return! evaluateExpression body newEnv}
+                K { return apply }
+            | Expr.Let(bindings, body) -&gt;
+                let rec evalBindings acc = function 
+                    | [] -&gt; 
+                        let newEnv = 
+                            acc 
+                            |&gt; List.rev
+                            |&gt; makeEnv env
+                        K { return! evaluateExpression body newEnv }
+                    | (name, x)::xs -&gt; K { 
+                        let! v = evaluateExpression x env
+                        return! evalBindings ((name, v)::acc) xs
+                        }
+                K { return! evalBindings [] bindings }
+            | Expr.LetRec(bindings, body) -&gt;
+                let newEnv = 
+                    bindings
+                    |&gt; List.map (fun (name, _) -&gt; name, null)
+                    |&gt; makeEnv env
+                let rec evalBindings acc = function 
+                    | [] -&gt; K { return! evaluateExpression body newEnv }
+                    | (n, x)::xs -&gt; K { 
+                        let! v = evaluateExpression x newEnv
+                        set n v newEnv
+                        return! evalBindings (v::acc) xs
+                        }
+                K { return! evalBindings [] bindings }
+            | Expr.Sequence(statements) -&gt;
+                let rec impl s = 
+                    match s with
+                    | [] -&gt; K { return null } 
+                    | [x] -&gt; K { return! evaluateExpression x env }
+                    | x::xs -&gt; K { 
+                        let! _ = evaluateExpression x env
+                        return! impl xs
+                        }
+                K { return! impl statements } 
+            | Expr.Var(name) -&gt;
+                K { return get name env }
+    
+    let evaluate env expr = 
+        let result = ref null
+        let ok = ref true
+        let finalCont = fun o -&gt; result := o; Step None
+    
+        let step = ref (evaluateExpression expr env finalCont)
+        
+        while !ok do
+            let (Step s) = !step
+            match s with
+            | Some f -&gt;
+                step := f()
+            | None -&gt;
+                ok := false
+        !result
+</code></pre>
+<p>To make our description complete - builtin functions:</p>
+<pre><code class="language-fsharp">module Functions = 
+    let K = Scheme.K
+
+    let private pack (f : Scheme.Function) = box f
+    
+    let private makeListFunction f = 
+        (function | [v : obj] -&gt; f (v :?&gt; obj list)) |&gt; pack
+
+    let private makeBinary op = 
+        fun args -&gt; K { 
+            return args 
+                |&gt; List.map unbox
+                |&gt; List.reduce op
+        } |&gt; pack   
+
+    let builtins () = 
+        [ 
+          &quot;+&quot;, makeBinary (+)
+          &quot;-&quot;, makeBinary (-)
+          &quot;*&quot;, makeBinary (*)
+          &quot;/&quot;, makeBinary (/)
+          &quot;or&quot;, makeBinary (||)
+          &quot;&lt;&quot;, (fun [a; b] -&gt; K { return unbox a &lt; unbox b}) |&gt; pack
+          &quot;=&quot;, (function 
+                    | [] | [_]-&gt; failwith &quot;invalid args&quot;
+                    | [x; y] -&gt; K { return x.Equals(y) }
+                    | [x; y; z] -&gt; K { return (x.Equals(y) &amp;&amp; y.Equals(z)) } 
+                    | _ -&gt; failwith &quot;not supported&quot;)
+               |&gt; pack
+          &quot;zero?&quot;, (fun [x] -&gt; K { return unbox x = 0} ) |&gt; pack
+          &quot;null?&quot;, (function
+                    | [] -&gt; K { return true}
+                    | _  -&gt; K { return false} ) |&gt; makeListFunction
+          &quot;car&quot;, (function | x::_ -&gt; K { return x } ) |&gt; makeListFunction
+          &quot;cdr&quot;, (function | _::xs -&gt; K { return xs } ) |&gt; makeListFunction
+        ] 
+        |&gt; Scheme.makeEnv []
+</code></pre>
+<p>That's all folks, now time to test our creation:</p>
+<p><img src="https://github.com/IntelliFactory/blogs/raw/master/assets/scheme-cmd.png" alt="" /></p>
+<p>Now we have a working implementation, what should be done with it to make it accessible in a WebSharper web application:</p>
+<ul>
+<li><p>Add a reference to the <code>IntelliFactory.WebSharper</code> assembly</p>
+</li>
+<li><p>Annotate assembly with the <code>WebSharper</code> attribute</p>
+<pre><code class="language-fsharp">open System.Runtime.CompilerServices
+
+[&lt;assembly:IntelliFactory.WebSharper.WebSharper&gt;]
+do()
+</code></pre>
+</li>
+<li><p>Put <code>[&lt;IntelliFactory.WebSharper.JavaScriptAttribute&gt;]</code> and <code>[&lt;IntelliFactory.WebSharper.JavaScriptTypeAttribute&gt;]</code> to all functions and types in our library</p>
+</li>
+<li><p>Make some coffee, everything else is taken care of.</p>
+</li>
+</ul>
+<p>Main part is done but we still need a fancy front end: syntax highlighting and so on. The CodeMirror library already includes syntax highlighter for Scheme, we just need to plug it in. So add a WebSharper project to our solution, remove basic WebSharper sample code and perform a few magical passes:</p>
+<pre><code class="language-fsharp">open IntelliFactory.WebSharper
+
+type CodeMirrorResources() = 
+    interface IResource with
+        member this.Render(resolver, writer) = 
+            Resource.RenderJavaScript(resolver.ResolveUrl(&quot;js/codemirror.js&quot;)) writer
+            Resource.RenderJavaScript(resolver.ResolveUrl(&quot;js/mirrorframe.js&quot;)) writer
+            Resource.RenderCss(resolver.ResolveUrl(&quot;js/docs.css&quot;)) writer
+
+[&lt;Require(typeof&lt;CodeMirrorResources&gt;)&gt;]    
+module CodeMirror = 
+    
+    type Editor = 
+        [&lt;Inline &quot;$this.getCode()&quot;&gt;]
+        member this.Code : string = failwith &quot;no dynamic invokation&quot;
+
+    type EditorOptions [&lt;Inline &quot;{}&quot;&gt;]() =
+        [&lt;DefaultValue; Name &quot;height&quot;&gt;] 
+        val mutable Height : string
+
+        [&lt;DefaultValue; Name &quot;content&quot;&gt;] 
+        val mutable Content : string
+
+        [&lt;DefaultValue; Name &quot;stylesheet&quot;&gt;] 
+        val mutable StyleSheet : string
+
+        [&lt;DefaultValue; Name &quot;path&quot;&gt;] 
+        val mutable Path : string
+
+        [&lt;DefaultValue; Name &quot;parserfile&quot;&gt;] 
+        val mutable ParserFile : string array
+
+        [&lt;DefaultValue; Name &quot;autoMatchParens&quot;&gt;] 
+        val mutable AutoMatchParens : bool
+
+        [&lt;DefaultValue; Name &quot;disableSpellcheck&quot;&gt;] 
+        val mutable DisableSpellcheck : bool
+
+        [&lt;DefaultValue; Name &quot;lineNumbers&quot;&gt;] 
+        val mutable LineNumbers : bool
+    
+    [&lt;Inline(&quot;new CodeMirror(CodeMirror.replace($node), $options)&quot;)&gt;]
+    let create (node : Dom.Element) (options : EditorOptions) : Editor = 
+        failwith &quot;no dynamic invokation&quot;
+</code></pre>
+<p>Here we have created typed wrappers for CodeMirror editor and configuration options. Remaining part is little compared to the work we've already done. Main frontend code + formatting the evaluation result:</p>
+<pre><code class="language-fsharp">open IntelliFactory.WebSharper
+open IntelliFactory.WebSharper.Html
+
+open WebScheme
+
+[&lt;JavaScriptType&gt;]
+type WebSchemeUI() = 
+    inherit Web.Control()
+
+    [&lt;JavaScript&gt;]
+    let rec toString (v : obj) = 
+        match JOperators.TypeOf(v) with
+        | JType.Boolean 
+        | JType.Number
+        | JType.String -&gt; v.ToString()
+        | JType.Function -&gt; &quot;&lt;function&gt;&quot;
+        | JType.Undefined -&gt; &quot;&lt;null&gt;&quot;
+        | JType.Object -&gt;
+            let result = 
+                match v :?&gt; obj list with
+                | [] -&gt; &quot;&quot;
+                | l -&gt; 
+                    l 
+                    |&gt; Seq.map toString 
+                    |&gt; Seq.reduce (fun acc v -&gt; acc + &quot;,&quot; + v) 
+            &quot;[&quot; + result + &quot;]&quot;
+
+    [&lt;JavaScript&gt;]
+    override this.Body = 
+        let env = WebScheme.Functions.builtins () |&gt; ref
+        
+        let options = 
+            CodeMirror.EditorOptions(
+                Height = &quot;300px&quot;,
+                StyleSheet = &quot;js/schemecolors.css&quot;,
+                ParserFile = [|&quot;tokenizescheme.js&quot;; &quot;parsescheme.js&quot;|],
+                AutoMatchParens = true,
+                DisableSpellcheck = true,
+                LineNumbers = true,
+                Path = &quot;js/&quot;
+            )
+        let text = TextArea[]
+        let editor = ref None
+        text |&gt; OnAfterRender (fun n -&gt; 
+            editor := Some (CodeMirror.create n.Dom options)
+            )
+
+        let result = Div [Width &quot;100%&quot;; Class &quot;output&quot;]
+        let appendResult (v : obj) cls = 
+            let value = Div [ Span [Class (cls + &quot; message&quot;)] -&lt; [Text (toString v)]]
+            result.Append(value)
+            result.JQuery.ScrollTop(result.JQuery.Height()).Ignore
+
+        let evaluate = 
+            Button [Text &quot;Evaluate&quot;]
+            |&gt;! OnClick (fun _ _ -&gt;
+                let text = editor.Value.Value.Code
+                try
+                    let tokens = Lexer.getTokens text
+                    let expressions = Parser.parseMain tokens
+                    for e in expressions do
+                        match Scheme.evaluate !env e  with
+                        | null -&gt; ()
+                        | result -&gt; appendResult result &quot;success&quot;
+                with
+                    e -&gt; appendResult (e.ToString()) &quot;error&quot;
+                )
+
+        let clear = 
+            Button [Text &quot;Clear&quot;]
+            |&gt;! OnClick (fun _ _ -&gt;
+                env := Functions.builtins()
+                result.Clear()
+            )
+        Table [Width &quot;100%&quot;; Border &quot;0.8&quot;] -&lt; 
+        [ 
+            TR [Height &quot;300px&quot;] -&lt; [  TD [ text ] ]
+            TR [TD [evaluate; clear] ]
+            TR [Height &quot;200px&quot;] -&lt; [TD [result] ]
+        ]
+</code></pre>
+<p>Enjoy the results:</p>
+<p><img src="https://github.com/IntelliFactory/blogs/raw/master/assets/scheme-ui.png" alt="" /></p>
+<p>Notice that despite the large input parameter, <code>sumall</code> completed successfully. If we modify <code>ContBuilder</code> to make all evaluation eager - then the result will match our expectation:</p>
+<p><img src="https://github.com/IntelliFactory/blogs/raw/master/assets/scheme-ui-2.png" alt="" /></p>
+<p>Source code for this sample is available <a href="https://bitbucket.org/desco/webscheme/overview">here</a>. Enjoy 😃</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

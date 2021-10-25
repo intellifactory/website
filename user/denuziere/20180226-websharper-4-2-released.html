@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper 4.2 released</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                            <p class="text-white">Feb 26, 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>It is finally here! Today we are releasing WebSharper 4.2.</p>
+<p>The main highlight of this release is the support for .NET Standard 2.0 and ASP.NET Core.</p>
+<p>New features also make getting started with WebSharper easier than ever:</p>
+<ul>
+<li>With <code>dotnet</code> templates, creating a new C# or F# WebSharper project is now done in a single command line.
+<pre><code>dotnet new websharper-spa -lang f#
+</code></pre>
+</li>
+<li>WebSharper configuration for a project is now stored in a simple JSON file.</li>
+</ul>
+<p><img src="https://i.imgur.com/fGZ61Ge.png" alt="Visual Studio Code screenshot" title="A WebSharper app in Visual Studio Code" /></p>
+<h2 id="installing">Installing</h2>
+<p>You can install or update the templates to create WebSharper projects via the following means:</p>
+<ul>
+<li><p>in Visual Studio 2017, from <a href="http://websharper.com/downloads">the downloads page</a>.</p>
+</li>
+<li><p>for the <code>dotnet</code> command line, by typing the following command (see below for more details:</p>
+<pre><code>dotnet new -i WebSharper.Templates
+</code></pre>
+</li>
+</ul>
+<p>You can also add WebSharper to an existing project. Simply add the NuGet package <code>WebSharper.FSharp</code> or <code>WebSharper.CSharp</code> (depending on your language of choice) and add a <a href="#wsconfigjson">wsconfig.json file</a>.</p>
+<p>Now, let's see the changes that are coming in this release.</p>
+<h2 id="net-standard-and.net-core">.NET Standard and .NET Core</h2>
+<p>WebSharper's built-in libraries, as well as the entire library of standard extensions, are now available for .NET Standard 2.0. This means that you can now run WebSharper applications on .NET Core 2.0 on Windows, OS X and Linux.</p>
+<p>There are a small number of differences between the .NET Framework 4.6.1 and .NET Standard 2.0 versions of the WebSharper libraries, related to the fact that <code>System.Web</code> is exclusive to .NET Framework:</p>
+<ul>
+<li><code>WebSharper.Web.RpcModule</code> and <code>WebSharper.Sitelets.HttpModule</code> are only available for .NET Framework.</li>
+<li><code>WebSharper.Web.Control</code> inherits from <code>System.Web.UI.Control</code> in .NET Framework, and from <code>System.Object</code> in .NET Standard.</li>
+<li><code>WebSharper.Core.Resources.HtmlTextWriter</code> inherits from <code>System.Web.UI.HtmlTextWriter</code> in .NET Framework, and from <code>System.IO.TextWriter</code> in .NET Standard.</li>
+<li><code>WebSharper.Sitelets.IHostedWebsite</code>, which builds a sitelet from a <code>System.Web.HttpApplication</code>, is only available in .NET Framework.</li>
+</ul>
+<h2 id="asp.net-core-support">ASP.NET Core support</h2>
+<p>WebSharper Client-Server applications can now be hosted on ASP.NET Core thanks to WebSharper.AspNetCore. It is a simple interface that is very easy to connect:</p>
+<pre><code class="language-fsharp">// Your WebSharper website
+module Site =
+    let Main = // ...
+
+// Serve the WebSharper website
+type Startup() =
+    member this.Configure(app: IApplicationBuilder, env: IHostingEnvironment) =
+        app.UseStaticFiles()
+            .UseWebSharper(env, Site.Main)
+</code></pre>
+<p>WebSharper uses runtime configuration for things such as overriding the URL of dependent resources. WebSharper.AspNetCore provides this configuration from the standard runtime configuration system for ASP.NET Core, <code>Microsoft.Extensions.Configuration</code>:</p>
+<pre><code class="language-fsharp">    member this.Configure(app: IApplicationBuilder, env: IHostingEnvironment) =
+        // Create the configuration object...
+        let config =
+            ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile(&quot;appsettings.json&quot;)
+                .Build()
+
+        app.UseAuthentication()
+            .UseStaticFiles()
+            // ... and pass it to WebSharper.
+            .UseWebSharper(env, Site.Main, config.GetSection(&quot;websharper&quot;))
+</code></pre>
+<p>You can then pass WebSharper configuration in <code>appSettings.json</code>:</p>
+<pre><code class="language-javascript">{
+    &quot;websharper&quot;: {
+        &quot;WebSharper.JQuery.Resources.JQuery&quot;: &quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;
+    }
+}
+</code></pre>
+<p>WebSharper authentication also uses the standard methods:</p>
+<pre><code class="language-fsharp">    // Configure user authentication...
+    member this.ConfigureServices(services: IServiceCollection) =
+        services.AddAuthentication(&quot;WebSharper&quot;)
+            .AddCookie(&quot;WebSharper&quot;, fun options -&gt; ())
+        |&gt; ignore
+
+    member this.Configure(app: IApplicationBuilder, env: IHostingEnvironment) =
+        // ... and use it in the application.
+        app.UseAuthentication()
+            .UseStaticFiles()
+            .UseWebSharper(env, Site.Main)
+</code></pre>
+<h2 id="dotnet-project-templates"><code>dotnet</code> project templates</h2>
+<p>To easily create new .NET Standard and ASP.NET Core WebSharper projects, we created templates for the <code>dotnet new</code> command. You can install these templates with the following command:</p>
+<pre><code>dotnet new -i WebSharper.Templates
+</code></pre>
+<p>Once this is done, you can create a WebSharper project with one of the following commands (adding <code>-lang f#</code> or <code>-lang c#</code> to choose the language, with <code>c#</code> being the default):</p>
+<ul>
+<li><code>dotnet new websharper-web</code>
+This creates a Client-Server ASP.NET Core web project.</li>
+<li><code>dotnet new websharper-spa</code>
+This creates a Single-Page Application project. It is hosted in an ASP.NET Core project, so that you can quickly run it as well as serve RPCs to your SPA.</li>
+<li><code>dotnet new websharper-lib</code>
+This creates a simple WebSharper-compiled library.</li>
+<li><code>dotnet new websharper-html</code>
+This creates a static generated website.</li>
+</ul>
+<h2 id="wsconfig.json"><code>wsconfig.json</code></h2>
+<p>WebSharper compilation can now be configured using a JSON file called <code>wsconfig.json</code> located next to your project file. Its content overrides the corresponding properties set in your <code>.*proj</code> file. Here is an example:</p>
+<pre><code class="language-javascript">{
+ &quot;project&quot;: &quot;bundle&quot;,
+ &quot;dce&quot;: false,
+ &quot;outputDir&quot;: &quot;scripts/&quot;,
+ &quot;warnOnly&quot;: true
+}
+</code></pre>
+<p><a href="https://developers.websharper.com/docs/v4.x/fs/project-variables">Read the full documentation about wsconfig.json</a>.</p>
+<p>The F# tooling extension for Visual Studio Code, Ionide, provides code completion for wsconfig.json.</p>
+<h2 id="other-changes">Other changes</h2>
+<ul>
+<li><p>Updated FSharp.Compiler.Service to version 20.0.1, which makes compilation faster.</p>
+</li>
+<li><p>Support <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-2#reference-semantics-with-value-types">C# 7.2 language features</a>: reference semantics with value types, non-trailing named arguments.</p>
+</li>
+<li><p>A new compilation mode, <code>bundleOnly</code>, allows faster compilation of SPA projects by skipping some parts of the C# or F# compilation that are unnecessary if you don't reference this project from other .NET projects. Use it by setting <code>&quot;project&quot;: &quot;bundleOnly&quot;</code> in wsconfig.json, or <code>&lt;WebSharperProject&gt;BundleOnly&lt;/WebSharperProject&gt;</code> in your .*proj file if you are not using wsconfig.json.</p>
+</li>
+<li><p>WebSharper.UI enhancements:</p>
+<ul>
+<li><p><code>View.WithInit init view</code> creates a View that immediately returns a given initial value <code>init</code> if the input <code>view</code> is still awaiting.</p>
+<pre><code class="language-fsharp">module Server =
+    [&lt;Rpc&gt;]
+    let Greet (x: string) =
+        async { return &quot;Hello, &quot; + x }
+
+[&lt;JavaScript&gt;]
+module Client =
+    let userInput = Var.Create &quot;world&quot;
+
+    let vDoubled =
+        userInput.View
+        |&gt; View.MapAsync Server.Greet
+        |&gt; View.WithInit &quot;Deciding how to greet you...&quot;
+</code></pre>
+<p>Similarly, <code>View.WithInitOption view</code> immediately returns <code>None</code> if the input <code>view</code> is still awaiting, then returns <code>Some</code> once <code>view</code> has a value.</p>
+</li>
+<li><p><code>Attr.DynamicClass</code>'s API was inconsistent with other <code>Attr.*</code> functions: it was a generic function taking a <code>View&lt;'T&gt;</code> and a mapping function <code>'T -&gt; bool</code>, rather than directly a <code>View&lt;bool&gt;</code>. It is now deprecated, and the new <code>Attr.DynamicClassPred</code> has the more standard behavior.</p>
+<p>Additionally, the new <code>Attr.ClassPred</code> is equivalent to <code>DynamicClassPred</code> but takes its argument as a <code>bool</code> rather than a <code>View&lt;bool&gt;</code> and is reactive when using <code>.V</code>. It is now the recommended way to create a class that is reactively set or unset.</p>
+<pre><code class="language-fsharp">let currentPage = Var.Create &quot;home&quot;
+
+// Obsolete version:
+let hideIfHome() =
+    Attr.DynamicClass &quot;hidden&quot; currentPage.View (fun x -&gt; x = &quot;home&quot;)
+
+// New recommended version:
+let hideIfHome() =
+    Attr.ClassPred &quot;hidden&quot; (currentPage.V = &quot;home&quot;)
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>Happy coding!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

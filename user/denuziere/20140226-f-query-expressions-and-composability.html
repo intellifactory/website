@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">F# query expressions and composability</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                            <p class="text-white">Feb 26, 2014</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>Anyone who has written non-trivial applications that need to access a SQL database can attest it: being able to compose SQL queries, insert parts of query that depend on some runtime criterion, is tremendously helpful. Not having this capability often means having to copy and paste queries just to be able to add a &quot;where&quot; or a &quot;join&quot; clause, and I know few better ways to end up with buggy, hard-to-maintain code.</p>
+<p>This article discusses the auto-quoting mechanism of F# 3.x query expressions and how it can be leveraged to implement not-too-clunky composition.</p>
+<h2 id="powerpack.linq">PowerPack.Linq</h2>
+<p>In F# 2.0, the standard / usual way to access SQL databases was PowerPack.Linq, which featured a <code>query</code> function capable of translating a quotation containing sequence operations into a LINQ query. Therefore, composing sub-queries basically meant composing sequence operations, and it was not too difficult: quotation splicing did the trick.</p>
+<p>Let's take the classic example of a web forum, with a <code>Message</code> table containing a field <code>UserId</code> that keys into a <code>User</code> table through its <code>Id</code> field. Let's write the following function:</p>
+<pre><code class="language-fsharp">val GetLatestMessages : num: int -&gt; username: string option -&gt; Message[]
+</code></pre>
+<p>If <code>username</code> is <code>None</code>, we return the <code>num</code> latest messages posted by anyone; else, only those posted by the given user. So depending on <code>username</code>, we will need two different SQL queries: one with a join into the users table, and one without.</p>
+<p>With PowerPack.Linq, it will look like this:</p>
+<pre><code class="language-fsharp">let GetLatestMessages num usernameOpt =
+  use db = (* retrieve LINQ-to-SQL context *)
+  let baseQuery =
+    &lt;@ db.Messages |&gt; Seq.sortBy (fun m -&gt; m.PostedDate) @&gt;
+  let filteredQuery =
+    match usernameOpt with
+    | None -&gt; baseQuery
+    | Some username -&gt;
+      &lt;@ seq { for m in %baseQuery do
+               for u in db.Users do
+               if u.Username = username &amp;&amp; m.UserId = u.Id then
+                 yield m } @&gt;
+  query &lt;@ %filteredQuery |&gt; Seq.take num @&gt;
+  |&gt; Array.ofSeq
+</code></pre>
+<p>Note the use of the percent operator. It performs quotation splicing, which means that its argument, itself a quotation, is put as-is into the quotation being defined. In the end, the quotation compiled by <code>query</code> depends on the value of <code>usernameOpt</code>. If it is <code>None</code>, then the final quotation is:</p>
+<pre><code class="language-fsharp">&lt;@ db.Messages
+   |&gt; Seq.sortBy (fun m -&gt; m.PostedDate)
+   |&gt; Seq.take num @&gt;
+</code></pre>
+<p>If it is <code>Some username</code>, then the final quotation is:</p>
+<pre><code class="language-fsharp">&lt;@ seq { for m in (db.Messages |&gt; Seq.sortBy (fun m -&gt; m.PostedDate)) do
+         for u in db.Users do
+         if u.Username = username &amp;&amp; m.UserId = u.Id then
+           yield m }
+   |&gt; Seq.take num @&gt;
+</code></pre>
+<p>The function <code>query</code> is then able to take whichever of these quotations, compile it into a valid SQL query, and run it. We do have the functionality we need, with the totality of the query being performed by the database.</p>
+<h2 id="query-expressions-the-problem">Query Expressions: The Problem</h2>
+<p>F# 3.0 introduced query expressions, with the intent of creating a syntax similar to C#'s own LINQ syntax, itself very close to plain SQL. Using query expressions, the two above variants would be written as follows:</p>
+<pre><code class="language-fsharp">query { for m in db.Messages do
+        sortBy m.PostedDate
+        select m
+        take num }
+
+query { for m in db.Messages do
+        sortBy m.PostedDate
+        join u in db.Users on (m.UserId = u.Id)
+        where (u.Username = username)
+        select m
+        take num }
+</code></pre>
+<p>But how can we choose between these two queries without having to duplicate the common parts, just like we did with <code>PowerPack.Linq</code>? As a first attempt, we can try to use the result of the previous fragment in the <code>for</code> part of the next one.</p>
+<pre><code class="language-fsharp">let GetLatestMessages num usernameOpt =
+  use db = (* retrieve LINQ-to-SQL context *)
+  let baseQuery =
+    query { for m in db.Messages do
+            sortBy m.PostedDate
+            select m }
+  let filteredQuery =
+    match usernameOpt with
+    | None -&gt; baseQuery
+    | Some username -&gt;
+      query { for m in baseQuery do
+              join u in db.Users on (m.UserId = u.Id)
+              where (u.Username = username)
+              select m }
+  query { for m in filteredQuery do
+          take num }
+  |&gt; Array.ofSeq
+</code></pre>
+<p>However, at runtime, we get this cryptic exception (using a LINQ to Entities context; the message will probably be different if you use LINQ to SQL):</p>
+<pre><code>This method supports the LINQ to Entities infrastructure
+and is not intended to be used directly from your code.
+</code></pre>
+<p>What is going on here? Well, the problem here is that the <code>query</code> builder actually performs the translation to LINQ. So <code>baseQuery</code> is actually an <code>IQueryable&lt;Message&gt;</code> representing the output of the query. It is therefore too late to combine into a more complex query!</p>
+<h2 id="query-expressions-the-solution">Query Expressions: The Solution</h2>
+<p>In order to progress further, we need to understand how query expressions work internally. Like any F# computation expression, a query expression is mostly syntactic sugar on top of method calls on the builder object used to create the expression, in this case the <code>query</code> object. For example, <code>baseQuery</code> above corresponds to the following expression:</p>
+<pre><code class="language-fsharp">  query.Select(
+    query.SortBy(
+      query.Source(db.Messages),
+      fun m -&gt; m.PostedDate),
+    fun m -&gt; m)
+</code></pre>
+<p>(I am actually omitting a couple extra method calls that would make this less readable, but the principle stays the same.)</p>
+<p>But actually... Not quite. If this was all there was to it, then it would be trivially composable, just like normal <code>seq { ... }</code> expressions are composable. But in order to be able to compile such an expression to LINQ, it needs to be able to inspect it; and to do so, without telling you, it uses... <em>(drumrolls...)</em> quotations.</p>
+<p>In fact, the query expression syntax does more than put sugar on top of some method calls; when some conditions are met (ie. when the builder object has certain specific methods), it also implicitly puts the whole body in a quotation, and calls the <code>Run</code> method on it. The translation of <code>baseQuery</code> is therefore closer to this:</p>
+<pre><code class="language-fsharp">query.Run &lt;@
+  query.Select(
+    query.SortBy(
+      query.Source(db.Messages),
+      fun m -&gt; m.PostedDate),
+    fun m -&gt; m)
+@&gt;
+</code></pre>
+<p><code>query.Run : Expr&lt;Linq.QuerySource&lt;'T, _&gt;&gt; -&gt; IQueryable&lt;'T&gt;</code> is responsible for taking this quotation and turning it into the final LINQ expression that maps directly to SQL.</p>
+<p>Now if only we could have direct access to the quotation, we would be golden. Well, it turns out we can do exactly that. We are going to play around with quoting and unquoting pieces of queries, which is something I've first seen done by Tomas Petricek <a href="http://stackoverflow.com/questions/13826749/how-do-you-compose-query-expressions-in-f">here</a>. In fact, this SO response is the original inspiration for this whole post.</p>
+<p>All we have to do here is to create a subclass of <code>Linq.QueryBuilder</code> (the class of <code>query</code>) that implements <code>Run</code> differently.</p>
+<pre><code class="language-fsharp">type PartialQueryBuilder() =
+  inherit Linq.QueryBuilder()
+
+  member this.Run(e: Expr&lt;Linq.QuerySource&lt;'T, IQueryable&gt;&gt;) = e
+
+let pquery = PartialQueryBuilder()
+</code></pre>
+<p>We now have a query expression constructor, <code>pquery</code>, that we can invoke exactly like <code>query</code>, except that it returns the unevaluated query quotation.</p>
+<pre><code class="language-fsharp">let baseQuery =
+  pquery{ for m in db.Messages do
+          sortBy m.PostedDate
+          select m }
+
+// val baseQuery : Expr&lt;Linq.QuerySource&lt;'T, _&gt;&gt;
+</code></pre>
+<p>What we want to do next is to be able to pass this unevaluated query to <code>for</code> in another query. As I've shown above, the sequence given to <code>for</code> is passed by the desugaring to a method <code>query.Source : IQueryable&lt;'T&gt; -&gt; Linq.QuerySource&lt;'T, _&gt;</code>. But here, pquery directly gives us a <code>Linq.QuerySource&lt;'T, _&gt;</code>. No problem, we can use a trick similar to the above <code>Run</code> trick, except using an extension method on <code>query</code> itself:</p>
+<pre><code class="language-fsharp">type Linq.QueryBuilder with
+  [&lt;ReflectedDefinition&gt;]
+  member this.Source(qs: Linq.QuerySource&lt;'T, _&gt;) = qs
+</code></pre>
+<p>Okay, now all we have to do is pass our partial query to <code>for</code>. But wait, isn't it an <code>Expr&lt;Linq.QuerySource&lt;'T, _&gt;&gt;</code>, ie. a quoted version of what the <code>Source</code> we just wrote expects? Well, remember when I said that the body of query expressions gets wrapped in a quotation? This is not just a figure, it really is exactly what happens. So you can even use the <code>%</code> splicing operator in query expressions! For our example, the following code is valid:</p>
+<pre><code class="language-fsharp">query { for m in %baseQuery do
+        join u in db.Users on (m.UserId = u.Id)
+        where (u.Username = username)
+        select m }
+</code></pre>
+<p>And there we go! We just wrote a partial query and composed it into a final query, and readability-wise all it takes is an extra <code>p</code> in the former and a <code>%</code> in the latter. Not bad!</p>
+<p>Here is the whole code for reference:</p>
+<pre><code class="language-fsharp">// Utility code, write it once
+
+type PartialQueryBuilder() =
+  inherit Linq.QueryBuilder()
+
+  member this.Run(e: Expr&lt;Linq.QuerySource&lt;'T, IQueryable&gt;&gt;) = e
+
+let pquery = PartialQueryBuilder()
+
+type Linq.QueryBuilder with
+  [&lt;ReflectedDefinition&gt;]
+  member this.Source(qs: Linq.QuerySource&lt;'T, _&gt;) = qs
+
+// Example usage
+
+let GetLatestMessages num usernameOpt =
+  use db = (* retrieve LINQ-to-SQL context *)
+  let baseQuery =
+    pquery{ for m in ctx.Messages do
+            sortBy m.PostedDate
+            select m }
+  let filteredQuery =
+    match usernameOpt with
+    | None -&gt; baseQuery
+    | Some username -&gt;
+      pquery{ for m in %baseQuery do
+              join u in db.Users on (m.UserId = u.Id)
+              where (u.Username = username)
+              select m }
+  query { for m in %filteredQuery do
+          take num }
+  |&gt; Array.ofSeq
+</code></pre>
+<p>Note how we can just as easily compose a partial query into another partial query. And finally, if you need to directly run a partial query (as opposed to splicing it into a normal query), you can just pass it to the standard <code>query.Run</code>.</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

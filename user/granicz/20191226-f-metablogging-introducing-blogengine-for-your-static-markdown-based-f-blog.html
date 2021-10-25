@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">F# metablogging: introducing BlogEngine for your static markdown-based F# blog</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Dec 26, 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>(This post is part of <a href="https://sergeytihon.com/2019/11/05/f-advent-calendar-in-english-2019/">F# Advent 2019</a> - a huge thanks to Sergey Tihon for organizing this initiative for many years now! Happy Holidays!)</p>
+<p>Back in 2015, I was super happy to <a href="https://twitter.com/granicz/status/602928811320152064">announce FsBlogger</a>, an F#+markdown blogging platform.</p>
+<p><a href="https://i.imgur.com/VVYjhlZ.png"><img src="https://i.imgur.com/VVYjhlZl.png" alt="" /></a></p>
+<p>To this day, this platform runs our <a href="http://intellifactory.com/blogs/1">IntelliFactory</a>, <a href="https://forums.websharper.com/blogs">WebSharper</a>, and <a href="http://cloudsharper.com/blog">CloudSharper</a> blogs, and is directly tied into <a href="https://fpish.net">FPish</a> and the F# RSS feed on the <a href="https://fsharp.org">fsharp.org</a> website. However, while a fully managed blogging platform such as FsBlogger.com or Blogger.com frees you from having to deal with storing, running, and managing your blog articles, it can also leave you feeling out of control and dependent on these platform's longevity. One complaint in particular is that these managed options don't have transparent change tracking and self-hosting is not available. To address this, and to a fuller extent managing full static web sites as well, a whole host of static site generators (SSGs) popped up on the horizon. <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://nextjs.org/">Next.js</a>, <a href="https://gohugo.io/">Hugo</a> are prime examples.</p>
+<h3 id="with-and-beyond-ssgs-in-f">With and beyond SSGs in F#</h3>
+<p>Instead of looking at various SSGs, I am going to pick Jekyll as an example. A quick googling for &quot;Jekyll and F#&quot; reveals a staggering number of attempts to arrive at an elegant, static blog generator for F# developers. This stems from the fact that while Jekyll is pretty straightforward to use and easy to learn, we F# developers <del>like to do things our way</del> have extra needs. Here are some (totally random) examples of the ingenuity produced as a result.</p>
+<ul>
+<li><p>One early approach, ca. 2013, was Ashley Towns's <a href="https://github.com/aktowns/tilde">tilde</a> library, that used Razor and F# Formatting. Some of this made it into MattDrivenDev et. al's <a href="https://github.com/fsprojects/FsBlog">FsBlog</a>.</p>
+</li>
+<li><p>I also thoroughly enjoyed Mathias Brandewinder's <a href="http://brandewinder.com/2016/08/28/gsd-with-fsharp/">Get Stuff Done (GDS) article on porting his old blog to Jekyll</a>. Here, Mathias walks through some plain F# functions that he used to convert his past HTML articles to markdown files that can feed directly into Jekyll.</p>
+</li>
+<li><p>Colin Bull, another long-time F# veteran describes <a href="http://www.colinbull.net/2014/11/04/Blogging-with-FSharp/">his move to Jekyll</a> and how he used F# Formatting to enable using <code>.fsx</code> blog files as well. A definite read for those who need support for blogging with F# literate programming.</p>
+</li>
+<li><p>The <a href="http://fsharp.org">fsharp.org</a> website is also based on the Jekyll layout but uses an <a href="https://github.com/fsharp/fsfoundation/commit/755d45d9c233374dbb44ba1fdf87214ef8b34520">.fsx script</a> that does away with the Jekyll runtime and instead uses a single F# script to process source <code>.md</code> files into Liquid templates to generate the static <code>.html</code> output. As Tomas called it in his above commit, this primitive approach does make certain cuts, for instance it only handles simple <code>{{ ... }}</code> placeholders in the Liquid source templates, although using DotLiquid or something similar would be an easy enhancement.</p>
+</li>
+<li><p>Krzysztof Cieslak's <a href="https://github.com/LambdaFactory/Fornax">Fornax</a> does away with Jekyll all together, and instead gives you an F# DSL to define your templates and lets you instantiate them from F# values as models. It also uses markdown files as input.</p>
+</li>
+<li><p>Jeremie Chassaing <a href="https://thinkbeforecoding.com/post/2018/12/07/full-fsharp-blog">implements a full blog engine</a> by using F# Formatting to render markdown to HTML and Fable HTML combinators to output the resulting content into simple layout pages. In subsequent articles (<a href="https://thinkbeforecoding.com/post/2018/12/09/full-fsharp-blog-2">Part 2</a> and <a href="https://thinkbeforecoding.com/post/2019/12/13/full-fsharp-blog-3">Part 3</a>) he sets up Azure Functions to push and retrieve blog articles to Azure blob storage and shows how to set up free SSL certs to secure the resulting blog.</p>
+</li>
+</ul>
+<h3 id="combining-ssgs-and-f">Combining SSGs and F#</h3>
+<p>It's hard to argue that you should switch your entire static site generation to F# (such as to Fornax or Fable in some of the above approaches) - especially if your tool doesn't support templating. A reasonable choice would be to keep full compatibility with a given SSG such as Jekyll in terms of input and templating, but remove the need to install a full Ruby/etc. development environment just to run these tools that generate the output markup. So Tomas nailed it with fsharp.org: if we already have an F# development environment installed, we should use that.</p>
+<p>In this article, I want to show you another way of keeping your SSG in F#: using <a href="https://websharper.com">WebSharper</a>. Armed with the full power of a .NET web framework and <a href="http://developers.websharper.com/docs/v4.x/fs/ui">its templating features</a> (see the HTML templates section), this has numerous advantages, most importantly, among others, that you can embed dynamic features written in F# or C# to give you a truly impressive and dynamic blog, despite being statically generated.</p>
+<p>So, how we do start?</p>
+<h3 id="getting-your-templates-under-control">Getting your templates under control</h3>
+<p>A long while back I started working on a WebSharper+Jekyll implementation that enabled dropping in a full Jekyll theme on top of a set of markdown article files to generate a static blog. However, I quickly got annoyed with the mess these themes came with: templates composed from smaller layout files that collectively were nearly impossible to author/enhance, configuration allowed HTML fragments without checking consistency or well-formedness, etc. So although there are a lot of Jekyll themes out there ready to be used, considering the very real possibility that most users will end up wanting customizing these, this was a no go for me at the end. Instead, I decided to use WebSharper's HTML templating type provider and plain HTML files decorated with a few basic placeholders, and filling these site templates with content in an all-F# solution.</p>
+<h3 id="your-blog-as-a-websharper-offline-sitelet">Your blog as a WebSharper (offline) sitelet</h3>
+<p>A <a href="http://developers.websharper.com/docs/v4.x/fs/sitelets">sitelet</a> is a WebSharper server-side abstraction that describes how incoming requests are routed to the content we return. A typical sitelet will use a discriminated union (DU) endpoint type and provide a mapping from those endpoints to responses with a simple pattern match (most often using <code>Application.MultiPage</code> as a helper).</p>
+<p>So you can model your blog's endpoints as something like:</p>
+<pre><code class="language-fsharp">open WebSharper
+open WebSharper.Sitelets
+
+type EndPoint =
+    | [&lt;EndPoint &quot;GET /&quot;&gt;] Home
+    | [&lt;EndPoint &quot;GET /blog&quot;&gt;] Article of slug:string
+
+...
+module Site =
+    let ArticlePage articles article =
+        ...
+
+    let Main articles =
+        Application.MultiPage (fun (ctx: Context&lt;_&gt;) -&gt; function
+            | Home -&gt;
+                Content.Text &quot;This will be the home page&quot;
+            | Article slug -&gt;
+                ArticlePage articles articles.[slug]
+        )
+</code></pre>
+<p>Using DUs to represent the pages in our web application proves to be a handy tool when it comes to static site generation, and WebSharper provides a basic <code>IWebsite</code> interface for marking web apps for this sort of processing. But more on this later.</p>
+<p>Just as simple as the above code looks, we have a home page and a set of blog pages identified by an article &quot;slug.&quot; Rendering the actual blog page content is handled by <code>Site.ArticlePage</code>, a function that will compute a <code>Async&lt;Content&lt;'T&gt;&gt;</code>, where <code>Content</code> is the built-in type representing content generated by a sitelet.</p>
+<p>Now, <code>Site.ArticlePage</code> will be different depending on your own template, this is a function every blog author has to write initially. Structurally, it will be looking something like:</p>
+<pre><code class="language-fsharp">open WebSharper.UI
+
+type BlogTemplate = Templating.Template&lt;&quot;index.html&quot;&gt;
+
+let ArticlePage articles (article: Article) =
+    BlogTemplate.Article()
+        .Title(article.Title)
+        .Subtitle(article.Subtitle)
+        .Content(Doc.Verbatim article.ContentHtml)
+        .Doc()
+</code></pre>
+<p>This code assumes you have an <code>index.html</code> file with an inner template called <code>Article</code> in it, which in turn contains multiple placeholders (<code>Title</code>, <code>Subtitle</code>, <code>Content</code>, etc.)</p>
+<p>It also uses a type (<code>Article</code>) to store data about a given blog article. And because it's often the case that a given article needs references to other articles, we just pass the entire collection (as an <code>articles: Map&lt;string, Article&gt;</code> argument) as well.</p>
+<h3 id="offline-vs-onlineregular-sitelets">Offline vs online/regular sitelets</h3>
+<p>Now, back to <code>IWebsite</code> I mentioned earlier. A sitelet is most typically served in a live web app by exposing it as a module-bound value with the <code>[&lt;Website&gt;]</code> attribute, something like:</p>
+<pre><code class="language-fsharp">module App =
+    let articles = Site.Articles () // compute all articles
+
+    [&lt;Website&gt;]
+    let App = Site.Main articles
+</code></pre>
+<p>Here, you need to use the WebSharper <a href="http://developers.websharper.com/docs/v4.x/fs/templates">client-server project template</a> (available for <code>dotnet</code> CLI use and as a Visual Studio extension installer from the WebSharper <a href="https://websharper.com/downloads">download page</a>) to get the correct build configuration to compile and run your sitelet-based app, and you should not need anything else to get a working app.</p>
+<p>However, for your static site you don't want to run a server, all you want are the HTML files for each of your pages/articles. To set this up, you need to add a few extra lines to your app:</p>
+<pre><code class="language-fsharp">[&lt;Sealed&gt;]
+type Website() =
+    let articles = Site.Articles ()
+
+    interface IWebsite&lt;EndPoint&gt; with
+        member this.Sitelet = Site.Main articles
+        member this.Actions = [
+            Home
+            for (slug, _) in Map.toList articles do
+                Article slug
+        ]
+
+[&lt;assembly: Website(typeof&lt;Website&gt;)&gt;]
+do ()
+</code></pre>
+<p>Note the use of the <code>[&lt;Website&gt;]</code> attribute once again, this time on the entire assembly, with a type argument. This type argument needs to implement <code>IWebsite&lt;EndPoint&gt;</code>, which requires two members: the main sitelet and a list of actions (aka. endpoints) for which you want to generate static content.</p>
+<p>(Now, you may have used other F# web tech before and if so, you likely remember constructing paths via various route combinators or paths that resembled <code>printf</code> format strings. Hopefully, here you can appreciate using DUs instead to represent web pages to process.)</p>
+<p>This use of the <code>[&lt;Website&gt;]</code>  attribute marks what we call an <strong>offline sitelet</strong> - a sitelet statically generated on the server into an HTML application. The only additional change you need for this to work is to ensure that the <code>project</code> type in your <code>wsconfig.json</code> is set to <code>&quot;html&quot;</code>, naturally, or simply use the WebSharper HTML application project template to start from.</p>
+<h3 id="blogengine-getting-your-new-shiny-f-blog-and-adding-your-articles">BlogEngine:  Getting your new shiny F# blog and adding your articles</h3>
+<p><a href="https://i.imgur.com/RVJs5IX.png"><img src="https://i.imgur.com/RVJs5IXl.png" alt="" /></a></p>
+<p>If you prefer to jump into a working setup, you can just check out the <a href="https://github.com/granicz/BlogEngine">BlogEngine repo</a> I created to jumpstart the process, and follow the instructions in <code>README.md</code> to build your new F# blog:</p>
+<ol>
+<li>Run <code>install.ps</code> to install the npm packages needed, this is only <a href="http://bulma.io">Bulma</a> currently.</li>
+<li>Run <code>dotnet build</code> to compile and generate your dummy blog (remember, you don't have any articles yet, but don't worry I copied a few of mine to help you get started.)</li>
+<li>Run <code>start.cmd</code> to power up a local webserver and serve your blog articles.</li>
+</ol>
+<p>All in all, it only takes these three commands to get a blog up and running, and all the code behind it is under 300 lines of F#.</p>
+<p>At this point, you can <strong>start placing your markdown files</strong> under <code>src\Website\posts</code> using the <code>YYYY-MM-DD-TitleWithNoSpaces.md</code> file format. This will ensure that your articles are displayed in the expected chronological order. Since BlogEngine is geared towards building developer/F# blogs, you can write F# code inside &quot;triple-backtick fsharp&quot; code blocks, these will be turned into properly syntax-highlighted code blocks at the end.</p>
+<p>You may also notice that BlogEngine has a list of all blog articles on the home page. This uses a custom inner template (<code>HomeBody</code>) and an <code>ArticleList</code> placeholder in it, and is implemented in the main sitelet function as:</p>
+<pre><code class="language-fsharp">    let Main articles =
+        Application.MultiPage (fun (ctx: Context&lt;_&gt;) -&gt; function
+            | Home -&gt;
+                MainTemplate.HomeBody()
+                    .ArticleList(
+                        Doc.Concat [
+                            for (_, article) in Map.toList articles -&gt;
+                                MainTemplate.ArticleCard()
+                                    .Author(&quot;My name&quot;)
+                                    .Title(article.title)
+                                    .Url(article.url)
+                                    .Date(article.date)
+                                    .Doc()
+                        ]                        
+                    )
+                    .Doc()
+                |&gt; Page None false articles
+            | Article slug -&gt; ...
+</code></pre>
+<h4 id="getting-the-html-content-of-markdown-source-files">Getting the HTML content of markdown source files</h4>
+<p>Recall how we instantiated the <code>.Content</code> placeholder of an article by simply passing the HTML representation verbatim. Here is the actual code from the BlogEngine repo:</p>
+<pre><code class="language-fsharp">    let ArticlePage articles (article: Article) =
+        MainTemplate.Article()
+            .Title(article.title)
+            .Subtitle(Doc.Verbatim article.subtitle)
+            .Sidebar(BlogSidebar articles)
+            .Content(PLAIN article.content)
+            .Doc()
+        |&gt; Page (Some article.title) false articles
+</code></pre>
+<p>Here, <code>PLAIN</code> is just a helper for creating verbatim HTML output, the essence lies with <code>article.content</code> - which at this point is an HTML string parsed and generated for each article's markdown source file. I will spare you the details and instead refer you to the ~150 LOC (about 2/3 of the entire code base) that deals with that conversion. Here is a rough summary of what happens underneath:</p>
+<ol>
+<li><p>I created the <code>Article</code> type to model the data I want to know about each article. It looks like this:</p>
+<pre><code class="language-fsharp">type [&lt;CLIMutable&gt;] Article =
+    {
+        title: string
+        subtitle: string
+        url: string
+        content: string
+        date: string
+    }
+</code></pre>
+</li>
+<li><p>A couple important fields into this record (<code>title</code> and <code>subtitle</code>) will come from a YAML header of each markdown input file, which we strip and parse as YAML using <a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a>, a .NET library/NuGet that simplifies YAML handling. Note the <code>[&lt;CLIMutable&gt;]</code> attribute on <code>Article</code> above, this is to ensure that YamlDotNet can create an <code>Article</code> instance even when certain fields are missing.</p>
+</li>
+<li><p>Some of these fields: <code>url</code>, <code>content</code>, and <code>date</code> will be computed instead of passed in the YAML header. Part of this conversion is taking the rest of the markdown file (everything but the YAML header) and converting it to HTML using <a href="https://github.com/lunet-io/markdig">Markdig</a>, a .NET library/NuGet markdown processor. <code>date</code> will come from the input file name.</p>
+</li>
+<li><p>When we define the main offline sitelet for our blog, we run the above process for the markdown files in the <code>src\Website\posts</code> folder, and feed the result as a <code>Map&lt;string, Article&gt;</code> collection to the rest of our sitelet pipeline.</p>
+</li>
+<li><p>We then list/enumerate our articles in our offline sitelet definition (in the <code>Actions</code> member) using this article collection. Generating HTML files automatically completes the process.</p>
+</li>
+</ol>
+<p>Note, that each article HTML page is generated at compilation time. This means that if you change or add a new article, you need to recompile the <code>src\Website</code> project.</p>
+<h3 id="modifying-the-existing-blog-template-or-adding-your-own">Modifying the existing blog template or adding your own</h3>
+<p>Recall I made a statement about Jekyll and its templates being a PITA to edit/customize, because you end up writing unchecked HTML code in configuration files or in nested templates, both of which are impossible to preview until you regenerate your site. If you study the <code>index.html</code> we use in the BlogEngine repo, you will see that we did away with Jekyll-style configuration files and incorporated all templates (nested or not) into this one master file. Clearly, if you open this file in a browser, you won't find it easy to &quot;edit and see the results,&quot; either. But you can do a few things to alleviate the situation:</p>
+<ol start="0">
+<li><p>Recompile the <code>src\Website</code> project on every template or SCSS change to regenerate everything properly. You can also set up a file watcher for these files to trigger recompilation automatically. This sucks, but works, and you are in no worse situation than with Jekyll. Keep reading for more options.</p>
+</li>
+<li><p>You can start a webserver relative to <code>src\Website</code> (just create a new script from <code>start.cmd</code> in the root folder to point here) - this way various  file references light up properly, but those WebSharper-specific templates still get in the way.</p>
+</li>
+<li><p>You can apply <code>display:none</code> on those templates using a few lines of CSS. You can then edit your HTML and see your changes immediately. This however will make it impossible to work on (inner) templates.</p>
+</li>
+<li><p>You can keep everything as is, but switch your <code>src/Website</code> project to <code>&quot;site&quot;</code>in <code>wsconfig.json</code> - essentially, making it a hosted client-server app. Follow the guidance in the &quot;Offline vs online/regular sitelets&quot; section above to mark your sitelet appropriately for this to work. Once you set this up, I also recommend setting up automatic template reloading when the template file changes by modifying the TP call as follows:</p>
+<pre><code class="language-fsharp">type MainTemplate = Templating.Template&lt;&quot;index.html&quot;, serverLoad=Templating.ServerLoad.WhenChanged&gt;
+</code></pre>
+<p>With these changes, you can fire up your blog, make changes to <code>index.html</code> (including changes to your inner templates) and see those changes immediately when you hit Ctrl+F5 on a rendered page (clearly, you need to run the webserver to serve these files.) This should give you a pretty comfortable workflow to author new templates or enhance the built-in one.</p>
+</li>
+</ol>
+<h3 id="adding-client-side-functionality-to-your-blog-pages">Adding client-side functionality to your blog pages</h3>
+<p>As I pointed out earlier, one of the most significant advantages of using the approach I outlined above is being able to write client-side functionality in F# (or C#) instead of JavaScript/TypeScript.</p>
+<p>In fact, the reference BlogEngine repo already comes with two such client-side enhancements built-in: syntax-highlighting F# code in your blog articles and setting up the drawer menu interaction when using mobile devices. These are placed in the adjacent <code>src\Client</code> project, which is a WebSharper &quot;bundle&quot; project (project type <code>&quot;bundle&quot;</code> in <code>wsconfig.json</code>), ie. a project whose JS+CSS output is bundled into a single JS+CSS file. This is so that we can include these easily in our master template file and benefit immediately.</p>
+<p>For instance, here is the code for setting up the syntax highlighter (which uses <a href="https://highlightjs.org/">Highlight.js</a> as a WebSharper extension - a &quot;proxy&quot; that lets us talk to this JS library in F#/C#):</p>
+<pre><code class="language-fsharp">module Highlight =
+    open WebSharper.HighlightJS
+
+    [&lt;Require(typeof&lt;Resources.Languages.Fsharp&gt;)&gt;]
+    [&lt;Require(typeof&lt;Resources.Styles.Vs&gt;)&gt;]
+    let Run() =
+        JS.Document.QuerySelectorAll(&quot;code[class^=language-]&quot;).ForEach(
+            (fun (node, _, _, _) -&gt; Hljs.HighlightBlock(node)),
+            JS.Undefined
+        )
+</code></pre>
+<p>This showcases WebSharper's important value proposition for resource handling: when <code>Highlight.Run()</code> is called in any dynamic functionality embedded into a sitelet page (thus in our blog article pages as well) it will automatically bring Highlight.js's  F# language mode and VS styles with it (and the inner call to <code>Hljs.HighlightBlock</code> will bring the main Highlight.js references/resources as well, in the right/expected order.)</p>
+<p>For this to work, the bundle project from <code>src\Client</code> needs to have a &quot;entrypoint&quot;, a function that will call and light up all desired functionality when the bundle script is loaded into an HTML page. WebSharper conveniently provides the <code>[&lt;SPAEntryPoint&gt;]</code> attribute, and we can tag our global entrypoint function with it as follows:</p>
+<pre><code class="language-fsharp">[&lt;SPAEntryPoint&gt;]
+let Main() =
+    Bulma.HookDrawer()
+    Highlight.Run()
+
+[&lt;assembly:JavaScript&gt;]
+do ()
+</code></pre>
+<p>In a similar vein, you could also create your own custom client-side functionality for <em>selected</em> blog articles, such as visualizations/charts/etc for a given article. This, however, doesn't yet blend into the simplified &quot;process all input files in the same way&quot; we presented. One way to deal with this would be via a custom YAML header field and differentiate based on its value when rendering each article page. I will leave this suprisingly straightforward solution to another blog article.</p>
+<h3 id="where-to-go-next">Where to go next?</h3>
+<p>Apart from the custom client-side content above (which is more of a blog-specific path, as opposed to a general wireframe solution I intend to give with BlogEngine), I plan to add support for multi-user articles and RSS feeds, and follow up with another article about setting up automatic deployment to GitHub Pages. We will most definitely use these new features in our own various company-wide blogs, and migrate away from the current self-hosted solutions.</p>
+<p>Anyhow - lots to explore, I hope you found this article useful and will give BlogEngine a try. As always, feel free to get in touch or file tickets or PRs, I'd love to get more people involved. I also want to thank my <a href="https://intellifactory.com">IntelliFactory</a> colleagues for their input/ideas and work that led to BlogEngine, most notably <a href="https://github.com/Tarmil">Loic Denuziere</a>, who has now adapted some of the earlier code for his own blog and for the <a href="http://fsbolero.io">Bolero website</a>.</p>
+<p>Happy coding and Happy Holidays!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

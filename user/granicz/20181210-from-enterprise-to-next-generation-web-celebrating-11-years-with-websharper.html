@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">From enterprise to next-generation web: celebrating 11 years with WebSharper</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Dec 10, 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>(This article is my contribution to <a href="https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/">F# Advent</a> - a huge thanks to Sergey Tihon for organizing and running this initiative! - and it is the first part of a string of <strong>F# + WebAssembly</strong> articles lined up for you in coming days and weeks.)</p>
+<p>F# web development is teeming with ideas and OSS projects, and it's often hard to figure out what to pay attention to with all the social media noise. With <strong><a href="http://websharper.com">WebSharper</a> being 11 years old soon</strong>, I wanted to take this opportunity to briefly outline the historical circumstances around WebSharper (just some notes in no particular order) that <strong>position it for a bright future outlook</strong>, and give a quick glimple of what we are working on with it to advance the current state of F# web programming. If you'd rather just skip the history part, feel free to skip to the whats-coming part and <strong>see a full WebSharper application run on WebAssembly</strong>.</p>
+<h3 id="not-your-typical-community-project-a-historical-perspective">Not your typical community project - a historical perspective</h3>
+<p>We started WebSharper in 2007 at <a href="http://intellifactory.com">IntelliFactory</a>, a small Budapest-based startup, to enable ourselves to develop ASP.NET applications entirely in F#. We were not only interested in writing code behind files in F# (see the work of Tomas Petricek to implement an <a href="http://tomasp.net/blog/aspnet-fsharp-intro.aspx/">F# CodeDOM provider for ASP.NET</a>) , but also client-side code that interacts with the server, transpiled into JavaScript. Unlike in Tomas's <a href="http://tomasp.net/blog/fswebtools-intro.aspx/">F# Web Tools project</a> that came up around the same time, calls crossing tiers were marked by .NET attributes (<code>[&lt;Remote&gt;]</code> vs <code>[&lt;JavaScript&gt;]</code>) and nearly the entire F# language and its standard libraries were supported in the translation.  This effort culminated in the <strong>first public WebSharper release in 2007</strong>, with support for remote and service calls, and the ability to write client-server apps in F# to facilitate full-stack development.</p>
+<p>WebSharper's goal has always been <strong>removing the need to work with JavaScript</strong> and <strong>to provide a more robust, type-safe, and functional way to develop web applications - without having to worry about the underlying execution engine</strong>. Various WebSharper concepts that were evolved (sitelets, pagelets, formlets, piglets, etc.) all aimed at this single goal and quickly shifted our attention from just writing an F# to JavaScript transpiler to working on <strong>fundamental building blocks</strong> for web applications. I often refer to this as &quot;<strong>WebSharper is 80% about web abstractions and 20% about translating F# to JavaScript</strong>&quot; in talks I give at conferences, but it's difficult to appreciate this until you actually work with WebSharper.</p>
+<p>Some of these web abstractions that WebSharper pioneered:</p>
+<ul>
+<li><strong><a href="https://developers.websharper.com/docs/v4.x/fs/sitelets">Sitelets</a></strong> - a server-side abstraction for <strong>building microservices and server-sides</strong> to web clients.</li>
+<li><strong>Typed endpoints, safe URLs</strong> - unique to WebSharper and part of the sitelet abstraction, these enable <strong>representing all entry points to an application's client and/or server-side in the type system</strong>.</li>
+<li><strong>Type-safe <a href="https://developers.websharper.com/docs/v4.x/fs/remoting">remoting</a></strong> - <strong>asyncronous client-server communication and message passing</strong>, with the ability to supply server-side functionality via multiple server sides, using an attribute-based notation or interfaces to mark/describe server-side functionality.</li>
+<li><strong><a href="https://github.com/dotnet-websharper/formlets">Formlets</a></strong> - <strong>declarative user interfaces</strong>, also available as <a href="https://github.com/dotnet-websharper/ui.formlets">reactive formlets</a> built on WebSharper UI. Formlets can be arbitrarily composed and can be used to build highly complex UIs, albeit without much control for render customization.</li>
+<li><strong><a href="https://github.com/dotnet-websharper/piglets">Piglets</a></strong> and <strong><a href="https://github.com/dotnet-websharper/forms">reactive Forms</a></strong> - providing the same consice, declarative notation as formlets, but <strong>with explicit control of the output structure</strong>.</li>
+<li><strong><a href="https://github.com/dotnet-websharper/ui">WebSharper UI</a></strong> (previously called UI.Next) - an alternative to React and other reactive libraries, UI provides a <strong>reactive application foundation with dynamic data flow</strong>.</li>
+</ul>
+<p>Back around 2007, open source in the .NET community was not widespread, and we quickly found a solid business opportunity to sell WebSharper as a commercial tech, keeping a free/shareware option (under what we coined as WebSharper Professional and Community.) Customers included Fortune 500 organizations and startups alike. In parallel, we also developed commercial WebSharper applications, for instance, we presented <strong>the first line-of-business application written entirely in F#</strong> (later followed by an entire umbrella of related services and applications) in CUFP 2009, the commercial users workshop organized under ICFP, one of the most prestigious international FP research/academic conferences. These applications were already in the 30-50k LOC range, proving WebSharper to be a <strong>worthy, mature, enterprise-ready technology</strong>.</p>
+<p>As a proprietary code base at the time, WebSharper met with a <strong>fair amount of resistance</strong> from the early F# community. Misconceptions like &quot;WebSharper is trying to do too much&quot;, &quot;WebSharper is hard to understand&quot;, and &quot;WebSharper is too monolithic, frameworks are evil&quot; all came from this prejudice. We listened to this criticism. To juggle our ongoing commercial contracts and further developing WebSharper in parallel, we released WebSharper on a dual license model (GNU GPL for open source projects and commercial license for closed source use), which ensured the viability for the time being, but failed to attract indy developers due to the &quot;copyleft&quot; issues associated with GPL. So ultimately, we <strong>released the entire code base on Apache 2.0</strong> (under WebSharper 3 in late 2014).</p>
+<p>From the start, the WebSharper ecosystem also encompassed various extensions, providing <strong>proxies to popular JavaScript libraries</strong> so they can be used in F# code directly. There is a resurgence of this now with Fable, binding JS libraries - and it's great to see these match those existing extensions available for WebSharper. Be sure to check out <a href="https://github.com/AndreiDegtiarev?tab=repositories">Andrei Degtiarev's community extensions</a>, Mariusz Wasak's <a href="https://github.com/websharper-extensions">PowerBI extensions</a>, and the <a href="https://github.com/dotnet-websharper">WebSharper organization on GitHub</a>, containing another 70+ extensions, all of which are also available on NuGet for easy reference in your projects. Most of these extensions use WIG underneath - the WebSharper Interface Generator: an <strong>F# DSL to describe and generate proxies</strong>. WIG is considerably expressive, catering to all sorts of JavaScript weirdness, yet WIG definitions remain short and easy to maintain. We also developed a <strong>TypeScript bridge to create WebSharper extensions from TypeScript declaration files</strong>, and enabled WebSharper to output the same type of declarations for WebSharper libraries. These tools and some larger extensions have been made available in the WebSharper Insider Program, and will likely be open source at some not so distant point similar to the 70+ of their counterparts already on GitHub.</p>
+<p>All in all, WebSharper sits in a slightly unusal corner of open source community projects: with an F# consulting company driving it and supporting it commercially for over 10 years, it caters to <strong>significantly more advanced scenarios</strong> that one usually encounters in larger, enterprise applications. It also represents a highly contraversial stance that <strong>seeks to minimize the use of JavaScript</strong>.  This often paints a false image: due to <strong>our team constantly being busy and overlooking the importance of remaining active on social media</strong> (most notably the F# Slack channel, Twitter, Gitter, etc. - sorry, we are working on that...), and our enterprise devs <strong>getting support through our dedicated support channels</strong> instead of the <a href="https://forums.websharper.com">public WebSharper forums</a> (start with the &quot;Request support&quot; button on the top right corner on forum tickets),  it's easy to assume you should be looking at other options. The constant pressure to infiltrate F# with JavaScript artifacts (proposals like adding npm dependencies to Paket, or adding features to the language that facilitate JavaScript translation, etc.) to widen F#'s appeal to include millions of JavaScript developers also doesn't help. <strong>It's time to realize that JavaScript might just soon be much less important.</strong></p>
+<p>While I urge everyone to always explore all options to formulate an educated opinion (after all, anything that raises awareness to <strong>any</strong> F# web development tool helps WebSharper become more visible as well), do consider that <strong>popular topics nowadays with other F# web tech (Giraffe, Fable, SAFE, Saturn, etc.)</strong>, such as creating microservices, calling remote functions, server and client-side debugging, source maps, composable and reactive UI forms, IDE integration and various project templates (just have a look at the last few editions of F# Weekly) <strong>have been available for years in the WebSharper ecosystem</strong>. Instead, you will find us most active with multi-server RPCs; reactive, native and highly performant UI abstractions; advanced templating for client-server apps and SPAs; client-server reactive models; enhanced performance with web workers; shared, type-safe routing on the client and the server; and other not-so-obvious themes.  But all in all, <strong>WebAssembly sits very high on our list and we are fully committed to it</strong>.</p>
+<h3 id="what-about-javascript">What about JavaScript?</h3>
+<p>WebSharper has always taken a low-ceremony stance with respect to generating JavaScript: it's done in a &quot;translate-it-and-forget-about-it&quot; fashion. The main objective here is to provide a <strong>semantically correct translation</strong>, and not pretty, F#-looking code that you will spend time hand-editing. In most cases, developers will never have to look at the generated code and can simply assume things work as expected, and for the demanding cases (that involve a heavy use of external JS libraries, etc.) employ source maps to help with debugging.</p>
+<p>WebSharper can emit <strong>minimized</strong> or verbose code (driven by a configuration setting or compiler option), and <strong>dead-code eliminated single-file includes for SPAs</strong>, among others. The generated JS code <strong>can be consumed from other JavaScript or TypeScript projects</strong> easily, and is also embedded into the target .NET assemblies to <strong>avoid recomputation in dependent projects</strong>. In addition, sitelet-based apps (client-server and HTML applications) perform <strong>resource tracking for each page served</strong>, outputting the minimal set of external references/dependencies for the generated JS functionality - both in the sitelet serving runtime and in statically generated pages. This is incredibly useful with reusable components that depend on each other or require JS libs to function (extensions, for instance.)</p>
+<p>These features ensure that your WebSharper applications <strong>scale properly</strong> as their complexity increases. Some of the largest WebSharper apps we worked on included 25-30 library projects, compiled incrementally on demand.</p>
+<p>You can therefore safely conclude that working with <strong>WebSharper will drastically reduce your exposure to JavaScript</strong>, often to nothing. Like I summarized earlier, this is one of the fundamental goals of WebSharper. This also applies to the typical development setup: while you can use JavaScript tools to bring dependencies into your project via <code>npm</code> and friends, <strong>the correct approach is to let this happen automatically by using proper WebSharper extensions</strong> that declare and embed/reference their dependencies.</p>
+<p>That said, we made a conscious effort to <strong>avoid external dependencies for the core WebSharper libraries</strong>. jQuery was one such dependency initially, used for dynamic DOM manipulation, but it was later removed in the 4.x releases. The main reactive <a href="https://developers.websharper.com/docs/v4.x/fs/ui">UI core library</a> (<a href="https://github.com/dotnet-websharper/ui">sources on GitHub</a>), for instance, that powers most of the reactive WebSharper applications, implements the foundation for reactive web applications <strong>entirely in F#</strong> without any JavaScript dependencies (no React.js, etc.), and is then bootstrapped into all generated client-side code in consuming applications. This has the benefit of the potential for further dead-code elimination, fewer external dependencies, and above all, a <strong>fully .NET-based reactive UI machinery/application backbone</strong>.</p>
+<h3 id="teaser-bolero-taking-websharper-and-f-to-webassembly">Teaser: Bolero - taking WebSharper and F# to WebAssembly</h3>
+<p>Armed with the above, one of the upcoming things we have been working on is to enable <strong>adapting WebSharper applications to run on <a href="https://webassembly.org/">WebAssembly</a> via <a href="https://blazor.net/">Blazor</a></strong>. This is a project we codenamed Bolero that we will be announcing next.</p>
+<p>WASM is a portable assembly representation that can be <strong>efficiently executed in all major web browsers</strong>, giving an <strong>alternative to JavaScript to run web applications</strong>. The impact here is tremendeous as WebAssembly can eventually be made to run on any device, giving a universal assembly representation for any programming language compiler. While there are still some rough edges, this concept has already been applied to a wide range of compilers, giving WASM compilation for Rust, Go, C, C++, and many others. Furthermore, WASM is expected to <strong>significantly reduce the use of JavaScript in future web applications</strong>, even though at this time it is only meant to provide extra safety and performance and work side-by-side with JavaScript (obviously).</p>
+<p>Blazor has a similarly ambitious goal: it aims to <strong>run any .NET code on WebAssembly</strong> by implementing/compiling a .NET runtime in WASM. This will ultimately enable running .NET applications anywhere where WASM can run. Blazor also aims to implement an <strong>IL to WASM path</strong>, allowing all .NET languages to compile to WASM directly.</p>
+<p>Built on top of these, Bolero enables you to <strong>use WebSharper's key features/abstractions</strong> to develop Blazor applications. In its ultimate form, it will allow to adapt most WebSharper applications with minimal changes to run on WebAssembly via Blazor. In the first cut we are shipping next, <strong>sitelet endpoint types</strong>, a slightly modified version of <strong>UI's HTML templating type provider</strong> as an alternative to Razor, and <strong>RPC client-server communication</strong> is enabled. Bolero also integrates the <strong>Elm Architecture</strong> natively via <strong>Elmish</strong>, making it easy to develop Model-View-Update (MVU) apps that you may have seen with Fable+React, but this time without the JS dependencies and running entirely in WASM.</p>
+<p>Consider the TodoMVC challenge:</p>
+<p><img src="https://i.imgur.com/wIKvUdjm.png" alt="TodoMVC with WebSharper" /></p>
+<p>There are several WebSharper (F# to JavaScript) implementations for this app. The older <a href="https://github.com/websharper-samples/TodoMVC">WebSharper.UI-based one</a> showcases using UI's <strong>list models</strong>, client side routing, and templating features. I have an alternative, more recent implementation that uses UI's <strong>reactive composite models</strong> along with <strong>the use of lenses and the V notation</strong>, feel free to reach out to get a glimple (I should have blogged this ages ago...) Then there is an <a href="https://github.com/dotnet-websharper/mvu">WebSharper.MVU</a>-based <a href="https://github.com/dotnet-websharper/mvu/tree/master/WebSharper.Mvu.TodoMvc">implementation</a>, that very much resembles the <a href="https://github.com/elmish/sample-react-todomvc">Fable+React implementation</a>, except it uses a UI-specific <code>render</code> function that operates on read-only views of the underlying composite model instead of the model value itself, and doesn't depend on React.js as noted above. It is also <strong>considerably shorter</strong> due to the use of lenses, UI's V notation and templating.</p>
+<p>The matching <a href="https://github.com/intellifactory/Bolero.TodoMVC/tree/master/src/Bolero.TodoMVC.Client">Bolero implementation</a> (F# to Blazor/WASM) is <strong>almost identical</strong>, except that the <code>render</code> function here uses model values as in Elmish, exactly like in the Fable+React version mentioned above. Minor changes were also applied in the app's HTML template to accommodate the change in attributes that the Bolero templating type provider works with, to be more in line with Blazor's data binding notation.</p>
+<p><strong>You can see <a href="https://fsbolero.io/TodoMVC/">the app running in WASM</a> live.</strong> Note the short delay initially as you load the page: this is the time it takes to initialize the Blazor runtime in WASM and download the required .NET framework assemblies.</p>
+<p>We are very excited about moving <strong>more</strong> WebSharper features under the Bolero umbrella, providing an a solid framework to adapt WebSharper applications to run fully in WASM. But even in its current form, <strong>the key basic WebSharper features and Elmish/MVU integration are available, and you can develop Blazor SPAs and client-server applications entirely in F# in much of the same way as you are used to with WebSharper</strong>.</p>
+<p>And one last bit: you may have also noticed in the commits in the past 12 months to the core WebSharper repo, that we have been working on enabling WebSharper to <strong>produce TypeScript output as well</strong>. Here, we considered tailoring this output to play well with technologies that can translate a subset of TypeScript to WASM. But overall, this approach would be <strong>inferior to what Bolero already offers</strong>.</p>
+<h3 id="final-words">Final words</h3>
+<p>11 years is a very long time for any project. WebSharper might just be the oldest F# tech around with a <strong>tremendeous track record and impact</strong> (at the time of writing, there are <a href="https://www.nuget.org/packages?q=websharper">147 NuGet packages for WebSharper</a>) . This would not have been possible without a great deal of perseverance, hard work, and overcoming a great number of challenges.</p>
+<p>I would like to thank our <strong>WebSharper users, customers, and contributors</strong> who continue to appreciate the kind of brevity, abstraction, and productivity that WebSharper brings to web development, <strong>our IntelliFactory WebSharper team members</strong>, who over the years have worked on WebSharper and its tooling, in no particular order: Loic Denuziere, Andras Janko, Jozsef Uri, Anton Tayanovskyy, Joel Bjornson, Simon Fowler, Ernesto Rodriguez, Diego Echeverri, Istvan Gansperger, Sandor Rakonczai, Sandor Szaloki, Adam Abonyi-Toth, Gergely Fabian, Ramon Snir, Maciej Lopatka, Gyula Kiss, Csaba Hruska, Joel Huang, and <strong>our other F# developers, interns, contractors, and staff</strong> for the engaging technical and strategic discussions.</p>
+<p>I would also like to thank the multitude of people in the community <strong>who have contributed to applying F# in web programming</strong>. It would be impossible to list everyone, but a very special thanks goes to Dustin Moris Gorski, Ryan Riley, Andrew Cherry, Alfonso Garcia-Caro, ncave, Zaid Ajaj, Krzysztof Cieslak, Maxime Mangel, Eugene Tolmachev, Steffen Forkmann, Henrik Feldt, Robert Pickering, Justin Greene, Zach Bray, Vladimir Matveev, Don Syme, Tomas Petricek, the past and current Microsoft F# team, Colin Gravill, Catalin Bocirnea, Kimserey Lam, Youenn Bouglouan, Taha Hachana, Flechner Romain, Jonathan Nolis, Mariusz Wasak, Andrei Degtiarev, Abelardo Mieres, among many-many others for running inspiring initiatives and building F# web communities. You guys rock!</p>
+<p>And last, but not least, I would like to thank <strong>Art Scott</strong> for making me curious about WebAssembly back in 2015, ahead of everyone else in the community, whose clear vision was spot on, and the <strong>Blazor team</strong> for bringing .NET to WebAssembly.</p>
+<p>Happy coding and Merry Christmas soon!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

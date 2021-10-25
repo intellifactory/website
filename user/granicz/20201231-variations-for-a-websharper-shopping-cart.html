@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Variations for a WebSharper shopping cart</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Dec 31, 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><h2 id="variations-for-a-websharper-shopping-cart-part-i">Variations for a WebSharper shopping cart - Part I</h2>
+<p>(This article is part of <a href="https://sergeytihon.com/2020/10/22/f-advent-calendar-in-english-2020/">F# Advent 2020</a> - a huge shout-out and thanks to Sergey Tihon for organizing it!)</p>
+<p>A long time ago, sometime in 2010, I wrote an article about <a href="/user/granicz/20100930-tutorial-implementing-a-shopping-cart-with-websharper.html">implementing a shopping cart with WebSharper</a>. It used <strong>first-class F# events</strong> to implement a reactive shopping cart that updates without page refresh. While you can still read that article today, time has certainly left its mark on it: the code is based on ASP.NET master pages/templates, screenshots are lost, etc. But more importantly, while most of that code would still run today (albeit, with the help of deprecated libraries such as <code>WebSharper.Html</code>), things in <a href="https://websharper.com">WebSharper</a> land have progressed a long ways since then. So I thought I would highlight some of these advancements, bringing the original example back to life.</p>
+<p>To follow along and make your own changes, you can grab the code from the following GitHub repo:</p>
+<p><a href="https://github.com/websharper-samples/ShoppingCart"><img src="https://cdn.iconscout.com/icon/free/png-64/github-169-1174970.png" alt="" /></a></p>
+<h2 id="start-with-the-design">1. Start with the design</h2>
+<blockquote>
+<p>WebSharper has long advocated and pioneered the idea of working with <strong>abstract</strong> UIs (formlets, piglets, <a href="https://github.com/dotnet-websharper/forms">reactive forms</a> - basically, <strong>F# code</strong>) that go hand-in-hand with application logic, to enable developers to <strong>write entire applications without the need to have an actual concrete design up front</strong>, cutting the long dreaded dependency between design and development. Sadly, many developers failed to embrace this approach despite its numerous advantages - which would easily deserve an entire series of articles to highlight, but perhaps more on that later.</p>
+</blockquote>
+<p>So instead, I will stick to the ordinary approach and show how to develop a design template into WebSharper.UI building blocks that will make up the main application UI later. This will include a couple dull HTML preparation steps, so just please bear with me.</p>
+<p>First, here is the very same skeleton design from the 2010 article (should be easy to change, just follow the same steps below), and its hideously backwards but dead-simple HTML (don't worry about the CSS, it's in the repo):</p>
+<p><a href="https://i.imgur.com/VlLUd4U.png"><img src="https://i.imgur.com/VlLUd4Ul.png" alt="" /></a></p>
+<pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+    &lt;link href=&quot;reset.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;link href=&quot;site.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;title&gt;A simple site&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; id=&quot;banner&quot;&gt;
+                    &lt;h1&gt;Your site&lt;/h1&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td id=&quot;main&quot;&gt;
+                    Main content here...
+                &lt;/td&gt;
+                &lt;td id=&quot;side&quot;&gt;
+                    Sidebar content here...
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; id=&quot;footer&quot;&gt;
+                    Your footer goes here...
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>To prepare this into a fully featured master design, first we add the master placeholders (where the store items and the shopping cart items are displayed, etc.), turning <code>index.html</code> into a WebSharper.UI template (you can read about WebSharper.UI and the various reactive and templating primitives <a href="https://developers.websharper.com/docs/v4.x/fs/ui">here</a>):</p>
+<pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+    &lt;link href=&quot;reset.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;link href=&quot;site.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;title&gt;${Title}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; id=&quot;banner&quot;&gt;
+                    &lt;h1&gt;${Title}&lt;/h1&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td id=&quot;main&quot;&gt;
+                    &lt;div ws-replace=&quot;Main&quot;&gt;&lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td id=&quot;side&quot;&gt;
+                    &lt;div ws-replace=&quot;Sidebar&quot;&gt;&lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; id=&quot;footer&quot;&gt;
+                    &lt;div ws-replace=&quot;Footer&quot;&gt;&lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;script ws-replace=&quot;scripts&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Next, we add the actual design for all the parts we need: items in various categories to the main panel, and a shopping cart in the sidebar. I like to do this inside placeholders, so that the HTML file still renders OK as is, making subsequent refinement (edit and refresh) easier.</p>
+<p>For instance, here is our main section, listing various categories of computers:</p>
+<pre><code class="language-html">...
+                    &lt;div ws-replace=&quot;Main&quot;&gt;
+                        &lt;div id=&quot;shopping-cart&quot;&gt;
+                            &lt;div class=&quot;family&quot;&gt;
+                                &lt;h1&gt;Laptops&lt;/h1&gt;
+                                &lt;div class=&quot;product&quot;&gt;
+                                    &lt;img alt=&quot;Toshiba&quot; src=&quot;/images/laptop.png&quot; /&gt;
+                                    &lt;div&gt;
+                                        &lt;h1&gt;Toshiba&lt;/h1&gt;
+                                        &lt;p&gt;
+                                            &lt;code&gt;$1299 / item&lt;/code&gt;
+                                        &lt;/p&gt;
+                                        &lt;input type=&quot;text&quot; value=&quot;1&quot; /&gt;
+                                        &lt;button&gt;Add to cart&lt;/button&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;product&quot;&gt;
+                                    &lt;img alt=&quot;HP&quot; src=&quot;/images/laptop.png&quot; /&gt;
+                                    &lt;div&gt;
+                                        &lt;h1&gt;HP&lt;/h1&gt;
+                                        &lt;p&gt;
+                                            &lt;code&gt;$1499 / item&lt;/code&gt;
+                                        &lt;/p&gt;
+                                        &lt;input type=&quot;text&quot; value=&quot;1&quot; /&gt;
+                                        &lt;button&gt;Add to cart&lt;/button&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                ...
+                            &lt;/div&gt;
+                            &lt;div class=&quot;family&quot;&gt;
+                                ...
+                            &lt;/div&gt;
+                            ...
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+</code></pre>
+<p>And this is what it looks like when it's turned into a set of inner templates and additional placeholders:</p>
+<pre><code class="language-html">                    &lt;div ws-replace=&quot;Main&quot;&gt;
+                        &lt;div ws-template-children=&quot;ShoppingCart&quot;&gt;
+                            &lt;div id=&quot;shopping-cart&quot;&gt;
+                                &lt;div ws-replace=&quot;Families&quot;&gt;
+                                    &lt;div ws-template-children=&quot;Family&quot;&gt;
+                                        &lt;div class=&quot;family&quot;&gt;
+                                            &lt;h1&gt;${FamilyTitle}&lt;/h1&gt;
+                                            &lt;div ws-replace=&quot;Products&quot;&gt;
+                                                &lt;div ws-template-children=&quot;Product&quot;&gt;
+                                                    &lt;div class=&quot;product&quot;&gt;
+                                                        &lt;img alt=&quot;${ProductTitle}&quot; src=&quot;${ProductImageSrc}&quot; /&gt;
+                                                        &lt;div&gt;
+                                                            &lt;h1&gt;${ProductTitle}&lt;/h1&gt;
+                                                            &lt;p&gt;
+                                                                &lt;code&gt;$ ${ProductPrice} / item&lt;/code&gt;
+                                                            &lt;/p&gt;
+                                                            &lt;input type=&quot;text&quot; value=&quot;1&quot; /&gt;
+                                                            &lt;button ws-onclick=&quot;AddToCart&quot;&gt;Add to cart&lt;/button&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;product&quot;&gt;
+                                                &lt;img alt=&quot;HP&quot; src=&quot;/images/laptop.png&quot; /&gt;
+                                                &lt;div&gt;
+                                                    &lt;h1&gt;HP&lt;/h1&gt;
+                                                    &lt;p&gt;
+                                                        &lt;code&gt;$1499 / item&lt;/code&gt;
+                                                    &lt;/p&gt;
+                                                    &lt;input type=&quot;text&quot; value=&quot;1&quot; /&gt;
+                                                    &lt;button&gt;Add to cart&lt;/button&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            ...
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+</code></pre>
+<p>At this point, our file renders &quot;almost nicely&quot;, with the exception of the inner templates (for items and categories, and the shopping cart) we introduced:</p>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>WebSharper.UI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://i.imgur.com/KtPJxi8.png"><img src="https://i.imgur.com/KtPJxi8l.png" alt="" /></a></td>
+<td><a href="https://i.imgur.com/w47y2v7.png"><img src="https://i.imgur.com/w47y2v7l.png" alt="" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-a-new-websharper-spa-on-top-of-the-design">2. Create a new WebSharper SPA on top of the design</h2>
+<p>Now that we have a basic design and sprinkled in the templating primitives (<code>ws-replace</code> placeholders for content, <code>ws-onclick</code> event handlers, and named our inner templates), it's time to put our F# code in place. For this application, instead of the usual client-server WebSharper application template, we will use the WebSharper SPA one for simplicity. In a real-life shopping cart, you will inevitably need a server or backend service to post to; this you can add later pretty easily.</p>
+<p>I normally just do the following:</p>
+<ol start="0">
+<li><p>Make sure I have the basics first:</p>
+<ol type="a">
+<li><p>The latest <code>dotnet</code> CLI. The easiest way for that is to <a href="https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net50">install the latest .NET Core SDK</a>.</p>
+</li>
+<li><p>The latest WebSharper project templates. You can grab them with:</p>
+<p>dotnet new -i WebSharper.Templates</p>
+</li>
+</ol>
+</li>
+<li><p>Create a WebSharper SPA:</p>
+<pre><code> dotnet new websharper-spa -lang f# -n MyShoppingCart
+</code></pre>
+</li>
+<li><p>Copy the design template <code>index.html</code> to the <code>wwwroot</code> folder, overwriting the file there, with the following additions:</p>
+<ol type="a">
+<li><p>Add the following HTML, say, to the <code>&lt;head&gt;</code> section, to remove the initial flickering between the document load event and the time WebSharper.UI's bind event fires (which hides all templates in the document and binds the placeholders):</p>
+ <style>
+     /* Don't show the not-yet-loaded templates */
+     [ws-template], [ws-children-template] { display: none; }
+ </style>
+</li>
+<li><p>Add the following HTML just before the end of the <code>&lt;body&gt;</code> tag, to load the generated JavaScript for the app we will be developing (note the filename matching the project folder/name we created earlier):</p>
+ <script type="text/javascript" src="Content/MyShoppingCart.min.js"></script>
+</li>
+</ol>
+</li>
+<li><p>At this point, we are ready to change <code>Client.fs</code> and get rid of those compiler errors.</p>
+</li>
+</ol>
+<h2 id="a.write-the-application-logic-approach-1-reactive-ui">3.a. Write the application logic - Approach #1 - Reactive UI</h2>
+<p>Here is our entire app:</p>
+<pre><code class="language-fsharp">namespace MyShoppingCart
+
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.UI
+open WebSharper.UI.Client
+open WebSharper.UI.Templating
+open WebSharper.UI.Notation
+
+[&lt;JavaScript&gt;]
+module DTO =
+    type Product =
+        {
+            Id: string
+            Title: string
+            Price: int
+            ImageSrc: string
+        }
+
+    type ProductFamily =
+        {
+            Title: string
+            Products: Product list
+        }
+    
+    type Store = ProductFamily list
+
+[&lt;JavaScript&gt;]
+module Client =
+    // The templates are loaded from the DOM, so you just can edit index.html
+    // and refresh your browser, no need to recompile unless you add or remove holes.
+    type IndexTemplate = Template&lt;&quot;wwwroot/index.html&quot;, ClientLoad.FromDocument&gt;
+
+    type CartItem =
+        {
+            Item: Product
+            Quantity: int
+        }
+
+    // Our cart is a reactive list - changes to it
+    // are immediately reflected on the UI.
+    type Cart = ListModel&lt;string, CartItem&gt;
+
+    // Populate our store. This can be changed to fetch from a
+    // server if needed.
+    let store =
+        let item imageSrc (title, id, price) =
+            {
+                Id = id
+                Title = title
+                Price = price
+                ImageSrc = imageSrc
+            }
+        let laptop product = item &quot;/images/laptop.png&quot; product
+        let desktop product = item &quot;/images/desktop.png&quot; product
+        let netbook product = item &quot;/images/netbook.png&quot; product
+        [
+            {
+                Title = &quot;Laptops&quot;
+                Products =
+                    [
+                        laptop (&quot;Toshiba&quot;, &quot;id1&quot;, 1299)
+                        laptop (&quot;HP&quot;, &quot;id2&quot;, 1499)
+                        laptop (&quot;Dell&quot;, &quot;id3&quot;, 1499)
+                        laptop (&quot;Acer&quot;, &quot;id4&quot;, 1499)
+                    ]
+            }
+            {
+                Title = &quot;Laptops&quot;
+                Products =
+                    [
+                        desktop (&quot;Gamer 1&quot;, &quot;id11&quot;, 699)
+                        desktop (&quot;Gamer 2&quot;, &quot;id12&quot;, 799)
+                        desktop (&quot;Office&quot;, &quot;id13&quot;, 599)
+                        desktop (&quot;Server&quot;, &quot;id14&quot;, 1299)
+                    ]
+            }
+            {
+                Title = &quot;Laptops&quot;
+                Products =
+                    [
+                        netbook (&quot;Entry&quot;, &quot;id21&quot;, 799)
+                        netbook (&quot;Medium&quot;, &quot;id22&quot;, 899)
+                        netbook (&quot;Cool&quot;, &quot;id23&quot;, 699)
+                        netbook (&quot;Speed-King&quot;, &quot;id24&quot;, 999)
+                    ]
+            }
+        ]
+
+    // Set up empty cart
+    let cart : Cart = ListModel.Create (fun item -&gt; item.Item.Id) []
+
+    [&lt;SPAEntryPoint&gt;]
+    let Main () =
+        IndexTemplate()
+            .Title(&quot;My Shop&quot;)
+            .Footer(&quot;MyShoppingCart - a simple WebSharper.UI demo app&quot;)
+            .Main(
+                IndexTemplate.ItemsToSell()
+                    .Families(
+                        store
+                        |&gt; List.map (fun family -&gt;
+                            IndexTemplate.Family()
+                                .Title(&quot;Laptops&quot;)
+                                .Products(
+                                    family.Products
+                                    |&gt; List.map (fun product -&gt;
+                                        IndexTemplate.Product()
+                                            .Title(product.Title)
+                                            .Price(string product.Price)
+                                            .ImageSrc(product.ImageSrc)
+                                            .Quantity(string 1)
+                                            .AddToCart(fun e -&gt;
+                                                if cart.ContainsKey(product.Id) then
+                                                    let item = cart.Lens(product.Id)
+                                                    let quantity = item.LensAuto (fun item -&gt; item.Quantity)
+                                                    quantity := quantity.Value + int e.Vars.Quantity.Value
+                                                elif int e.Vars.Quantity.Value &lt;&gt; 0 then
+                                                    cart.Add
+                                                        {
+                                                            Item = product
+                                                            Quantity = int e.Vars.Quantity.Value
+                                                        }
+                                                else ()
+                                            )
+                                            .Doc()
+                                    )
+                                )
+                                .Doc()
+                        )
+                    )
+                    .Doc()
+            )
+            .Sidebar(
+                IndexTemplate.ShoppingCart()
+                    .CartItems(
+                        cart.View.DocSeqCached (fun item -&gt;
+                            IndexTemplate.CartItem()
+                                .Name(item.Item.Title)
+                                .Quantity(string item.Quantity)
+                                .Amount(string (item.Quantity * item.Item.Price))
+                                .Remove(fun e -&gt;
+                                    cart.RemoveByKey(item.Item.Id)
+                                )
+                                .Increment(fun e -&gt;
+                                    cart.Lens(item.Item.Id) := { item with Quantity=item.Quantity+1 }
+                                )
+                                .Decrement(fun e -&gt;
+                                    if item.Quantity &lt;= 1 then
+                                        cart.RemoveByKey(item.Item.Id)
+                                    else
+                                        cart.Lens(item.Item.Id) := { item with Quantity=item.Quantity-1 }
+                                )
+                                .Doc()
+                        )
+                    )
+                    .TotalAmount(
+                        cart.View
+                        |&gt; View.Map (Seq.sumBy (fun item -&gt; item.Item.Price * item.Quantity))
+                        |&gt; View.Map string
+                    )
+                    .Checkout(fun _ -&gt; JS.Alert(&quot;Checkout was called!&quot;))
+                    .EmptyCart(fun _ -&gt;
+                        cart.Clear()
+                    )
+                    .Doc()
+            )
+            .Bind()
+</code></pre>
+<p>A couple bits worth noting:</p>
+<ul class="contains-task-list">
+<li><p>We see our design template placeholders and inner templates under <code>IndexTemplate</code>, which is a type space brought in through the WebSharper.UI templating type provider:</p>
+<pre><code class="language-fsharp"> // The templates are loaded from the DOM, so you just can edit index.html
+// and refresh your browser, no need to recompile unless you add or remove holes.
+type IndexTemplate = Template&lt;&quot;wwwroot/index.html&quot;, ClientLoad.FromDocument&gt;
+</code></pre>
+<blockquote>
+<p>As the code comment says, one of the nicest things about this setup, apart from <strong>never missing a placeholder</strong> and the <strong>type safety and perfect matching of design to code</strong> we all enjoy so much, is that any design changes you make to the HTML file are <strong>immediately reflected</strong> (aka <strong>hot reload</strong>) in your app, all you need is to refresh your page in the browser. This makes WebSharper templating far superior to any &quot;embed your HTML into F# code&quot; approach, which of course is still available if/when you need it. (You will only need to recompile if you add/remove placeholders or event handlers.)</p>
+</blockquote>
+</li>
+<li><p>The products in the store are a given: data is populated on the client. If you want to fetch this info from the server, you can move that block to an RPC function (say, in a separate module to make your code clearer):</p>
+<pre><code class="language-fsharp">module Server =
+    open DTO
+
+    [&lt;Rpc&gt;]
+    let GetStoreInfo () =
+        ...
+</code></pre>
+<p>At this point, you will get a WebSharper warning about non-asynchronous server calls, so just wrap the above RPC function into:</p>
+<pre><code class="language-fsharp">        |&gt; async.Return
+</code></pre>
+<p>Then in your client code, call it appropriately:</p>
+<pre><code class="language-fsharp">let store =
+    async {
+        return! Server.GetStoreInfo()    
+    }
+    |&gt; Async.RunSynchronously
+</code></pre>
+</li>
+<li><p>The main panel is populated by mapping each product family and the products inside it into markup (represented by the <code>Doc</code> type). We don't expect any changes to our product hierarchy, but if there were any, we would need to make that mapping reactive.</p>
+</li>
+<li class="task-list-item"><p>The shopping cart on the other hand is bound <strong>reactively</strong>. Since our data model is composite/aggregate and not a single atomic value, we use a <code>ListModel</code>, which is a built-in reactive store for a list of values (of any shape, including further aggregates.)</p>
+<p>A WebSharper.UI reactive model is based on reactive variables and their current values (we call these &quot;views&quot;.) To introduce any UI reactivity, we need to turn these reactive views into reactive markup. For a list model, we can do that with <code>DocSeqCached</code>, which takes a function from the underlying, individual (non-reactive) values to markup (<code>Doc</code>), and creates an aggregated markup block that will react to changes inside those values (single or composite). Here, we don't deal with two-way binding, i.e. changes originating from the UI back to the data model, but that's similarly easy to set up (via <code>ws-var</code> in the markup.)</p>
+<p>When you dig deeper in the code and the design template, you will see that I marked the [+], [-], <input disabled="disabled" type="checkbox" checked="checked" /> buttons in the shopping cart widget with a special <code>ws-onclick=&quot;...&quot;</code> attribute. This makes those click event handlers available to bind in F# code. In those event handlers, we make use of WebSharper.UI lenses to access a particular cart item as a reactive variable, and make changes to it through that reference. (You can read about the <a href="https://developers.websharper.com/docs/v4.x/fs/ui#v">V notation</a> as well for an alternative syntax.)</p>
+<pre><code class="language-fsharp">cart.View.DocSeqCached (fun item -&gt;
+    IndexTemplate.CartItem()
+        .Name(item.Item.Title)
+        .Quantity(string item.Quantity)
+        .Amount(string (item.Quantity * item.Item.Price))
+        .Remove(fun e -&gt;
+            cart.RemoveByKey(item.Item.Id)
+        )
+        .Increment(fun e -&gt;
+            cart.Lens(item.Item.Id) := { item with Quantity=item.Quantity+1 }
+        )
+        .Decrement(fun e -&gt;
+            if item.Quantity &lt;= 1 then
+                cart.RemoveByKey(item.Item.Id)
+            else
+                cart.Lens(item.Item.Id) := { item with Quantity=item.Quantity-1 }
+        )
+        .Doc()
+</code></pre>
+</li>
+<li><p>The &quot;Add to cart&quot; button knows the identity of each product from its closure, and we grab a reactive reference to an existing cart item through a lense, so we can update its quantity:</p>
+<pre><code class="language-fsharp">family.Products
+|&gt; List.map (fun product -&gt;
+    IndexTemplate.Product()
+        // ...
+        .AddToCart(fun e -&gt;
+            if cart.ContainsKey(product.Id) then
+                let item = cart.Lens(product.Id)
+                let quantity = item.LensAuto (fun item -&gt; item.Quantity)
+                quantity := quantity.Value + int e.Vars.Quantity.Value
+            elif int e.Vars.Quantity.Value &lt;&gt; 0 then
+                cart.Add
+                    {
+                        Item = product
+                        Quantity = int e.Vars.Quantity.Value
+                    }
+            else ()
+        )
+</code></pre>
+<p>Another key concept to note is the use of <code>e.Vars</code>. Here, <code>e</code> is the target of the event handler, which usefully &quot;knows&quot; about the data model of its surrounding template. In this case, it knows that there is a <code>Quantity</code> field that is two-way bound to the quantity input box on the UI (since we made that binding explicit with <code>ws-var=&quot;...&quot;</code>), and we can read its current value with <code>.Value</code>.</p>
+<p>All in all, data/model changes to the shopping cart (via <code>cart.Add</code> for adding, <code>cart.Remove</code> for removing, and <code>cart.Lens(...) := ...</code> for updating) reflect on the UI immediately, and only those DOM nodes that need to be changed are indeed changed. You can see this in action below:</p>
+<p><img src="https://i.imgur.com/5eKJs0J.gif" alt="" /></p>
+<p>WebSharper.UI's dataflow algorithm, detecting model changes and applying/reflecting them to the UI and back is stunningly fast. In our earlier benchmarks, we observed a 10-20% performance improvement over using hand-written React, which is quite a feat considering that we didn't have to write a single line of JavaScript.</p>
+</li>
+</ul>
+<h2 id="b.write-the-application-logic-approach-2-websharper.mvu">3.b. Write the application logic - Approach #2 - WebSharper.Mvu</h2>
+<p>I thought it would be a fun experiment to contrast the mutable, reactive WebSharper.UI implementation above with an immutable WebSharper.Mvu implementation. The latter is not a 100% Elm-style MVU but a slightly modified one, with the couple important differences and benefits. I plan to describe these in a follow-up article.</p>
+<h2 id="conclusions">4. Conclusions</h2>
+<p>WebSharper.UI templating and reactive data models are an effective way to develop highly performant web applications. The <a href="/user/granicz/20100930-tutorial-implementing-a-shopping-cart-with-websharper.html">original 2010 article</a> used first-class F# events and WebSharper HTML-in-F# components, which altogether was significantly more code and didn't offer a streamlined developer experience. The revisited implementation above makes HTML changes immediate with a simple page refresh, frees us from having to write F# for HTML, provides strong guarantees about templating type safety, and gives a ultra-performant two-way binding for reactive components.</p>
+<p>Now, there are still a number of things that can be improved or streamlined further. If you are interested in discovering more, come and chat in the <a href="http://gitter.im/intellifactory/websharper">WebSharper Gitter channel</a>:</p>
+<p><a href="http://gitter.im/intellifactory/websharper"><img src="https://icon-icons.com/icons2/2530/PNG/128/gitter_button_icon_151850.png" alt="" /></a></p>
+<p>Happy holidays!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

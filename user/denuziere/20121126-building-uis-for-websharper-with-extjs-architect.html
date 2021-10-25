@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Building UIs for WebSharper with ExtJS Architect</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                            <p class="text-white">Nov 26, 2012</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>As you may know, we provide a complete extension to WebSharper for <a href="http://websharper.com/samples/ExtJs">ExtJS</a>. It allows you to easily create full-fledged user interfaces with features one would expect from a desktop application.</p>
+<p>The folks at Sencha have also developed a wonderful tool to design ExtJS interfaces called <a href="http://www.sencha.com/products/architect">ExtJS Architect</a>. It's a visual designer that allows you to very intuitively create a complete UI from the ground up and still provides access to every one of the numerous options and parameters ExtJS offers. And, as it turns out, it is very easy to use an interface created in Architect from a WebSharper application. Here is how.</p>
+<h2 id="a-simple-extjs-architect-interface">A simple ExtJS Architect interface</h2>
+<h3 id="creating-an-interface">Creating an interface</h3>
+<p>For this example, we will create the most basic UI possible in Architect. My goal is not to explain how to use Architect — it's not difficult anyways 😉 — but simply to have a UI to integrate to WebSharper.</p>
+<p>In the welcome screen, select &quot;Ext JS 4.0.x&quot;. This is the version that is currently bound in the WebSharper extension. An extension for 4.1.x will be available as soon as possible, but until then, 4.0 it is.</p>
+<p><img src="http://fpish.net/assets/ext-js-architect/welcome.png" alt="" /></p>
+<p>You are now on the main screen of Architect. From the left menu, select &quot;Containers&quot;, then drag-and-drop &quot;Viewport&quot; into the central area. The viewport is the full-page container into which the application components will be inserted.</p>
+<p><img src="http://fpish.net/assets/ext-js-architect/main.png" alt="" /></p>
+<p>Now, drag a Panel into the viewport you just created. This will create a container with a title bar. You can customize the title, and any other attributes, in the &quot;Config&quot; area (bottom-right).</p>
+<p><img src="http://fpish.net/assets/ext-js-architect/options.png" alt="" /></p>
+<p>You can now click the &quot;Save&quot; button and choose a location to save your project. With this, we have everything we need to learn how to use this UI we just created from WebSharper. You can beef it up a bit if you want, nothing is more satisfying than seeing a complete application appear on the first try 😉</p>
+<h3 id="integrating-with-websharper">Integrating with WebSharper</h3>
+<p>The integration can be done in a few simple steps.</p>
+<ul>
+<li><p>In the Project Inspector (top-right tree view), select the root node (&quot;Application&quot;). Then in the Config area, change the appFolder to &quot;/app&quot;. Using an absolute path will avoid any problem when your application is served from a URL with subpaths, which will probably happen if you use Sitelets.</p>
+<p><img src="http://fpish.net/assets/ext-js-architect/appFolder.png" alt="" /></p>
+</li>
+<li><p>In the &quot;Settings&quot; dialog of Architect (gear icon), go to the &quot;Project&quot; tab and set the &quot;Publish path&quot; to the Web project of your WebSharper application, which will generally be <code>SolutionPath/ProjectName/Web</code>.</p>
+<p><img src="http://fpish.net/assets/ext-js-architect/settings.png" alt="" /></p>
+</li>
+<li><p>Now, your WebSharper project. In the HTML of your application, which will be Web/Main.html if you use the Sitelets project template, insert the following line:</p>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot; src=&quot;/app.js&quot; /&gt;
+</code></pre>
+<p>You want to put it <em>after</em> the WebSharper script manager, ie. the <c><meta data-replace="scripts"></c> tag. This way, WebSharper will have loaded ExtJS before trying to load the UI.</p>
+</li>
+<li><p>Don't forget to add a reference to <code>IntelliFactory.WebSharper.ExtJS.dll</code> in your F# project. Now, the way dependencies work in WebSharper, ExtJS JavaScript and CSS tags are only added by the script manager if a class from ExtJS is used in code directly called from a <code>Web.Control</code>. However, here we are going to make ExtJS call directly a F# function when it has finished loading the UI. So we will need to add the following control somewhere on our page:</p>
+<pre><code class="language-fsharp">module Client =
+    open IntelliFactory.WebSharper.Html
+    open IntelliFactory.WebSharper.ExtJS
+
+    [&lt;Sealed&gt;]
+    type Control() =
+        inherit Web.Control()
+
+        [&lt;JavaScript&gt;]
+        override this.Body =
+            Ext.OnReady ignore // use ExtJS in order to trigger the dependency
+            Div [] :&gt; _
+</code></pre>
+</li>
+<li><p>And finally, every time you modify your UI in Architect, click the &quot;Publish&quot; button, and voilà! Your application is up-to-date. No need to recompile your WebSharper application, since you only modified static JavaScript files.</p>
+</li>
+</ul>
+<h3 id="interacting-with-the-ui-from-f">Interacting with the UI from F#</h3>
+<p>All right, you have a nice and shiny user interface. But it doesn't do anything useful yet; it's time to fix this. We will now add code which, whenever the user clicks a button, displays an input dialog and then replaces the title of the panel with what the user has input.</p>
+<p>First, let's add a button to our UI. Simply drag a Buttons &gt; Button into the panel, customize the &quot;text&quot; config if you want to, save and publish.</p>
+<p>As previously mentioned, we will make ExtJS call a F# function once the UI has been loaded. To do so, in the Application's config panel, click the + button on the &quot;launch&quot; line, then the arrow button that appeared. Then insert the following code into the editor:</p>
+<pre><code class="language-javascript">Website.Client.Init(Ext.ComponentQuery.query(&quot;viewport&quot;)[0]);
+</code></pre>
+<p><code>Website.Client.Init</code> is the F# function we are going to write; adjust the namespaces according to your application. And once again, don't forget to Publish.</p>
+<p>Now, let's write this control function. Here is the code:</p>
+<pre><code class="language-fsharp">[&lt;JavaScript&gt;]
+let Init (viewport : Ext.container.Viewport) =
+    let button = viewport.Query(&quot;button&quot;).[0] :?&gt; Ext.button.Button
+    let panel = viewport.Query(&quot;panel&quot;).[0] :?&gt; Ext.panel.Panel
+    button.On(&quot;click&quot;, fun () -&gt;
+        Ext.Msg.Prompt(&quot;Change title&quot;, &quot;What title?&quot;, fun (btnId, answer) -&gt;
+            if btnId = &quot;ok&quot; then
+                panel.SetTitle answer
+        )
+    )
+</code></pre>
+<p><code>viewport.Query</code> retrieves an array of elements that match the given query. Since we have only one panel and one button, we can simply query by type; if you need to retrieve a specific element, you can give it an &quot;id&quot; config in Architect and use <code>viewport.Query(&quot;#the_id&quot;)</code>. The rest of the code is pretty self-explanatory: we attach a handler on the &quot;click&quot; event of the button, which opens a prompt window asking for a title.</p>
+<p><img src="http://fpish.net/assets/ext-js-architect/result.png" alt="" /></p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

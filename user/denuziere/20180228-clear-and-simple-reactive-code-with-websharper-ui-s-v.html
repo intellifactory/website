@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Clear and simple reactive code with WebSharper.UI&#39;s V</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                            <p class="text-white">Feb 28, 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>Writing reactive code in WebSharper.UI can result in the use of a lot of functions and combinators, and code that is more verbose than a static counterpart would be. However, a recent new feature can help reduce most of this overhead: the <code>V</code> property. Let's get started with it!</p>
+<blockquote>
+<p>Note: examples in this article are given in F#; but all the concepts are applicable in C#, except the final part about V and lenses, which is only compatible with F# record types.</p>
+</blockquote>
+<h2 id="the-working-example">The working example</h2>
+<p>Here is a simple static form asking the user for their name. It has two input fields and a paragraph showing the value. Obviously this last part is not very useful yet since this is only a static form; it just always shows whatever was the initial value.</p>
+<pre><code class="language-fsharp">type FullName =
+    {
+        First: string
+        Last: string
+    }
+
+let promptName (name: FullName) =
+    form [] [
+        input [attr.value name.First] []
+        input [attr.value name.Last] []
+        p [] [text (sprintf &quot;Hello, %s %s!&quot; name.First name.Last)]
+    ]
+</code></pre>
+<p><a href="https://try.websharper.com/snippet/loic.denuziere/0000In">See it in action</a></p>
+<p>Over the course of this article, we'll transform it into a dynamic form where the paragraph reacts to the user's inputs. Spoiler alert: here's what our final code will look like.</p>
+<pre><code class="language-fsharp">let promptName (name: Var&lt;FullName&gt;) =
+    form [] [
+        Doc.Input [] (Lens name.V.First)
+        Doc.Input [] (Lens name.V.Last)
+        p [] [text (sprintf &quot;Hello, %s %s!&quot; name.V.First name.V.Last)]
+    ]
+</code></pre>
+<p><a href="https://try.websharper.com/snippet/loic.denuziere/0000Ir">See it in action</a></p>
+<p>I would argue that the above is exactly as readable as the original static code, while providing extra reactive functionality. Now let's see how the sausage is made!</p>
+<h2 id="a-first-unmodular-attempt">A first, unmodular attempt</h2>
+<p>Before we try to make our little function reactive, here's a refresher on how reactive code works in WebSharper. Fundamentally, it is based on the combination of two types:</p>
+<ul>
+<li><code>Var&lt;'T&gt;</code> is a mutable cell containing a value of type <code>'T</code>. It's basically equivalent to a <code>ref&lt;'T&gt;</code>, except that it can be reactively observed by a...</li>
+<li><code>View&lt;'T&gt;</code>, which is a read-only reactive <code>'T</code>.</li>
+</ul>
+<p>A number of functions integrate these into the page. For example:</p>
+<ul>
+<li><code>Doc.Input</code> is similar to the regular <code>input</code> function that creates an <code>&lt;input&gt;</code> element, but it takes a <code>Var&lt;string&gt;</code> and binds itself to it. When the user types, the <code>Var</code> is updated, and when the <code>Var</code> changes due to other code, the input box is updated.</li>
+<li><code>textView</code> shows text content, similar to <code>text</code>, except it's reactive: the text content changes whenever the <code>View&lt;string&gt;</code> changes.</li>
+</ul>
+<p>Armed with these, let's write our first attempt at a reactive form.</p>
+<pre><code class="language-fsharp">    let promptName (first: Var&lt;string&gt;) (last: Var&lt;string&gt;) =
+        form [] [
+            Doc.Input [] first
+            Doc.Input [] last
+            p [] [
+                textView (
+                    View.Map2
+                        (fun f l -&gt; sprintf &quot;Hello, %s %s!&quot; f l)
+                        first.View last.View
+                )
+            ]
+        ]
+</code></pre>
+<p><a href="https://try.websharper.com/snippet/loic.denuziere/0000Ik">See it in action</a></p>
+<p><code>View.Map2</code> creates a new <code>View</code> by applying a function to the values of two input <code>View</code>s.</p>
+<p>This works well enough, but there are several improvements we could make.</p>
+<ul>
+<li>First, we completely dropped our <code>FullName</code> record, and instead we are taking the two fields as separate <code>Var</code>s. This is pretty bad for the maintainability of our code. <code>FullName</code> is probably a type from our application's model: we pass <code>FullName</code> values around, maybe even between the server and the client. We don't want to have to convert it into its components and then put them back together whenever we want the user to interact with it.</li>
+<li>Second, this is a bit verbose, isn't it? We have to call another function and write an anonymous function just to display two strings. That feels overkill.</li>
+</ul>
+<h2 id="deriving-vars-with-lenses">Deriving <code>Var</code>s with Lenses</h2>
+<p>Let's attack the first problem. Ideally, we'd like our function to receive a <code>Var&lt;FullName&gt;</code> and be able to deal with it. We want each of our input boxes to transparently update the corresponding field of this <code>Var</code>. This is what <strong>lenses</strong> are for.</p>
+<p>Lenses are a way to &quot;zoom in&quot; (hence the name) on a part of a <code>Var</code>, such as a field of a record. You provide a getter (a function that retrieves the field value from the full value) and a setter (a function that takes an old full value and a new field value, and returns the new full value) and it gives you back a new <code>Var</code> for your field.</p>
+<pre><code class="language-fsharp">let promptName (name: Var&lt;FullName&gt;) =
+    let first = Var.Lens name (fun n -&gt; n.First) (fun n f -&gt; { n with First = f })
+    // ...
+</code></pre>
+<p>The important aspect of this is that the reactivity works as you would expect: if you set the value of the full <code>Var</code>, the field <code>Var</code>'s own <code>View</code> is updated, and vice-versa.</p>
+<p>Armed with this new tool, we can write a better version of <code>promptName</code> that uses <code>FullName</code>.</p>
+<pre><code class="language-fsharp">let promptName (name: Var&lt;FullName&gt;) =
+    let first = Var.Lens name (fun n -&gt; n.First) (fun n f -&gt; { n with First = f })
+    let last = Var.Lens name (fun n -&gt; n.Last) (fun n l -&gt; { n with Last = l })
+    form [] [
+        Doc.Input [] first
+        Doc.Input [] last
+        p [] [
+            textView (
+                View.Map2
+                    (fun f l -&gt; sprintf &quot;Hello, %s %s!&quot; f l)
+                    first.View last.View
+            )
+        ]
+    ]
+</code></pre>
+<p><a href="https://try.websharper.com/snippet/loic.denuziere/0000Il">See it in action</a></p>
+<p>This works nicely! But... we've made the verbosity problem worse, haven't we? ☹️</p>
+<h2 id="introducing-v">Introducing <code>V</code></h2>
+<p>We'd like to be able to compose together <code>View</code>s as naturally as we would compose simple values. Instead of this:</p>
+<pre><code class="language-fsharp">View.Map2
+    (fun f l -&gt; sprintf &quot;Hello, %s %s!&quot; f l)
+    first.View last.View
+</code></pre>
+<p>We want to write this:</p>
+<pre><code class="language-fsharp">sprintf &quot;Hello, %s %s!&quot; first.View last.View
+</code></pre>
+<p>Of course, that isn't quite possible directly — the types don't even match! <code>first.View</code> has type <code>View&lt;string&gt;</code>, but <code>sprintf</code> wants a <code>string</code>.</p>
+<p>This is where WebSharper introduces a bit of &quot;magic&quot;. The type <code>View&lt;'T&gt;</code> has a field called <code>V</code>, of type <code>'T</code>. Now, <code>'T</code> is not a reactive type, so this field should only be able to return one value: the current value of our <code>View</code> at the moment of calling <code>.V</code>. But when you use <code>.V</code> in an argument to certain special functions, WebSharper automatically transforms this argument into the appropriate calls to <code>View.Map</code>, <code>View.Map2</code>, or whatever else is needed to build a reactive value from this expression.</p>
+<p><code>text</code> is one such special function. When its argument contains uses of <code>.V</code>, it is compiled into a call to <code>textView</code> and the argument is transformed to be properly reactive. So this:</p>
+<pre><code class="language-fsharp">// Assuming you have a value myView: View&lt;string&gt;
+
+text (&quot;myView's current value is &quot; + myView.V)
+</code></pre>
+<p>is exactly equivalent to this:</p>
+<pre><code class="language-fsharp">textView (myView |&gt; View.Map (fun x -&gt; &quot;myView's current value is &quot; + x))
+</code></pre>
+<p>That's much more readable, don't you think? It allows us to simplify our display function tremendously:</p>
+<pre><code class="language-fsharp">let promptName (name: Var&lt;FullName&gt;) =
+    let first = Var.Lens name (fun n -&gt; n.First) (fun n f -&gt; { n with First = f })
+    let last = Var.Lens name (fun n -&gt; n.Last) (fun n l -&gt; { n with Last = l })
+    form [] [
+        Doc.Input [] first
+        Doc.Input [] last
+        p [] [
+            text (sprintf &quot;Hello, %s %s!&quot; first.View.V last.View.V)
+        ]
+    ]
+</code></pre>
+<p>In fact, we can simplify it even further, as <code>Var</code> also has a field <code>.V</code>, which is equivalent to <code>.View.V</code>.</p>
+<pre><code class="language-fsharp">let promptName (name: Var&lt;FullName&gt;) =
+    let first = Var.Lens name (fun n -&gt; n.First) (fun n f -&gt; { n with First = f })
+    let last = Var.Lens name (fun n -&gt; n.Last) (fun n l -&gt; { n with Last = l })
+    form [] [
+        Doc.Input [] first
+        Doc.Input [] last
+        p [] [
+            text (sprintf &quot;Hello, %s %s!&quot; first.V last.V)
+        ]
+    ]
+</code></pre>
+<p><a href="https://try.websharper.com/snippet/loic.denuziere/0000Ip">See it in action</a></p>
+<blockquote>
+<p>Side note: earlier I said that <code>.V</code> &quot;should only be able to return one value: the current value of our <code>View</code> at the moment of calling <code>.V</code>&quot;. That's the only thing it <em>could</em> do, if it <em>did</em> anything; but in fact, it causes a compile error. That's because <code>.V</code> is really intended to simplify reactive code; so I made sure that people wouldn't end up with non-reactive code by mistake. Plus, there are some cases (in particular when using <code>View.MapAsync</code>) where it is simply not possible to extract the current value of a <code>View</code>.</p>
+</blockquote>
+<h2 id="using.v-with-lenses">Using <code>.V</code> with lenses</h2>
+<p>Now let's look into simplifying our lenses. They really feel like boilerplate: getting and setting a field in a record is a very uniform pattern. Can WebSharper's &quot;magic&quot; help us with it? As it turns out, yes it can.</p>
+<p>As said before, <code>Var</code> also has a <code>.V</code> field. In addition to serving as a shortcut for <code>.View.V</code>, it can also be used to write lenses very concisely, in conjunction with the <code>Lens</code> function. So this:</p>
+<pre><code class="language-fsharp">Lens name.V.First
+</code></pre>
+<p>is exactly equivalent to this:</p>
+<pre><code class="language-fsharp">Var.Lens name (fun n -&gt; n.First) (fun n f -&gt; { n with First = f })
+</code></pre>
+<p>Note that, at least for the moment, <code>Lens</code> is only able to deal with record fields.</p>
+<p>This allows us to simplify our code further:</p>
+<pre><code class="language-fsharp">let promptName (name: Var&lt;FullName&gt;) =
+    let first = Lens name.V.First
+    let last = Lens name.V.Last
+    form [] [
+        Doc.Input [] first
+        Doc.Input [] last
+        p [] [
+            text (sprintf &quot;Hello, %s %s!&quot; first.V last.V)
+        ]
+    ]
+</code></pre>
+<p>Now, this final step is more subjective: I think that in the above code, the definitions of <code>first</code> and <code>last</code> have become short enough that it's a bit redundant to give them names at all. I would shorten it to the following:</p>
+<pre><code class="language-fsharp">let promptName (name: Var&lt;FullName&gt;) =
+    form [] [
+        Doc.Input [] (Lens name.V.First)
+        Doc.Input [] (Lens name.V.Last)
+        p [] [text (sprintf &quot;Hello, %s %s!&quot; name.V.First name.V.Last)]
+    ]
+</code></pre>
+<p><a href="https://try.websharper.com/snippet/loic.denuziere/0000Ir">See it in action</a></p>
+<p>And here we are! Our reactive code is now clear and maintainable.</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

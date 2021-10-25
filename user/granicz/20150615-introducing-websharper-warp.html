@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Introducing WebSharper Warp</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Jun 15, 2015</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p><a href="https://github.com/intellifactory/websharper.warp">WebSharper Warp</a> is a friction-less web development library for building scripted and standalone <strong>full-stack</strong> F# client-server applications. Warp is built on top of WebSharper and is designed to help you become more productive and benefit from the rich WebSharper features more quickly and more directly.  While Warp shorthands target the most typical applications (text, SPAs, multi-page) and easy exploration, you can extend your Warp applications with the full WebSharper capabilities at any time.</p>
+<h3 id="installing">Installing</h3>
+<p>To get started with Warp is super-easy, all you need is to open a new F# Console Application (or any other F# project type if you want to script applications), and add <code>WebSharper.Warp</code> to it:</p>
+<pre><code>Install-Package WebSharper.Warp
+</code></pre>
+<p>Or if you use <a href="http://fsprojects.github.io/Paket/">Paket</a>:</p>
+<pre><code>paket init
+paket add nuget WebSharper.Warp
+</code></pre>
+<h3 id="hello-world">Hello world!</h3>
+<p>The simplest Warp site just serves text and consist of a single endpoint (<code>/</code>), by default listening on <code>http://localhost:9000</code>.</p>
+<pre><code class="language-fsharp">open WebSharper
+
+let MyApp = Warp.Text &quot;Hello world!&quot;
+
+[&lt;EntryPoint&gt;]
+do Warp.RunAndWaitForInput(MyApp) |&gt; ignore
+</code></pre>
+<p><img src="http://i.imgur.com/fZgqeKjl.png" alt="" /></p>
+<h3 id="single-page-applications">Single Page Applications</h3>
+<p>While serving text is fun and often useful, going beyond isn't any complicated. Warp also helps constructing HTML.  In the most basic form, you can create single page applications (SPAs) using <code>Warp.CreateSPA</code> and WebSharper's server-side HTML combinators:</p>
+<pre><code class="language-fsharp">open WebSharper.Html.Server
+
+let MySite =
+    Warp.CreateSPA (fun ctx -&gt;
+        [H1 [Text &quot;Hello world!&quot;]])
+
+[&lt;EntryPoint&gt;]
+do Warp.RunAndWaitForInput(MySite) |&gt; ignore
+</code></pre>
+<p><img src="http://i.imgur.com/xYITvCql.png" alt="" /></p>
+<h3 id="multi-page-applications">Multi-page applications</h3>
+<p>Using multiple <code>EndPoints</code> and <code>Warp.CreateApplication</code>, you can define multi-page Warp applications.  When constructing the actual pages, <code>Warp.Page</code> comes handy - allowing you to fill the <code>Title</code>, <code>Head</code>, and the <code>Body</code> parts on demand.  <code>Warp.Page</code> pages are fully autonomous and will <strong>automatically contain the dependencies of any client-side code used on the page</strong>.</p>
+<pre><code class="language-fsharp">type Endpoints =
+    | [&lt;EndPoint &quot;GET /&quot;&gt;] Home
+    | [&lt;EndPoint &quot;GET /about&quot;&gt;] About
+
+let MySite =
+    Warp.CreateApplication (fun ctx endpoint -&gt;
+        let (=&gt;) label endpoint = A [HRef (ctx.Link endpoint)] -&lt; [Text label]
+        match endpoint with
+        | Endpoints.Home -&gt;
+            Warp.Page(
+                Body =
+                    [
+                        H1 [Text &quot;Hello world!&quot;]
+                        &quot;About&quot; =&gt; Endpoints.About
+                    ]
+            )
+        | Endpoints.About -&gt;
+            Warp.Page(
+                Body =
+                    [
+                        P [Text &quot;This is a simple app&quot;]
+                        &quot;Home&quot; =&gt; Endpoints.Home
+                    ]
+            )
+    )
+
+[&lt;EntryPoint&gt;]
+do Warp.RunAndWaitForInput(MySite) |&gt; ignore
+</code></pre>
+<p><img src="http://i.imgur.com/WMnmzIPl.png" alt="" /></p>
+<h3 id="adding-client-side-functionality">Adding client-side functionality</h3>
+<p>Warp applications can easily incorporate client-side content and functionality, giving an absolute edge over any web development library. The example below is reimplemented from <a href="/user/granicz/20150515-deploying-websharper-apps-to-azure-via-github.html">Deploying WebSharper apps to Azure via GitHub</a>, and although it omits the more advanced templating in that approach (which is straightforward to add to this implementation), it greatly simplifies constructing and running the application.</p>
+<pre><code class="language-fsharp">module Server =
+    [&lt;Server&gt;]
+    let DoWork (s: string) = 
+        async {
+            return System.String(List.ofSeq s |&gt; List.rev |&gt; Array.ofList)
+        }
+
+[&lt;Client&gt;]
+module Client =
+    open WebSharper.JavaScript
+    open WebSharper.Html.Client
+
+    let Main () =
+        let input = Input [Attr.Value &quot;&quot;]
+        let output = H1 []
+        Div [
+            input
+            Button([Text &quot;Send&quot;])
+                .OnClick (fun _ _ -&gt;
+                    async {
+                        let! data = Server.DoWork input.Value
+                        output.Text &lt;- data
+                    }
+                    |&gt; Async.Start
+                )
+            HR []
+            H4 [Class &quot;text-muted&quot;] -- Text &quot;The server responded:&quot;
+            Div [Class &quot;jumbotron&quot;] -&lt; [output]
+        ]
+
+let MySite =
+    Warp.CreateSPA (fun ctx -&gt;
+        [
+            H1 [Text &quot;Say Hi to the server&quot;]
+            Div [ClientSide &lt;@ Client.Main() @&gt;]
+        ])
+
+[&lt;EntryPoint&gt;]
+do Warp.RunAndWaitForInput(MySite) |&gt; ignore
+</code></pre>
+<p><img src="http://i.imgur.com/9sPa4lzl.png" alt="" /></p>
+<h3 id="taking-things-further">Taking things further</h3>
+<p>Creating RESTful applications, using client-side visualizations is just as easy. For a quick example, here is a Chart.js-based visualization using the <code>WebSharper.ChartJs</code> WebSharper extension:</p>
+<pre><code class="language-fsharp">[&lt;Client&gt;]
+module Client =
+    open WebSharper.JavaScript
+    open WebSharper.Html.Client
+    open WebSharper.ChartJs
+
+    let RadarChart () =
+        Div [
+            H3 [Text &quot;Activity Chart&quot;]
+            Canvas [Attr.Width  &quot;450&quot;; Attr.Height &quot;300&quot;]
+            |&gt;! OnAfterRender (fun canvas -&gt;
+                let canvas = As&lt;CanvasElement&gt; canvas.Dom
+                RadarChartData(
+                    Labels   = [| &quot;Eating&quot;; &quot;Drinking&quot;; &quot;Sleeping&quot;;
+                                  &quot;Designing&quot;; &quot;Coding&quot;; &quot;Cycling&quot;; &quot;Running&quot; |],
+                    Datasets = [|
+                        RadarChartDataset(
+                            FillColor   = &quot;rgba(151, 187, 205, 0.2)&quot;,
+                            StrokeColor = &quot;rgba(151, 187, 205, 1)&quot;,
+                            PointColor  = &quot;rgba(151, 187, 205, 1)&quot;,
+                            Data        = [|28.0; 48.0; 40.0; 19.0; 96.0; 27.0; 100.0|]
+                        )
+                        RadarChartDataset(
+                            FillColor   = &quot;rgba(220, 220, 220, 0.2)&quot;,
+                            StrokeColor = &quot;rgba(220, 220, 220, 1)&quot;,
+                            PointColor  = &quot;rgba(220,220,220,1)&quot;,
+                            Data        = [|65.0; 59.0; 90.0; 81.0; 56.0; 55.0; 40.0|]
+                        )
+                    |]
+                )
+                |&gt; Chart(canvas.GetContext &quot;2d&quot;).Radar
+                |&gt; ignore
+            )
+        ]
+
+let MySite =
+    Warp.CreateSPA (fun ctx -&gt;
+        [
+            H1 [Text &quot;Charts are easy with WebSharper Warp!&quot;]
+            Div [ClientSide &lt;@ Client.RadarChart() @&gt;]
+        ])
+
+[&lt;EntryPoint&gt;]
+do Warp.RunAndWaitForInput(MySite) |&gt; ignore
+</code></pre>
+<p><img src="http://i.imgur.com/9o7x2b1l.png" alt="" /></p>
+<h3 id="scripting-with-warp">Scripting with Warp</h3>
+<p>When you add the <code>WebSharper.Warp</code> NuGet package to your project in Visual Studio, a new document tab will open giving the necessary boilerplate for using Warp in scripted applications.</p>
+<p>For instance, the SPA example above can be written as an F# script and executed in F# Interative:</p>
+<pre><code class="language-fsharp">#I &quot;../packages/Owin.1.0/lib/net40&quot;
+#I &quot;../packages/Microsoft.Owin.3.0.1/lib/net45&quot;
+#I &quot;../packages/Microsoft.Owin.Host.HttpListener.3.0.1/lib/net45&quot;
+#I &quot;../packages/Microsoft.Owin.Hosting.3.0.1/lib/net45&quot;
+#I &quot;../packages/Microsoft.Owin.FileSystems.3.0.1/lib/net45&quot;
+#I &quot;../packages/Microsoft.Owin.StaticFiles.3.0.1/lib/net45&quot;
+#I &quot;../packages/WebSharper.3.2.8.170/lib/net40&quot;
+#I &quot;../packages/WebSharper.Compiler.3.2.4.170/lib/net40&quot;
+#I &quot;../packages/WebSharper.Owin.3.2.6.83/lib/net45&quot;
+#load &quot;../packages/WebSharper.Warp.3.2.10.13/tools/reference.fsx&quot;
+
+open WebSharper
+open WebSharper.Html.Server
+
+let MySite =
+    Warp.CreateSPA (fun ctx -&gt;
+        [H1 [Text &quot;Hello world!&quot;]])
+
+do Warp.RunAndWaitForInput(MySite) |&gt; ignore
+</code></pre>
+<p>If you use Paket, then you should replace the <code>#</code>-lines above with this one:</p>
+<pre><code class="language-fsharp">#load &quot;../packages/WebSharper.Warp/tools/reference-nover.fsx&quot;
+</code></pre>
+<p>In FSI, you should see:</p>
+<pre><code>--&gt; Added 'c:\sandbox\test\Library1\HelloWorld\../packages/Owin.1.0/lib/net40' to library include path
+[... more lines ...]
+
+[Loading c:\sandbox\test\Library1\packages\WebSharper.Warp.3.2.10.13\tools\reference.fsx]
+
+namespace FSI_0004
+
+Serving http://localhost:9000/, press Enter to stop.
+</code></pre>
+<p>You can then test this application as before:</p>
+<p><img src="http://i.imgur.com/xYITvCql.png" alt="" /></p>
+<h3 id="getting-help">Getting help</h3>
+<p>Warp now has a chat room where you can ask questions, feel free to drop by:</p>
+<p><a href="https://gitter.im/intellifactory/websharper.warp?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter" /></a></p>
+<p>Happy coding!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

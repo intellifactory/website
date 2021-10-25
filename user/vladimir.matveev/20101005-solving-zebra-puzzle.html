@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Solving Zebra Puzzle</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Vladimir Matveev</h4>
+                            <p class="text-white">Oct 05, 2010</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p><a href="https://en.wikipedia.org/wiki/Zebra_Puzzle">Zebra puzzle</a> (often referred as Einstein's problem) is a well-known class of logic puzzles where you need to reconstruct the missing parts from the set of known facts. In university I've solved similar puzzles with Prolog, but I've never tried to do it with F#... Time to act with justice.</p>
+<p>First of all, I'd like to remind the rules (this is one of many versions but core principles remain the same):</p>
+<ul>
+<li>There are 5 houses (along the street) in 5 different colors: blue, green, red, white and yellow.</li>
+<li>In each house lives a person of a different nationality: Brit, Dane, German, Norwegian and Swede.</li>
+<li>These 5 owners drink a certain beverage: beer, coffee, milk, tea and water, smoke a certain brand of cigar: Blue Master, Dunhill, Pall Mall, Prince and blend, and keep a certain pet:cat, bird, dog, fish and horse.</li>
+<li>No owners have the same pet, smoke the same brand of cigar, or drink the same beverage.</li>
+</ul>
+<p>Besides these facts there are several hints:</p>
+<ul>
+<li>The Brit lives in a red house.</li>
+<li>The Swede keeps dogs as pets.</li>
+<li>The Dane drinks tea.</li>
+<li>The green house is on the left of the white house (next to it).</li>
+<li>The green house owner drinks coffee.</li>
+<li>The person who smokes Pall Mall rears birds.</li>
+<li>The owner of the yellow house smokes Dunhill.</li>
+<li>The man living in the house right in the center drinks milk.</li>
+<li>The Norwegian lives in the first house.</li>
+<li>The man who smokes blend lives next to the one who keeps cats.</li>
+<li>The man who keeps horses lives next to the man who smokes Dunhill.</li>
+<li>The owner who smokes Blue Master drinks beer.</li>
+<li>The German smokes Prince.</li>
+<li>The Norwegian lives next to the blue house.</li>
+<li>The man who smokes blend has a neighbor who drinks water.</li>
+</ul>
+<p>Question: who owns the fish?</p>
+<p>Well, first intention is usually: forget about complex solutions and use brute force. Very bad idea indeed, especially if we try to calculate amount of possible combinations: <code>5*5*5*5*5 = 3125</code> - this is total amount of all existing combinations of persons' attributes we need to check; then from this set we need to select permutations of size 5 (representing the street). <a href="https://en.wikipedia.org/wiki/Permutation#In_combinatorics">Article in Wiki</a> gives us necessary formula to calculate total amount of permutations: <code>(n! / (n - k)!)</code>, after substitution of formal parameters with real values we get the result - <code>297 070 617 187 575 000</code>. Now it is clear that brute force is not the best thing we can invent...</p>
+<p>Let's have look at hints. We can split then into two groups: first that uses street related information and second - that doesn't. Maybe if we convert hint groups to filters and apply them subsequently, second, then first - then on the second step source set will be smaller thus decreasing amount of combinations.</p>
+<pre><code class="language-fsharp">open System
+
+type House       =  Blue      = 1| Green  = 2| Red     = 4| White    = 8| Yellow = 16 
+type Nationality =  Brit      = 1| Dane   = 2| German  = 4| Norwegian= 8| Swede  = 16
+type Beverage    =  Beer      = 1| Coffee = 2| Milk    = 4| Tea      = 8| Water  = 16
+type Cigar       =  BlueMaster= 1| Dunhill= 2| PallMall= 4| Prince   = 8| Blend  = 16
+type Pet         =  Cat       = 1| Bird   = 2| Dog     = 4| Fish     = 8| Horse  = 16
+
+type Person = House * Nationality * Beverage * Cigar  * Pet
+
+let values&lt;'T when 'T : enum&lt;int&gt;&gt; = Enum.GetValues(typeof&lt;'T&gt;) :?&gt; 'T array
+
+let house       v  ((h, _, _, _, _) : Person) = h = v
+let nationality v  ((_, n, _, _, _) : Person) = n = v
+let beverage    v  ((_, _, b, _, _) : Person) = b = v
+let cigar       v  ((_, _, _, c, _) : Person) = c = v
+let pet         v  ((_, _, _, _, p) : Person) = p = v
+
+let (&lt;&amp;&gt;) f1 f2 = fun p -&gt; 
+    let a = f1 p 
+    let b = f2 p
+    a = b
+
+let hint1  = nationality Nationality.Brit   &lt;&amp;&gt; house House.Red
+let hint2  = nationality Nationality.Swede  &lt;&amp;&gt; pet Pet.Dog
+let hint3  = nationality Nationality.Dane   &lt;&amp;&gt; beverage Beverage.Tea
+let hint5  = house House.Green              &lt;&amp;&gt; beverage Beverage.Coffee
+let hint6  = cigar Cigar.PallMall           &lt;&amp;&gt; pet Pet.Bird
+let hint7  = house House.Yellow             &lt;&amp;&gt; cigar Cigar.Dunhill
+let hint12 = cigar Cigar.BlueMaster         &lt;&amp;&gt; beverage Beverage.Beer
+let hint13 = nationality Nationality.German &lt;&amp;&gt; cigar Cigar.Prince
+
+let (&lt;+&gt;) f1 f2 = fun p -&gt; f1 p &amp;&amp; f2 p
+
+let tests = 
+    [ for house         in values&lt;House&gt;        do
+      for nationality   in values&lt;Nationality&gt;  do
+      for beverage      in values&lt;Beverage&gt;     do
+      for cigar         in values&lt;Cigar&gt;        do
+      for pet           in values&lt;Pet&gt;          do
+        yield (house, nationality, beverage, cigar, pet) ]
+
+tests 
+    |&gt; List.filter(
+        hint1 &lt;+&gt; 
+        hint2 &lt;+&gt; 
+        hint3 &lt;+&gt; 
+        hint5 &lt;+&gt; 
+        hint6 &lt;+&gt; 
+        hint7 &lt;+&gt; 
+        hint12 &lt;+&gt; 
+        hint13
+        )
+    |&gt; (List.length &gt;&gt; printfn &quot;length %d&quot;)
+
+// length: 78
+</code></pre>
+<p>Some notes:</p>
+<ul>
+<li><p><code>house</code>, <code>nationality</code>, <code>beverage</code>, <code>cigar</code>, <code>pet</code> are helper functions for creating hints.</p>
+</li>
+<li><p>The <code>&lt;&amp;&gt;</code> operator applies two hints and then combines its results. Tricky moment here is that both arguments should be evaluated to make final decision. I.e. if hints are <code>(cigar PallMall) &amp; (house Yellow)</code>, then for successful result person being tested should either satisfty both conditions or non-one: if person smokes Pallmall, then it should live in yellow house, and the opposite - if it lives in yellow house - it should smoke Pallmall. That's why we cannot use builtin <code>&amp;</code> operator - it can reject potentially positive results.</p>
+</li>
+</ul>
+<p>After test execution is completed of our code we see that amount of source combinations is now 78. Nice! However, it is not the final improvement. When generating street structure we may notice that combination with duplicated values of some particular attribute is incorrect: two different persons cannot live in blue house at the same time. So during generation we can filter out knowingly incorrect options thus reducing number of combinations to be checked.</p>
+<p>Straightforward way to denote the whole combination of attributes at once - bitmask. Value of type <code>int</code> shall be split into 5 groups, 5 bits in each group. During generation we will pass the mask with all involved attributes. On every step candidate value will be matched against mask and possibly rejected (if one or more property was already used on this generation stage).</p>
+<pre><code class="language-fsharp">open System
+
+type House       =  Blue      = 1| Green  = 2| Red     = 4| White    = 8| Yellow = 16 
+type Nationality =  Brit      = 1| Dane   = 2| German  = 4| Norwegian= 8| Swede  = 16
+type Beverage    =  Beer      = 1| Coffee = 2| Milk    = 4| Tea      = 8| Water  = 16
+type Cigar       =  BlueMaster= 1| Dunhill= 2| PallMall= 4| Prince   = 8| Blend  = 16
+type Pet         =  Cat       = 1| Bird   = 2| Dog     = 4| Fish     = 8| Horse  = 16
+
+type Person = House * Nationality * Beverage * Cigar  * Pet
+
+let values&lt;'T when 'T : enum&lt;int&gt;&gt; = Enum.GetValues(typeof&lt;'T&gt;) :?&gt; 'T array
+
+let inline mask ((h, n, b, c, p) : Person) = 
+    (int h)        ||| 
+    (int n &lt;&lt;&lt; 5)  ||| 
+    (int b &lt;&lt;&lt; 10) ||| 
+    (int c &lt;&lt;&lt; 15) ||| 
+    (int p &lt;&lt;&lt; 20)
+
+let house       v  ((h, _, _, _, _) : Person) = h = v
+let nationality v  ((_, n, _, _, _) : Person) = n = v
+let beverage    v  ((_, _, b, _, _) : Person) = b = v
+let cigar       v  ((_, _, _, c, _) : Person) = c = v
+let pet         v  ((_, _, _, _, p) : Person) = p = v
+
+let (&lt;&amp;&gt;) f1 f2 = fun p -&gt; 
+    let a = f1 p 
+    let b = f2 p
+    a = b
+
+let hint1  = nationality Nationality.Brit   &lt;&amp;&gt; house House.Red
+let hint2  = nationality Nationality.Swede  &lt;&amp;&gt; pet Pet.Dog
+let hint3  = nationality Nationality.Dane   &lt;&amp;&gt; beverage Beverage.Tea
+let hint5  = house House.Green              &lt;&amp;&gt; beverage Beverage.Coffee
+let hint6  = cigar Cigar.PallMall           &lt;&amp;&gt; pet Pet.Bird
+let hint7  = house House.Yellow             &lt;&amp;&gt; cigar Cigar.Dunhill
+let hint12 = cigar Cigar.BlueMaster         &lt;&amp;&gt; beverage Beverage.Beer
+let hint13 = nationality Nationality.German &lt;&amp;&gt; cigar Cigar.Prince
+
+let (&lt;+&gt;) f1 f2 = fun p -&gt; f1 p &amp;&amp; f2 p
+
+let permutations k l =
+    let rec impl n flags = seq { 
+        if n = 0 then yield []
+        else
+            for value in l do
+                if flags &amp;&amp;&amp; (mask value) = 0 then
+                    for suffix in impl (n - 1) (flags ||| mask value) do
+                        yield value::suffix
+        }
+    impl k 0
+
+let hint4 persons =
+    let greenIndex = List.findIndex (house House.Green) persons
+    let whiteIndex = List.findIndex (house House.White) persons
+    (whiteIndex - greenIndex) = 1
+
+let hint8 persons = 
+    let milkIndex = List.findIndex (beverage Beverage.Milk) persons
+    milkIndex = 2
+let hint9 persons = 
+    let norwegianIndex = List.findIndex (nationality Nationality.Norwegian) persons
+    norwegianIndex = 0
+
+let neighbour h1 h2 persons = 
+    let index1 = List.findIndex h1 persons 
+    let index2 = List.findIndex h2 persons 
+    abs (index1 - index2) = 1
+
+let hint10 = neighbour (cigar Cigar.Blend)   (pet Pet.Cat)
+let hint11 = neighbour (cigar Cigar.Dunhill) (pet Pet.Horse)
+let hint14 = neighbour (nationality Nationality.Norwegian) (house House.Blue)
+let hint15 = neighbour (cigar Cigar.Blend) (beverage Beverage.Water)
+
+let tests = 
+    [ for house         in values&lt;House&gt;        do
+      for nationality   in values&lt;Nationality&gt;  do
+      for beverage      in values&lt;Beverage&gt;     do
+      for cigar         in values&lt;Cigar&gt;        do
+      for pet           in values&lt;Pet&gt;          do
+        yield (house, nationality, beverage, cigar, pet) ]
+
+let sw = System.Diagnostics.Stopwatch.StartNew()
+tests 
+    |&gt; List.filter(
+        hint1 &lt;+&gt; 
+        hint2 &lt;+&gt; 
+        hint3 &lt;+&gt; 
+        hint5 &lt;+&gt; 
+        hint6 &lt;+&gt; 
+        hint7 &lt;+&gt; 
+        hint12 &lt;+&gt; 
+        hint13
+        )
+    |&gt; permutations 5
+    |&gt; Seq.filter (
+        hint4 &lt;+&gt; 
+        hint8 &lt;+&gt; 
+        hint9 &lt;+&gt; 
+        hint10 &lt;+&gt; 
+        hint11 &lt;+&gt; 
+        hint14 &lt;+&gt; 
+        hint15
+        )
+    |&gt; Seq.toList
+    |&gt; (fun [x] -&gt; printfn &quot;%A&quot; x)
+sw.Stop()
+printfn &quot;completed in %A&quot; sw.Elapsed
+</code></pre>
+<pre><code>[(Yellow, Norwegian, Water, Dunhill, Cat); (Blue, Dane, Tea, Blend, Horse);
+ (Red, Brit, Milk, PallMall, Bird); (Green, German, Coffee, Prince, Fish);
+ (White, Swede, Beer, BlueMaster, Dog)]
+completed in 00:00:00.5034056
+</code></pre>
+<p>Mystery is solved.</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

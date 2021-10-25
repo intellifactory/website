@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper 4 beta-6 released</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Andras Janko</h4>
+                            <p class="text-white">Mar 25, 2017</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>WebSharper 4 beta-6 contains updates to DOM and JQuery bindings, erased union types, JS output optimizations and fixes.</p>
+<p>Visual Studio 2017, F# 4.1 and C# 7 support are coming soon.</p>
+<h2 id="improvements">Improvements</h2>
+<ul>
+<li><p>using FSharp.Compiler.Service <code>11.0.4</code>. To have optimal compilation speeds, go to a folder in a solution at <code>packages\Zafir.FSharp.4.0.155.11-beta6\tools</code> and run <code>./runngen</code> in PowerShell as administrator.</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/650">#650</a> Bindings to DOM have been updated to current ECMA specification</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/652">#652</a> Bindings to JQuery have benn updated to version 3.1.1</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/660">#660</a> Erased union and option types have been added to <code>WebSharper.JavaScript</code> namespace, named <code>Union</code> and <code>Optional</code>. These are similar to <code>Choice</code> and <code>Option</code> types of F#, but work as TypeScript's erased unions in the JS translation. Conversion functions are available under modules <code>Optional</code> and <code>Union</code>.</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/651">#651</a> output is using JavaScript strict mode</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/550">#550</a> custom structs can now be used in RPC calls</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/644">#644</a> F# unions with <code>Constant null</code> case can now be used in RPC calls</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/642">#642</a> Local generic functions in F# compile when the compiler does not need the type parameter for custom code generation (macros). If it does, you get an error &quot;Macro [name] would use a local type parameter. Make the inner function non-generic or move it to module level and mark it with the Inline attribute&quot;</p>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/648">#648</a> JavaScript code output optimizations:</p>
+<ul>
+<li>Functions taking F# tupled or curried functions as parameters and only fully applying them (in the case of curried parameter) now translates to taking a flat JavaScript function. This means less closure creation and better performance when using functions like <code>List.map2</code></li>
+<li>Local F# tupled and curried functions are now converted to flat functions in JavaScript where possible</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/649">#649</a> Tail call optimization for F#:</p>
+<ul>
+<li><code>let rec</code> expressions with single or mutual recursion</li>
+<li>Module or class (in default constructor) <code>let rec</code> expressions with single recursive function</li>
+<li>Class members, calling itself but no other members of the same class annotated with <code>JavaScript</code> (so inlines do not opt-out of optimization). For instance members, the call must be on the current instance.</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/intellifactory/websharper/issues/655">#655</a> <code>Require</code> and <code>RemotingProvider</code> attributes can take additional object parameters. These will be passed on to the constructors of the resource class and the client-side <code>RemotingProvider</code> instance respectively.</p>
+</li>
+<li><p><code>WebSharper.Resources.BaseResource</code> is not an abstract class any more. This allows using it with the <code>Require</code> attribute without defining an extra type:</p>
+<pre><code class="language-fsharp">[&lt;Require(typeof&lt;Resources.BaseResource&gt;, &quot;//myurl.com/mylib.js&quot;)&gt;]
+</code></pre>
+</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li><a href="https://github.com/intellifactory/websharper/issues/645">#645</a> Name conflict in <code>WebSharper.Sitelets.Content</code> from C#</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/657">#657</a> Using <code>Name</code> attribute on properties with getter and setter now adds <code>set_</code> to the name of the setter to disambiguate them.</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/633">#633</a> WIG-defined interfaces now can be inherited from with F#/C# code if they contain only method definitions without custom inline annotations. Calling interface members from <code>.d.ts</code>-based bindings now translate properly, but these interfaces can't be inherited from in your code (as they are using special call semantics).</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/665">#665</a> Unpacking Scripts/Contents for web projects required the <code>WebProjectOutputDir</code> property, although previously assumed project root as default. This default has been restored for back-compatibility.</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/668">#668</a> Printing F# compilation errors and warnings as compiling with <code>fsc.exe</code> would, respecting <code>nowarn</code>, <code>warn</code>, <code>warnon</code>, <code>warneserror</code> flags</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/667">#667</a> Fix C# analyzer giving failure warnings on build</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/669">#669</a> <code>Async.StartImmediate</code> and <code>Async.StartWithContinuations</code> now start the <code>async</code> immediately as in .NET, possibly finishing synchronously if they contain no bind/combine.</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/671">#671</a> Fix a translation bug in optimization around calling curried instance members</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/673">#673</a> integer type <code>Parse</code> and <code>TryParse</code> methods follow .NET semantics, checking boundaries and disallowing fractions</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/677">#677</a> Fix using <code>Inline</code> on constructors calling into other constructors</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/678">#678</a> Fix inlining JavaScript statements, and using <code>return</code> to produce a value</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/679">#679</a> exception properties <code>Message</code> and <code>InnerException</code> should work for all exception types</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/676">#676</a> <code>Queue</code> and <code>Stack</code> constructors taking a <code>seq&lt;'T&gt;</code> (<code>IEnumerable&lt;T&gt;</code>)</li>
+</ul>
+<h2 id="breaking-changes">Breaking changes</h2>
+<ul>
+<li>Macro API: <code>MacroResult.MacroNeedsResolvedTypeArg</code> now needs the offending type parameter as a field. You can decide if a type is a type parameter of any kind by using the new <code>IsParameter</code> property.</li>
+</ul>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

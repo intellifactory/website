@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper UI.Next: Animating Single-Page Applications</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Simon Fowler</h4>
+                            <p class="text-white">Aug 01, 2014</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>In my <a href="http://fpish.net/blog/SimonJF/id/3965/2014722-structuring-web-applications-with-websharper-ui-next">previous blog</a>, I was asked about how easy it would be to tie in custom animations to the flowlet I described. In this post I hope to convince you that the answer to that is, well... Pretty easy!</p>
+<p>If you haven't checked out <a href="http://fpish.net/blog/anton.tayanovskyy/id/3964/2014721-websharper-ui-next-declarative-animation">Anton's blog on declarative animation in UI.Next</a>, it provides a good introduction and is a bit more in-depth than this one. It'll also help to check out the blog on <a href="http://fpish.net/blog/SimonJF/id/3965/2014722-structuring-web-applications-with-websharper-ui-next">structuring single-page applications</a>.</p>
+<p>A brief introduction for those who haven't read up on UI.Next just yet: UI.Next is a dataflow-backed reactive DOM framework for <a href="http://www.websharper.com">WebSharper</a>. By defining reactive variables (which are a bit like reference cells) and views on these (which allow you to 'peer into' the variable as it changes), it's possible to create DOM fragments which change with the variable.</p>
+<p>This makes it really good for constructing single-page applications (SPAs), and we've cooked up some patterns and abstractions to make this feel pretty natural. Of course, with SPAs, some kind of animation between page transitions is quite nice -- and very doable. Of course, you could do this with CSS -- but I hope you'll agree that it's nicer and more powerful in F# 😃</p>
+<h2 id="fade-transitions-for-a-mini-site">Fade Transitions for a Mini-Site</h2>
+<p>Earlier, I showed a pattern to create mini-sites consisting of multiple pages. To do this, we create an ADT to show the different types of pages you can have, and a rendering function for each. Once this is done, we get a view of the variable, map the rendering function onto it, then embed it into the document.</p>
+<pre><code class="language-fsharp"> // Here we define the minisite.
+    let Main () =
+        // We first create a variable to hold our current page.
+        let m = Var.Create BobsleighHome
+
+        // Here, we render the current page using a view of the current page variable
+        let ctx = {Go = Var.Set m}
+        View.FromVar m
+        |&gt; View.Map (fun pg -&gt;
+            match pg with
+            | BobsleighHome -&gt; HomePage ctx
+            | BobsleighHistory -&gt; History ctx
+            | BobsleighGovernance -&gt; Governance ctx
+            | BobsleighTeam -&gt; Team ctx)
+        |&gt; Doc.EmbedView // Finally, we can embed it to get a Doc
+</code></pre>
+<p>Okay, so what we want is for each page to fade out, and a new one to fade in. You can see this live <a href="https://websharper-samples.github.io/ui/#/samples/AnimatedBobsleighSite">here</a>.</p>
+<p>To do this, we'll take a look at a few things in the <code>Animation</code> module: if you're interested in looking into this a bit more deeply, then check out the <a href="https://github.com/dotnet-websharper/ui/blob/master/docs/UINext-Animation.md">API Reference</a>.</p>
+<p>The first thing to do is create an <code>Anim</code>, which specifies the basic properties about the animation:</p>
+<ul>
+<li><strong>Interpolation</strong>: How to calculate the intermediate values given the current time. This is parameterised over the type we want to interpolate -- we'll just use the inbuilt <code>Double</code> interpolation.</li>
+<li><strong>Easing</strong>: How to &quot;distort&quot; the interpolation, to give more interesting effects. We'll use the <code>CubicInOut</code> easing.</li>
+<li><strong>Time</strong>: The amount of time the animation will last.</li>
+</ul>
+<p>Without further ado...</p>
+<pre><code class="language-fsharp">    let fadeTime = 300.0
+    let Fade =
+        Anim.Simple Interpolation.Double Easing.CubicInOut fadeTime
+</code></pre>
+<p>The next step is to define a <code>Transition</code>, which will trigger the animation. We want to fade in when the page gets shown (meaning we'll need an enter transition) and out when the page gets removed (meaning we'll need an exit transition). When this happens, we'll want to play the Fade animation, changing the <code>opacity</code> style from 0.0 to 1.0 for a fade in, and 1.0 to 0.0 for a fade out.</p>
+<p>You'll notice that <code>Trans.Enter</code> and <code>Trans.Exit</code> take a function providing a value. This allows the transition to depend on a time-varying element -- in this case, since the transition will be the same each time, we don't need this. It comes in really handy for data-driven animations though, as you can see in the <a href="https://websharper-samples.github.io/ui/#/samples/ObjectConstancy">object constancy sample</a>.</p>
+<pre><code class="language-fsharp">    let FadeTransition =
+        Trans.Create Fade
+        |&gt; Trans.Enter (fun i -&gt; Fade 0.0 1.0)
+        |&gt; Trans.Exit (fun i -&gt; Fade 1.0 0.0)
+</code></pre>
+<p>The final step is to create an animation attribute, and attach it to the element we want to animate. This is done as follows, using the <code>Attr.Animated</code> and <code>Attr.AnimatedStyle</code> functions.</p>
+<pre><code class="language-fsharp">let MakePage var pg =
+    Doc.Concat [
+        NavBar var
+        Div [Attr.AnimatedStyle &quot;opacity&quot; FadeTransition (View.Const 1.0) string] [
+            pg
+        ]
+    ]
+</code></pre>
+<p>The function firstly takes the appropriate attribute we want to change as a result of the animation -- in the case of a fade, this will be opacity. We then specify our transition, and a constant view to be passed to the transition. Recall that since this animation doesn't depend on state, it's pretty much irrelevant in this case, but can come in handy at other points. The final argument is a function to change the double we're animating to a string, so that it can be displayed as an attribute.</p>
+<p>All that's left now is to pipe the pages to the <code>MakePage</code> function, which also adds a navigation bar, and we're done!</p>
+<pre><code class="language-fsharp">let Main () =
+    let m = Var.Create BobsleighHome
+    let ctx = {Go = Var.Set m}
+    View.FromVar m
+    |&gt; View.Map (fun pg -&gt;
+        match pg with
+        | BobsleighHome -&gt; HomePage ctx
+        | BobsleighHistory -&gt; History ctx
+        | BobsleighGovernance -&gt; Governance ctx
+        | BobsleighTeam -&gt; Team ctx
+        |&gt; MakePage m)
+    |&gt; Doc.EmbedView
+</code></pre>
+<h2 id="animating-flowlets">Animating Flowlets</h2>
+<p>It's also very possible to combine animations. Flowlets allow us to easily construct &quot;wizard-like&quot; forms, where each page that has been shown may depend on previous pages. Now, a nice thing to do in such a case is to have a swipe-style animation that's triggered upon clicking the &quot;next&quot; button of the form, for example. You can see this example live <a href="https://websharper-samples.github.io/ui/#/samples/AnimatedContactFlow">here</a>.</p>
+<p>The first thing to do is to define a new swipe animation and transition, much as before: the code is pretty much the same, but we'll move 400px to the right, so we'll interpolate between 0.0 and 400.0 this time instead. The transition will also only be triggered when the node is removed, so we'll only need an exit transition this time.</p>
+<pre><code class="language-fsharp">// It's a similar story for swipes -- we're wanting to swipe 400px left.
+let swipeTime = 300.0
+let Swipe =
+    Anim.Simple Interpolation.Double Easing.CubicInOut swipeTime
+
+// We're only swiping out -- so we only specify an exit transition here
+let SwipeTransition =
+    Trans.Create Swipe
+    |&gt; Trans.Exit (fun i -&gt; Swipe 0.0 400.0)
+</code></pre>
+<p>We'll use the same <code>&lt;div&gt;</code> trick as before to attach the animation to each flowlet page: since each animation is added as an attribute, it's possible to add the flow one in, too:</p>
+<pre><code class="language-fsharp">    let AnimateFlow pg =
+        Div
+            [
+                Attr.Style &quot;position&quot; &quot;relative&quot;
+                Attr.AnimatedStyle &quot;opacity&quot; FadeTransition (View.Const 1.0) string
+                Attr.AnimatedStyle &quot;left&quot; SwipeTransition (View.Const 0.0) (fun x -&gt; (string x) + &quot;px&quot;)
+            ]
+
+            [ pg ]
+</code></pre>
+<p>And finally, all we need to do to animate a flowlet page is to pipe it to the <code>AnimateFlow</code> function we just defined:</p>
+<pre><code class="language-fsharp">let personFlowlet =
+    Flow.Define (fun cont -&gt;
+        let rvName = Var.Create &quot;&quot;
+        let rvAddress = Var.Create &quot;&quot;
+        Form [cls &quot;form-horizontal&quot; ; &quot;role&quot; ==&gt; &quot;form&quot;] [
+            ...
+        ]
+        |&gt; AnimateFlow
+    )
+</code></pre>
+<p>...and we're done!</p>
+<h2 id="finishing-up">Finishing Up</h2>
+<p>Thanks for reading, and I hope I've shown how you can use the declarative animation functionality in UI.Next to animate single-page applications. Of course, I'm only scratching the surface here! Expect some more samples and posts in the coming weeks.</p>
+<p>Any questions and comments are very welcome as ever!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

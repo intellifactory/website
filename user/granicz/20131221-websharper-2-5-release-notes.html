@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper 2.5 Release Notes</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Dec 21, 2013</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>We are happy to announce the general availability of <a href="http://websharper.com/downloads">WebSharper 2.5</a>, and the corresponding new <a href="http://websharper.com">WebSharper site</a> that has gone through a major facelift. I plan to blog about the major individual features in detail as separate blog entries, until then, here is a short list of the main changes.</p>
+<h3 id="switched-to-nuget">Switched to NuGet</h3>
+<p>You can now grab WebSharper or WebSharper extensions directly from NuGet, on demand when your project needs them. This gives a simple distribution and upgrade model for the compiler and extensions, however, we recommend that you install WebSharper itself through the Visual Studio <a href="http://websharper.com/websharper.vsix">.VSIX extension</a> to benefit from the various WebSharper templates.</p>
+<p>If you have any installed legacy (2.4 or older) WebSharper binaries and you no longer wish to use them in your legacy projects, this would be a good time to uninstall those.</p>
+<h3 id="upgraded-to-f-3.0">Upgraded to F# 3.0</h3>
+<p>For WebSharper 2.5, we decided to move to F# 3.0 to better benefit from the new language features. F# 3.1 support is coming. By default, you will also need .NET 4.5 installed, as this is the new target framework for WebSharper 2.5. Those who wish to use WebSharper 2.5 on .NET 4.0 can use the new branch created for that. See #185 for details.</p>
+<h3 id="support-for-vs-2012-express-and-vs-2013">Support for VS 2012 Express and VS 2013</h3>
+<p>WebSharper 2.5 now works with the full Visual Studio 2012 suite, including the free Express For Web edition. It also works with Visual Studio 2013.</p>
+<h3 id="support-for-web.api-and-owin">Support for Web.API and OWIN</h3>
+<p>WebSharper 2.5 now supports running WebSharper sitelets via Web.API, allowing to host sitelets standalone in a variety of web containers via OWIN or integrate them with latest ASP.NET MVC and Web.API projects (via the separate <a href="https://bitbucket.org/IntelliFactory/websharper.webapi">websharper.webapi project</a>).</p>
+<h3 id="support-for-pure-f-web-projects-without-template-indirection">Support for pure-F# web projects without template indirection</h3>
+<p>WebSharper 2.4 sitelets required a C# host web application. WebSharper 2.5 removes the need for these host projects and supports pure F# web projects with sitelets embedded.</p>
+<h3 id="more-open-sourced-components">More open sourced components</h3>
+<p>We have open sourced <a href="https://bitbucket.org/IntelliFactory/websharper.mobile">WebSharper Mobile</a>, the component that supplies packaging and Visual Studio templates for Android and Windows Phone; and several key extensions (<a href="https://bitbucket.org/IntelliFactory/websharper.bing.maps">Bing Maps</a>, <a href="https://bitbucket.org/IntelliFactory/websharper.google.maps">Google Maps</a>, <a href="https://bitbucket.org/IntelliFactory/websharper.google.visualization">Google Visualization</a>, <a href="https://bitbucket.org/IntelliFactory/websharper/raw/tip/IntelliFactory.WebSharper.Html5/Definition.fs">WebGL</a>, <a href="https://bitbucket.org/IntelliFactory/websharper.o3d">Google O3D</a>, <a href="https://bitbucket.org/IntelliFactory/websharper.glmatrix">GlMatrix</a>, <a href="https://bitbucket.org/IntelliFactory/websharper.jquery.ui">jQuery UI</a>, <a href="https://bitbucket.org/IntelliFactory/websharper.jquerymobile">jQuery Mobile</a>).</p>
+<h3 id="new-extensions">New extensions</h3>
+<p>We have released two new extensions (<a href="https://bitbucket.org/IntelliFactory/websharper.d3">D3</a>, and HighCharts), and have several upcoming ones in the pipeline for HTML5 games, mobile application development, and charting and visualization.</p>
+<h3 id="introducing-piglets">Introducing Piglets</h3>
+<p>Pluggable Interactive GUIlets - <a href="http://websharper.com/docs/piglets">Piglets</a> - are an improved formalism similar to <a href="http://websharper.com/docs/formlets">formlets</a>, that provides for better UI and logic separation. We have published the first results of this new formalism in our upcoming IFL 2013 paper.</p>
+<h3 id="experimental-bundling-support">Experimental: Bundling support</h3>
+<p>WebSharper can now merge all offline dependencies into a single bundle file, making it easier to package Single Page Applications and offline sitelets, and manage optional and on-demand loading of resources. To use bundling you can supply an additional command line argument (<code>bundle</code>) to <code>websharper.exe</code>, or simply use the new Visual Studio project template (Website Bundle) that we added to the VSIX installer. This is an experimental feature, see #128 for details.</p>
+<h3 id="typescript-support-for-generated-js-code-descriptors">TypeScript support for generated JS code descriptors</h3>
+<p>WebSharper now outputs <code>.d.ts</code> files for each generated JavaScript file, making it easier to interface with those files from TypeScript. This is an experimental feature, see ticket #144 for details.</p>
+<h3 id="typescript-type-provider-for-typescript-0.9.x">TypeScript type provider for TypeScript 0.9.x</h3>
+<p>We have work underway to augment WebSharper 2.5 with a new TypeScript type provider that can read TypeScript declarations and create WebSharper extensions out of them on the fly. This component is released separately and its availability will be announced shortly.</p>
+<h3 id="webgl">WebGL</h3>
+<p>We moved the WebGL bindings to the main WebSharper repository, so you can now develop WebGL-based mobile and web applications without an extension. See ticket #159 for details.</p>
+<h3 id="a-ton-of-smaller-enhancements-and-fixes">A ton of smaller enhancements and fixes</h3>
+<p>Bug fixes and extended proxy support for .NET methods: #70, #71, #72, #73, #74, #75, #77, #78, #79, #80, #83, #86, #87, #90, #91, #92, #93, #96, #101, #107, #109, #110, #111, #112, #114, #117, #118, #123, #125, #126, #133, #134, #136, #139, #145, #148, #152, #153, #154, #156, #158, #160, #161, #162, #163, #164, #165, #166, #169, #170, #172, #176, #177, #178, #180, #182, #183, #184, #186, #187. This includes support for for/while syntax in async workflows, array and string slicing (#136), better <code>DateTime</code> and <code>TimeSpan</code> support (#134), improved compilation strategies for sequence operations (#145) and mutable variables (#148)</p>
+<p>Happy coding!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

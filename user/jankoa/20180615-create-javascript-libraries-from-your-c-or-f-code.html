@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Create JavaScript libraries from your C# or F# code</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Andras Janko</h4>
+                            <p class="text-white">Jun 15, 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>There might be many reasons why a .NET-to-JavaScript transpiler is useful, some of the most common use cases:</p>
+<ul>
+<li>Reuse existing code within a web application</li>
+<li>Use the same data models and part of the code for the server and client side of the same web project</li>
+<li>Write complicated algorithms or business logic with strong typing and advanced features of C# and/or F#, which is easier to implement and test in .NET</li>
+</ul>
+<p>WebSharper is such a transpiler, but also more, a set of tools for creating full websites or standalone single page web application.
+But sometimes something simpler and more to the point tool is needed, to just create a single self-contained <code>.js</code> file that is exposing the translated code well and can be used as a module in a  website or JavaScript-based mobile application using any other technologies and frameworks.
+WebSharper 4.2.13 introduces a simple way to do just this that previously required some hacks.</p>
+<p>This article is using C# terminology and syntax for attributes, but all the same features apply to F# as well.</p>
+<h2 id="translating-a-library-project">Translating a library project</h2>
+<p>Suppose that you have a library project that contains functionality that you would like to access in JavaScript.
+First, add <code>WebSharper.CSharp</code> nuget package (or <code>WebSharper.FSharp</code> for an F# project).
+This also installs the <code>WebSharper</code> package, containing the core APIs and proxies (JavaScript implementations of .NET framework built-in classes).</p>
+<h3 id="translate-whole-code">Translate whole code</h3>
+<p>WebSharper does not auto-translate anything in a project, only marked code parts.
+This is so that mixed client/server projects can be written within a single project.
+But if you do like to translate it all, use</p>
+<pre><code class="language-csharp">using WebSharper;
+
+[assembly: JavaScript]
+</code></pre>
+<p>If the project only uses .NET standard library classes and methods that WebSharper knows a translation for, you get no errors,
+otherwise at this point the WebSharper code analyzer alerts you at the method and constructor calls that are not supported for client-side use
+(You have to build the project to see WebSharper-related warnings/errors for F#).
+To handle these errors, <a href="#resolve">look below</a>.</p>
+<p>Even if you have no errors, when you build the project, no output is produced other than the normal <code>.dll</code>.
+This is because the default mode of WebSharper is to prepare libraries to be used in WebSharper-based sites.
+When you look inside the <code>.dll</code> with a tool like <code>ILSpy</code>, you can find resources added to the assembly, for example a <code>WebSharper.js</code> which contains the translated code for the current library (but not any dependency it might have).
+Extracting this is still not enough, as this code can rely on JavaScript files contained in references (like WebSharper core libraries itself).</p>
+<p>To create a self-contained <code>.js</code>, we need to configure the WebSharper compiler a bit.</p>
+<h3 id="the-wsconfig.json-file">The <code>wsconfig.json</code> file</h3>
+<p>The easiest way for configuration is to add a file named <code>wsconfig.json</code> to your project root folder.
+Initialize it like this:</p>
+<pre><code>{
+  &quot;$schema&quot;: &quot;https://websharper.com/wsconfig.schema.json&quot;,
+  &quot;project&quot;: &quot;bundle&quot;,
+  &quot;outputDir&quot;: &quot;Content&quot;,
+  &quot;javascriptExport&quot;: true
+}
+</code></pre>
+<p>Now if you build your library, you will see a <code>Content</code> folder populated within your project folder.
+Our main interest is in the <code>MyLibrary.js</code> file, which contains the full JavaScript output (there is also a minified version of it).
+The &quot;bundle&quot; project type uses dead code elimination to produce this, recursively only including those functions that are called from the starting code points.
+These starting points are:</p>
+<ul>
+<li>You can have a static argumentless method marked with the <code>[SPAEntryPoint]</code> attribute. This will be included in bundle output (along with all code dependencies), and will run on script load.</li>
+<li>Any other code marked directly or indirectly with <code>[JavaScriptExport]</code> (which is a stronger attribute than <code>[JavaScript]</code>, marking it for translation but also inclusion in bundle output) and their code dependencies.</li>
+</ul>
+<p>The <code>&quot;javascriptExport&quot;: true</code> setting in <code>wsconfig.json</code> is actually equivalent to having <code>[assembly: JavaScriptExport]</code>, so the previously added assembly-level attribute can be removed with no change.</p>
+<p>Note, that you also have a <code>MyLibrary.head.html</code> and <code>MyLibrary.css</code> files.
+The former contains links generated to all external scripts that the bundle output <code>.js</code> file needs.
+The <code>.css</code> contains all style resources embedded in WebSharper-enabled libraries that are required by the bundled code.
+(This should be empty if you only use WebSharper core libraries.)</p>
+<p>The <code>MyLibrary.head.js</code> is just a variant of the <code>head.html</code> to use in active development only, it uses <code>document.write</code> to add the required scripts.
+This is a deprecated feature in modern browsers, but allows linking this script and not worry about if required scripts are changing during development.
+It is highly recommended to take a look at <code>head.html</code> and making sure those dependencies are included in your <code>html</code> file when building for deployment.</p>
+<h3 id="output.js-file-only">Output <code>.js</code> file only</h3>
+<p>If you use the <code>&quot;project&quot;: &quot;bundleOnly&quot;</code> project type, the output <code>.dll</code> will not get the WebSharper-specific resources added, so it will not be able to be used as a reference to another WebSharper-enabled project.
+(In the case of F#, even emitting a <code>.ddl</code> is skipped.)
+The only goal of WebSharper compiler here becomes to produce the bundle output files.</p>
+<p>If you do not set <code>&quot;outputDir&quot;</code> but set one or both of <code>&quot;jsOutput&quot;</code> and <code>&quot;minJsOutput&quot;</code> (value must be a relative or absolute path to the output file), only the <code>.js</code> and/or <code>.min.js</code> files will be produced.</p>
+<h3 id="translate-select-methods-and-types">Translate select methods and types</h3>
+<p>If you only want to mark specific methods and/or types to be included in <code>.js</code> output (serving as starting points for dead code elimination), you can apply the <code>JavaScriptExport</code> attribute and/or <code>wsconfig.json</code> setting in various ways:</p>
+<ul>
+<li>Add a <code>[JavaScriptExport]</code> attribute to the type or member itself or on a whole assembly. The latter is equivalent to having <code>&quot;javascriptExport&quot;: true</code>.</li>
+<li>Add a <code>[JavaScriptExport(typeof(MyType))]</code> attribute on either assembly-level or on a class that contains the targeted type as a nested class. This marks the targeted type, same as if it would have a <code>[JavaScriptExport]</code> directly. This can also be used to target types in another project. Note that the other project need to be WebSharper-enabled too, and have that type in marked with <code>[JavaScript]</code> (using one of the same ways as for <code>JavaScriptExport</code>). So when the first assembly is compiled, WebSharper can prepare the translation of that type, and when targeting it with <code>JavaScriptExport</code>, that can be added to the bundle output readily.</li>
+<li>Add a <code>[JavaScriptExport(&quot;MyNameSpace.MyType&quot;)]</code> attribute, which works the same as using <code>typeof</code>. It also has a configuration equivalent in <code>&quot;javascriptExport&quot;: [ &quot;MyNameSpace.MyType&quot; ]</code>. You can add multiple types to this array.</li>
+<li>Add a <code>[JavaScriptExport(&quot;AssemblyName&quot;)]</code> attribute or equivalently use <code>&quot;javascriptExport&quot;: [ &quot;AssemblyName&quot; ]</code>. This marks the full WebSharper-translated part of targeted assembly to be included in bundle output. So that library must have the WebSharper libraries and tools referenced and have the parts intended for client-side use marked for translation with <code>JavaScript</code>/<code>JavaScriptExport</code>.</li>
+</ul>
+<p><a name="resolve"></a></p>
+<h2 id="resolve-not-found-in-javascript-translation-compilation-errors">Resolve <code>not found in JavaScript translation compilation</code> errors</h2>
+<p>There are limitations to WebSharper's ability to translate method and constructor calls, only those that have proxies in the core libraries will be able to be used in JavaScript-annotated code.
+WebSharper uses type-erasure for the output JavaScript code, using dynamic code generation based on type information at compile time.
+This means that using <code>System.Type</code> and reflection are not supported.
+So sometimes you have to modify your code to run in a suitable way in the browser while also keeping .NET functionality intact.</p>
+<h3 id="branching-via-isclient">Branching via <code>IsClient</code></h3>
+<p>The easiest solution is to introducing some branching around code parts that cannot be translated directly to JavaScript.
+Use the static property <code>WebSharper.Pervasives.IsClient</code> in a branching (<code>if</code> or <code>? :</code>) to have the <code>false</code> branch not considered for translation, while
+it will be run in .NET proper.
+(You can write only <code>IsClient</code> in F# if you have <code>open WebSharper</code>)</p>
+<pre><code class="language-csharp">    if (WebSharper.Pervasives.IsClient) {
+        // this will be translated and run in the browser
+    } else {
+        // this will only run in .NET
+    }
+</code></pre>
+<h3 id="adding-proxies">Adding proxies</h3>
+<p>WebSharper core libraries itself are defining types that are <code>internal</code> but marked with the <code>Proxy</code> attribute to denote that they are implementing another class for client-side use.
+You can do the same to add support for translating types that are found in non-WebSharper enabled assemblies (either framework assemblies or third-party libraries).</p>
+<p>For a minimal implementation of <code>StringBuilder</code>, you can write:</p>
+<pre><code class="language-csharp">[Proxy(typeof(StringBuilder))]
+internal class StringBuilderProxy
+{
+    private List&lt;string&gt; b = new List&lt;string&gt;();
+
+    public StringBuilderProxy Append(string s)
+    {
+        b.Add(s);
+        return this;
+    }
+
+    public override string ToString()
+    {
+        var s = String.Concat(b);
+        b.Clear();
+        b.Add(s);
+        return s;
+    }
+}
+</code></pre>
+<p>Or the same in F#:</p>
+<pre><code class="language-fsharp">[&lt;Proxy(typeof&lt;System.Text.StringBuilder&gt;)&gt;]
+type internal StringBuilderProxy () =
+    let b = ResizeArray()
+
+    member this.Append(s: string) =
+        b.Add(s)
+        this
+
+    override this.ToString() =
+        let s = String.concat &quot;&quot; b 
+        b.Clear()
+        b.Add(s)
+        s
+</code></pre>
+<p>If the type signature of a method matches the a method on the targeted class (taking the proxy type itself to be equivalent to the target), then it will serve as the JavaScript implementation.</p>
+<p>If you feel that some type or method should have a standard proxy, feel free to ask about it on the <a href="https://forums.websharper.com/">WebSharper forums</a> or the submit a pull request to the open-source <a href="https://github.com/dotnet-websharper/core">repository on GitHub</a>.</p>
+<p>Have a good time running .NET code in your websites!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

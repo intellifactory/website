@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">XML computation expressions: Playing around with extending the F# compiler</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                            <p class="text-white">Jun 30, 2013</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>It's been a couple months since <a href="https://groups.google.com/forum/?fromgroups=#!searchin/fsharp-opensource/xml/fsharp-opensource/lvqnyb1CZUA">this discussion</a> in the F# Open-Source mailing list about a unified F# EDSL for XML trees, but I've remained intrigued by this problem and wanting to improve on the solutions proposed. I found <a href="http://fssnip.net/hf">Tomas Petricek's computation expression-based solution</a>, in particular, quite nice in its conciseness and non-reliance on custom operators, which makes it much more intuitive. Its big problem, though, is its complete reliance on side-effects at every level.</p>
+<h2 id="so-much-impurity">So much impurity...</h2>
+<p>Now, I'm not saying that such an EDSL <em>must</em> be completely pure in order to be even considered. After all, WebSharper's own HTML EDSL relies on side-effects. But at a much smaller scale: for example, in the following code, the only side-effect is done by the <c>(-&lt;)</c> operator, which destructively adds children to a node.</p>
+<pre><code class="language-fsharp">let ``WebSharper node`` =
+    Div [Class &quot;header&quot;; Id &quot;main-header&quot;] -&lt; [
+        Span [Text &quot;This is the contents of the header.&quot;]
+        Br []
+        Span [Class &quot;clear&quot;]
+    ]
+</code></pre>
+<p>On the other hand, Tomas's EDSL uses a global variable <code>h</code> containing an internal pointer to the current position in the XML tree where the next node will be written. Which means that not only does every single operation (moving up or down in the tree, inserting a node or an attribute) relies on mutation, but a wrong use of a method of <code>h</code> can land you in the wrong place of the tree, potentially throwing an error when closing the computation expression and trying to move up from the root. Ugh... Surely we can do better!</p>
+<h2 id="but-at-what-cost">... but at what cost?</h2>
+<p>Well, as it turns out, we can't.</p>
+<p>At least, not if we want to keep a clean and concise syntax. We could, of course, make use of the <code>yield</code> and <code>yield!</code> keywords, or even <a href="http://msdn.microsoft.com/en-us/library/hh289709.aspx">custom operations</a> if we find these keywords too long.</p>
+<pre><code class="language-fsharp">let ``Pure CE, first attempt`` =
+    // &quot;attr&quot;, &quot;node&quot; and &quot;nodes&quot; are custom operations here
+    div {
+        attr (&quot;class&quot;, &quot;header&quot;)
+        attr (&quot;id&quot;, &quot;main-header&quot;)
+        node (span { text &quot;This is the contents of the header.&quot; })
+        nodes [
+            br
+            span { attr (&quot;class&quot;, &quot;clear&quot;) }
+        ]
+    }
+</code></pre>
+<p>... And the result is more cluttered than any of the existing EDSLs. Not good.</p>
+<p>Actually, there is a simple reason why a Computation Expression-based XML EDSL needs to be destructive if it must be concise.</p>
+<p>For those unfamiliar with the way F# Computation Expressions are implemented, this is how it works: the keyword that you place at the beginning of a CE (<code>async</code>, <code>seq</code>, etc — or in the above code, <code>div</code>) is actually an object, called the builder. Each keyword inside the CE is translated to a method call on the builder according to a set of <a href="http://msdn.microsoft.com/en-us/library/dd233182.aspx">simple desugaring rules</a>.</p>
+<p>According to these rules, when a bare expression is met within a CE (<code>{| other-expr; cexpr |}</code>), it is transformed into a sequence of expressions (<code>other-expr; {| cexpr |}</code>). Which means its return value is discarded, and the only useful thing it can do is a side-effect. No way out of this: if we want to use bare expressions, they must be impure.</p>
+<h2 id="extending-f-for-fun-well-see-about-profit">Extending F# for fun, we'll see about profit</h2>
+<p>At this point, I chose to leave the realm of what can be done, and to enter the realm of what could be done. After all, you never do anything new if you don't start asking &quot;What if?&quot;</p>
+<p>What if the bare expression expansion rule was different? What if instead of simply transforming it into a sequence of expressions, it called a new method on the CE, let's call it <code>Sequence</code>, that would perform whatever transformation we want it to?</p>
+<p>Well, there's only one way to find out. Off to <a href="https://github.com/fsharp/fsharp">the compiler</a> we go!</p>
+<p>This being my first foray into the F# compiler source, it took me some time to find my way around. But fortunately, the change needed to implement the <code>Sequence</code> method ended up being <a href="https://github.com/Tarmil/fsharp/commit/fca70beefb47d005f198eeca3bab1ab7b1d138ef">even smaller</a> than I thought it would be. The first chunk of the diff implements the following transformation:</p>
+<pre><code class="language-fsharp">{| other-expr; cexpr |} --&gt; builder.Sequence(other-expr, {| cexpr |})
+</code></pre>
+<p>and the second chunk implements:</p>
+<pre><code class="language-fsharp">{| other-expr |} --&gt; builder.Sequence(other-expr, builder.Zero())
+</code></pre>
+<p>The nice part about this is, just like the existing <code>Run</code> and <code>Delay</code> methods, if <code>Sequence</code> is not implemented by the builder, then we can just revert to the default behavior, making this change 99% retro-compatible. The only breaking case is if an existing builder happens to have a <code>Sequence</code> method for its own purposes, then this method will be mistaken for an implementation of this feature.</p>
+<h2 id="a-better-xml-than-xml">A better XML than XML</h2>
+<p>So, back to our XML EDSL business, but now with our custom F# compiler. In the F# Open-Source mailing list thread, Anton Tayanovskyy listed the different cases that our EDSL should be able to concisely represent.</p>
+<pre><code class="language-xml">&lt;!-- empty element with no attributes --&gt;
+&lt;hr /&gt;
+
+&lt;!-- empty element with attributes --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;foo.css&quot; /&gt;
+
+&lt;!-- empty element with text-only content --&gt;
+&lt;title&gt;foo&lt;/title&gt;
+
+&lt;!-- empty element with attributes and text-only content --&gt;
+&lt;div id=&quot;main&quot;&gt;foo&lt;/div&gt;
+
+&lt;!-- element with no attributes and element-only content --&gt;
+&lt;div&gt;&lt;hr/&gt;&lt;/div&gt;
+
+&lt;!-- element with attributes and element-only content --&gt;
+&lt;div id=&quot;main&quot;&gt;&lt;hr/&gt;&lt;/div&gt;
+
+&lt;!-- element (possibly with attributes) with mixed content --&gt;
+&lt;div id=&quot;address&quot;&gt;Foo St&lt;br/&gt;Bar Town&lt;/div&gt;
+</code></pre>
+<p>With our newly implemented CE syntax extension, this is how we'll be able to represent them:</p>
+<pre><code class="language-fsharp">// empty element with no attributes
+HR
+
+// empty element with attributes
+Link { Rel &quot;stylesheet&quot;; HRef &quot;foo.css&quot; }
+
+// empty element with text-only content
+Title { &quot;foo&quot; }
+
+// empty element with attributes and text-only content
+Div { Id &quot;main&quot; } { &quot;foo&quot; }
+
+// element with no attributes and element-only content
+Div { HR }
+
+// element with attributes and element-only content
+Div { Id &quot;main&quot; } { HR }
+
+// element (possibly with attributes) with mixed content
+Div { Id &quot;address&quot; } { &quot;Foo St&quot;; Br; &quot;Bar Town&quot; }
+</code></pre>
+<p>Looks pretty cool, doesn't it? <a href="https://gist.github.com/Tarmil/5894620">Here is the implementation.</a> It actually relies on a final couple of tricks, but unlike the previous one, these tricks are entirely legit F# 😃</p>
+<h3 id="the-builder">The builder</h3>
+<p>The first trick is simple: the node type is the builder! This allows us to have both</p>
+<pre><code class="language-fsharp">Div : Node
+</code></pre>
+<p>and</p>
+<pre><code class="language-fsharp">Div { HR } : Node
+</code></pre>
+<p>Even better, if we have an existing node <code>myNode</code>, then we can add children to it with a CE:</p>
+<pre><code class="language-fsharp">myNode { Div }
+</code></pre>
+<h3 id="attributes">Attributes</h3>
+<p>The value carried around by the CE is actually the list of children that will be added to the node. The final creation of the node is done by the <code>Run</code> method, which gets called automatically by the CE desugaring (as shown <a href="http://msdn.microsoft.com/en-us/library/dd233182.aspx">here</a>).</p>
+<p>But what about attributes? One thing we could do is, instead of carrying a list of children, carry a pair: a list of children and a list of attributes. But this would allow mixing children and attributes within the same CE:</p>
+<pre><code class="language-fsharp">Div { Id &quot;main&quot;; Span { &quot;contents&quot; } }
+</code></pre>
+<p>and I'm not very fond of the idea: it contradicts this fundamental distinction, in XML, between attributes and child nodes. So I decided instead to take advantage of method overloading. I have two versions of <code>Sequence</code>:</p>
+<pre><code class="language-fsharp">type Node =
+    // ...
+    member this.Sequence (n: Node, l: Node list) = n :: l
+    member this.Sequence (a: Attribute, l: Attribute list) = a :: l
+</code></pre>
+<p>It is now impossible to mix nodes and attributes, because there is no method with arguments <code>Node * Attribute list</code> or vice-versa.</p>
+<p>In the end, we have what could be considered two different CEs using the same builder; one for child nodes, and one for attributes. And since the type finally returned by the CE is the builder type, we can chain them:</p>
+<pre><code class="language-fsharp">// Using the child node CE
+Div { Span }
+// Using the attribute CE
+Div { Id &quot;main&quot; }
+// Chaining both CEs
+Div { Id &quot;main&quot; } { Span }
+</code></pre>
+<h3 id="sequences-of-children">Sequences of children</h3>
+<p>It is very common, when building HTML, to need to insert a sequence of children into a parent node. Rows into a table, articles into a page, etc. This is actually, in my opinion, the main weakness of WebSharper's EDSL. It is certainly possible to insert a sequence of children, but not very practical:</p>
+<pre><code class="language-fsharp">let childrenToAdd = [Div [Text &quot;c1&quot;]; Div [Text &quot;c2&quot;]]
+
+/// The parent as it would be without the children.
+let parent = Div [
+    H1 [Text &quot;Title&quot;]
+    // We want to put the children here
+    Div [Class &quot;footer&quot;]
+]
+
+/// First possibility: use yield!, forcing us to add yield to all other children.
+let parent' = Div [
+    yield H1 [Text &quot;Title&quot;]
+    yield! childrenToAdd
+    yield Div [Class &quot;footer&quot;]
+]
+
+/// Second possibility: use (-&lt;) to break down the children into several sequences.
+let parent'' = Div [
+    H1 [Text &quot;Title&quot;]
+] -&lt; childrenToAdd -&lt; [
+    Div [Class &quot;footer&quot;]
+]
+</code></pre>
+<p>Fortunately, our new EDSL can do this better, in two different ways even. The first one is to (ab)use method overloading again:</p>
+<pre><code class="language-fsharp">type Node =
+    // ...
+    member this.Sequence(ns: seq&lt;Node&gt;, l: Node list) = List.ofSeq ns @ l
+
+let childrenToAdd = [ Div { &quot;c1&quot; }; Div { &quot;c2&quot; } ]
+
+let parent = Div {
+    H1 { &quot;title&quot; }
+    childrenToAdd
+    Div { Class &quot;footer&quot; }
+}
+</code></pre>
+<p>The second one is to implement the <code>For</code> method of the CE builder. This allows us to insert for loops right into our XML!</p>
+<pre><code class="language-fsharp">let parent = Div {
+    H1 { &quot;title&quot; }
+    for c = 1 to 2 do
+        Div { &quot;c&quot; + string i }
+    Div { Class &quot;footer&quot; }
+}
+</code></pre>
+<h2 id="in-conclusion">In conclusion</h2>
+<p>Obviously, the EDSL presented here is only a toy and a yearning for what could be; and it will remain so as long as it depends on a custom patched compiler. This being said, with the recent news that the F# team intends to put out <a href="http://blogs.msdn.com/b/fsharpteam/archive/2013/06/27/announcing-a-pre-release-of-f-3-1-and-the-visual-f-tools-in-visual-studio-2013.aspx">more frequent updates to the language</a>, one could imagine a feature similar to <code>Sequence</code> making its way into the official F# compiler some day. Hey, don't blame me for hoping!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

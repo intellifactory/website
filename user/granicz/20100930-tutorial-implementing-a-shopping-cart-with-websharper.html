@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Tutorial: Implementing a shopping cart with WebSharper</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Sep 30, 2010</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>Last week I had a <a href="http://www.communityforfsharp.net/september-2010-live-meeting">Community for F#</a> talk on WebSharper where I presented a small WebSharper application to implement a client-based, persistent shopping cart, and I received numerous emails asking for the source code for that talk. So in this post I am going to show you the full source code and walk you through what I did to implement the shopping cart functionality. The code provided here should work on any existing 1.0.X installation, preferably on the latest 1.0.28 release.</p>
+<p>What's so special about this implementation?</p>
+<ul>
+<li>First of all, it's all done with F# code with minimal markup involved to implement a site master page.</li>
+<li>It demonstrates how easily you can write entire web applications in F# and integrate seamlessly with ASP.NET.</li>
+<li>Despite its shortness, this shopping cart implementation can handle multiple product categories and display various products under in each category.</li>
+<li>It is implemented entirely in client-side code, except for the initial call to the server to fetch the available products and families. Therefore, adding to, or removing items from the shopping cart, and calculating the total sum is handled entirely on the client, without any server-side intervention. This makes the application fast and highly interactive.</li>
+<li>The application demonstrates just how easily you can enlist external JavaScript libraries in your WebSharper applications, all with F# code.</li>
+</ul>
+<h3 id="building-a-shopping-cart-the-parts-needed">Building a shopping cart - the parts needed</h3>
+<p>There are three main parts to this WebSharper application. First, you need a design for how the page should look, second you need a WebSharper binding for the chosen client-side persistency framework, and third you need the WebSharper code for the main functionality of the shopping cart. We will discuss each of these below.
+To get started, you should create a new WebSharper application in Visual Studio. If you don't have WebSharper installed, you can search for the <a href="http://visualstudiogallery.msdn.microsoft.com/en-us/288b94ea-0ea7-4dde-8906-f72eb22fbe1b">WebSharper Standard</a> plugin in the Visual Studio Gallery (in Visual Studio 2010, go to Tools / Extension Manager, and search for WebSharper in the Online Gallery), or download <a href="http://www.intellifactory.com/products/wsp/DownloadStd.aspx">WebSharper Standard from our web site</a> directly.</p>
+<p>The following screenshot shows how your solution will eventually look like in the Visual Studio Solution Explorer.</p>
+<img src="/assets/shopping-cart-solution.png">
+<h4 id="step-1-getting-the-design-done">Step 1 - Getting the design done</h4>
+<p>With WebSharper Standard, the primary way to expose your WebSharper applications is via ASP.NET. You will see shortly how easily you can accomplish this. In this first step, however, you will create a basic master page and populate the web application project in your WebSharper solution with a couple pages.</p>
+<p>First, note that I am showing an out-of-project design.html file in the WebApplication project. This I used to create a basic HTML layout page that will serve as my ASP.NET master page. I then took this design and transliterated it to the following master page:</p>
+<pre><code class="language-xml">&lt;%@ Master %&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;!-- Head --&gt;
+&lt;head id=&quot;Head1&quot; runat=&quot;server&quot;&gt;
+    &lt;title&gt;Your site title&lt;/title&gt;
+    &lt;link href=&quot;reset.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;link href=&quot;site.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;WebSharper:ScriptManager runat=&quot;server&quot; &gt;&lt;/WebSharper:ScriptManager&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form runat=&quot;server&quot;&gt;
+    &lt;table&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; id=&quot;menu&quot;&gt;
+                    &lt;div&gt;
+                        &lt;asp:HyperLink runat=&quot;server&quot; NavigateUrl=&quot;~/Flowlet.aspx&quot;&gt;
+                            Flowlet&lt;/asp:HyperLink&gt; |
+                        &lt;asp:HyperLink runat=&quot;server&quot; NavigateUrl=&quot;~/ShoppingCart.aspx&quot;&gt;
+                            Shopping Cart&lt;/asp:HyperLink&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; id=&quot;banner&quot;&gt;
+                    &lt;asp:ContentPlaceHolder runat=&quot;server&quot; ID=&quot;Title&quot;&gt;
+                    &lt;/asp:ContentPlaceHolder&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td id=&quot;main&quot;&gt;
+                    &lt;asp:ContentPlaceHolder runat=&quot;server&quot; ID=&quot;Main&quot;&gt;
+                    &lt;/asp:ContentPlaceHolder&gt;
+                &lt;/td&gt;
+                &lt;td id=&quot;side&quot;&gt;
+                    &lt;asp:ContentPlaceHolder runat=&quot;server&quot; ID=&quot;Side&quot;&gt;
+                    &lt;/asp:ContentPlaceHolder&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; id=&quot;footer&quot;&gt;
+                    WebSharper demo by Adam Granicz, IntelliFactory.
+                    Absolutely no warranty of any kind :)
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>I won't inline reset.css and site.css here, you can find them in the attachment zip file in the bottom of this article. As you would expect, the former implements some basic &quot;reset&quot; on the HTML styles, and the latter implements the look and feel for the mini-site.</p>
+<p>The master page with a default instantiation looks like the following:</p>
+<img src="/assets/shopping-cart-base.png">
+<p>With this new master page, you can add a couple new pages and modify the default page to have links to both. Here is Flowlet.aspx - which wraps the SignupSequence pagelet (renamed to signup.fs in WebSharperProject) from the &quot;default&quot; WebSharper project that I left for the sake of having two different pages in our mini site:</p>
+<pre><code class="language-xml">&lt;%@ Page MasterPageFile=&quot;~/site.master&quot; %&gt;
+
+&lt;asp:Content ContentPlaceHolderID=&quot;Title&quot; runat=&quot;server&quot;&gt;
+    &lt;h1&gt;Flowlets Demo&lt;/h1&gt;
+&lt;/asp:Content&gt;
+
+&lt;asp:Content ContentPlaceHolderID=&quot;Main&quot; runat=&quot;server&quot;&gt;
+    &lt;ws:SignupSequence runat=&quot;server&quot; &gt;&lt;/ws:SignupSequence&gt;
+&lt;/asp:Content&gt;
+</code></pre>
+<p>Note that I did have to make a couple small changes in signup.fs from the default, namely I switched the formlet and flowlet declarations to be lazy, so I have:</p>
+<pre><code class="language-fsharp">[&lt;JavaScript&gt;]
+let BasicInfoForm () : Formlet&lt;BasicInfo&gt; =
+    ...
+
+[&lt;JavaScript&gt;]
+let ContactInfoForm () =
+    ...
+
+[&lt;JavaScript&gt;]
+let SignupSequence () =
+    ...
+
+[&lt;JavaScript&gt;]
+override this.Body = ContactForms.SignupSequence ()
+</code></pre>
+<p>These were necessary because the code in the default project template assumes that these formlets are created eagerly - that is for every pagelet inside your WebSharper application. However, in our shopping cart application this is not true - so you need to switch those formlet/flowlet constructions to be on demand.</p>
+<p>The ShoppingCart.aspx file is just as simple as Flowlet.aspx, simply filling the content holes of the master page and exposing the two WebSharper controls (ItemsToBuy and ShoppingCart) we are about to develop.</p>
+<pre><code class="language-xml">&lt;%@ Page MasterPageFile=&quot;~/site.master&quot; %&gt;
+
+&lt;asp:Content ContentPlaceHolderID=&quot;Title&quot; runat=&quot;server&quot;&gt;
+    &lt;h1&gt;Your Shopping Cart&lt;/h1&gt;
+&lt;/asp:Content&gt;
+
+&lt;asp:Content ContentPlaceHolderID=&quot;Main&quot; runat=&quot;server&quot;&gt;
+    &lt;ws:ItemsToBuy ID=&quot;ItemsToBuy1&quot; runat=&quot;server&quot; &gt;&lt;/ws:ItemsToBuy&gt;
+&lt;/asp:Content&gt;
+
+&lt;asp:Content ContentPlaceHolderID=&quot;Side&quot; runat=&quot;server&quot;&gt;
+    &lt;ws:ShoppingCart ID=&quot;ShoppingCart1&quot; runat=&quot;server&quot; &gt;&lt;/ws:ShoppingCart&gt;
+&lt;/asp:Content&gt;
+</code></pre>
+<h4 id="step-ii-wrapping-persist.js">Step II - Wrapping Persist.js</h4>
+<p>Before we develop the shopping cart functionality, we need an API for saving to and retrieving values from a client-side persistent storage. This machinery will give us the necessary functions to operate on the shopping cart state.</p>
+<p>A quick look around the web for client-side persistent storage reveals several compeling choices. For one, we could use HTML5 Web Storage - however, its implementation is lagging behind in different browsers. Another alternative, <a href="http://pablotron.org/?cid=1557">PersistJs</a> seems much more viable as it promises widespread backwards compatibility, so I decided to use that.</p>
+<p>A quick look at the PersistJs samples reveals a very simple, to-the-point API. You can do three main things:</p>
+<ul>
+<li>Create or fetch a new store by name</li>
+<li>Save some string data at a given string key in a store.</li>
+<li>Retrieve asynchronously the value assigned to some key in a store.</li>
+</ul>
+<p>We will need to store arbitrary values in the store, so this API needs some slight adjustments as we migrate it over to WebSharper. For this, we need a way to marshal arbitrary values to strings and unmarshal them back to values of their appropriate type.</p>
+<p>Below is the full implementation of the PersistJs WebSharper bindings (WebSharperProject/persistjs.fs):</p>
+<pre><code class="language-fsharp">namespace IntelliFactory.WebSharper.PersistJs
+
+open IntelliFactory.WebSharper
+
+module internal JSON =
+
+    [&lt;Inline &quot;JSON.parse($x)&quot;&gt;]
+    let Parse&lt;'T&gt; (x: string) : 'T = Unchecked.defaultof&lt;'T&gt;
+
+module Dependencies =
+    open System
+    open System.Configuration
+    open IntelliFactory.WebSharper
+
+    let internal PersistJsBase =
+        let key = &quot;IntelliFactory.WebSharper.PersistJs&quot;
+        match ConfigurationManager.AppSettings.[key] with
+        | null -&gt;
+            &quot;/js/persist-js&quot;
+        | url -&gt;
+            url
+
+    [&lt;AbstractClass&gt;]
+    type JsResource(fname: string) =
+        interface IResource with
+            member this.Render (resolver, writer) =
+                let loc = sprintf &quot;%s/%s&quot; PersistJsBase fname
+                Resource.RenderJavaScript loc writer
+
+    type PersistJs() = inherit JsResource(&quot;persist-min.js&quot;)
+
+[&lt;Require(typeof&lt;Dependencies.PersistJs&gt;)&gt;]
+[&lt;JavaScriptType&gt;]
+type Store =
+    [&lt;Inline &quot;new Persist.Store($name)&quot;&gt;]
+    static member Create (name: string) : Store =
+        failwith &quot;Client-side&quot;
+
+    [&lt;Inline &quot;$this.set($key, JSON.stringify($value))&quot;&gt;]
+    member this.Save&lt;'T&gt; (key: string, value: 'T) : unit =
+        failwith &quot;Client-side&quot;
+
+    [&lt;Inline &quot;$this.get($key, $callback)&quot;&gt;]
+    member private this.RetrieveP (key: string, callback: bool*string-&gt;unit) : unit =
+        failwith &quot;Client-side&quot;
+
+    [&lt;JavaScript&gt;]
+    [&lt;Inline&gt;]
+    member this.Retrieve&lt;'T&gt; (key: string) : Async&lt;'T option&gt; =
+        Async.FromContinuations &lt;| fun (onOk, onExc, onTerm) -&gt;
+            this.RetrieveP(key, fun (ok, str) -&gt;
+                if ok &amp;&amp; str &lt;&gt; null then
+                    onOk (Some (JSON.Parse&lt;'T&gt; str))
+                else
+                    onOk None)
+
+    [&lt;JavaScript&gt;]
+    [&lt;Inline&gt;]
+    member this.Contains (key: string) : Async&lt;bool&gt; =
+        Async.FromContinuations &lt;| fun (onOk, onExc, onTerm) -&gt;
+            this.RetrieveP(key, fun (ok, str) -&gt;
+                if ok &amp;&amp; str &lt;&gt; null then
+                    onOk true
+                else
+                    onOk false)
+</code></pre>
+<p>In this code, the internal JSON module supplies the <code>Parse</code> member, this performs the unmarshalling needed for retrieving values from the store. Marshalling is inlined via the native <code>JSON.stringify</code> function.</p>
+<p>While the above code is pretty straightforward, the <code>Dependencies</code> module deserves some mention. First, we define an abstract class that represents JavaScript resources relative to a base location. This base location defaults to the <code>/js/persist-js</code> folder on the web server, but can also be overriden via Web.Config. Finally, we define the persist-min.js (available from the PersistJs site) artifact as a JavaScript resource. Note how this resource is then annotated on the main <code>Store</code> type as a resource requirement. This causes the WebSharper script manager (that is present in our master page) to inline a reference to persist-min.js when this <code>Store</code> class is in use in the current page.</p>
+<h4 id="part-3-implementing-the-shopping-cart">Part 3 - Implementing the shopping cart</h4>
+<p>Now you are ready to implement the main shopping cart functionality. This has two parts- a listing of available products broken down by category, and the shopping cart that summarizes the items already in the cart.</p>
+<p>Below is a mockup of these two &quot;controls&quot; and the events that can originate from both.</p>
+<img src="/assets/shopping-cart-mockup-1.png">
+<img src="/assets/shopping-cart-mockup-2.png">
+<p>Note that both the ItemsForSale and the ShoppingCart controls can originate events, but only the latter one can react to them visually. You can implement these events in a variety of ways. In my talk I mentioned several alternatives:</p>
+<ul>
+<li>Implementing a simple message queue, such as a MailBox</li>
+<li>Hosting ItemsToBuy and ShoppingCart in a parent pagelet and handling their communication locally in that pagelet</li>
+<li>Using the upcoming <a href="http://www.intellifactory.com/docs/rxjs/index.html">RxJs</a> bindings for WebSharper, and implementing the shopping cart as an observable collection via reactive programming</li>
+<li>Using simple F# events - where both controls trigger various events, and the ShoppingCart control subscribes to the shared event channel and responds visually as appropriate</li>
+</ul>
+<p>For this implementation I chose the last option, implementing the communication between the two pagelets using F# events. This is a strikingly simple yet effective approach that works perfectly on the client-side.</p>
+<p>So without further due, let's jump into the main shopping-cart.fs module:</p>
+<pre><code class="language-fsharp">namespace WebSharperProject
+
+open System
+open IntelliFactory.WebSharper
+open IntelliFactory.WebSharper.Html
+
+module ShoppingCartInternals =
+    module M = Microsoft.FSharp.Collections.Map
+
+    module Internals =
+
+        [&lt;JavaScript&gt;]
+        let internal store () = PersistJs.Store.Create &quot;shopping-cart-4&quot;
+
+        [&lt;JavaScript&gt;]
+        let NextCounter () =
+            let setCounterTo i =
+                (store ()).Save&lt;int&gt;(&quot;counter&quot;, i)
+            async {
+                let! currOpt = (store ()).Retrieve&lt;int&gt; &quot;counter&quot;
+                let current =
+                    match currOpt with
+                    | None -&gt;
+                        0
+                    | Some curr -&gt;
+                        curr
+                let res = current+1
+                setCounterTo res
+                return res
+            }
+
+        [&lt;JavaScript&gt;]
+        let SetItemsInCart items =
+            (store ()).Save&lt;(string * (string*float*int*int)) array&gt;(&quot;cart&quot;, items)
+
+        [&lt;JavaScript&gt;]
+        let GetItemsInCart () : Async&lt;Map&lt;string, (string*float*int*int)&gt;&gt; =
+            let getCart () =
+                (store ()).Retrieve&lt;(string * (string*float*int*int)) array&gt; &quot;cart&quot;
+            async {
+                let! res = getCart ()
+                let newres =
+                    match res with
+                    | None -&gt;
+                        SetItemsInCart [||]
+                        [||]
+                    | Some items -&gt;
+                        items
+                let res =
+                    newres
+                    |&gt; M.ofArray
+                return res
+            }
+</code></pre>
+<p>The above code encapsulates the persistent storage-related functionality into the <code>Internals</code> module. Here, the internal <code>store</code> function creates or fetches a store by name, <code>NextCounter</code> supplies an increasing stream of numbers (implemented via storing the last &quot;ticket&quot; number in the persistent store) that you use for ordering items that are added to the cart (last added is shown last), <code>SetItemsInCart</code>, and <code>GetItemsInCart</code> store and retrieve all items in the cart, respectively (we do this as a batch operation since our PersistJs binding doesn't expose an API for enumerating all entries in a given store).</p>
+<p>The events you saw earlier are modeled as a union type (<code>CartEvent</code>) and the main event channel (<code>ShoppingCartEvents</code>) is a simple F# first-class event that communicates <code>CartEvent</code> values:</p>
+<pre><code class="language-fsharp">    module Events =
+        type Item =
+            { ProductName : string
+              Title: string
+              Price: float }
+
+        type CartEvent =
+            | AddItem of Item * int
+            | AddOneItem of string
+            | RemoveOneItem of string
+            | RemoveItem of string
+            | EmptyCart
+
+        [&lt;JavaScript&gt;]
+        let ShoppingCartEvents = new Event&lt;CartEvent&gt; ()
+</code></pre>
+<p>The only time we need to contact the server is when we fetch the available products and their categories. This is encapsulated in the Server module:</p>
+<pre><code class="language-fsharp">    module Server =
+        type CartFamily =
+            { Title : string
+              Products : CartProduct list }
+
+        and CartProduct =
+            { Title : string
+              ProductName : string
+              ImageSrc : string
+              Price : float }
+
+        /// Computes the families and the products inside them that are
+        /// available for download.
+        [&lt;Rpc&gt;]
+        let ComputeFamiliesAndProducts () : CartFamily list =
+            let T imageSrc (title, id, price) =
+                { Title = title
+                  ProductName = id
+                  ImageSrc = imageSrc
+                  Price = price }
+            let laptop prod = T &quot;/images/laptop.png&quot; prod
+            let desktop prod = T &quot;/images/desktop.png&quot; prod
+            let netbook prod = T &quot;/images/netbook.png&quot; prod
+            [ { Title = &quot;Laptops&quot;
+                Products =
+                  [ laptop (&quot;Toshiba&quot;, &quot;id1&quot;, 1299.0)
+                    laptop (&quot;HP&quot;, &quot;id2&quot;, 1499.0)
+                    laptop (&quot;Dell&quot;, &quot;id3&quot;, 1499.0)
+                    laptop (&quot;Acer&quot;, &quot;id4&quot;, 1499.0) ] }
+              { Title = &quot;Desktops&quot;
+                Products =
+                  [ desktop (&quot;Gamer 1&quot;, &quot;id11&quot;, 699.0)
+                    desktop (&quot;Gamer 2&quot;, &quot;id12&quot;, 799.0)
+                    desktop (&quot;Office&quot;, &quot;id13&quot;, 599.0)
+                    desktop (&quot;Server&quot;, &quot;id14&quot;, 1299.0) ] }
+              { Title = &quot;Netbooks&quot;
+                Products =
+                  [ netbook (&quot;Entry&quot;, &quot;id21&quot;, 799.0)
+                    netbook (&quot;Medium&quot;, &quot;id22&quot;, 899.0)
+                    netbook (&quot;Cool&quot;, &quot;id23&quot;, 699.0)
+                    netbook (&quot;Speed-King&quot;, &quot;id24&quot;, 999.0) ] } ]
+</code></pre>
+<p>Here, each product has a title that we display (such as &quot;Dell&quot;), a corresponding product name we use to identify the product (such as &quot;id3&quot;), a URL that points to the image that represents the product, and a price (we assume dollars).</p>
+<p>You will also need a tiny utility function to create buttons:</p>
+<pre><code class="language-fsharp">    module WebControls =
+
+        [&lt;JavaScript&gt;]
+        let Button label =
+            Input [Type &quot;button&quot;; Value label; Width (label.Length*15 |&gt; string)]
+</code></pre>
+<p>With the internal, event-, and server-relared abstractions, you can now implement the actual client-side controls. The &quot;design&quot; for these controls is taken from our initial HTML mockup (design.html), transliterated into a nested HTML combinator structure with further F# code to populate it with actual data. The Client module has the function that is called when the user checks out - I left this function empty, but this is the place where you would normally process payment, etc.</p>
+<pre><code class="language-fsharp">    module Client =
+        /// Sends payment.
+        [&lt;JavaScript&gt;]
+        let SendPayment (items: (string * (string*float*int*int)) list) =
+            ()
+</code></pre>
+<p>The ItemsForSale control fetches all product families from the server and displays them.</p>
+<pre><code class="language-fsharp">        /// Displays all item categories and their items for sale.
+        [&lt;JavaScript&gt;]
+        let ItemsToBuy () =
+            let families = Server.ComputeFamiliesAndProducts ()
+            Div [Id &quot;shopping-cart&quot;] -&lt; [
+                families
+                |&gt; List.map (fun family -&gt;
+                    Div [Class &quot;family&quot;] -&lt; [
+                        H1 [Text family.Title]
+</code></pre>
+<p>For each family, you list all products therein by iterating through the Products collection:</p>
+<pre><code class="language-fsharp">                        family.Products
+                        |&gt; List.map (fun product -&gt;
+                            let input = Input [Type &quot;text&quot;; Value &quot;1&quot;]
+                            Div [Class &quot;product&quot;] -&lt; [
+                                Img [Alt product.Title; Src product.ImageSrc]
+                                Div [
+                                    H1 [Text product.Title]
+                                    P [
+                                        Code [Text (&quot;$&quot; + string product.Price)]
+                                    ] -&lt; [
+                                        Text &quot; / item&quot;
+                                    ]
+                                    P [
+                                        Text &quot;Quantity:&quot;
+                                    ] -&lt; [
+                                        input
+                                    ]
+</code></pre>
+<p>The &quot;Add to cart&quot; button triggers a CartEvent.AddItem event that carries the product data:</p>
+<pre><code class="language-fsharp">                                    WebControls.Button &quot;Add to cart&quot;
+                                    |&gt;! OnClick (fun e args -&gt;
+                                        Events.CartEvent.AddItem (
+                                            { ProductName=product.ProductName
+                                              Title=product.Title
+                                              Price=product.Price },
+                                            (int input.Value))
+                                        |&gt; Events.ShoppingCartEvents.Trigger
+                                    )
+                                ]
+                            ]
+                        )
+</code></pre>
+<p>Finally, you add a &quot;closer&quot; DIV to render each family nicely under one another.</p>
+<pre><code class="language-fsharp">                        |&gt; fun products -&gt;
+                            products @ [
+                                Div [Style &quot;clear:both;&quot;]
+                            ]
+                            |&gt; Div
+                    ]
+                )
+                |&gt; Div
+            ]
+</code></pre>
+<p>The ShoppingCart control is slightly more complex as it needs to handle the various events that come through the ShoppingCartEvents channel. But first, you define a placeholder for the shopping cart (contents), and a function that updates this placeholder with the items in the cart:</p>
+<pre><code class="language-fsharp">        /// Displays the shopping cart.
+        [&lt;JavaScript&gt;]
+        let ShoppingCart () =
+            let contents = Div []
+            let updateCart () =
+                async {
+                    let! itemsInCart = Internals.GetItemsInCart ()
+                    contents.Clear ()
+                    Div [Id &quot;shopping-cart-contents&quot;] -&lt; [
+                        H1 [Text &quot;Shopping Cart&quot;]
+</code></pre>
+<p>Each item in the cart will be displays as a row in a table. Furthermore, cart items are sorted by their order. You also need to the total cost of all items in the cart, so you fold through the sorted item list, with some minor logic to alternate row styles:</p>
+<pre><code class="language-fsharp">                        Table [
+                            itemsInCart
+                            |&gt; M.toList
+                            |&gt; List.sortBy (fun (_, (_, _, _, order)) -&gt; order)
+                            |&gt; List.fold (fun (i, acc, sum) (product, (t, p, q, o)) -&gt;
+                                let alt =
+                                    if i%2 = 1 then
+                                        &quot;alt &quot;
+                                    else
+                                        &quot;&quot;
+</code></pre>
+<p>For each item, you display a set of buttons, each firing their corresponding events, and accumulate the total cost:</p>
+<pre><code class="language-fsharp">                                (i+1, acc @
+                                 [
+                                    TR [Class alt] -&lt; [
+                                        TD [Class &quot;col1&quot;] -&lt; [
+                                            WebControls.Button &quot;-&quot;
+                                            // What happens when we click &quot;-&quot;?
+                                            |&gt;! OnClick (fun e args -&gt;
+                                                product
+                                                |&gt; Events.CartEvent.RemoveOneItem
+                                                |&gt; Events.ShoppingCartEvents.Trigger
+                                            )
+                                            Div [Class &quot;count&quot;] -&lt; [q|&gt;string|&gt;Text]
+                                            WebControls.Button &quot;+&quot;
+                                            // What happens when we click &quot;+&quot;?
+                                            |&gt;! OnClick (fun e args -&gt;
+                                                product
+                                                |&gt; Events.CartEvent.AddOneItem
+                                                |&gt; Events.ShoppingCartEvents.Trigger
+                                            )
+                                            WebControls.Button &quot;X&quot;
+                                            // What happens when we click &quot;Remove&quot;?
+                                            |&gt;! OnClick (fun e args -&gt;
+                                                product
+                                                |&gt; Events.CartEvent.RemoveItem
+                                                |&gt; Events.ShoppingCartEvents.Trigger
+                                            )
+                                            Div [Class &quot;title&quot;] -&lt; [Text t]
+                                        ]
+                                        TD [Class &quot;col2&quot;] -&lt; [
+                                            Code [
+                                                Text (string p)
+                                            ]
+                                        ]
+                                    ]
+                                 ], sum + (float q)*p)
+                            ) (0, [], 0.)
+</code></pre>
+<p>Finally, you wrap up the items with displaying the totals:</p>
+<pre><code class="language-fsharp">                            |&gt; fun (_, rows, sum) -&gt;
+                                rows
+                                |&gt; fun rows -&gt;
+                                    rows @ [
+                                        TR [ Hr [] ]
+                                        TR [
+                                            TD [Text &quot;Total:&quot;]
+                                            TD [Code [sum |&gt; string |&gt; Text]]
+                                        ]
+                                    ]
+                                    |&gt; TBody
+                        ]
+</code></pre>
+<p>And last, you add the &quot;Checkout&quot; and &quot;Empty cart&quot; buttons - both clearing the cart contents.</p>
+<pre><code class="language-fsharp">                        Div [Style &quot;height:20px&quot;] -&lt; []
+                        Div [
+                            WebControls.Button &quot;Checkout&quot;
+                            |&gt;! OnClick (fun e args -&gt;
+                                Window.Alert &quot;Checkout!&quot;
+                                // Process payment
+                                itemsInCart
+                                |&gt; M.toList
+                                |&gt; SendPayment
+                                // Empty shopping cart
+                                Events.CartEvent.EmptyCart
+                                |&gt; Events.ShoppingCartEvents.Trigger
+                            )
+                            WebControls.Button &quot;Empty cart&quot;
+                            |&gt;! OnClick (fun e args -&gt;
+                                Events.CartEvent.EmptyCart
+                                |&gt; Events.ShoppingCartEvents.Trigger
+                            )
+                        ]
+                    ]
+                    |&gt; contents.Append
+                }
+                |&gt; Async.Start
+</code></pre>
+<p>Handling the events that come through the event channel is done by subscribing to that event channel, matching on the various events that come in and do the right thing for each:</p>
+<pre><code class="language-fsharp">            Events.ShoppingCartEvents.Publish.Add (fun ce -&gt;
+                async {
+                    let! itemsInCart = Internals.GetItemsInCart ()
+                    let! next = Internals.NextCounter ()
+                    let SET items =
+                        items |&gt; M.toArray |&gt; Internals.SetItemsInCart
+                    let _ =
+                        match ce with
+                        | Events.CartEvent.AddItem (item, qty) -&gt;
+                            let qN, o =
+                                if M.containsKey item.ProductName itemsInCart then
+                                    let _, _, qO, o = itemsInCart.[item.ProductName]
+                                    qO + qty, o
+                                else
+                                    qty, next
+                            itemsInCart
+                            |&gt; M.add item.ProductName (item.Title, item.Price, qN, o)
+                            |&gt; SET
+                        | Events.CartEvent.RemoveOneItem productName -&gt;
+                            if M.containsKey productName itemsInCart then
+                                let t, p, q, o = itemsInCart.[productName]
+                                if q &lt;= 1 then
+                                    itemsInCart
+                                    |&gt; M.remove productName 
+                                else
+                                    itemsInCart
+                                    |&gt; M.add productName (t, p, q-1, o)
+                                |&gt; SET
+                        | Events.CartEvent.AddOneItem productName -&gt;
+                            if M.containsKey productName itemsInCart then
+                                let t, p, q, o = itemsInCart.[productName]
+                                itemsInCart
+                                |&gt; M.add productName (t, p, q+1, o)
+                                |&gt; SET
+                        | Events.CartEvent.RemoveItem productName -&gt;
+                            itemsInCart
+                            |&gt; M.remove productName
+                            |&gt; SET
+                        | Events.CartEvent.EmptyCart -&gt;
+                            M.empty
+                            |&gt; SET
+                    do updateCart ()
+                }
+                |&gt; Async.Start
+            )
+</code></pre>
+<p>And finally, you display the cart contents and return the placeholder element:</p>
+<pre><code class="language-fsharp">            updateCart ()
+            contents
+</code></pre>
+<h3 id="conclusion">Conclusion</h3>
+<p>In this tutorial, you saw how you can bind and use existing JavaScript libraries with WebSharper and implemented a client-based persistent shopping cart based on PersistJs. You used asynchronous workflows to model fetching values from the persistent store, and F# events for modeling the communication between two pagelets that made up your shopping cart application.</p>
+<p><a href="https://github.com/intellifactory/blogs/raw/master/assets/AbstractShoppingCart.rar">AbstractShoppingCart.zip</a></p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

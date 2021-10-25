@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper.3.0.26-alpha released</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Andras Janko</h4>
+                            <p class="text-white">Feb 10, 2015</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>This release of WebSharper 3.0 alpha ships several major and breaking changes: introducing strongly-typed JavaScript function interoperability, various WebSharper Interface Generator (WIG) API enhancements and revisions, bringing the JQuery binding up to date (to 1.11.2) and more type-safe, and lots of other small fixes and improvements.</p>
+<p>If you update WebSharper, be sure to update all your other WebSharper-based packages and rebuild all your projects with the new version because of metadata incompatibility.</p>
+<h2 id="strongly-typed-javascript-function-interoperability">Strongly-typed JavaScript function interoperability</h2>
+<h3 id="summary-of-the-visible-changes">Summary of the visible changes</h3>
+<p>This change standardizes the way functions passed to and from JavaScript libraries (eg. callbacks) are represented. Those used to be inconsistent depending on whether the function was expected to use the <code>this</code> value: a delegate was used if it was, and an F# function with tupled arguments if it wasn't. Now the type of JavaScript callbacks is as follows:</p>
+<pre><code>fun this (arg1, arg2, ..., argn) -&gt; result
+</code></pre>
+<p>If the function is not expected to use the <code>this</code> value, then the first argument is omitted, and the function is identical to previous versions of WebSharper. Conversely, if <code>this</code> is used and the JavaScript function takes no argument, then the second argument is omitted.</p>
+<p>If the JavaScript function is variadic (ie. it takes <em>n</em> fixed arguments and a variable number of extra arguments), then the corresponding F# function takes a tuple of <em>n + 1</em> arguments, where the last argument is an array of the variable arguments.</p>
+<p>In some rare cases (eg. when using arrays of functions), the function needs to be wrapped in one of the types described below in &quot;New function types&quot;.</p>
+<h3 id="in-depth-explanation">In-depth explanation</h3>
+<p>The <code>FSharpFunc&lt;'TArg, 'TRes&gt;</code> type (which is used for lambdas by the F# compiler) always take one parameter (which can be a tuple). In WebSharper translation, these become JavaScript functions taking a single fixed-length array (although curried functions only used in local scope are optimized). However, it is often required that we pass functions defined in F# to a JavaScript library (for example event handlers, callbacks, functional-style libraries).</p>
+<p>Previous versions of WebSharper used a wrapper function called <code>Runtime.Tupled</code> for this. This created a function that passed along its arguments to the inner function if it was called with 0 or 1 arguments, otherwise passing the <code>arguments</code> object. This meant that <code>Runtime.Tupled</code>-wrapped functions had a double calling convention: with a single array or with multiple arguments.</p>
+<p>Although this solution was a performance hit (tuple-argument lambdas got wrapped even if they were never passed to outside JavaScript code), it covered most cases. But if the JavaScript library would sometimes call the function with one argument and sometimes more, <code>Runtime.Tupled</code> would cause errors. Also there was no strongly typed way to handle functions returned by outside JavaScript libraries, or function-typed properties on objects.</p>
+<p>This release introduces a one-to-one relation between new F# types describing functions and how they are to be called/treated in JavaScript. WIG is also expanded with support for interop transformations, including automatically converting between function calling conventions. F#-defined lambdas used only in passing to outside JavaScript code are now optimized in the output to be straight functions with multiple arguments, not a wrapped function. This means then a lambda like <code>fun (a, b) -&gt; a + b</code> would be translated to <code>function(tupledArg) { return tupledArg[0] + tupledArg[1]; }</code> but if you have this lambda passed to a JavaScript library expecting a function with two arguments, it will become <code>function(a, b) { return a + b; }</code>.</p>
+<h2 id="new-function-types">New function types</h2>
+<p>In the <code>IntelliFactory.WebSharper.JavaScript</code> namespace you can find several new types corresponding to JavaScript functions. These have constructors for creating them from F# functions, and methods to call them. As described in the WIG section, in most cases these types are not needed, because WIG is creating inlines which convert to and from F# functions. However if you need to pass an array of JavaScript functions, it will use one of these types as automatically mapping an array would be confusing (arrays are mutable, we need to preserve identity).</p>
+<ul>
+<li>For JavaScript functions with 0 or 1 parameters, that do not use the <code>this</code> value, simply use F# functions (<code>'a -&gt; 'b</code>).</li>
+<li><code>FuncWithArgs&lt;'TArgs, 'TResult&gt;</code>: Represents a JavaScript function with more than one argument. The <code>'TArgs</code> type parameter must be a tuple.</li>
+<li><code>FuncWithThis&lt;'TThis, 'TFunc&gt;</code>: Represents a JavaScript function that cares about the <code>this</code> value. <code>'TFunc</code> can be a straight F# function or other interop type.</li>
+<li><code>FuncWithRest&lt;..., 'TRest, 'TResult&gt;</code>: Represents a JavaScript function that takes some fixed arguments, and then rest arguments. The number of fixed arguments can be between 0 and 6.</li>
+<li><code>FuncWithArgsRest&lt;'TArgs, 'TRest, 'TResult&gt;</code>: This is for covering the probably rare case of more than 6 fixed arguments. <code>'TArgs</code> must be a tuple type of the fixed arguments. Its <code>.Call</code> method also takes the fixed arguments as a tuple.</li>
+<li>Delegate types are no longer supported for creating JavaScript functions using the <code>this</code> argument. Only explicitly proxied delegate types are translated. (WebSharper currently only defines proxy for <code>System.Action</code> which is used by <code>CancellationToken.Register</code>.)</li>
+</ul>
+<h2 id="interface-generator-api-changes">Interface Generator API changes</h2>
+<ul>
+<li><p>We felt that using <code>|+&gt; [...]</code> and <code>|+&gt; Protocol [...]</code> to add static and instance members accordingly is a bit non-intuitive, and also an easy source of errors, because forgetting Protocol would give no warning. Adding a list of members to a type definition is now recommended using <code>|+&gt; Static [...]</code> and <code>|+&gt; Instance [...]</code>. Previous syntax will give deprecated warning.
+Also: constructors can be in the Instance list and they will still get handled correctly.</p>
+</li>
+<li><p>Adding members to an interface is still done with <code>|+&gt; [...]</code>.</p>
+</li>
+<li><p>There have been functions called <code>Static</code> and <code>Instance</code> operating on a single method definition. These would have no use now and have been removed.</p>
+</li>
+<li><p>You can use the <code>TSelf</code> value as a placeholder in member declarations and will be resolved to the declaring type.</p>
+</li>
+<li><p>The <code>WithMacro</code> helper adds a WebSharper macro to a method/constructor. Currently the macro type itself must be defined in another assembly than the WIG generator assembly.</p>
+</li>
+<li><p><code>ObjectConstructor</code> creates a constructor where the inline is a simple JavaScript object expression. This functionality was previously exposed only by the <code>Pattern.Config</code> helper.</p>
+</li>
+<li><p>Generic type definitions also use <code>Generic –</code> now instead of <code>Generic /</code>, and produce a single <code>CodeModel.TypeDefinition</code> value. This can be directly inserted into <code>CodeModel.Namespace</code> member lists. When you want to add specify type arguments, use the item syntax <code>MyTypeDef.[T1, T2, ...]</code> as you can with other types. The number of applied type parameters is not checked by the type system currently, but will give a detailed error when compiling with WIG. This includes wrongly parameterizing external types which would previously generate invalid IL.</p>
+</li>
+<li><p>Use <code>Generic + [&quot;T1&quot;; &quot;T2&quot;] - ...</code> to specify the names of the type parameters.</p>
+</li>
+<li><p><code>Generic –</code> now takes a function with arguments of type <code>CodeModel.TypeParameter</code>. In some cases, explicitly declaring the argument type can be required for type inference. Also, sometimes using <code>p.Type</code> to convert a <code>CodeModel.TypeParameter</code> to a <code>Type.Type</code> is needed.</p>
+</li>
+<li><p>There is a new overload of <code>Generic –</code> which takes an <code>int * (list&lt;CodeModel.TypeParameter&gt; -&gt; #CodeModel.Entity)</code>, where the first value is the number of type parameters. This allows creating generic type declarations or members with more than 4 type parameters.</p>
+</li>
+<li><p>You can now set type constraints on parameters using <code>p.Constraints &lt;- [...]</code> inside the lambda passed to <code>Generic -</code>. Previous <code>WithConstraints</code> helper is removed as we want to have all helper functions named <code>With...</code> to be non-destructive.</p>
+</li>
+<li><p>You can add a custom defined inline transformation with the <code>WithInterop</code> helper. This takes a record with an <code>In</code> and an <code>Out</code> field, both <code>string -&gt; string</code>. For example:</p>
+<pre><code>  let Index = 
+      T&lt;int&gt; |&gt; WithInterop { 
+          In  = fun s -&gt; s + &quot; - 1&quot;
+          Out = fun s -&gt; s + &quot; + 1&quot;
+      }
+</code></pre>
+<p>You can then use this <code>Type.Type</code> value instead of <code>T&lt;int&gt;</code> in your member declarations where you want to handle an index as 1-based in your code, but pass it to and get it from a 0-based value in a JavaScript library. On method parameters and property setters the <code>In</code> function will be used on the parameter or property value in the automatic inline. On method return values and property getters the <code>Out</code> function will be used on the whole inline of the method or property getter.</p>
+</li>
+<li><p>You can use the <code>WithNoInterop</code> helper to (non-destructively) clean any automatic and custom inline transformations from a <code>Type.Type</code> value.</p>
+</li>
+<li><p>To define a custom inline for a method that still makes use of the default or custom inline transformations on parameters and return value, use the <code>WithInteropInline</code> helper. It takes a function typed <code>(string -&gt; string) -&gt; string</code>, use the provided function on a parameter name or index to get its transformed inline. For example, defining an <code>on</code> event setter with function argument detupling:</p>
+<pre><code>  &quot;onChange&quot; =&gt; (T&lt;int&gt; * T&lt;obj&gt; ^-&gt; T&lt;unit&gt;)?callback ^-&gt; T&lt;unit&gt;
+  |&gt; WithInteropInline (fun tr -&gt; &quot;$this.on('change', &quot; + tr &quot;callback&quot; + &quot;)&quot;
+</code></pre>
+</li>
+<li><p>Similar helpers exists for property getters and setters: <code>WithInteropGetterInline</code> and <code>WithInteropSetterInline</code>. For getters, provided function is only usable for transforming <code>&quot;index&quot;</code> in the case of an indexed property, and for setters transforming <code>&quot;value&quot;</code> or <code>&quot;index&quot;</code>.</p>
+</li>
+<li><p>You can now use the <code>!?</code> operator on types too, not just parameters.  Existing method definitions work without change as before, producing method overloads of different arity. On properties the option type is converted to and from an existing or missing field on a JavaScript object. On method returns, undefined is converted to <code>None</code>, all other values (including <code>null</code>) to <code>Some ...</code>.</p>
+</li>
+<li><p>Union types (for example <code>T&lt;int&gt; + T&lt;string&gt;</code>) was used previously for creating method overloads, but defaulted to <code>T&lt;obj&gt;</code> when used on a property or method return type. Now these get automatically transformed to <code>Choice</code>  types when the cases can be distinguished in JavaScript using the <code>typeof</code>, <code>Array.isArray</code> and the <code>arr.length</code> functions. In F# this means either at most one array case or possibly multiple tuple cases with all different length, at most one number type (including <code>DateTime</code> and <code>TimeSpan</code>, which are proxied as a Number), <code>string</code>, <code>bool</code>, and at most one other object type. If there are cases which can't be separated, the type will still default to <code>obj</code>.</p>
+</li>
+</ul>
+<h2 id="other-improvements">Other improvements</h2>
+<ul>
+<li>The <code>IntelliFactory.WebSharper.JavaScript.Object</code> type is now generic. <code>Object&lt;obj&gt;</code> is equivalent to previous <code>Object</code> type. Now, if relevant, you can specify the types of all fields, for example <code>Object&lt;string&gt;</code> for a JavaScript string map.</li>
+<li>You can use the <code>[&lt;OptionalField&gt;]</code> attribute on a class or record field with an option type to represent it with an existing/nonexisting field in the JavaScript translation. (Planned: <code>[&lt;OptionalField&gt;]</code> on a class or record will apply to all fields with an option type.)</li>
+<li>The <code>[&lt;Name &quot;&quot;&gt;]</code> attribute now works on class fields.</li>
+<li>JQuery binding updated with better typing for AJAX operations.</li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>WIG couldn't create tuple types with length more than 7.</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/323">Bug #323</a> Derived classes defining a field with the same name as a base class don't overlap in JavaScript translation.</li>
+<li><a href="https://github.com/intellifactory/websharper/issues/330">Bug #330</a> <code>withCredentials</code> should not be used in synchronous requests. Thanks to ca-ta for the report and pull request.</li>
+</ul>
+<h2 id="known-issues">Known issues</h2>
+<ul>
+<li>Currently the TypeScript definition output can be off from the generated JavaScript as it was not reviewed yet with the latest changes.</li>
+<li>Source mapping at the current state is not as usable as we would like. Many-to-many mapping is not handled well by either IE11 or Chrome.</li>
+</ul>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

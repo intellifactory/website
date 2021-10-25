@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Serving SPAs</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
+                            <p class="text-white">Dec 29, 2017</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>(This article is part of <a href="https://sergeytihon.com/2017/10/22/f-advent-calendar-in-english-2017/">F# Advent 2017</a> - thanks to <a href="https://sergeytihon.com/">Sergey Tihon</a> for organizing!)</p>
+<p>Consider a very typical scenario: you have a web application that serves an SPA. The SPA itself has several &quot;pages,&quot; each with its own client-side routed URLs (think of Gmail, for instance.) Then people copy some of these URLs from their &quot;session&quot; and send them to others, who in turn expect to find exactly what the sender saw. Except with most SPAs, the server-side knows nothing about the URLs generated on the client and usually throws you back to some initial SPA page. Implementing this properly requires you to share all or a subset of the URLs both on the server and on the client. With WebSharper, this is easy.</p>
+<h3 id="routing">Routing</h3>
+<p>One fundamental difference between WebSharper and other server-side capable F# frameworks such as Giraffe or Suave, is that WebSharper supports <strong>safe URLs</strong>, i.e. URLs computed from the serving context (as opposed to encoding them as ordinary strings) that are guaranteed to be correct.</p>
+<p>Consider the following simple app in Giraffe:</p>
+<pre><code class="language-fsharp">open Giraffe
+
+let webApp =
+    choose [
+        route &quot;/ping&quot;     &gt;=&gt; text &quot;pong&quot;
+        routef &quot;/echo/%s&quot; (fun s -&gt; text s)
+        route &quot;/&quot;         &gt;=&gt; htmlFile &quot;/pages/index.html&quot; ]
+
+type Startup() =
+    member __.Configure (app : IApplicationBuilder)
+                        (env : IHostingEnvironment)
+                        (loggerFactory : ILoggerFactory) =
+
+        app.UseGiraffe webApp
+</code></pre>
+<p>The same app would look like this in WebSharper:</p>
+<pre><code class="language-fsharp">open WebSharper
+open WebSharper.Sitelets
+
+type EndPoint =
+    | [&lt;EndPoint &quot;/&quot;&gt;]     Home
+    | [&lt;EndPoint &quot;/ping&quot;&gt;] Ping
+    | [&lt;EndPoint &quot;/echo&quot;&gt;] Echo of string
+
+[&lt;Website&gt;]
+let Main =
+    Application.MultiPage (fun (ctx: Context&lt;EndPoint&gt;) -&gt; function
+        | EndPoint.Home   -&gt; Content.File &quot;pages/index.html&quot;
+        | EndPoint.Ping   -&gt; Content.Text &quot;pong&quot;
+        | EndPoint.Echo s -&gt; Content.Text s
+    )
+</code></pre>
+<p>With this declaration, <strong>you can obtain the correct URL to any page</strong> (or &quot;endpoint&quot;, and fully formed with any of its page arguments) from the serving context, which itself is parameterized over the (typically) discriminated union type that represents all entry points to the application.</p>
+<p>For instance, you can get the URL to a particular instantiation of the &quot;echo&quot; page as follows:</p>
+<pre><code class="language-fsharp">   ctx.Link (EndPoint.Echo &quot;hello&quot;)
+</code></pre>
+<p>Now, clearly, there is a lot you would/could want to do with URLs/endpoints. Making them accessible via POST instead of GET, adding authentication, passing or posting structured values, etc. (You can find the relevant <a href="https://developers.websharper.com/docs/v4.1/fs/sitelets">WebSharper documentation here</a>.) You can do all of these in WebSharper and Giraffe, equally. The main difference, however, remains that Giraffe (or Suave for that matter) builds these up from smaller functions/combinators, whereas WebSharper enables you to do these declaratively (attached to the type that represents your endpoints, i.e. <code>EndPoint</code> above) and generates a similar pipeline of combinators under the cover (you can also construct routers manually, similar to Giraffe). This gains not only safe URLs, but also a number of other benefits.</p>
+<p>One such benefit is exactly what we need: sharing the URL space between the server and the client side. In pure SPAs, this means sharing the full endpoint type, but more often than that you would want your client-side URL space as a proper subset of the full endpoint set.</p>
+<h3 id="a-barebones-approach">A barebones approach</h3>
+<p><a href="https://i.imgur.com/Dk73D2j.png"><img src="https://i.imgur.com/Dk73D2jm.png" alt="" /></a>
+<a href="https://i.imgur.com/K2PnK5I.png"><img src="https://i.imgur.com/K2PnK5Im.png" alt="" /></a>
+<a href="https://i.imgur.com/XYPtC8R.png"><img src="https://i.imgur.com/XYPtC8Rm.png" alt="" /></a></p>
+<p>(In the screeshots above, the city pages are routed on the client and no server roundtrip (and thus no page refresh) is taking place. The home page is re-requested from the server every time you visit it, you can add other server-based pages easily. However, you can refresh each page, including the two kinds of SPA pages, and you will correctly see the same content.)</p>
+<p>Say you want an app (shown above, grab it via a gist <a href="https://gist.github.com/granicz/eeaf2140a3f1fbccc9ebb4af9deadaa1">here</a>) to report things on various cities using the following URLs:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">URL</th>
+<th style="text-align: left;">.....</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>/</code></td>
+<td style="text-align: left;">The root/home page</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/spa/cities</code></td>
+<td style="text-align: left;">The page listing our cities, the main SPA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/spa/cities/XYZ</code></td>
+<td style="text-align: left;">A page for showing info for a given city</td>
+</tr>
+</tbody>
+</table>
+<p>You can define your endpoint type as follows:</p>
+<pre><code class="language-fsharp">type SPA =
+    | [&lt;EndPoint &quot;/cities&quot;&gt;] Cities
+    | [&lt;EndPoint &quot;/cities&quot;&gt;] City of string
+
+type EndPoint =
+    | [&lt;EndPoint &quot;/&quot;&gt;] Home
+    | [&lt;EndPoint &quot;/spa&quot;&gt;] SPA of SPA
+</code></pre>
+<p>The intention is that <strong><code>/spa/*</code> URLs will be routed and their content generated on the client</strong> (i.e. without a server roundtrip). You can do this easily by combining <code>Router.Infer&lt;...&gt;</code> (to create a router for an endpoint type automatically), <code>Router.Slice</code> (to split the part of it you want to make available on the client), and <code>Router.Install</code> (to create a client-side router to listen to URL changes in the browser) - alternatively, you can also use <code>Router.InstallHash</code> for a hash-based version:</p>
+<pre><code class="language-fsharp">    let router = Router.Infer&lt;EndPoint&gt;()
+    let location =
+        router
+        |&gt; Router.Slice (function | SPA spa -&gt; Some spa | _ -&gt; None) EndPoint.SPA
+        |&gt; Router.Install SPA.Cities
+</code></pre>
+<p>The type of <code>location</code> is <code>Var&lt;SPA&gt;</code>, a reactive variable that you can observe the value of (to fetch the current SPA page) or set directly (to route to that page). Note the sharp contrast between this type-safe approach and other ad-hoc methods that perform these via ordinary strings.</p>
+<pre><code class="language-fsharp">open WebSharper.UI.Notation
+
+location := SPA.Cities
+</code></pre>
+<p>You can now reactively construct the individual SPA pages based on the value of <code>location</code> and a simple city store:</p>
+<pre><code class="language-fsharp">[&lt;JavaScript&gt;]
+module Client =
+    open WebSharper.UI.Client
+    
+    let store =
+        [
+            &quot;Budapest&quot;, &quot;awesome&quot;
+            &quot;Paris&quot;, &quot;famous&quot;
+            &quot;San Francisco&quot;, &quot;expensive&quot;
+            &quot;London&quot;, &quot;cosmopolitan&quot;
+            &quot;Singapore&quot;, &quot;crowded&quot;
+        ]
+        
+    let Main () =
+        ...
+        location.View.Doc(function
+            | SPA.Cities -&gt;
+                Doc.Concat [
+                    ul [] (
+                        store |&gt; List.map (fun (city, _) -&gt;
+                            a [attr.href &lt;| router.Link (EndPoint.SPA (SPA.City city))] [
+                                li [] [text city]
+                            ] :&gt; Doc)
+                    )
+                ]
+            | SPA.City city -&gt;
+                let message =
+                    match List.tryFind (fun (cty, _) -&gt; city=cty) store with
+                    | None -&gt;
+                        p [] [text &quot;I don't know your city :(&quot;]
+                    | Some (_, adjective) -&gt;
+                        p [] [text &lt;| &quot;Your city is &quot; + adjective + &quot;!&quot;]
+                Doc.Concat [
+                    h1 [] [text city]
+                    message
+                    p [] [
+                        text &quot;Click &quot;
+                        a [attr.href (router.Link (EndPoint.SPA SPA.Cities))] [text &quot;here&quot;]
+                        text &quot; to go back.&quot;
+                    ]
+                ]
+        )
+</code></pre>
+<p>All that remains is serving this SPA and an empty home page from the server-side:</p>
+<pre><code class="language-fsharp">module Site =
+    let HomePage (ctx: Context&lt;EndPoint&gt;) =
+        Content.Page(
+            Title = &quot;Home&quot;,
+            Body = [
+                p [] [
+                    text &quot;There is nothing here, go to the &quot;
+                    a [attr.href &lt;| ctx.Link (EndPoint.SPA SPA.Cities)] [text &quot;Cities page&quot;]
+                ]
+            ]
+        )
+
+    let CitiesPage ctx =
+        Content.Page(
+            Title = &quot;Cities&quot;,
+            Body = [
+                div [] [client &lt;@ Client.Main () @&gt; ]
+            ]
+
+        )
+
+    [&lt;Website&gt;]
+    let Main =
+        Application.MultiPage (fun ctx endpoint -&gt;
+            match endpoint with
+            | EndPoint.Home -&gt;
+                HomePage ctx
+            | EndPoint.SPA SPA.Cities
+            | EndPoint.SPA (SPA.City _) -&gt;
+                CitiesPage ctx
+        )
+</code></pre>
+<p>This app, which can be hosted in any ASP.NET- or OWIN-compatible container, including Suave, or self-hosted) guarantees that we can serve any one of the three types of URLs we specified earlier, and it correctly routes the SPA (<code>/spa/*</code>) accordingly as well. (Note: you can also accomplish this also by combining Suave or Giraffe for the server-side and Fable.Elmish on the client-side, but <strong>you won't get any integration or safe URL representation between the two tiers</strong>.)</p>
+<h3 id="adding-templating">Adding templating</h3>
+<p><a href="https://i.imgur.com/uBAdweU.png"><img src="https://i.imgur.com/uBAdweUm.png" alt="" /></a>
+<a href="https://i.imgur.com/mOuYbuL.png"><img src="https://i.imgur.com/mOuYbuLm.png" alt="" /></a>
+<a href="https://i.imgur.com/eKE3u0D.png"><img src="https://i.imgur.com/eKE3u0Dm.png" alt="" /></a></p>
+<p>Another very common need is <strong>to be able to modify an application, or at least its appearance, at runtime</strong>. For instance, you may want to touch up some of the markup you generate in your application, change its structure, add new attributes here and there, etc. On the server-side, both Suave and Giraffe provide a way to serve templated content via DotLiquid. They can also detect modifications to these templates and reload them before serving new content based on them. However, support for templating on the client-side from an F# perspective is severely limited, and you typically fall back to using Mustache, Handlebars, Underscore, or whatever JavaScript-based templating engine you prefer, via inlined JS code, or no support at all.</p>
+<p>Not with WebSharper. Although you can easily adapt DotLiquid and other server-side templating engines to plug directly into WebSharper content, WebSharper UI also comes with its own templating engine that you can read about <a href="https://developers.websharper.com/docs/v4.1/fs/ui">here</a>. The nice thing about this templating engine is that <strong>it works both on the server and on the client, unlike anything else</strong>.</p>
+<p>What we want is to remove as much of the inlined HTML from our F# code as possible and replace it with HTML templates that we can then modify external to the application. And don't even think about trying to push CSS and other silliness into your F# code, as it will limit you severely. For this example, I cooked up a straightforward template (<code>Main.html</code>) that uses Bulma, which you can find in <a href="https://gist.github.com/granicz/9cd31128496fda6c0f6c228cce55d246">this gist</a>.</p>
+<p>For instance, consider the following fragment, which defines a <code>Banner</code> placeholder and two inner &quot;sub&quot; templates <code>HomeBanner</code> and <code>CitiesBanner</code>, that can be readily plugged into <code>Banner</code>.</p>
+<pre><code class="language-xml">  &lt;div ws-replace=&quot;Banner&quot;&gt;
+    &lt;section class=&quot;hero is-info&quot; ws-template=&quot;HomeBanner&quot;&gt;
+      &lt;div class=&quot;hero-body&quot;&gt;
+        &lt;p class=&quot;title&quot;&gt;Home&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;hero is-info&quot; ws-template=&quot;CitiesBanner&quot;&gt;
+      &lt;div class=&quot;hero-body&quot;&gt;
+        &lt;p class=&quot;title&quot;&gt;Cities&lt;/p&gt;
+        &lt;p class=&quot;subtitle&quot;&gt;Pick your favorite city.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+</code></pre>
+<p>Or consider the nested templates for the SPA content:</p>
+<pre><code class="language-xml">      &lt;div class=&quot;content&quot;&gt;
+        &lt;div ws-replace=&quot;Body&quot;&gt;
+          &lt;ul ws-template=&quot;CityLinks&quot; ws-hole=&quot;Links&quot;&gt;
+            &lt;li ws-template=&quot;CityLink&quot;&gt;&lt;a href=&quot;${Link}&quot;&gt;${Title}&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;div ws-template=&quot;CityPage&quot;&gt;
+            &lt;h1&gt;${Name}&lt;/h1&gt;
+            &lt;div ws-replace=&quot;Message&quot;&gt;
+              &lt;div ws-template=&quot;NotFound&quot;&gt;
+                &lt;p&gt;I don't know your city :(&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div ws-template=&quot;Found&quot;&gt;
+                &lt;p&gt;Your city is &lt;b&gt;${Kind}&lt;/b&gt;&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p&gt;Click &lt;a href=&quot;${BackLink}&quot;&gt;here&lt;/a&gt; to return.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+</code></pre>
+<p>All you have to do now is to bring the template and all the good stuff in it into scope:</p>
+<pre><code class="language-fsharp">    open WebSharper.UI.Templating
+
+    type MainTemplate = Template&lt;&quot;Main.html&quot;, ClientLoad.FromDocument, ServerLoad.WhenChanged&gt;
+</code></pre>
+<p>This says &quot;go through <code>Main.html</code> and find all placeholders, templates and nested templates in it, and make them available under <code>MainTemplate</code>, and if the file changes refresh it automatically when used from the server, and reload it automatically from the main document on the client (since we are in an SPA that is based on the very same file.)&quot; <strong>This one line performs a LOT if you think about it, and all that complexity is taken care of and hidden from you, so you can concentrate on your code and logic instead</strong>.</p>
+<p>Contrast what happens inside <code>Client.Main()</code> now with templating:</p>
+<pre><code class="language-fsharp">[&lt;JavaScript&gt;]
+module Client =
+    ...
+    let Main () =
+        ...
+        location.View.Doc(function
+            | SPA.Cities -&gt;
+                MainTemplate.CityLinks()
+                    .Links(
+                        store |&gt; List.map (fun (city, _) -&gt;
+                            MainTemplate.CityLink()
+                                .Link(router.Link (EndPoint.SPA (SPA.City city)))
+                                .Title(city)
+                                .Doc()
+                        )
+                    )
+                    .Doc()
+            | SPA.City city -&gt;
+                let message =
+                    match List.tryFind (fst &gt;&gt; (=) city) store with
+                    | None -&gt;
+                        MainTemplate.NotFound().Doc()
+                    | Some (_, adjective) -&gt;
+                        MainTemplate.Found().Kind(adjective).Doc()
+                MainTemplate.CityPage()
+                    .Name(city)
+                    .Message(message)
+                    .BackLink(router.Link (EndPoint.SPA SPA.Cities))
+                    .Doc()
+        )
+</code></pre>
+<p>Not a single in-code HTML combinator in sight - so we are good to go. The final F# code is 110 LOC, and it serves our SPA and all of its links when visited directly as well, all dressed up in a nice Bulma-based master template. Hurray!</p>
+<h3 id="summing-up">Summing up</h3>
+<p>In this article, we looked at two fundamental problems you are likely to encounter in any serious web development: serving SPAs with their URLs understood both on the server and the client, and externalizing your entire presentation layer so it can be modified at runtime.</p>
+<p>If you want to try the gists, start with a Client-Server Application template after installing WebSharper into your Visual Studio (you can grab the VSIX installer from the <a href="https://websharper.com">main website</a>, or download that template from the developer site (from the Apps menu on the top.)</p>
+<p>Guess what? You can do all this in C# as well, but I'll save that for another article! So stay tuned and don't hesitate to ask about WebSharper on the <a href="https://forums.websharper.com">forums</a>, and be sure to check out the <a href="https://developers.websharper.com">documentation</a> - both 100% WebSharper SPAs in case you wondered 😉</p>
+<h4 id="forums">Forums</h4>
+<p><a href="https://forums.websharper.com"><img src="https://i.imgur.com/2DkBX2ol.png" alt="" /></a></p>
+<h4 id="documentation">Documentation</h4>
+<p><a href="https://developers.websharper.com"><img src="https://i.imgur.com/ANg1Fual.png" alt="" /></a></p>
+<h4 id="quick-links">Quick links:</h4>
+<ul>
+<li>documentation on <a href="http://developers.websharper.com/docs/v4.1/fs/sitelets">routing requests</a></li>
+<li>documentation on <a href="http://developers.websharper.com/docs/v4.1/fs/ui">WebSharper UI and templating</a></li>
+<li>barebones example in <a href="https://gist.github.com/granicz/eeaf2140a3f1fbccc9ebb4af9deadaa1">this gist</a>, and</li>
+<li>the templated version in <a href="https://gist.github.com/granicz/9cd31128496fda6c0f6c228cce55d246">this gist</a></li>
+</ul>
+<p>Happy holidays and happy coding!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper 4.5.4 released</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                            <p class="text-white">Oct 25, 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>We are happy to announce the release of WebSharper 4.5.4.</p>
+<p>Download the project templates for .NET Core SDK: <code>dotnet new -i WebSharper.Templates::4.5.4.278</code></p>
+<p>Or use the extension for Visual Studio 2017: <a href="http://websharper.com/installers/WebSharper.4.5.4.278.vsix">http://websharper.com/installers/WebSharper.4.5.4.278.vsix</a></p>
+<h2 id="cors-handling">CORS handling</h2>
+<p>The main highlight of this release is the new API to handle <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a> headers in Sitelets. This allows you to manage what requests are allowed to be performed by a browser from a different domain.</p>
+<p>This API is fully integrated with inferred sitelets. It automatically handles preflight <code>OPTIONS</code> requests, and adds the necessary headers to the main response.</p>
+<p>For example, here is a JSON API as you would typically define it:</p>
+<pre><code class="language-fsharp">/// The endpoint type for our full website.
+type EndPoint =
+    | [&lt;EndPoint &quot;GET /&quot;&gt;] Home
+    | [&lt;EndPoint &quot;/api&quot;&gt;] Api of ApiEndPoint
+
+/// The endpoint type for our API subsite.
+and ApiEndPoint =
+    | [&lt;EndPoint &quot;GET /users&quot;&gt;] GetUsers
+    | [&lt;EndPoint &quot;GET /users&quot;&gt;] GetUser of id: int
+    | [&lt;EndPoint &quot;POST /users&quot;; Json &quot;data&quot;&gt;] PostUser of data: UserData
+    | [&lt;EndPoint &quot;DELETE /users&quot;&gt;] DeleteUser of id: int
+
+and UserData = // ...
+
+/// Handle API requests.
+let HandleApi (ctx: Context&lt;EndPoint&gt;) (endpoint: ApiEndPoint) =
+    match endpoint with
+    | GetUsers -&gt; Content.Json &quot;retrieve and return the list of users...&quot;
+    | GetUser id -&gt; Content.Json &quot;retrieve and return the user...&quot;
+    | PostUser data -&gt; Content.Json &quot;store the user...&quot;
+    | DeleteUser id -&gt; Content.Json &quot;delete the user...&quot;
+
+/// Handle all requests, including the main site and the API subsite.
+let Website = Application.MultiPage(fun (ctx: Context&lt;EndPoint&gt;) (endpoint: EndPoint) -&gt;
+    match endpoint with
+    | Home -&gt; Content.Text &quot;Home page...&quot;
+    | Api endpoint -&gt; HandleApi ctx endpoint
+)
+</code></pre>
+<p>This website handles requests such as <code>GET /api/users</code> or <code>DELETE /api/users/123</code>.</p>
+<p>Adding CORS support is done in two steps:</p>
+<ol>
+<li><p>Wrap the affected endpoint type in <code>Cors&lt;_&gt;</code>:</p>
+<pre><code class="language-fsharp">type EndPoint =
+    | [&lt;EndPoint &quot;GET /&quot;&gt;] Home
+    | [&lt;EndPoint &quot;/api&quot;&gt;] Api of Cors&lt;ApiEndPoint&gt; // &lt;- ApiEndPoint needs CORS handling
+</code></pre>
+</li>
+<li><p>Use <code>Content.Cors</code> to indicate the CORS headers to serve:</p>
+<pre><code class="language-fsharp">let Website = Application.MultiPage(fun ctx endpoint -&gt;
+    match endpoint with
+    | Home -&gt; Content.Text &quot;Home page...&quot;
+    | Api endpoint -&gt;
+        Content.Cors endpoint
+            (fun corsAllows -&gt;
+                // Add the headers you need here:
+                { corsAllows with
+                    // Allow requests from these origins:
+                    Origins = [&quot;http://example.com&quot;; &quot;https://example.com&quot;]
+                    // Allow these requests to send user credentials (including cookies):
+                    Credentials = true
+                    // Enforce a new preflight request after 24 hours:
+                    MaxAge = Some 86400 })
+            (HandleApi ctx)
+)
+</code></pre>
+</li>
+</ol>
+<p>And that's it! Note that we didn't need to specify the <code>Methods</code> to allow, because WebSharper is able to infer which methods need to be allowed based on the endpoint type definition. In this case, the inferred header value is <code>GET, POST, DELETE</code>.</p>
+<p>Now, here is the full changelog for this release:</p>
+<h2 id="websharper">WebSharper</h2>
+<h3 id="breaking-changes">Breaking changes</h3>
+<ul>
+<li><a href="https://github.com/dotnet-websharper/core/issues/1028">#1028</a>  Simplified and unified class names in <code>WebSharper.JavaScript.Dom</code>, stripping <code>DOM</code> prefix where there was one.</li>
+</ul>
+<h3 id="features">Features</h3>
+<ul>
+<li><a href="https://github.com/dotnet-websharper/core/issues/999">#999</a>: Added <code>Content.Cors</code>, a helper for checking for Cross-Origin Resource Sharing headers.</li>
+<li><a href="https://github.com/dotnet-websharper/core/issues/1025">#1025</a> Added <code>Router.FetchWith</code>and <code>Router.AjaxWith</code> that are taking a <code>RequestOptions</code> to customize the request sent to an automatically routed WebSharper endpoint.</li>
+</ul>
+<h3 id="fixes">Fixes</h3>
+<ul>
+<li><p><a href="https://github.com/dotnet-websharper/core/issues/1019">#1019</a> Show a compile-time warning when an <code>Inline</code> or <code>Direct</code> contains a <code>$variable</code> that doesn't correspond to an argument. Additionally, added a property <code>UseDollarVariables : string</code> on both <code>InlineAttribute</code> and <code>DirectAttribute</code> to indicate that a given <code>$variable</code> is not an argument typo and should not cause a warning.</p>
+<p>For example, the following warns that <code>$unexpected</code> doesn't correspond to an argument, but doesn't warn about <code>$expected1</code> and <code>$expected2</code>:</p>
+<pre><code class="language-fsharp">[&lt;Inline(&quot;$this.myMethod($theArg, $unexpected, $expected1, $expected2)&quot;,
+         UseDollarVariables = &quot;$expected1, $expected2&quot;)&gt;]
+member this.MyMethod(theArg: int) = X&lt;unit&gt;
+</code></pre>
+</li>
+<li><p><a href="https://github.com/dotnet-websharper/core/issues/1021">#1021</a> Fixed parsing FormData when using <code>Router.Infer</code>.</p>
+</li>
+<li><p><a href="https://github.com/dotnet-websharper/core/issues/1077">#1027</a> Added <code>classList</code> on <code>Dom.Element</code>.</p>
+</li>
+<li><p><a href="https://github.com/dotnet-websharper/core/issues/1030">#1030</a> Use invariant number format for floats in routing. Fixes failing to parse decimal point character in URLs created on the client when the server system settings use another character instead of point.</p>
+</li>
+<li><p><a href="https://github.com/dotnet-websharper/core/issues/1031">#1031</a> Handle NoWarn+TreatWarningsAsErrors well for F# compilation.</p>
+</li>
+<li><p><a href="https://github.com/dotnet-websharper/core/issues/1032">#1032</a> Fix skipping pre-translating some server-side quoted event handlers. In particular, this caused issues in server-side WebSharper.UI templates where one could not use both <code>ws-onxxx</code> and <code>.OnYyy()</code> with the same template.</p>
+</li>
+<li><p><a href="https://github.com/dotnet-websharper/core/issues/1033">#1033</a> Fix inconsistent behavior of <code>HtmlTextWriter</code> between netfx and netstandard. Attributes written using <code>HtmlTextWriter.WriteAttribute</code>, which includes WebSharper.UI attributes, are now always automatically escaped.</p>
+</li>
+</ul>
+<h2 id="websharper.ui">WebSharper.UI</h2>
+<h3 id="enhancements">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/182">#182</a> Eliminate the last uses of jQuery: <code>parseHTML</code> in templating and <code>Doc.Verbatim</code>, and <code>on</code> in <code>Input.Keyboard</code>.</li>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/189">#189</a> C# templating: correctly pass along custom <code>ClientLoad</code> and <code>ServerLoad</code> from template comments and use <code>ClientLoad = Inline</code> as default.</li>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/190">#190</a> C# templating: fix generated code for <code>&lt;input type=&quot;number&quot;&gt;</code></li>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/195">#195</a>: Add <code>V</code>-enabled <code>Attr.Prop</code> overload.</li>
+</ul>
+<h3 id="fixes-1">Fixes</h3>
+<ul>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/190">#190</a> C# templating: generate full namespace for <code>CheckedInput</code>.</li>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/194">#194</a>: Ensure <code>Router.Install</code> and <code>Router.InstallInto</code> initialize their state from the current URL.</li>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/198">#198</a>  Ensure <code>Elt.OnAfterRender()</code> depends on <code>OnAfterRenderControl</code> for the Sitelet runtime to include the correct <code>.js</code> link needed.</li>
+<li><a href="https://github.com/dotnet-websharper/ui/issues/199">#199</a> Don't double-encode generated event attributes, causing server-defined event handlers to fail on .NET core.</li>
+</ul>
+<p>Happy coding!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>

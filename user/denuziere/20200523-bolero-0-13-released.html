@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="py-8 px-4 lg:px-10 bg-gray-800">
+            <nav class="relative flex justify-between items-center">
+                <a class="text-2xl text-white font-bold" href="#">
+                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                </a>
+                <div class="lg:hidden">
+                    <button class="p-2 navbar-burger">
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                    </button>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <ul class="flex items-center text-white space-x-10">
+                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
+                        <span>
+                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+                        </span>
+                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+            </nav>
+            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+                    <div class="flex items-center mb-16 pr-6">
+                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
+                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto px-10">
+                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                        <p class="mt-6 mb-4 text-lg text-center">
+                            <span>2021 © Zospace. All rights reserved.</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+
+        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Bolero 0.13 released</h2>
+                    <div class="inline-flex mb-14 lg:mb-20 items-center">
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <div class="text-left">
+                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                            <p class="text-white">May 23, 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 mb-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
+                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                </div>
+                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>We are happy to announce the release of <a href="https://fsbolero.io">Bolero</a> version 0.13. Bolero is a library that enables writing full-stack applications in F#, whose client side runs in WebAssembly using <a href="https://blazor.net/">Blazor</a>.</p>
+<p>This release requires the .NET Core SDK version 3.1.300 or newer, which you can download <a href="https://dotnet.microsoft.com/download/dotnet-core/3.1">here</a> for Windows, OSX or Linux.</p>
+<p>Install the latest project template with:</p>
+<pre><code>dotnet new -i Bolero.Templates::0.13.6
+</code></pre>
+<p>If you have an existing Bolero project, you can check <a href="https://fsbolero.io/docs/Upgrade">the upgrade guide</a> to learn how to update your project for Bolero 0.13.</p>
+<h2 id="blazor-3.2.0-final-release">Blazor 3.2.0 final release</h2>
+<p>The Blazor team <a href="https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/">have released their first stable version</a>, v3.2.0. Congratulations to them!</p>
+<p>In Bolero 0.13, we have updated the dependencies to v3.2.0, and as a consequence, we have also removed the <code>preview</code> tag from Bolero's package version.</p>
+<h2 id="improved-server-side-hosting">Improved server-side hosting</h2>
+<p>Bolero applications can be hosted by an ASP.NET Core server, not only when running in server-side mode, but also in WebAssembly mode. This enables features such as server-side prerendering of the page contents. Until v0.12, some of the hosting configuration logic was implemented in the Bolero project template, in a file called <code>HostModel.fs</code> and in the server-side Razor page <code>_Host.cshtml</code>.</p>
+<p>In v0.13, this logic has been streamlined into <code>Bolero.Server</code>. <code>HostModel.fs</code> is now gone, <code>_Host.cshtml</code> is simpler, and configuration is centralized in the ASP.NET Core application startup. <a href="https://fsbolero.io/docs/Upgrade">See the upgrade guide for how to adapt an existing project</a>.</p>
+<pre><code class="language-fsharp">open Microsoft.Extensions.DependencyInjection
+open Bolero.Server.RazorHost
+
+type Startup() =
+
+    member _.ConfigureServices(services: IServiceCollection) =
+        services.AddBoleroHost() |&gt; ignore
+        // Add other services, including MVC...
+</code></pre>
+<p>This method <code>AddBoleroHost()</code> has optional arguments that configure the hosting of Bolero applications:</p>
+<ul>
+<li><p><code>server: bool</code> decides where the application runs: in WebAssembly if <code>server = false</code>, or on the server if <code>server = true</code>. The default is <code>false</code>.</p>
+</li>
+<li><p><code>prerendered: bool</code> decides whether the application's initial view should be prerendered in the served HTML (<code>true</code>), or should be blank and only rendered once the application is loaded (<code>false</code>).</p>
+</li>
+<li><p><code>devToggle: bool</code>: when this is <code>true</code> and the ASP.NET Core application runs in the <code>Development</code> <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-3.1">environment</a>, the <code>server</code> option can be temporarily overridden by passing <code>?server=true</code> or <code>?server=false</code> in the URL. This is particularly useful when developing a WebAssembly application, to temporarily switch to server mode for easier debugging.</p>
+</li>
+</ul>
+<h2 id="component-attributes">Component attributes</h2>
+<p>It is simple to use Blazor components from Bolero: call the <code>comp</code> function parameterized by the component type, then pass a list of attributes and a list of children, and voilà. Here is an example using the <a href="https://www.matblazor.com">MatBlazor</a> library for Material UI style components:</p>
+<pre><code class="language-fsharp">open Bolero.Html
+open MatBlazor
+
+let myButton =
+    comp&lt;MatButton&gt;
+      [ &quot;Icon&quot; =&gt; &quot;favorite&quot;
+        &quot;Link&quot; =&gt; &quot;https://github.com/BlazorComponents/MatBlazor&quot; ]
+      [ text &quot;Click me!&quot; ]
+</code></pre>
+<p>However, some attribute types need specific handling. Bolero 0.13 adds functions for the following:</p>
+<ul>
+<li><p><code>EventCallback&lt;T&gt;</code> can be used using one of the following functions:</p>
+<ul>
+<li><code>attr.callback : string -&gt; (T -&gt; unit) -&gt; Attr</code> to create a synchronous handler;</li>
+<li><code>attr.async.callback : string -&gt; (T -&gt; Async&lt;unit&gt;) -&gt; Attr</code> or</li>
+<li><code>attr.task.callback : string -&gt; (T -&gt; Task) -&gt; Attr</code> to create an asynchronous handler.</li>
+</ul>
+<p>For example:</p>
+<pre><code class="language-fsharp">let myButton (js: IJSRuntime) =
+    comp&lt;MatButton&gt;
+      [ attr.task.callback &quot;OnClick&quot; (fun _ -&gt; js.InvokeVoidAsync(&quot;alert&quot;, &quot;Clicked!&quot;).AsTask()) ]
+      [ text &quot;Click me!&quot; ]
+</code></pre>
+</li>
+<li><p><code>RenderFragment</code> and <code>RenderFragment&lt;T&gt;</code> can be used using the following functions:</p>
+<ul>
+<li><code>attr.fragment : string -&gt; Node -&gt; Attr</code> for <code>RenderFragment</code>;</li>
+<li><code>attr.fragmentWith : string -&gt; (T -&gt; Node) -&gt; Attr</code> for <code>RenderFragment&lt;T&gt;</code>.</li>
+</ul>
+<p>For example:</p>
+<pre><code class="language-fsharp">open MatBlazor
+
+type Car =
+  { Name: string
+    Price: decimal
+    Horsepower: int }
+
+type Model =
+  { Cars: Car[] }
+
+let myTable model dispatch =
+    comp&lt;MatTable&gt;
+      [ &quot;Items&quot; =&gt; model.Cars
+
+        attr.fragment &quot;MatTableHeader&quot; (
+          concat
+            [ th [] [ text &quot;Name&quot; ]
+              th [] [ text &quot;Price&quot; ]
+              th [] [ text &quot;Horsepower&quot;]
+            ]
+        )
+
+        attr.fragmentWith &quot;MatTableRow&quot; (fun (car: Car) -&gt;
+          concat
+            [ td [] [ text car.Name ]
+              td [] [ textf &quot;%.2f&quot; car.Price ]
+              td [] [ textf &quot;%i&quot; car.Horsepower ]
+            ]
+        )
+      ]
+      []
+</code></pre>
+</li>
+</ul>
+<p>Happy coding!</p>
+</div></div>
+            </div>
+        </section>
+        <section class="py-20 2xl:py-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                    <div class="w-full lg:w-3/5 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
+                                    <li><a class="hover:underline" href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
+                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-full lg:w-1/3 px-4 mb-4">
+                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
+                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
+                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <form action="#">
+                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
+                                <span class="inline-block pl-6 lg:pl-10">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                </span>
+                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
+                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                            </div>
+                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="md:flex items-center">
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
+                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            </a>
+                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                            <p class="hidden lg:block text-sm">
+                                <span>&copy; 2021 Shuffle.</span>
+                                <span class="text-gray-300">All rights reserved.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="md:flex items-center justify-end">
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/facebook.svg" alt="" />
+                            </a>
+                            <a class="inline-block mr-2" href="#">
+                                <img src="/files/logos/instagram.svg" alt="" />
+                            </a>
+                            <a class="inline-block" href="#">
+                                <img src="/files/logos/twitter.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="lg:hidden text-sm">
+                    <span>&copy; 2021 Shuffle.</span>
+                    <span class="text-gray-300">All rights reserved.</span>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+    
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+    <script src="/js/Dynamic.min.js"></script>
+</body>
+</html>
