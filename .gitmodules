@@ -1,0 +1,6 @@
+[submodule "blogs"]
+	path = blogs
+	url = https://github.com/intellifactory/blogs
+[submodule "legal"]
+	path = legal
+	url = https://github.com/intellifactory/legal
