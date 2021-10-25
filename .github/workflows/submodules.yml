@@ -1,0 +1,26 @@
+name: Update submodules
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule update --remote --merge
+          git add .
+          git config user.email "ci@intellifactory.com"
+          git config user.name "IntelliFactory CI"
+          git commit -m "Update submodules"
+          git push
+
+      
