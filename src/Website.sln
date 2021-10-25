@@ -5,9 +5,12 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Online", "Online\Online.fsproj", "{58782DC8-0C71-427F-9F71-EBAFF6CE6FDB}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Dynamic", "Dynamic\Dynamic.fsproj", "{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Dynamic", "Dynamic\Dynamic.fsproj", "{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Offline", "Offline\Offline.fsproj", "{2A6F4735-5EE7-4CA4-99A5-64AD349E4426}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Offline", "Offline\Offline.fsproj", "{2A6F4735-5EE7-4CA4-99A5-64AD349E4426}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58782DC8-0C71-427F-9F71-EBAFF6CE6FDB} = {58782DC8-0C71-427F-9F71-EBAFF6CE6FDB}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
