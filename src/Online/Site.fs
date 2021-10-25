@@ -2,6 +2,7 @@ namespace Online
 
 open System
 open System.IO
+open System.Xml.Linq
 open System.Text.RegularExpressions
 open WebSharper
 open WebSharper.Sitelets
@@ -17,8 +18,21 @@ type EndPoint =
     // UserArticle: if slug is empty, we go to the user's home page
     | [<EndPoint "GET /user">] UserArticle of user:string * slug:string
     | [<EndPoint "GET /refresh">] Refresh
+    | [<EndPoint "GET /feed.atom">] AtomFeed
+    | [<EndPoint "GET /feed.rss">] RSSFeed
+    | [<EndPoint "GET /atom">] AtomFeedForUser of string
+    | [<EndPoint "GET /rss">] RSSFeedForUser of string
 
-type PostTemplate = Template<"post.html", clientLoad=ClientLoad.FromDocument, serverLoad=ServerLoad.WhenChanged>
+type PostTemplate = Template<"../Online/post.html", serverLoad=ServerLoad.WhenChanged>
+
+// Utilities to make XML construction somewhat sane
+[<AutoOpen>]
+module Xml =
+    let TEXT (s: string) = XText(s)
+    let (=>) (a1: string) (a2: string) = XAttribute(XName.Get a1, a2)
+    let N = XName.Get
+    let X (tag: XName) (attrs: XAttribute list) (content: obj list) =
+        XElement(tag, List.map box attrs @ List.map box content)
 
 module Markdown =
     open Markdig
@@ -501,6 +515,50 @@ module Site =
                     |> List.map fst
                     |> sprintf "Trying to find page \"%s\" (with key=\"%s\"), but it's not in %A" p page
                     |> Content.Text
+            let ARTICLES_BY_USEROPT (userOpt: string option) =
+                articles.Value |> Map.toList
+                // Filter by user, if given
+                |> List.filter (fun ((user, _), _) -> if userOpt.IsSome then user = userOpt.Value else true)
+                |> List.sortByDescending (fun (_, article: Article) -> article.Date.Ticks)
+            let ATOM_FEED userOpt =
+                let ns = XNamespace.Get "http://www.w3.org/2005/Atom"
+                let articles = ARTICLES_BY_USEROPT userOpt
+                X (ns + "feed") [] [
+                    X (ns + "title") [] [TEXT config.Value.Title]
+                    X (ns + "subtitle") [] [TEXT config.Value.Description]
+                    X (ns + "link") ["href" => config.Value.ServerUrl] []
+                    X (ns + "updated") [] [Helpers.ATOM_DATE DateTime.UtcNow]
+                    for ((user, slug), article) in articles do
+                        X (ns + "entry") [] [
+                            X (ns + "title") [] [TEXT article.Title]
+                            X (ns + "link") ["href" => config.Value.ServerUrl + Urls.POST_URL (user, slug)] []
+                            X (ns + "id") [] [TEXT (user+slug)]
+                            for category in article.Categories do
+                                X (ns + "category") [] [TEXT category]
+                            X (ns + "summary") [] [TEXT article.Abstract]
+                            X (ns + "updated") [] [TEXT <| Helpers.ATOM_DATE article.Date]
+                        ]
+                ]
+            let RSS_FEED userOpt =
+                let articles = ARTICLES_BY_USEROPT userOpt
+                X (N "rss") ["version" => "2.0"] [
+                    X (N "channel") [] [
+                        X (N "title") [] [TEXT config.Value.Title]
+                        X (N "description") [] [TEXT config.Value.Description]
+                        X (N "link") [] [TEXT config.Value.ServerUrl]
+                        X (N "lastBuildDate") [] [Helpers.RSS_DATE DateTime.UtcNow]
+                        for ((user, slug), article) in articles do
+                            X (N "item") [] [
+                                X (N "title") [] [TEXT article.Title]
+                                X (N "link") [] [TEXT <| config.Value.ServerUrl + Urls.POST_URL (user, slug)]
+                                X (N "guid") ["isPermaLink" => "false"] [TEXT (user+slug)]
+                                for category in article.Categories do
+                                    X (N "category") [] [TEXT category]
+                                X (N "description") [] [TEXT article.Abstract]
+                                X (N "pubDate") [] [TEXT <| Helpers.RSS_DATE article.Date]
+                            ]
+                    ]
+                ]
             match endpoint with
             | EndPoint.Home ->
                 Content.Text "Home"
@@ -513,6 +571,38 @@ module Site =
                 //    <| fun (u, _) _ -> user = u
             | UserArticle (user, p) ->
                 ARTICLE (user, p)
+            | AtomFeed ->
+                Content.Custom (
+                    Status = Http.Status.Ok,
+                    Headers = [Http.Header.Custom "content-type" "application/atom+xml"],
+                    WriteBody = fun stream ->
+                        let doc = ATOM_FEED None
+                        doc.Save(stream)
+                )
+            | AtomFeedForUser user ->
+                Content.Custom (
+                    Status = Http.Status.Ok,
+                    Headers = [Http.Header.Custom "content-type" "application/atom+xml"],
+                    WriteBody = fun stream ->
+                        let doc = ATOM_FEED (Some user)
+                        doc.Save(stream)
+                )
+            | RSSFeed ->
+                Content.Custom (
+                    Status = Http.Status.Ok,
+                    Headers = [Http.Header.Custom "content-type" "application/rss+xml"],
+                    WriteBody = fun stream ->
+                        let doc = RSS_FEED None
+                        doc.Save(stream)
+                )
+            | RSSFeedForUser user ->
+                Content.Custom (
+                    Status = Http.Status.Ok,
+                    Headers = [Http.Header.Custom "content-type" "application/rss+xml"],
+                    WriteBody = fun stream ->
+                        let doc = RSS_FEED (Some user)
+                        doc.Save(stream)
+                )
             | Refresh ->
                 // Reload the master configs and the article cache
                 config := ReadConfig()
@@ -522,3 +612,100 @@ module Site =
                 identities1 := ComputeIdentities1 articles.Value
                 Content.Text "Articles/configs reloaded."
         )
+
+open System.IO
+
+[<Sealed>]
+type Website() =
+    let config = ref <| Site.ReadConfig()
+    let _info, _articles = Site.ReadArticles (!config)
+    let info = ref _info
+    let articles = ref _articles
+    let identities1 = ref <| Site.ComputeIdentities1 articles.Value
+
+    interface IWebsite<EndPoint> with
+        member this.Sitelet = Site.Main config identities1 info articles
+        member this.Actions =
+            let articles = Map.toList articles.Value
+            let categories =
+                articles
+                |> List.map snd
+                |> List.collect (fun article -> article.Categories)
+                |> Set.ofList
+                |> Set.toList
+            let languages =
+                articles
+                |> List.map snd
+                |> List.map (fun article -> Site.URL_LANG config.Value article.Language)
+                |> Set.ofList
+                |> Set.toList
+            let noPagesForLanguage language =
+                let noArticlesInLanguage =
+                    articles
+                    |> List.map snd
+                    |> List.filter (fun article -> language = Site.URL_LANG config.Value article.Language)
+                    |> List.length
+                noArticlesInLanguage / config.Value.PageSize + 1
+            let users =
+                articles
+                |> List.map (fst >> fst)
+                |> Set.ofList
+                |> Set.toList
+            //let jobs =
+            //    DirectoryInfo("../Hosted/jobs/").EnumerateFiles("*.html", SearchOption.TopDirectoryOnly)
+            //    |> Seq.map (fun x -> x.Name.Replace(".html", ""))
+            //    |> List.ofSeq
+            [
+                //// Generate the learning page
+                //for training in Site.trainings do
+                //    Courses training
+                //Trainings
+                //// Generate contact page
+                //Contact
+                //// Generate the main blog page (a redirect)
+                //Blogs (BlogListingArgs.Empty)
+                //// Generate redirection pages for the old article pages
+                //for (_, article) in articles do
+                //    Redirect1 (fst article.Identity, article.SlugWithoutDate)
+                // Generate articles
+                for ((user, slug), _) in articles do
+                    if String.IsNullOrEmpty user then
+                        Article slug
+                    else
+                        UserArticle (user, slug)
+                //// Generate user pages
+                //for user in users do
+                //    UserArticle (user, "")
+                //// Generate tag/category pages
+                //for category in categories do
+                //    for language in languages do
+                //        if
+                //            List.exists (fun (_, (art: Site.Article)) ->
+                //                language = Site.URL_LANG config.Value art.Language
+                //                &&
+                //                List.contains category art.Categories 
+                //            ) articles
+                //        then
+                //            Category (category, language)
+                //Categories
+                // Generate the RSS/Atom feeds
+                RSSFeed
+                AtomFeed
+                for user in users do
+                    RSSFeedForUser user
+                    AtomFeedForUser user
+                //for job in jobs do
+                //    Job job
+                //// Generate 404 page
+                //Error404
+                //// Generate legal pages
+                //CookiePolicy
+                //TermsOfUse
+                //PrivacyPolicy
+                //Research
+                //Consulting
+                //Careers
+            ]
+
+[<assembly: Website(typeof<Website>)>]
+do ()

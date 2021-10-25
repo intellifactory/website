@@ -7,6 +7,8 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Online", "Online\Online.fsp
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Dynamic", "Dynamic\Dynamic.fsproj", "{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Offline", "Offline\Offline.fsproj", "{2A6F4735-5EE7-4CA4-99A5-64AD349E4426}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F96EA808-EEE9-4254-B3EB-6C91FAEB87E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6F4735-5EE7-4CA4-99A5-64AD349E4426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6F4735-5EE7-4CA4-99A5-64AD349E4426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6F4735-5EE7-4CA4-99A5-64AD349E4426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6F4735-5EE7-4CA4-99A5-64AD349E4426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

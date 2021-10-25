@@ -5,7 +5,7 @@
 /src/Online/posts/*
 /src/Online/wwwroot/Scripts/*
 /src/Online/wwwroot/Content/*
-/src/Online/wwwroot/assets/.gitkeep
+/src/Online/wwwroot/files/.gitkeep
 /src/Online/wwwroot/js/Dynamic.*
 /_template/node_modules/*
 /_template/public/*
@@ -13,4 +13,7 @@
 /src/.vs/*
 /src/Dynamic/bin/*
 /src/Dynamic/obj/*
+/build/*
+/src/Offline/bin/*
+/src/Offline/obj/*
 
