@@ -25,6 +25,7 @@
     <ExtraFiles Include="../Online/wwwroot/files/**" linkBase="files" />
     <ExtraFiles Include="../Online/wwwroot/css/**" linkBase="css" />
     <ExtraFiles Include="../Online/wwwroot/js/**" linkBase="js" />
+    <ExtraFiles Include="../Online/wwwroot/img/**" linkBase="img" />
     <ExtraFiles Include="../Online/wwwroot/assets/**" linkBase="assets" />
     <ExtraFiles Include="../Online/wwwroot/legal/**" linkBase="legal" />
   </ItemGroup>
