@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Page title</title>
+    <title>WebSharper UI.Next 3.4: the new HTML syntax</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -10,61 +10,55 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
     <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/vs.min.css"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/far.min.css"></link>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
     <script src="/js/main.js"></script>
 </head>
 <body class="antialiased bg-body text-body font-body">
     <div class="">
-        <section class="py-8 px-4 lg:px-10 bg-gray-800">
-            <nav class="relative flex justify-between items-center">
+        <section class="px-4 lg:px-10 bg-gray-800 px-2">
+            <nav class="relative flex justify-between items-center py-2">
                 <a class="text-2xl text-white font-bold" href="#">
-                    <img class="h-7" src="/files/logos/zospace-logo.svg" alt="" width="auto" />
+                    <img style="height:3rem;margin:-0.65rem 0 -0.65rem 0;" src="/img/if-logo.png" alt="IntelliFactory" />
                 </a>
                 <div class="lg:hidden">
                     <button class="p-2 navbar-burger">
-                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
+                            <rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect>
+                        </svg>
                     </button>
                 </div>
-                <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                <div class="hidden lg:block ml-auto mr-16">
                     <ul class="flex items-center text-white space-x-10">
-                        <li><a class="text-white font-bold text-lg" href="#">Home</a></li>
-                        <span>
-                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-                        </span>
-                        <li><a class="text-white font-bold text-lg" href="#">Open Source</a></li>
-                        <span>
-                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-                        </span>
-                        <li><a class="text-white font-bold text-lg" href="#">Blog</a></li>
-                        <span>
-                            <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-                        </span>
-                        <li><a class="text-white font-bold text-lg" href="#">Contact</a></li>
+                        <li><a class="text-white font-bold text-lg" href="/">Home</a></li>
+                        <li><a class="text-white font-bold text-lg" href="/oss">Open Source</a></li>
+                        <li><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
+                        <li><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="hidden lg:block"><a class="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full" href="#">Sign Up</a></div>
+                <div class="hidden lg:block"><a class="inline-block px-12 text-white font-bold border border-gray-200 hover:border-white rounded-full py-2" href="#">Sign Up</a></div>
             </nav>
             <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
                 <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
                 <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
                     <div class="flex items-center mb-16 pr-6">
                         <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
-                            <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            <img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" />
                         </a>
                     </div>
                     <div>
                         <ul>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Home</a></li>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Open Source</a></li>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Blog</a></li>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Contact</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/">Home</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/oss">Open Source</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/blogs">Blogs</a></li>
+                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="mt-auto px-10">
                         <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
                         <p class="mt-6 mb-4 text-lg text-center">
-                            <span>2021 © Zospace. All rights reserved.</span>
+                            <span>2004-2021 © IntelliFactory. All rights reserved.</span>
                         </p>
                     </div>
                 </nav>
@@ -74,10 +68,10 @@
 
         <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
             <div class="container px-4 mx-auto">
-                <div class="max-w-3xl mx-auto text-center">
+                <div class="max-w-4xl mx-auto text-center">
                     <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper UI.Next 3.4: the new HTML syntax</h2>
                     <div class="inline-flex mb-14 lg:mb-20 items-center">
-                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/user.png" alt="Loic Denuziere" />
                         <div class="text-left">
                             <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
                             <p class="text-white">Aug 03, 2015</p>
@@ -85,8 +79,7 @@
                     </div>
                 </div>
                 <div class="relative h-96 mb-20">
-                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517171771326-cbc7f641008a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1200&amp;amp;q=80" alt="" />
-                    <img class="absolute bottom-0 left-0 ml-4 lg:ml-12 -mb-16 lg:-mb-24 w-32 lg:w-48 h-40 lg:h-60 object-cover" src="https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=800&amp;amp;q=80" alt="" />
+                    <img class="w-full h-full object-cover" src="/img/category3.jpg" alt="" />
                 </div>
                 <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>As its name suggests, UI.Next was created to be the next-generation standard library for UI programming in WebSharper. As a consequence, as of WebSharper 4.0, <strong>UI.Next will be merged into WebSharper itself</strong> under a less &quot;codenamey&quot; moniker that we haven't decided yet. It will completely obsolete the current Html.Client and Html.Server.</p>
 <p>The <a href="/user/denuziere/20150803-websharper-3-4-released.html">recently released version 3.4</a> prepares the terrain for this merger. It streamlines the embedded markup syntax, introduces server-side capability and adds client-side functionality.</p>
@@ -233,91 +226,81 @@ module Server =
 </div></div>
             </div>
         </section>
-        <section class="py-20 2xl:py-40">
+        <section class="2xl:py-20 py-5">
             <div class="container mx-auto px-4">
-                <div class="flex flex-wrap -mx-4 pb-6 lg:pb-20 border-b border-gray-100">
+                <div class="flex flex-wrap -mx-4 border-b border-gray-100 pt-5 lg:pt-10">
                     <div class="w-full lg:w-3/5 px-4">
                         <div class="flex flex-wrap -mx-4">
                             <div class="w-1/2 lg:w-1/3 px-4 mb-12">
-                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Zospace</h3>
+                                <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">IntelliFactory</h3>
                                 <ul class="text-lg">
-                                    <li class="mb-5"><a class="hover:underline" href="#">Hello</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Story</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Pricing</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Applications</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Stats</a></li>
-                                    <li><a class="hover:underline" href="#">Blog</a></li>
-                                </ul>
-                            </div>
-                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
-                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Products</h3>
-                                <ul class="text-lg">
-                                    <li class="mb-5"><a class="hover:underline" href="#">Newsletter</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Features</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">How it works</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">FAQ&apos;s</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Portfolio</a></li>
-                                    <li><a class="hover:underline" href="#">Team</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="/blogs">Blogs</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
+                                    <li class="mb-4 Cookies"><a class="hover:underline" href="/cookie-policy">Cookies</a></li>
+                                    <li><a class="hover:underline" href="#">Contact</a></li>
                                 </ul>
                             </div>
                             <div class="w-full lg:w-1/3 px-4 mb-4">
-                                <h3 class="mb-8 lg:mb-14 text-xl font-bold font-heading">Your Account</h3>
+                                <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Services</h3>
                                 <ul class="text-lg">
-                                    <li class="mb-5"><a class="hover:underline" href="#">New account</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Log in</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Testimonials</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Contact</a></li>
-                                    <li class="mb-5"><a class="hover:underline" href="#">Privacy Policy</a></li>
-                                    <li><a class="hover:underline" href="#">Cookies</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="/home#consulting">Consulting</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="/home#development">Development</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="/home#code-synthesis">AI-driven Code Synthesis</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="/home#dsls">Domain-Specific Languages</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                                <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Open Source</h3>
+                                <ul class="text-lg">
+                                    <li class="mb-4"><a class="hover:underline" href="https://websharper.com">WebSharper</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="https://fsbolero.io">Bolero</a></li>
+                                    <li class="mb-4"><a class="hover:underline" href="#">From our Lab</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
-                        <h3 class="mb-16 text-xl font-bold">Newsletter</h3>
+                        <h3 class="mb-10 text-xl font-bold">Newsletter</h3>
                         <form action="#">
                             <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
-                                <span class="inline-block pl-6 lg:pl-10">
-                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle><circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle><circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle></svg>
+                                <span class="inline-block pl-2 lg:pl-5">
+                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle>
+                                        <circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle>
+                                        <circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle>
+                                    </svg>
                                 </span>
-                                <input class="pl-4 py-4 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Drop your Email" />
-                                <button class="ml-auto px-4 px-8 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                                <input class="pl-4 py-2 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Your email address" />
+                                <button class="ml-auto px-6 lg:px-8 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
                             </div>
-                            <p class="text-gray-300">The brown fox jumps over the lazy dog.</p>
+                            <p class="text-gray-300">We will not spam you or give your details to anyone.</p>
                         </form>
                     </div>
                 </div>
-                <div class="flex flex-wrap items-center pt-10 mb-8 lg:mb-0">
-                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                <div class="flex flex-wrap items-center mb-8 lg:mb-0 pt-5">
+                    <div class="w-full md:w-3/4 mb-8 md:mb-0">
                         <div class="md:flex items-center">
-                            <a class="inline-block text-gray-900 text-xl font-bold" href="#">
-                                <img class="h-7" src="/files/logos/zospace-dark-logo.svg" alt="" width="auto" />
+                            <a class="inline-block text-gray-900 text-xl font-bold" href="/">
+                                <img class="h-7" src="/img/if-logo-long.png" alt="" width="auto" />
                             </a>
                             <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
-                            <p class="hidden lg:block text-sm">
-                                <span>&copy; 2021 Shuffle.</span>
-                                <span class="text-gray-300">All rights reserved.</span>
-                            </p>
+                            <p class="hidden lg:block text-sm"><span>© 2004-2021 IntelliFactory.</span>                <span class="text-gray-300">All rights reserved.</span></p>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
+                    <div class="w-full md:w-1/4">
                         <div class="md:flex items-center justify-end">
                             <a class="inline-block mr-2" href="#">
-                                <img src="/files/logos/facebook.svg" alt="" />
+                                <img src="/files/logos/facebook.svg" alt="Facebook" />
                             </a>
                             <a class="inline-block mr-2" href="#">
                                 <img src="/files/logos/instagram.svg" alt="" />
                             </a>
                             <a class="inline-block" href="#">
-                                <img src="/files/logos/twitter.svg" alt="" />
+                                <img src="/files/logos/twitter.svg" alt="Twitter" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <p class="lg:hidden text-sm">
-                    <span>&copy; 2021 Shuffle.</span>
-                    <span class="text-gray-300">All rights reserved.</span>
-                </p>
             </div>
         </section>
         
