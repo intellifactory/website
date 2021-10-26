@@ -482,8 +482,15 @@ module Site =
 //            .Description(article.Abstract)
 //            .PageUrl(article.Url)
             .AuthorName(article.AuthorName)
+            .AuthorUsernameForAvatar(
+                let fname = Path.Combine (__SOURCE_DIRECTORY__, sprintf @"../Online/wwwroot/img/avatar/%s.png" article.User)
+                if File.Exists(fname) then
+                    article.User
+                else
+                    "user"
+            )
 //            .AuthorUrl(article.AuthorUrl)
-//            .CategoryNo(string article.CategoryNumber)
+            .CategoryNo(string article.CategoryNumber)
 //            .ServerUrl(config.ServerUrl)
             // Sidebar
 //            .Sidebar(BlogSidebar config articles article)

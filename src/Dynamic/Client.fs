@@ -7,7 +7,7 @@ module Highlight =
     open WebSharper.HighlightJS
 
     [<Require(typeof<Resources.Languages.Fsharp>)>]
-    [<Require(typeof<Resources.Styles.Vs>)>]
+    [<Require(typeof<Resources.Styles.Far>)>]
     let Run() =
         JS.Document.QuerySelectorAll("code[class^=language-]").ForEach(
             (fun (node, _, _, _) -> Hljs.HighlightBlock(node)),
