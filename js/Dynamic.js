@@ -342,7 +342,7 @@
 (function(Global)
 {
  "use strict";
- var Client,Highlight,Newsletter,EventTarget,Node,WindowOrWorkerGlobalScope,WebSharper,Strings,Obj,hljs,IntelliFactory,Runtime,$;
+ var Client,Highlight,Newsletter,EventTarget,Node,WindowOrWorkerGlobalScope,WebSharper,Strings,Obj,hljs,IntelliFactory,Runtime;
  Client=Global.Client=Global.Client||{};
  Highlight=Client.Highlight=Client.Highlight||{};
  Newsletter=Client.Newsletter=Client.Newsletter||{};
@@ -355,7 +355,6 @@
  hljs=Global.hljs;
  IntelliFactory=Global.IntelliFactory;
  Runtime=IntelliFactory&&IntelliFactory.Runtime;
- $=Global.jQuery;
  Client.Main=function()
  {
   Highlight.Run();
@@ -374,22 +373,29 @@
  };
  Newsletter.SignUpAction=function()
  {
-  Global.jQuery("#signUp").click(function(ev)
+  self.document.getElementById("signup").addEventListener("click",function(ev)
   {
-   var email,fd,r;
-   Global.jQuery(".newsletter-form .success-box").removeClass("visible");
-   Global.jQuery(".newsletter-form .error-box").removeClass("visible");
-   Global.jQuery("#signUp").addClass("loading").attr("disabled","disabled");
-   email=Global.jQuery("#nemail").val();
-   return Strings.Trim(email)!==""?(fd=new Global.FormData(),(fd.append("email",email),fd.append("type","Blogs"),$.ajax((r={},r.url="https://api.intellifactory.com/api/newsletter",r.data=fd,r.processData=false,r.contentType=false,r.type="POST",r.success=function()
+   var input,email,alertList,fd,r;
+   ev.preventDefault();
+   input=self.document.getElementById("newsletter-input");
+   email=input.value;
+   return Strings.Trim(email)!==""?(alertList=self.document.getElementById("newsletter-alert-list"),(alertList.replaceChildren.apply(alertList,[]),input.setAttribute("disabled","disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("type","Blogs"),void(self.fetch("https://api.intellifactory.com/api/newsletter",(r={},r.method="POST",r.body=fd,r)).then(function()
    {
-    $(".newsletter-form .success-box").addClass("visible");
-    return $("#signUp").removeClass("loading").removeAttr("disabled");
-   },r.error=function()
+    var successMessage;
+    successMessage=self.document.createElement("div");
+    successMessage.className="success-alert";
+    successMessage.textContent="You have successfully signed up!";
+    input.removeAttribute("disabled");
+    return alertList.appendChild(successMessage);
+   }))["catch"](function()
    {
-    $(".newsletter-form .error-box").addClass("visible");
-    return $("#signUp").removeClass("loading").removeAttr("disabled");
-   },r)),ev.preventDefault())):$("#signUp").removeClass("loading").removeAttr("disabled");
+    var errorMessage;
+    errorMessage=self.document.createElement("div");
+    errorMessage.className="error-alert";
+    errorMessage.textContent="Sorry, we could not sign you for the newsletter!";
+    input.removeAttribute("disabled");
+    return alertList.appendChild(errorMessage);
+   }))):null;
   });
  };
  Strings.Trim=function(s)
