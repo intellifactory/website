@@ -18,36 +18,44 @@ module Newsletter =
     open WebSharper.JQuery
 
     let SignUpAction () =
-        JQuery.JQuery.Of("#signUp").Click(fun _ ev ->
-            JQuery.JQuery.Of(".newsletter-form .success-box").RemoveClass("visible").Ignore
-            JQuery.JQuery.Of(".newsletter-form .error-box").RemoveClass("visible").Ignore
-            JQuery.JQuery.Of("#signUp").AddClass("loading").Attr("disabled", "disabled").Ignore
-            let email : string = JQuery.JQuery.Of("#nemail").Val() :?> string
+        let button = JS.Document.GetElementById "signup"
+        button.AddEventListener("click", System.Action<Dom.Event>(fun ev -> 
+            ev.PreventDefault()
+            let input = JS.Document.GetElementById "newsletter-input"
+            let email : string = input?value
             if email.Trim() <> "" then
+                let alertList = JS.Document.GetElementById "newsletter-alert-list"
+                alertList.ReplaceChildren(([||] : string []))
+                input.SetAttribute("disabled", "disabled")
                 let fd = FormData()
                 fd.Append("email", email)
                 fd.Append("type", "Blogs")
-                let ajaxSettings =
-                    JQuery.AjaxSettings(
-                        Url = "https://api.intellifactory.com/api/newsletter",
-                        Data = fd,
-                        ProcessData = false,
-                        ContentType = Union1Of2(false),
-                        Type = JQuery.RequestType.POST,
-                        Success = (fun _ _ _ ->
-                            JQuery.JQuery.Of(".newsletter-form .success-box").AddClass("visible").Ignore
-                            JQuery.JQuery.Of("#signUp").RemoveClass("loading").RemoveAttr("disabled").Ignore
-                        ),
-                        Error = (fun _ _ _ ->
-                            JQuery.JQuery.Of(".newsletter-form .error-box").AddClass("visible").Ignore
-                            JQuery.JQuery.Of("#signUp").RemoveClass("loading").RemoveAttr("disabled").Ignore
-                        )
+                let options =
+                    RequestOptions(
+                        Method = "POST",
+                        Body = fd
                     )
-                JQuery.JQuery.Ajax(ajaxSettings) |> ignore
-                ev.PreventDefault()
+                let responsePromise = 
+                    JS.Fetch("https://api.intellifactory.com/api/newsletter", options)
+                responsePromise
+                    .Then(fun resp ->
+                        let successMessage = JS.Document.CreateElement("div")
+                        successMessage.ClassName <- "success-alert"
+                        successMessage.TextContent <- "You have successfully signed up!"
+                        input.RemoveAttribute("disabled")
+                        alertList.AppendChild successMessage
+                    )
+                    .Catch(fun _ ->
+                        let errorMessage = JS.Document.CreateElement("div")
+                        errorMessage.ClassName <- "error-alert"
+                        errorMessage.TextContent <- "Sorry, we could not sign you for the newsletter!"
+                        input.RemoveAttribute("disabled")
+                        alertList.AppendChild errorMessage
+                    )
+                    |> ignore
             else
-                JQuery.JQuery.Of("#signUp").RemoveClass("loading").RemoveAttr("disabled").Ignore
-        ).Ignore
+                ()
+        ))
 
 [<SPAEntryPoint>]
 let Main() =
