@@ -1,87 +1,80 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>WebSharper / O3D sample: Snooker game</title>
+  <head>
+    <title>Page title</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;amp;subset=latin" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;amp;display=swap" />
     <link rel="stylesheet" href="/css/tailwind/tailwind.min.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/far.min.css"></link>
 
     <script src="/js/main.js"></script>
-</head>
-<body class="antialiased bg-body text-body font-body">
-    <div class="">
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <div>
+      <div>
         <section class="px-4 lg:px-10 bg-gray-800 px-2">
-            <nav class="relative flex justify-between items-center py-2">
-                <a class="text-2xl text-white font-bold" href="#">
-                    <img style="height:3rem;margin:-0.65rem 0 -0.65rem 0;" src="/img/if-logo.png" alt="IntelliFactory" />
-                </a>
-                <div class="lg:hidden">
-                    <button class="p-2 navbar-burger">
-                        <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
-                            <rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect>
-                        </svg>
-                    </button>
-                </div>
-                <div class="hidden lg:block ml-auto mr-16">
-                    <ul class="flex items-center text-white space-x-10">
-                        <li><a class="text-white font-bold text-lg" href="/">Home</a></li>
-                        <li><a class="text-white font-bold text-lg" href="/oss">Open Source</a></li>
-                        <li><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
-                        <li><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="hidden lg:block"><a class="inline-block px-12 text-white font-bold border border-gray-200 hover:border-white rounded-full py-2" href="#">Sign Up</a></div>
-            </nav>
-            <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
-                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
-                <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
-                    <div class="flex items-center mb-16 pr-6">
-                        <a class="ml-10 text-2xl text-gray-800 font-bold" href="#">
-                            <img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" />
-                        </a>
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/">Home</a></li>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/oss">Open Source</a></li>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/blogs">Blogs</a></li>
-                            <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto px-10">
-                        <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
-                        <p class="mt-6 mb-4 text-lg text-center">
-                            <span>2004-2021 © IntelliFactory. All rights reserved.</span>
-                        </p>
-                    </div>
-                </nav>
+          <nav class="relative flex justify-between items-center py-2"><a class="text-2xl text-white font-bold" href="#"><img style="height:3rem;margin:-0.65rem 0 -0.65rem 0;" src="/img/if-logo.png" alt="IntelliFactory" /></a>
+            <div class="lg:hidden">
+              <button class="p-2 navbar-burger">
+                <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
+                  <rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect>
+                </svg>
+              </button>
             </div>
+            <div class="hidden lg:block ml-auto mr-16">
+              <ul class="flex items-center text-white space-x-10">
+                <li><a class="text-white font-bold text-lg" href="/">Home</a></li>
+                <li><a class="text-white font-bold text-lg" href="/oss">Open Source</a></li>
+                <li><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
+                <li><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="hidden lg:block"><a class="inline-block px-12 text-white font-bold border border-gray-200 hover:border-white rounded-full py-2" href="#">Sign Up</a></div>
+          </nav>
+          <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+            <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+              <div class="flex items-center mb-16 pr-6"><a class="ml-10 text-2xl text-gray-800 font-bold" href="#"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" /></a></div>
+              <div>
+                <ul>
+                  <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/">Home</a></li>
+                  <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/oss">Open Source</a></li>
+                  <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/blogs">Blogs</a></li>
+                  <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/contact">Contact</a></li>
+                </ul>
+              </div>
+              <div class="mt-auto px-10">
+                <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
+                <p class="mt-6 mb-4 text-lg text-center"><span>2004-2021 © IntelliFactory. All rights reserved.</span></p>
+              </div>
+            </nav>
+          </div>
         </section>
         
-
-        <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
-            <div class="container px-4 mx-auto">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper / O3D sample: Snooker game</h2>
-                    <div class="inline-flex mb-14 lg:mb-20 items-center">
-                        <img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/user.png" alt="Loic Denuziere" />
-                        <div class="text-left">
-                            <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
-                            <p class="text-white">Jun 16, 2011</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative h-96 mb-20">
-                    <img class="w-full h-full object-cover" src="/img/category3.jpg" alt="" />
-                </div>
-                <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>We are happy to present to you <a href=http://www.websharper.com/samples/O3D>the first game</a> coded using WebSharper. It is a translation from one of O3D's biggest samples: the snooker.</p>
+      </div>
+      <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">WebSharper / O3D sample: Snooker game</h2>
+            <div class="inline-flex mb-14 lg:mb-20 items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/user.png" alt="Loic Denuziere" />
+              <div class="flex-1 text-left">
+                <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
+                <p class="text-white">Jun 16, 2011</p>
+              </div>
+              <div class="text-right ml-20">
+                <p class="mb-1 font-bold text-gray-50 text-xl">Reading time:</p>
+                <p class="text-white"> mins</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-96 mb-20"><img class="w-full h-full object-cover" src="/img/category3.jpg" alt="" /></div>
+          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>We are happy to present to you <a href=http://www.websharper.com/samples/O3D>the first game</a> coded using WebSharper. It is a translation from one of O3D's biggest samples: the snooker.</p>
 <img src="http://intellifactory.com/ShowDigitalAsset.aspx?DigitalAsset=195">
 <p>This WebSharper snooker is on par with <a href=http://o3d.googlecode.com/svn/trunk/samples_webgl/o3d-webgl-samples/pool.html>its JavaScript counterpart</a> in terms of game speed, showing the performance of our generated code. But the source code is actually about 25% shorter than the original. Moreover, the extra safety brought by F# and WebSharper would have made its development easier and faster.</p>
 <h2 id="why-is-it-safer">Why is it safer?</h2>
@@ -111,87 +104,71 @@
 <img src="http://intellifactory.com/ShowDigitalAsset.aspx?DigitalAsset=196">
 <p>So, go ahead, <a href=http://www.websharper.com/samples/O3DRun>try it</a> and don't hesitate to have a look at <a href=http://www.websharper.com/samples/O3D>the source</a>!</p>
 </div></div>
-            </div>
-        </section>
-        <section class="2xl:py-20 py-5">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap -mx-4 border-b border-gray-100 pt-5 lg:pt-10">
-                    <div class="w-full lg:w-3/5 px-4">
-                        <div class="flex flex-wrap -mx-4">
-                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
-                                <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">IntelliFactory</h3>
-                                <ul class="text-lg">
-                                    <li class="mb-4"><a class="hover:underline" href="/blogs">Blogs</a></li>
-                                    <li class="mb-4"><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
-                                    <li class="mb-4 Cookies"><a class="hover:underline" href="/cookie-policy">Cookies</a></li>
-                                    <li><a class="hover:underline" href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                            <div class="w-full lg:w-1/3 px-4 mb-4">
-                                <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Services</h3>
-                                <ul class="text-lg">
-                                    <li class="mb-4"><a class="hover:underline" href="/home#consulting">Consulting</a></li>
-                                    <li class="mb-4"><a class="hover:underline" href="/home#development">Development</a></li>
-                                    <li class="mb-4"><a class="hover:underline" href="/home#code-synthesis">AI-driven Code Synthesis</a></li>
-                                    <li class="mb-4"><a class="hover:underline" href="/home#dsls">Domain-Specific Languages</a></li>
-                                </ul>
-                            </div>
-                            <div class="w-1/2 lg:w-1/3 px-4 mb-12">
-                                <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Open Source</h3>
-                                <ul class="text-lg">
-                                    <li class="mb-4"><a class="hover:underline" href="https://websharper.com">WebSharper</a></li>
-                                    <li class="mb-4"><a class="hover:underline" href="https://fsbolero.io">Bolero</a></li>
-                                    <li class="mb-4"><a class="hover:underline" href="#">From our Lab</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
-                        <h3 class="mb-10 text-xl font-bold">Newsletter</h3>
-                        <form method="post">
-                            <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full">
-                                <span class="inline-block pl-2 lg:pl-5">
-                                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle>
-                                        <circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle>
-                                        <circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle>
-                                    </svg>
-                                </span>
-                                <input id="newsletter-input" class="pl-4 py-2 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Your email address" />
-                                <button id="signup" class="ml-auto px-6 lg:px-8 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
-                            </div>
-                            <div id="newsletter-alert-list"></div>
-                            <p class="text-gray-300">We will not spam you or give your details to anyone.</p>
-                        </form>
-                    </div>
+        </div>
+      </section>
+      <section class="2xl:py-20 py-5">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap -mx-4 border-b border-gray-100 pt-5 lg:pt-10">
+            <div class="w-full lg:w-3/5 px-4">
+              <div class="flex flex-wrap -mx-4">
+                <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">IntelliFactory</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/jobs">Jobs</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/blogs">Blogs</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
+                    <li class="mb-4 Cookies"><a class="hover:underline" href="/cookie-policy">Cookies</a></li>
+                    <li><a class="hover:underline" href="#">Contact</a></li>
+                  </ul>
                 </div>
-                <div class="flex flex-wrap items-center mb-8 lg:mb-0 pt-5">
-                    <div class="w-full md:w-3/4 mb-8 md:mb-0">
-                        <div class="md:flex items-center">
-                            <a class="inline-block text-gray-900 text-xl font-bold" href="/">
-                                <img class="h-7" src="/img/if-logo-long.png" alt="" width="auto" />
-                            </a>
-                            <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
-                            <p class="hidden lg:block text-sm"><span>© 2004-2021 IntelliFactory.</span>                <span class="text-gray-300">All rights reserved.</span></p>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/4">
-                        <div class="md:flex items-center justify-end">
-                            <a class="inline-block mr-2" href="#">
-                                <img src="/files/logos/facebook.svg" alt="Facebook" />
-                            </a>
-                            <a class="inline-block mr-2" href="#">
-                                <img src="/files/logos/instagram.svg" alt="" />
-                            </a>
-                            <a class="inline-block" href="#">
-                                <img src="/files/logos/twitter.svg" alt="Twitter" />
-                            </a>
-                        </div>
-                    </div>
+                <div class="w-full lg:w-1/3 px-4 mb-4">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Services</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/home#consulting">Consulting</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#development">Development</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#code-synthesis">AI-driven Code Synthesis</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#dsls">Domain-Specific Languages</a></li>
+                  </ul>
                 </div>
+                <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Open Source</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="https://websharper.com">WebSharper</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="https://fsbolero.io">Bolero</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="#">From our Lab</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </section>
-        
+            <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+              <h3 class="mb-10 text-xl font-bold">Newsletter</h3>
+              <form action="#">
+                <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full"><span class="inline-block pl-2 lg:pl-5">
+                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle>
+                      <circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle>
+                    </svg></span>
+                  <input class="pl-4 py-2 rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Your email address" />
+                  <button class="ml-auto px-6 lg:px-8 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                </div>
+                <p class="text-gray-300">We will not spam you or give your details to anyone.</p>
+              </form>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center mb-8 lg:mb-0 pt-5">
+            <div class="w-full md:w-3/4 mb-8 md:mb-0">
+              <div class="md:flex items-center"><a class="inline-block text-gray-900 text-xl font-bold" href="#"><img class="h-7" src="zospace-assets/logos/zospace-dark-logo.svg" alt="" width="auto" /></a>              <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                <p class="hidden lg:block text-sm"><span>© 2004-2021 IntelliFactory.</span>                <span class="text-gray-300">All rights reserved.</span></p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4">
+              <div class="md:flex items-center justify-end"><a class="inline-block mr-2" href="#"><img src="zospace-assets/logos/facebook.svg" alt="" /></a>              <a class="inline-block mr-2" href="#"><img src="zospace-assets/logos/instagram.svg" alt="" /></a>              <a class="inline-block" href="#"><img src="zospace-assets/logos/twitter.svg" alt="" /></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </div>
     
     <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
@@ -203,5 +180,5 @@ if (typeof IntelliFactory !=='undefined') {
 </script>
 
     <script src="/js/Dynamic.min.js"></script>
-</body>
+  </body>
 </html>
