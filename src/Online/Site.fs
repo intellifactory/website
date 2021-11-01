@@ -22,8 +22,10 @@ type EndPoint =
     | [<EndPoint "GET /feed.rss">] RSSFeed
     | [<EndPoint "GET /atom">] AtomFeedForUser of string
     | [<EndPoint "GET /rss">] RSSFeedForUser of string
+    | [<EndPoint "GET /contact">] Contact
 
 type PostTemplate = Template<"../Online/post.html", serverLoad=ServerLoad.WhenChanged>
+type ContactTemplate = Template<"../Online/contact.html", serverLoad=ServerLoad.WhenChanged>
 
 // Utilities to make XML construction somewhat sane
 [<AutoOpen>]
@@ -461,9 +463,9 @@ module Site =
     let ArticlePage (config: Config) articles (article: Article) =
         let head = head()
         PostTemplate()
-//#if !DEBUG
-//            .ReleaseMin(".min")
-//#endif
+#if !DEBUG
+            .ReleaseMin(".min")
+#endif
             .Head(head)
             .MenubarPlaceholder(
                 PostTemplate.Menubar()
@@ -475,7 +477,7 @@ module Site =
             .Content(
                 PLAIN article.Content
             )
-//            .TimeToRead(string article.TimeToRead)
+            .TimeToRead(string article.TimeToRead)
 //            .SourceCodeUrl(sprintf "%s/tree/master%s.md" config.GitHubRepo article.Url)
             .Date(article.Date.ToString("MMM dd, yyyy"))
             .Title(article.Title)
@@ -566,6 +568,19 @@ module Site =
                             ]
                     ]
                 ]
+            let CONTACT () =
+//                let mapContactStyles = mapContactStyles()
+                ContactTemplate()
+#if !DEBUG
+                    .ReleaseMin(".min")
+#endif
+                    .MenubarPlaceholder(PostTemplate.Menubar().Doc())
+//                    .Map(client <@ ClientSideCode.TalksAndPresentations.GMapOffice(mapContactStyles) @>)
+                    .FooterPlaceholder(PostTemplate.Footer().Doc())
+//                    .Cookie(Cookies.Banner false)
+                    .Doc()
+                |> Content.Page
+
             match endpoint with
             | EndPoint.Home ->
                 Content.Text "Home"
@@ -618,6 +633,8 @@ module Site =
                 articles := _articles
                 identities1 := ComputeIdentities1 articles.Value
                 Content.Text "Articles/configs reloaded."
+            | Contact ->
+                CONTACT ()
         )
 
 open System.IO

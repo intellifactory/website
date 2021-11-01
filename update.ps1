@@ -1,6 +1,3 @@
-# Initialize git submodules
-git submodule update --init --recursive
-
 Write-Output "Copy legal files"
 
 xcopy .\legal\site-docs\intellifactory.com\* .\src\Online\legal\ /s /e
