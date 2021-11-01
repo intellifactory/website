@@ -684,8 +684,8 @@ type Website() =
                 //for training in Site.trainings do
                 //    Courses training
                 //Trainings
-                //// Generate contact page
-                //Contact
+                // Generate contact page
+                Contact
                 //// Generate the main blog page (a redirect)
                 //Blogs (BlogListingArgs.Empty)
                 //// Generate redirection pages for the old article pages
