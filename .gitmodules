@@ -7,4 +7,4 @@
 [submodule "website-template"]
 	path = website-template
 	url = https://github.com/intellifactory/website-template
-	branch = development
+	branch = dev2
