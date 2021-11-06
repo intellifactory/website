@@ -342,16 +342,22 @@
 (function(Global)
 {
  "use strict";
- var Client,Highlight,Newsletter,EventTarget,Node,WindowOrWorkerGlobalScope,WebSharper,Strings,Obj,hljs,IntelliFactory,Runtime;
+ var Client,Highlight,Newsletter,Contact,EventTarget,Node,WebSharper,Operators,Unchecked,Arrays,Element,HTMLElement,WindowOrWorkerGlobalScope,Obj,Strings,hljs,IntelliFactory,Runtime;
  Client=Global.Client=Global.Client||{};
  Highlight=Client.Highlight=Client.Highlight||{};
  Newsletter=Client.Newsletter=Client.Newsletter||{};
+ Contact=Client.Contact=Client.Contact||{};
  EventTarget=Global.EventTarget;
  Node=Global.Node;
- WindowOrWorkerGlobalScope=Global.WindowOrWorkerGlobalScope;
  WebSharper=Global.WebSharper=Global.WebSharper||{};
- Strings=WebSharper.Strings=WebSharper.Strings||{};
+ Operators=WebSharper.Operators=WebSharper.Operators||{};
+ Unchecked=WebSharper.Unchecked=WebSharper.Unchecked||{};
+ Arrays=WebSharper.Arrays=WebSharper.Arrays||{};
+ Element=Global.Element;
+ HTMLElement=Global.HTMLElement;
+ WindowOrWorkerGlobalScope=Global.WindowOrWorkerGlobalScope;
  Obj=WebSharper.Obj=WebSharper.Obj||{};
+ Strings=WebSharper.Strings=WebSharper.Strings||{};
  hljs=Global.hljs;
  IntelliFactory=Global.IntelliFactory;
  Runtime=IntelliFactory&&IntelliFactory.Runtime;
@@ -359,6 +365,7 @@
  {
   Highlight.Run();
   Newsletter.SignUpAction();
+  Contact.SendMessageAction();
  };
  Highlight.Run=function()
  {
@@ -373,36 +380,261 @@
  };
  Newsletter.SignUpAction=function()
  {
-  self.document.getElementById("signup").addEventListener("click",function(ev)
-  {
-   var input,email,alertList,fd,r;
-   ev.preventDefault();
-   input=self.document.getElementById("newsletter-input");
-   email=input.value;
-   return Strings.Trim(email)!==""?(alertList=self.document.getElementById("newsletter-alert-list"),(alertList.replaceChildren.apply(alertList,[]),input.setAttribute("disabled","disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("type","Blogs"),void(self.fetch("https://api.intellifactory.com/api/newsletter",(r={},r.method="POST",r.body=fd,r)).then(function()
+  var button,newsletterForm;
+  button=self.document.getElementById("signup");
+  newsletterForm=self.document.getElementById("newsletter-form");
+  if(!Unchecked.Equals(newsletterForm,null)&&!Unchecked.Equals(newsletterForm,void 0))
+   newsletterForm.addEventListener("submit",function(ev)
    {
-    var successMessage;
-    successMessage=self.document.createElement("div");
-    successMessage.className="success-alert";
-    successMessage.textContent="You have successfully signed up!";
-    input.removeAttribute("disabled");
-    return alertList.appendChild(successMessage);
-   }))["catch"](function()
+    return ev.preventDefault();
+   });
+  if(!Unchecked.Equals(button,null)&&!Unchecked.Equals(button,void 0))
+   button.addEventListener("click",function(ev)
    {
-    var errorMessage;
-    errorMessage=self.document.createElement("div");
-    errorMessage.className="error-alert";
-    errorMessage.textContent="Sorry, we could not sign you for the newsletter!";
-    input.removeAttribute("disabled");
-    return alertList.appendChild(errorMessage);
-   }))):null;
-  });
+    var email,alertList,fd,r;
+    ev.preventDefault();
+    email=self.document.getElementById("newsletter-input").value;
+    return Strings.Trim(email)!==""?(alertList=self.document.getElementById("newsletter-alert-list"),(alertList.replaceChildren.apply(alertList,[]),button.setAttribute("disabled","disabled"),button.classList.add("btn-disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("type","Blogs"),void(self.fetch("https://api.intellifactory.com/api/newsletter",(r={},r.method="POST",r.body=fd,r)).then(function()
+    {
+     var successMessage;
+     successMessage=self.document.createElement("div");
+     successMessage.className="success-alert";
+     successMessage.textContent="You have successfully signed up!";
+     button.removeAttribute("disabled");
+     button.classList.remove("btn-disabled");
+     return alertList.appendChild(successMessage);
+    }))["catch"](function()
+    {
+     var errorMessage;
+     errorMessage=self.document.createElement("div");
+     errorMessage.className="error-alert";
+     errorMessage.textContent="Sorry, we could not sign you for the newsletter!";
+     button.removeAttribute("disabled");
+     button.classList.remove("btn-disabled");
+     return alertList.appendChild(errorMessage);
+    }))):null;
+   });
  };
+ Contact.SendMessageAction=function()
+ {
+  var button,contactForm;
+  button=self.document.getElementById("contact-button");
+  contactForm=self.document.getElementById("contact-form");
+  if(!Unchecked.Equals(contactForm,null)&&!Unchecked.Equals(contactForm,void 0))
+   contactForm.addEventListener("submit",function(ev)
+   {
+    return ev.preventDefault();
+   });
+  if(!Unchecked.Equals(button,null)&&!Unchecked.Equals(button,void 0))
+   button.addEventListener("click",function(ev)
+   {
+    var emailInput,subjectInput,messageInput,termsInput,o,x,o$1,x$1,o$2,x$2,o$3,x$3,email,subject,message,terms,o$4,x$4,o$5,x$5,o$6,x$6,o$7,x$7,alertList,fd,r;
+    ev.preventDefault();
+    emailInput=self.document.querySelector("#contact-form *[name=\"email\"]");
+    subjectInput=self.document.querySelector("#contact-form *[name=\"subject\"]");
+    messageInput=self.document.querySelector("#contact-form *[name=\"message\"]");
+    termsInput=self.document.querySelector("#contact-form *[name=\"accept_terms\"]");
+    emailInput.classList.remove("input-failed-validation");
+    o=(x=emailInput.nextElementSibling,x!==void 0?{
+     $:1,
+     $0:x
+    }:null);
+    if(o==null)
+     ;
+    else
+     o.$0.classList.add("hidden");
+    subjectInput.classList.remove("input-failed-validation");
+    o$1=(x$1=subjectInput.nextElementSibling,x$1!==void 0?{
+     $:1,
+     $0:x$1
+    }:null);
+    if(o$1==null)
+     ;
+    else
+     o$1.$0.classList.add("hidden");
+    messageInput.classList.remove("input-failed-validation");
+    o$2=(x$2=messageInput.nextElementSibling,x$2!==void 0?{
+     $:1,
+     $0:x$2
+    }:null);
+    if(o$2==null)
+     ;
+    else
+     o$2.$0.classList.add("hidden");
+    o$3=(x$3=termsInput.nextElementSibling,x$3!==void 0?{
+     $:1,
+     $0:x$3
+    }:null);
+    if(o$3==null)
+     ;
+    else
+     o$3.$0.classList.remove("text-red");
+    email=emailInput.value;
+    subject=subjectInput.value;
+    message=messageInput.value;
+    terms=termsInput.checked;
+    if(emailInput.validity.typeMismatch||Strings.Trim(email)==="")
+     {
+      emailInput.classList.add("input-failed-validation");
+      o$4=(x$4=emailInput.nextElementSibling,x$4!==void 0?{
+       $:1,
+       $0:x$4
+      }:null);
+      o$4==null?void 0:o$4.$0.classList.remove("hidden");
+     }
+    if(Strings.Trim(subject)==="")
+     {
+      subjectInput.classList.add("input-failed-validation");
+      o$5=(x$5=subjectInput.nextElementSibling,x$5!==void 0?{
+       $:1,
+       $0:x$5
+      }:null);
+      o$5==null?void 0:o$5.$0.classList.remove("hidden");
+     }
+    if(Strings.Trim(message)==="")
+     {
+      messageInput.classList.add("input-failed-validation");
+      o$6=(x$6=messageInput.nextElementSibling,x$6!==void 0?{
+       $:1,
+       $0:x$6
+      }:null);
+      o$6==null?void 0:o$6.$0.classList.remove("hidden");
+     }
+    if(!terms)
+     {
+      o$7=(x$7=termsInput.nextElementSibling,x$7!==void 0?{
+       $:1,
+       $0:x$7
+      }:null);
+      o$7==null?void 0:o$7.$0.classList.add("text-red");
+     }
+    return!emailInput.validity.typeMismatch&&Strings.Trim(subject)!==""&&Strings.Trim(message)!==""&&terms?(alertList=self.document.getElementById("contact-alert-list"),(alertList.replaceChildren.apply(alertList,[]),button.setAttribute("disabled","disabled"),button.classList.add("btn-disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("name",subject),fd.append("message",message),void(self.fetch("https://api.intellifactory.com/api/contact",(r={},r.method="POST",r.body=fd,r)).then(function()
+    {
+     var modal;
+     modal=self.document.querySelector("#contact-form .modal");
+     self.document.querySelector("#contact-form .modal .modal-button").addEventListener("click",function()
+     {
+      var modal$1;
+      modal$1=self.document.querySelector("#contact-form .modal");
+      emailInput.value="";
+      subjectInput.value="";
+      messageInput.value="";
+      termsInput.checked=false;
+      modal$1.classList.add("hidden");
+      button.removeAttribute("disabled");
+      return button.classList.remove("btn-disabled");
+     });
+     return modal.classList.remove("hidden");
+    }))["catch"](function()
+    {
+     var errorMessage;
+     errorMessage=self.document.createElement("div");
+     errorMessage.className="error-alert";
+     errorMessage.textContent="Sorry, we could not sign you for the newsletter!";
+     button.removeAttribute("disabled");
+     button.classList.remove("btn-disabled");
+     return alertList.appendChild(errorMessage);
+    }))):null;
+   });
+ };
+ Operators.FailWith=function(msg)
+ {
+  throw new Global.Error(msg);
+ };
+ Unchecked.Equals=function(a,b)
+ {
+  var m,eqR,k,k$1;
+  if(a===b)
+   return true;
+  else
+   {
+    m=typeof a;
+    if(m=="object")
+    {
+     if(a===null||a===void 0||b===null||b===void 0||!Unchecked.Equals(typeof b,"object"))
+      return false;
+     else
+      if("Equals"in a)
+       return a.Equals(b);
+      else
+       if("Equals"in b)
+        return false;
+       else
+        if(a instanceof Global.Array&&b instanceof Global.Array)
+         return Unchecked.arrayEquals(a,b);
+        else
+         if(a instanceof Global.Date&&b instanceof Global.Date)
+          return Unchecked.dateEquals(a,b);
+         else
+          {
+           eqR=[true];
+           for(var k$2 in a)if(function(k$3)
+           {
+            eqR[0]=!a.hasOwnProperty(k$3)||b.hasOwnProperty(k$3)&&Unchecked.Equals(a[k$3],b[k$3]);
+            return!eqR[0];
+           }(k$2))
+            break;
+           if(eqR[0])
+            {
+             for(var k$3 in b)if(function(k$4)
+             {
+              eqR[0]=!b.hasOwnProperty(k$4)||a.hasOwnProperty(k$4);
+              return!eqR[0];
+             }(k$3))
+              break;
+            }
+           return eqR[0];
+          }
+    }
+    else
+     return m=="function"&&("$Func"in a?a.$Func===b.$Func&&a.$Target===b.$Target:"$Invokes"in a&&"$Invokes"in b&&Unchecked.arrayEquals(a.$Invokes,b.$Invokes));
+   }
+ };
+ Unchecked.arrayEquals=function(a,b)
+ {
+  var eq,i;
+  if(Arrays.length(a)===Arrays.length(b))
+   {
+    eq=true;
+    i=0;
+    while(eq&&i<Arrays.length(a))
+     {
+      !Unchecked.Equals(Arrays.get(a,i),Arrays.get(b,i))?eq=false:void 0;
+      i=i+1;
+     }
+    return eq;
+   }
+  else
+   return false;
+ };
+ Unchecked.dateEquals=function(a,b)
+ {
+  return a.getTime()===b.getTime();
+ };
+ Arrays.get=function(arr,n)
+ {
+  Arrays.checkBounds(arr,n);
+  return arr[n];
+ };
+ Arrays.length=function(arr)
+ {
+  return arr.dims===2?arr.length*arr.length:arr.length;
+ };
+ Arrays.checkBounds=function(arr,n)
+ {
+  if(n<0||n>=arr.length)
+   Operators.FailWith("Index was outside the bounds of the array.");
+ };
+ Obj=WebSharper.Obj=Runtime.Class({
+  Equals:function(obj)
+  {
+   return this===obj;
+  }
+ },null,Obj);
  Strings.Trim=function(s)
  {
   return s.replace(new Global.RegExp("^\\s+"),"").replace(new Global.RegExp("\\s+$"),"");
  };
- Obj=WebSharper.Obj=Runtime.Class({},null,Obj);
  Runtime.OnLoad(function()
  {
   Client.Main();
