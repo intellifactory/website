@@ -530,7 +530,7 @@
      var errorMessage;
      errorMessage=self.document.createElement("div");
      errorMessage.className="error-alert";
-     errorMessage.textContent="Sorry, we could not sign you for the newsletter!";
+     errorMessage.textContent="Sorry, we could not send your message!";
      button.removeAttribute("disabled");
      button.classList.remove("btn-disabled");
      return alertList.appendChild(errorMessage);
