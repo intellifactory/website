@@ -76,7 +76,7 @@ module Contact =
             button.AddEventListener("click", System.Action<Dom.Event>(fun ev -> 
                 ev.PreventDefault()
                 let emailInput = JS.Document.QuerySelector "#contact-form *[name=\"email\"]" :?> HTMLInputElement
-                let subjectInput = JS.Document.QuerySelector "#contact-form *[name=\"subject\"]" :?> HTMLInputElement
+                let subjectInput = JS.Document.QuerySelector "#contact-form *[name=\"name\"]" :?> HTMLInputElement
                 let messageInput = JS.Document.QuerySelector "#contact-form *[name=\"message\"]" :?> HTMLInputElement
                 let termsInput = JS.Document.QuerySelector "#contact-form *[name=\"accept_terms\"]" :?> HTMLInputElement
                 
