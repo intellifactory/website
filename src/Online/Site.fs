@@ -717,8 +717,8 @@ type Website() =
                 //Trainings
                 // Generate contact page
                 Contact
-                //// Generate the main blog page (a redirect)
-                //Blogs (BlogListingArgs.Empty)
+                //// Generate the main blog page
+                Blogs
                 //// Generate redirection pages for the old article pages
                 //for (_, article) in articles do
                 //    Redirect1 (fst article.Identity, article.SlugWithoutDate)
