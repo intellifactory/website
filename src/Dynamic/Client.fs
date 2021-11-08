@@ -156,7 +156,7 @@ module Contact =
                         .Catch(fun _ ->
                             let errorMessage = JS.Document.CreateElement("div")
                             errorMessage.ClassName <- "error-alert"
-                            errorMessage.TextContent <- "Sorry, we could not sign you for the newsletter!"
+                            errorMessage.TextContent <- "Sorry, we could not send your message!"
                             button.RemoveAttribute("disabled")
                             button.ClassList.Remove("btn-disabled")
                             alertList.AppendChild errorMessage
