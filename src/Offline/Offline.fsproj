@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <NeededForBuild Include="../Online/post.html" />
+    <NeededForBuild Include="../Online/contact.html" />
   </ItemGroup>
 
   <Target Name="CopyFilesBeforeBuild" BeforeTargets="Build">

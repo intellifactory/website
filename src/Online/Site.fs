@@ -13,6 +13,8 @@ open WebSharper.UI.Templating
 
 type EndPoint =
     | [<EndPoint "/">] Home
+    // The main blog page
+    | [<EndPoint "GET /blogs">] Blogs
     // User-less blog articles
     | [<EndPoint "GET /post">] Article of slug:string
     // UserArticle: if slug is empty, we go to the user's home page
@@ -26,6 +28,7 @@ type EndPoint =
 
 type PostTemplate = Template<"../Online/post.html", serverLoad=ServerLoad.WhenChanged>
 type ContactTemplate = Template<"../Online/contact.html", serverLoad=ServerLoad.WhenChanged>
+type BlogsTemplate = Template<"../Online/blogs.html", serverLoad=ServerLoad.WhenChanged>
 
 // Utilities to make XML construction somewhat sane
 [<AutoOpen>]
@@ -510,6 +513,32 @@ module Site =
     [<Website>]
     let Main (config: Config ref) (identities1: Identities1 ref) (info: BlogInfoRaw ref) (articles: Articles ref) =
         Application.MultiPage (fun ctx endpoint ->
+            let BLOGS ctx =
+                BlogsTemplate()
+                    .MenubarPlaceholder(PostTemplate.Menubar().Doc())
+                    .FooterPlaceholder(PostTemplate.Footer().Doc())
+                    .Articles(
+                        BlogsTemplate.ArticlesSection()
+                            .Articles(
+                                (!articles)
+                                |> Map.toList
+                                |> List.map snd
+                                |> List.sortBy (fun art -> -art.Date.Ticks)
+                                |> List.map (fun art ->
+                                    BlogsTemplate.ArticleBlock()
+                                        .AuthorName(art.AuthorName)
+                                        .Date(art.DateString)
+                                        .Title(art.Title)
+                                        .AuthorThumbnailUrl(sprintf "/img/avatar/%s.png" art.User)
+                                        .MinutesToRead(string (int (Math.Ceiling art.TimeToRead)))
+                                        .Doc()
+                                )
+                                |> Doc.Concat
+                            )
+                            .Doc()
+                    )
+                    .Doc()
+                |> Content.Page
             let ARTICLE (user, p: string) =
                 let page =
                     if p.ToLower().EndsWith(".html") then
@@ -584,6 +613,8 @@ module Site =
             match endpoint with
             | EndPoint.Home ->
                 Content.Text "Home"
+            | Blogs ->
+                BLOGS ctx
             | Article p ->
                 ARTICLE ("", p)
             // All articles by a given user

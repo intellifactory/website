@@ -9,6 +9,7 @@
     <Compile Include="Startup.fs" />
     <Content Include="post.html" />
     <Content Include="contact.html" />
+    <Content Include="blogs.html" />
     <Content Include="posts/**" />
     <None Include="wsconfig.json" />
   </ItemGroup>
