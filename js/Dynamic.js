@@ -431,7 +431,7 @@
     var emailInput,subjectInput,messageInput,termsInput,o,x,o$1,x$1,o$2,x$2,o$3,x$3,email,subject,message,terms,o$4,x$4,o$5,x$5,o$6,x$6,o$7,x$7,alertList,fd,r;
     ev.preventDefault();
     emailInput=self.document.querySelector("#contact-form *[name=\"email\"]");
-    subjectInput=self.document.querySelector("#contact-form *[name=\"subject\"]");
+    subjectInput=self.document.querySelector("#contact-form *[name=\"name\"]");
     messageInput=self.document.querySelector("#contact-form *[name=\"message\"]");
     termsInput=self.document.querySelector("#contact-form *[name=\"accept_terms\"]");
     emailInput.classList.remove("input-failed-validation");
