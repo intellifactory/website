@@ -2320,6 +2320,23 @@ video {
   font-family: "DM Sans";
   list-style: decimal !important;
   padding: unset;
+  padding-left: 1em;
+}
+
+.markdown ol[type="a" s] {
+  list-style: lower-latin !important;
+}
+
+.markdown ol[type="A" s] {
+  list-style: upper-latin !important;
+}
+
+.markdown ol[type="i" s] {
+  list-style: lower-roman !important;
+}
+
+.markdown ol[type="I" s] {
+  list-style: upper-roman !important;
 }
 
 .markdown ul {
@@ -2332,11 +2349,76 @@ video {
   font-family: "DM Sans";
   list-style: disc !important;
   padding: unset;
+  padding-left: 1em;
+}
+
+.markdown ul ul {
+  list-style: circle !important;
 }
 
 .markdown pre {
   margin-bottom: 1.5rem;
   overflow: auto;
+}
+
+.markdown table {
+  --tw-text-opacity: 1;
+  color: rgba(168, 168, 170, var(--tw-text-opacity));
+}
+
+.markdown h1 {
+  margin-bottom: 1rem;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 3rem;
+  line-height: 1.16;
+  font-weight: 700;
+  line-height: 1.25;
+  --tw-text-opacity: 1;
+  color: rgba(168, 168, 170, var(--tw-text-opacity));
+}
+
+.markdown h2 {
+  margin-bottom: 1rem;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  --tw-text-opacity: 1;
+  color: rgba(168, 168, 170, var(--tw-text-opacity));
+}
+
+.markdown h3 {
+  margin-bottom: 1rem;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  --tw-text-opacity: 1;
+  color: rgba(168, 168, 170, var(--tw-text-opacity));
+}
+
+.markdown h4 {
+  margin-bottom: 1rem;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  --tw-text-opacity: 1;
+  color: rgba(168, 168, 170, var(--tw-text-opacity));
+}
+
+.markdown h5 {
+  margin-bottom: 1rem;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  --tw-text-opacity: 1;
+  color: rgba(168, 168, 170, var(--tw-text-opacity));
 }
 
 .bg-red-600 {
