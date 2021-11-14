@@ -1,22 +1,22 @@
-﻿
+
 <html lang="en">
   <head>
-    <title>Page title</title>
+    <title>IntelliFactory blogs</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;subset=latin"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"/>
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css"/>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png"/>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body class="antialiased bg-body text-body font-body">
     <div>
       <div ws-replace="MenubarPlaceholder">MenubarPlaceholder</div>
       <section class="px-4 lg:px-10 bg-gray-800 px-2" ws-template="Menubar">
-        <nav class="relative flex justify-between items-center py-2"><a class="text-2xl text-white font-bold" href="#"><img style="height:3rem;margin:-0.65rem 0 -0.65rem 0;" src="/img/if-logo.png" alt="IntelliFactory"/></a>
+        <nav class="relative flex justify-between items-center py-2"><a class="text-2xl text-white font-bold" href="/"><span>Intelli</span>            <span class="text-blue-500 -ml-1">Factory</span></a>
           <div class="lg:hidden">
             <button class="p-2 navbar-burger">
               <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@
               </svg>
             </button>
           </div>
-          <div class="hidden lg:block ml-auto mr-16">
+          <div class="hidden lg:block ml-auto mr-1">
             <ul class="flex items-center text-white space-x-10">
               <li><a class="text-white font-bold text-lg" href="/">Home</a></li>
               <li><a class="text-white font-bold text-lg" href="/oss">Open Source</a></li>
@@ -33,12 +33,11 @@
               <li><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
             </ul>
           </div>
-          <div class="hidden lg:block"><a class="inline-block px-12 text-white font-bold border border-gray-200 hover:border-white rounded-full py-2" href="#">Sign Up</a></div>
         </nav>
         <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
           <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
           <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
-            <div class="flex items-center mb-16 pr-6"><a class="ml-10 text-2xl text-gray-800 font-bold" href="#"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory"/></a></div>
+            <div class="flex items-center mb-16 pr-6"><a class="ml-10 text-2xl text-gray-800 font-bold" href="/"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory"/></a></div>
             <div>
               <ul>
                 <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/">Home</a></li>
@@ -48,46 +47,51 @@
               </ul>
             </div>
             <div class="mt-auto px-10">
-              <div class="pt-6"><a class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Sign in</a><a class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign up</a></div>
               <p class="mt-6 mb-4 text-lg text-center"><span>2004-2021 © IntelliFactory. All rights reserved.</span></p>
             </div>
           </nav>
         </div>
       </section>
-      <section class="pt-8 pb-2 bg-blueGray-50">
+      <section class="py-20 2xl:py-40 overflow-hidden">
         <div class="container px-4 mx-auto">
-          <div class="flex flex-wrap -mx-3">
-            <div class="w-full md:w-1/3 px-3 mb-6">
-              <div class="p-6 shadow bg-white rounded">
-                <div class="flex justify-between">
-                  <p class="text-sm md:text-base text-blueGray-400">Followers</p><span class="text-xs py-1 px-2 rounded-full font-semibold text-blue-600 bg-blue-100 uppercase">Monthly</span>
+          <div class="max-w mx-auto">
+            <div class="flex flex-wrap -mx-5">
+              <div class="w-full lg:w-1/2 px-5 mb-20 lg:mb-0">
+                <div class="max-w"><span class="text-lg font-bold text-blue-500">2006 - Present</span>
+                  <h2 class="mt-12 mb-10 text-6xl font-bold font-heading">IntelliFactory blogs</h2>
+                  <p class="mb-16 text-xl text-gray-500">Read about what we have been doing with F# and what keeps us busy nowadays. We hope you will find some valuable insights that help you become a better F# web developer.</p>
+                  <div class="p-6 shadow bg-white rounded mr-10 max-w-xs">
+                    <div class="flex justify-between">
+                      <p class="text-sm md:text-base text-blueGray-400">Articles</p><span class="text-xs py-1 px-2 rounded-full font-bold text-blue-600 bg-blue-100 uppercase">F#</span>
+                    </div>
+                    <p class="text-3xl lg:text-4xl font-bold font-heading">${Count}</p>
+                    <p class="text-sm md:text-base text-blueGray-500"><span class="text-green-600">+${Count_NewThisYear}</span>                      This year
+                                          
+                    </p>
+                  </div>
                 </div>
-                <p class="text-3xl lg:text-4xl font-bold font-heading">250 324</p>
-                <p class="text-sm md:text-base text-blueGray-500"><span class="text-green-600">+18%</span>                  Since last week
-                                  
-                </p>
               </div>
-            </div>
-            <div class="w-full md:w-1/3 px-3 mb-6">
-              <div class="p-6 shadow bg-white rounded">
-                <div class="flex justify-between">
-                  <p class="text-sm md:text-base text-blueGray-400">Customers</p><span class="text-xs py-1 px-2 rounded-full font-semibold text-blue-600 bg-blue-100 uppercase">Monthly</span>
-                </div>
-                <p class="text-3xl lg:text-4xl font-bold font-heading">250 324</p>
-                <p class="text-sm md:text-base text-blueGray-500"><span class="text-green-600">+18%</span>                  Since last week
-                                  
-                </p>
-              </div>
-            </div>
-            <div class="w-full md:w-1/3 px-3 mb-6">
-              <div class="p-6 shadow bg-white rounded">
-                <div class="flex justify-between">
-                  <p class="text-sm md:text-base text-blueGray-400">Projects</p><span class="text-xs py-1 px-2 rounded-full font-semibold text-blue-600 bg-blue-100 uppercase">Monthly</span>
-                </div>
-                <p class="text-3xl lg:text-4xl font-bold font-heading">252</p>
-                <p class="text-sm md:text-base text-blueGray-500"><span class="text-red-500">-18.5%</span>                  Since last week
-                                  
-                </p>
+              <div class="w-full lg:w-1/2 px-5">
+                <ul>
+                  <li class="flex pb-5 mb-8 border-b border-gray-50">
+                    <div class="max-w">
+                      <h3 class="mb-3 text-lg font-bold font-heading">Author list</h3>
+                      <div class="flex flex-wrap space-x-1 gap-y-1" ws-hole="AuthorList"><a ws-template="AuthorFirst" href="${AuthorUrl}"><img class="ml-1 inline-block h-12 w-12 rounded-full ring-2 ring-white" src="${AuthorAvatarUrl}" alt="${AuthorName}"/></a>                        <a ws-template="AuthorOther" href="${AuthorUrl}"><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="${AuthorAvatarUrl}" alt="${AuthorName}"/></a><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2.25&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2.25&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2.25&amp;w=256&amp;h=256&amp;q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt=""/></div>
+                    </div>
+                  </li>
+                  <li class="flex pb-5 mb-4">
+                    <div class="max-w">
+                      <h3 class="mb-6 text-lg font-bold font-heading">Popular tags</h3>
+                      <div class="my-3 flex flex-wrap -m-1" ws-hole="Tags"><a class="m-1 bg-gray-100 hover:bg-gray-200 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer" ws-template="Tag" href="${TagUrl}"><span>#${TagName}</span></a>                        <span class="m-1 bg-gray-100 hover:bg-gray-200 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">#stark</span>                        <span class="m-1 bg-gray-100 hover:bg-gray-200 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">#gameofthrones</span>                        <span class="m-1 bg-gray-100 hover:bg-gray-200 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">#battle</span>                        <span class="m-1 bg-gray-100 hover:bg-gray-200 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">#jhonsnow</span>                        <span class="m-1 bg-gray-100 hover:bg-gray-200 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer">#kinglandings</span></div>
+                    </div>
+                  </li>
+                  <li class="flex pb-5">
+                    <div class="max-w">
+                      <h3 class="mb-6 text-lg font-bold font-heading">Products and libraries</h3>
+                      <p class="text-lg">TODO</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -97,10 +101,12 @@
         <div class="container px-4 mx-auto">
           <div class="flex flex-wrap items-center mb-12">
             <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
-              <h2 class="text-4xl font-bold font-heading"><span>Featured - F# Advent</span>                <span class="text-blue-600"></span>                <span></span></h2>
+              <h2 class="text-4xl font-bold font-heading"><span>F# Advent</span>                <span class="tracking-wider align-top text-white bg-blue-500 px-3 py-1 text-sm rounded leading-loose mx-2 font-semibold">Featured</span></h2>
             </div>
             <div class="w-full lg:w-1/2">
-              <p class="lg:pl-16 text-blueGray-400 leading-loose">Lorem ipsum dolor sit amet consectetur adipisicing. Dolor sit amet consectetur adipisicing elit. Aliquid harum ducimus adipisci animi quidem nesciunt similique ex enim accusantium voluptate. Consectetur adipisicing harum ducimus adipisci.</p>
+              <p class="lg:pl-16 text-blueGray-400 leading-loose"><a href="https://sergeytihon.com/fsadvent/">F# Advent</a> is a full month of F# community content each year, organized by Sergey Tihon. Below are our yearly contributions.
+                              
+              </p>
             </div>
           </div>
           <div class="flex flex-wrap -mx-3 -mb-6">
@@ -192,31 +198,46 @@
         </div>
       </section>
       <div>
-        <div ws-replace="Articles">Articles</div>
-        <section class="py-20" ws-template="ArticlesSection">
+        <section class="py-20 bg-white" ws-template="NoArticlesSection">
+          <div class="container px-4 mx-auto">
+            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-12">
+              <div class="lg:w-1/3 lg:pr-16 mb-2 lg:mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading">No articles to show</h2>
+              </div>
+              <div class="text-sm lg:text-base lg:w-1/3">
+                <p class="leading-loose text-blueGray-500"><span>Can’t find what you were looking for? </span>                <a class="text-blue-600 hover:text-blue-700" href="/contact">Drop us a line</a>.
+                                
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div ws-replace="ArticlesSection">ArticlesSection</div>
+        <section class="py-20 bg-white" ws-template="SectionWithArticles">
           <div class="container px-4 mx-auto">
             <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-12">
               <div class="lg:w-1/3 lg:pr-16 mb-2 lg:mb-8">
                 <h2 class="text-3xl md:text-4xl font-bold font-heading">Articles to date</h2>
               </div>
               <div class="text-sm lg:text-base lg:w-1/3">
-                <p class="leading-loose text-blueGray-500"><span>Can’t find the answer you’re looking for? Write out to our</span>                <a class="text-blue-600 hover:text-blue-700" href="#">customer support team.</a></p>
+                <p class="leading-loose text-blueGray-500"><span>Can’t find what you were looking for? </span>                <a class="text-blue-600 hover:text-blue-700" href="/contact">Drop us a line</a>.
+                                
+                </p>
               </div>
             </div>
             <div class="flex flex-wrap -mx-4">
-              <div ws-replace="Articles"></div>
-              <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" ws-replace="Articles">
                 <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="https://images.pexels.com/photos/5325840/pexels-photo-5325840.jpeg?q=80&amp;fm=jpg&amp;crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;h=48&amp;w=48" alt="Adam Granicz"/>
                   <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Adam Granicz</span></div>
                 </div>
                 <h4 class="text-xl font-semibold">Nunc at arcu non ipsum auctor lacinia quis quis mi?</h4>
                 <p class="text-sm md:text-base text-blueGray-400">Oct 27, 2019 · 10 min read</p>
               </div>
-              <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" ws-template="ArticleBlock">
-                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="${AuthorThumbnailUrl}" alt="${AuthorName}"/>
-                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">${AuthorName}</span></div>
-                </div>
-                <h4 class="text-xl font-semibold">${Title}</h4>
+              <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" ws-template="ArticleBlock"><a href="${AuthorBlogUrl}">
+                  <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="${AuthorThumbnailUrl}" alt="${AuthorName}"/>
+                    <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">${AuthorName}</span></div>
+                  </div></a>              <a href="${ArticleUrl}">
+                  <h4 class="text-xl font-semibold">${Title}</h4></a>
                 <p class="text-sm md:text-base text-blueGray-400">${Date} · ${MinutesToRead} min read</p>
               </div>
             </div>
@@ -275,7 +296,7 @@
           </div>
           <div class="flex flex-wrap items-center mb-8 lg:mb-0 pt-5">
             <div class="w-full md:w-3/4 mb-8 md:mb-0">
-              <div class="md:flex items-center"><a class="inline-block text-gray-900 text-xl font-bold" href="#"><img class="h-7" src="zospace-assets/logos/zospace-dark-logo.svg" alt="" width="auto"/></a>              <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+              <div class="md:flex items-center"><a class="inline-block text-gray-900 text-xl font-bold" href="#"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" width="auto"/></a>              <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
                 <p class="hidden lg:block text-sm"><span>© 2004-2021 IntelliFactory.</span>                <span class="text-gray-300">All rights reserved.</span></p>
               </div>
             </div>

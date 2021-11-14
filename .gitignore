@@ -8,6 +8,7 @@
 /src/Online/wwwroot/Content/*
 /src/Online/wwwroot/files/.gitkeep
 /src/Online/wwwroot/assets/*
+/src/Online/wwwroot/img/avatar/orig/*
 /src/Online/wwwroot/js/Dynamic.*
 /_template/node_modules/*
 /_template/public/*

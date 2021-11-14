@@ -19,6 +19,15 @@ xcopy website-template\public\post.html src\Online\
 Write-Output "Copy contact.html to \src\Online\contact.html"
 xcopy website-template\public\contact.html src\Online\
 
+Write-Output "Copy blogs.html to \src\Online\blogs.html"
+xcopy website-template\public\blogs.html src\Online\
+
+Write-Output "Copy author.html to \src\Online\author.html"
+xcopy website-template\public\author.html src\Online\
+
+Write-Output "Copy category.html to \src\Online\category.html"
+xcopy website-template\public\category.html src\Online\
+
 Write-Output "Copy css\tailwind\tailwind.min.css to src\Online\wwwroot\css\tailwind\tailwind.min.css"
 xcopy website-template\public\css\tailwind\tailwind.min.css src\Online\wwwroot\css\tailwind\
 

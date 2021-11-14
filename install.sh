@@ -18,6 +18,15 @@ cp -rT website-template/public/post.html src/Online/post.html
 echo "Copy contact.html to /src/Online/contact.html"
 cp -rT website-template/public/contact.html src/Online/contact.html
 
+echo "Copy blogs.html to /src/Online/blogs.html"
+cp -rT website-template/public/blogs.html src/Online/blogs.html
+
+echo "Copy author.html to /src/Online/author.html"
+cp -rT website-template/public/author.html src/Online/author.html
+
+echo "Copy category.html to /src/Online/category.html"
+cp -rT website-template/public/category.html src/Online/category.html
+
 echo "Copy css/tailwind/tailwind.min.css to /src/Online/wwwroot/css/tailwind/tailwind.min.css"
 cp -rT website-template/public/css/tailwind/tailwind.min.css src/Online/wwwroot/css/tailwind/tailwind.min.css
 

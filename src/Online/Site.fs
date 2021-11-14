@@ -19,16 +19,21 @@ type EndPoint =
     | [<EndPoint "GET /post">] Article of slug:string
     // UserArticle: if slug is empty, we go to the user's home page
     | [<EndPoint "GET /user">] UserArticle of user:string * slug:string
+    // Categories/labels
+    | [<EndPoint "GET /category">] Category of tag:string
     | [<EndPoint "GET /refresh">] Refresh
     | [<EndPoint "GET /feed.atom">] AtomFeed
     | [<EndPoint "GET /feed.rss">] RSSFeed
     | [<EndPoint "GET /atom">] AtomFeedForUser of string
     | [<EndPoint "GET /rss">] RSSFeedForUser of string
     | [<EndPoint "GET /contact">] Contact
+    | [<EndPoint "GET /debug">] Debug
 
 type PostTemplate = Template<"../Online/post.html", serverLoad=ServerLoad.WhenChanged>
 type ContactTemplate = Template<"../Online/contact.html", serverLoad=ServerLoad.WhenChanged>
 type BlogsTemplate = Template<"../Online/blogs.html", serverLoad=ServerLoad.WhenChanged>
+type AuthorTemlate = Template<"../Online/author.html", serverLoad=ServerLoad.WhenChanged>
+type CategoryTemlate = Template<"../Online/category.html", serverLoad=ServerLoad.WhenChanged>
 
 // Utilities to make XML construction somewhat sane
 [<AutoOpen>]
@@ -100,6 +105,11 @@ module Urls =
             sprintf "/user/%s/%s" user slug
     let OLD_TO_POST_URL (user: string, datestring: string, oldslug: string) =
         POST_URL (user, sprintf "%s-%s" datestring oldslug)
+    let AVATAR_URL user =
+        if String.IsNullOrEmpty user then
+            sprintf "/img/avatar/user.png"
+        else
+            sprintf "/img/avatar/%s.png" user
     let USER_URL user =
         if String.IsNullOrEmpty user then
             sprintf "/user"
@@ -510,33 +520,153 @@ module Site =
     let __identities1 : Identities1 ref = ref Map.empty
     let __config : Config ref = ref <| ReadConfig()
 
+    type AuthorInfo =
+        {
+            Username: string
+            DisplayName: string
+            BlogPageUrl: string
+            AvatarUrl: string
+        }
+
     [<Website>]
-    let Main (config: Config ref) (identities1: Identities1 ref) (info: BlogInfoRaw ref) (articles: Articles ref) =
+    let Main (config: Config ref) (identities1: Identities1 ref) (info: BlogInfoRaw ref) (articlesRef: Articles ref) =
         Application.MultiPage (fun ctx endpoint ->
+            let articles =
+                !articlesRef
+                |> Map.toList
+                |> List.map snd
+            let ARTICLES articles =
+                if List.length articles > 0 then
+                    BlogsTemplate.SectionWithArticles()
+                        .Articles(
+                            articles
+                            |> List.sortBy (fun art -> -art.Date.Ticks)
+                            |> List.map (fun art ->
+                                BlogsTemplate.ArticleBlock()
+                                    .AuthorName(art.AuthorName)
+                                    .Date(art.DateString)
+                                    .Title(art.Title)
+                                    .AuthorThumbnailUrl(sprintf "/img/avatar/%s.png" art.User)
+                                    .ArticleUrl(art.Url)
+                                    .AuthorBlogUrl(Urls.USER_URL art.User)
+                                    .MinutesToRead(string (int (Math.Ceiling art.TimeToRead)))
+                                    .Doc()
+                            )
+                        )
+                        .Doc()
+                else
+                    BlogsTemplate.NoArticlesSection()
+                        .Doc()
+            let CATEGORY ctx (category: string) =
+                let articles =
+                    articles
+                    |> List.filter (fun article -> List.contains category article.Categories)
+                CategoryTemlate()
+                    .Category(category)
+                    .ArticlesSection(ARTICLES articles)
+                    .MenubarPlaceholder(PostTemplate.Menubar().Doc())
+#if !DEBUG
+                    .ReleaseMin(".min")
+#endif
+                    .FooterPlaceholder(PostTemplate.Footer().Doc())
+                    .Doc()
+                |> Content.Page
+            let USER_ARTICLES ctx (user: string) =
+                let articles =
+                    articles
+                    |> List.filter (fun article -> article.User = user)
+                let name = (!config).Users.[user]
+                AuthorTemlate()
+                    .ArticlesSection(ARTICLES articles)
+                    .AuthorName(name)
+                    .AuthorUsernameForAvatar(user)
+                    .FooterPlaceholder(PostTemplate.Footer().Doc())
+                    .MenubarPlaceholder(PostTemplate.Menubar().Doc())
+#if !DEBUG
+                    .ReleaseMin(".min")
+#endif
+                    .Doc()
+                |> Content.Page
             let BLOGS ctx =
+                let authors =
+                    articles
+                    |> List.fold (fun (authors: Map<String, Article>) article ->
+                        if Map.containsKey article.User authors then
+                            let art = authors.[article.User]
+                            if article.Date.Ticks > art.Date.Ticks then
+                                Map.add article.User article authors
+                            else
+                                authors
+                        else
+                            Map.add article.User article authors
+                    ) Map.empty // Map of username->last article
+                    |> Map.toList
+                    |> List.sortBy (fun (_, article) -> -article.Date.Ticks)
+                    |> List.map (fun (username, article) ->
+                        {
+                            Username = article.User
+                            DisplayName = article.AuthorName
+                            BlogPageUrl = article.AuthorUrl
+                            AvatarUrl = Urls.AVATAR_URL article.User
+                        }
+                    )
+                    |> List.mapi (fun i author ->
+                        if i = 0 then
+                            BlogsTemplate.AuthorFirst()
+                                .AuthorName(author.DisplayName)
+                                .AuthorAvatarUrl(author.AvatarUrl)
+                                .AuthorUrl(author.BlogPageUrl)
+                                .Doc()
+                        else
+                            BlogsTemplate.AuthorOther()
+                                .AuthorName(author.DisplayName)
+                                .AuthorAvatarUrl(author.AvatarUrl)
+                                .AuthorUrl(author.BlogPageUrl)
+                                .Doc()
+                    )
+                    |> fun authors -> authors @ [
+                        BlogsTemplate.AuthorOther()
+                            .AuthorName("Gergely Fabian")
+                            .AuthorAvatarUrl(Urls.AVATAR_URL "gergely.fabian")
+                            .AuthorUrl("https://medium.com/@gergoo2")
+                            .Doc()
+                        BlogsTemplate.AuthorOther()
+                            .AuthorName("Sandor Szaloky")
+                            .AuthorAvatarUrl(Urls.AVATAR_URL "sandor.szaloky")
+                            .AuthorUrl("https://medium.com/@szaloki")
+                            .Doc()
+                        BlogsTemplate.AuthorOther()
+                            .AuthorName("Adam Abonyi-Toth")
+                            .AuthorAvatarUrl(Urls.AVATAR_URL "adam.abonyi-toth")
+                            .AuthorUrl("https://medium.com/@atadi96")
+                            .Doc()
+                    ]
+                let tags =
+                    (!info).Categories
+                    |> Map.toList
+                    |> List.sortBy snd
+                    |> List.rev
+                    // Filter those tags only that have count > 5
+                    |> List.filter (fun (_, count) -> count > 5)
+                    |> List.map (fun (tag, count) ->
+                        BlogsTemplate.Tag()
+                            .TagName(tag)
+                            .TagUrl(Urls.CATEGORY tag "")
+                            .Doc()
+                    )
                 BlogsTemplate()
                     .MenubarPlaceholder(PostTemplate.Menubar().Doc())
                     .FooterPlaceholder(PostTemplate.Footer().Doc())
-                    .Articles(
-                        BlogsTemplate.ArticlesSection()
-                            .Articles(
-                                (!articles)
-                                |> Map.toList
-                                |> List.map snd
-                                |> List.sortBy (fun art -> -art.Date.Ticks)
-                                |> List.map (fun art ->
-                                    BlogsTemplate.ArticleBlock()
-                                        .AuthorName(art.AuthorName)
-                                        .Date(art.DateString)
-                                        .Title(art.Title)
-                                        .AuthorThumbnailUrl(sprintf "/img/avatar/%s.png" art.User)
-                                        .MinutesToRead(string (int (Math.Ceiling art.TimeToRead)))
-                                        .Doc()
-                                )
-                                |> Doc.Concat
-                            )
-                            .Doc()
+                    .AuthorList(authors)
+                    .Tags(tags)
+                    .Count(string <| List.length articles)
+                    .Count_NewThisYear(
+                        articles
+                        |> List.filter (fun article -> article.Date.Year = DateTime.Today.Day)
+                        |> List.length
+                        |> string
                     )
+                    .ArticlesSection(ARTICLES articles)
                     .Doc()
                 |> Content.Page
             let ARTICLE (user, p: string) =
@@ -546,15 +676,15 @@ module Site =
                     else
                         p
                 let key = user, page
-                if articles.Value.ContainsKey key then
-                    ArticlePage config.Value articles.Value articles.Value.[key]
+                if articlesRef.Value.ContainsKey key then
+                    ArticlePage config.Value articlesRef.Value articlesRef.Value.[key]
                 else
-                    Map.toList articles.Value
+                    Map.toList articlesRef.Value
                     |> List.map fst
                     |> sprintf "Trying to find page \"%s\" (with key=\"%s\"), but it's not in %A" p page
                     |> Content.Text
             let ARTICLES_BY_USEROPT (userOpt: string option) =
-                articles.Value |> Map.toList
+                articlesRef.Value |> Map.toList
                 // Filter by user, if given
                 |> List.filter (fun ((user, _), _) -> if userOpt.IsSome then user = userOpt.Value else true)
                 |> List.sortByDescending (fun (_, article: Article) -> article.Date.Ticks)
@@ -613,15 +743,15 @@ module Site =
             match endpoint with
             | EndPoint.Home ->
                 Content.Text "Home"
+            | Category cat ->
+                CATEGORY ctx cat
             | Blogs ->
                 BLOGS ctx
             | Article p ->
                 ARTICLE ("", p)
             // All articles by a given user
-            | UserArticle (user, "") ->
-                Content.Text "Not implemented"
-                //USERBLOG_LISTING_NO_PAGING user
-                //    <| fun (u, _) _ -> user = u
+            | UserArticle ("", "") ->
+                Content.Text "Nothing here"
             | UserArticle (user, p) ->
                 ARTICLE (user, p)
             | AtomFeed ->
@@ -661,11 +791,28 @@ module Site =
                 config := ReadConfig()
                 let _info, _articles = ReadArticles (!config)
                 info := _info
-                articles := _articles
-                identities1 := ComputeIdentities1 articles.Value
+                articlesRef := _articles
+                identities1 := ComputeIdentities1 articlesRef.Value
                 Content.Text "Articles/configs reloaded."
             | Contact ->
                 CONTACT ()
+            | Debug ->
+                Content.Page(
+                    [
+                        h2 [] [text "Config"]
+                        p [] [text <| sprintf "%A" config.Value]
+                        h2 [] [text "Config.Users"]
+                        for user in Map.toList config.Value.Users do
+                            p [] [text <| sprintf "%A" user]
+                        h2 [] [text "Info"]
+                        p [] [text <| sprintf "%A" info.Value]
+                        h2 [] [text "Identities"]
+                        p [] [text <| sprintf "%A" identities1.Value]
+                        h2 [] [text "Articles"]
+                        for ((user, slug), art) in Map.toList (!articlesRef) do
+                            p [] [text <| sprintf "%s/%s -> %s" user slug art.Title]
+                    ]
+                )
         )
 
 open System.IO
@@ -728,20 +875,17 @@ type Website() =
                         Article slug
                     else
                         UserArticle (user, slug)
-                //// Generate user pages
+                // Generate user pages
                 //for user in users do
-                //    UserArticle (user, "")
-                //// Generate tag/category pages
-                //for category in categories do
-                //    for language in languages do
-                //        if
-                //            List.exists (fun (_, (art: Site.Article)) ->
-                //                language = Site.URL_LANG config.Value art.Language
-                //                &&
-                //                List.contains category art.Categories 
-                //            ) articles
-                //        then
-                //            Category (category, language)
+                //    if user <> "" then UserArticle (user, "")
+                // Generate tag/category pages
+                for category in categories do
+                    if
+                        List.exists (fun (_, (art: Site.Article)) ->
+                            List.contains category art.Categories 
+                        ) articles
+                    then
+                        Category category
                 //Categories
                 // Generate the RSS/Atom feeds
                 RSSFeed
