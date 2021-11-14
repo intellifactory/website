@@ -750,8 +750,8 @@ module Site =
             | Article p ->
                 ARTICLE ("", p)
             // All articles by a given user
-            | UserArticle ("", "") ->
-                Content.Text "Nothing here"
+            | UserArticle (user, "") ->
+                USER_ARTICLES ctx user
             | UserArticle (user, p) ->
                 ARTICLE (user, p)
             | AtomFeed ->
@@ -876,8 +876,8 @@ type Website() =
                     else
                         UserArticle (user, slug)
                 // Generate user pages
-                //for user in users do
-                //    if user <> "" then UserArticle (user, "")
+                for user in users do
+                    if user <> "" then UserArticle (user, "")
                 // Generate tag/category pages
                 for category in categories do
                     if
