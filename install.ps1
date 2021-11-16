@@ -28,6 +28,12 @@ xcopy website-template\public\author.html src\Online\
 Write-Output "Copy category.html to \src\Online\category.html"
 xcopy website-template\public\category.html src\Online\
 
+Write-Output "Copy oss.html to \src\Online\oss.html"
+xcopy website-template\public\oss.html src\Online\
+
+Write-Output "Copy 404.html to \src\Online\404.html"
+xcopy website-template\public\404.html src\Online\
+
 Write-Output "Copy css\tailwind\tailwind.min.css to src\Online\wwwroot\css\tailwind\tailwind.min.css"
 xcopy website-template\public\css\tailwind\tailwind.min.css src\Online\wwwroot\css\tailwind\
 

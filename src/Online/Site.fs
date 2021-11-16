@@ -28,12 +28,16 @@ type EndPoint =
     | [<EndPoint "GET /rss">] RSSFeedForUser of string
     | [<EndPoint "GET /contact">] Contact
     | [<EndPoint "GET /debug">] Debug
+    | [<EndPoint "GET /oss">] OSS
+    | [<EndPoint "GET /404">] Error404
 
 type PostTemplate = Template<"../Online/post.html", serverLoad=ServerLoad.WhenChanged>
 type ContactTemplate = Template<"../Online/contact.html", serverLoad=ServerLoad.WhenChanged>
 type BlogsTemplate = Template<"../Online/blogs.html", serverLoad=ServerLoad.WhenChanged>
-type AuthorTemlate = Template<"../Online/author.html", serverLoad=ServerLoad.WhenChanged>
-type CategoryTemlate = Template<"../Online/category.html", serverLoad=ServerLoad.WhenChanged>
+type AuthorTemplate = Template<"../Online/author.html", serverLoad=ServerLoad.WhenChanged>
+type CategoryTemplate = Template<"../Online/category.html", serverLoad=ServerLoad.WhenChanged>
+type OSSTemplate = Template<"../Online/oss.html", serverLoad=ServerLoad.WhenChanged>
+type Error404Template = Template<"../Online/404.html", serverLoad=ServerLoad.WhenChanged>
 
 // Utilities to make XML construction somewhat sane
 [<AutoOpen>]
@@ -561,7 +565,7 @@ module Site =
                 let articles =
                     articles
                     |> List.filter (fun article -> List.contains category article.Categories)
-                CategoryTemlate()
+                CategoryTemplate()
                     .Category(category)
                     .ArticlesSection(ARTICLES articles)
                     .MenubarPlaceholder(PostTemplate.Menubar().Doc())
@@ -576,7 +580,7 @@ module Site =
                     articles
                     |> List.filter (fun article -> article.User = user)
                 let name = (!config).Users.[user]
-                AuthorTemlate()
+                AuthorTemplate()
                     .ArticlesSection(ARTICLES articles)
                     .AuthorName(name)
                     .AuthorUsernameForAvatar(user)
@@ -654,6 +658,24 @@ module Site =
                             .TagUrl(Urls.CATEGORY tag "")
                             .Doc()
                     )
+                let fsadvent =
+                    BlogsTemplate.FSAdventBlock()
+                        .Articles(
+                            articles
+                            |> List.filter (fun art -> List.contains "fsadvent" art.Categories)
+                            |> List.map (fun art ->
+                                BlogsTemplate.FSAdventArticle()
+                                    .ArticleDate(art.DateString)
+                                    .ArticleTitle(art.Title)
+                                    .ArticleUrl(art.Url)
+                                    .AuthorBlogUrl(art.AuthorUrl)
+                                    .AuthorName(art.AuthorName)
+                                    .Username(art.User)
+                                    .Year(string art.Date.Year)
+                                    .Doc()
+                            )
+                        )
+                        .Doc()
                 BlogsTemplate()
                     .MenubarPlaceholder(PostTemplate.Menubar().Doc())
                     .FooterPlaceholder(PostTemplate.Footer().Doc())
@@ -666,6 +688,7 @@ module Site =
                         |> List.length
                         |> string
                     )
+                    .Feature_FSAdvent(fsadvent)
                     .ArticlesSection(ARTICLES articles)
                     .Doc()
                 |> Content.Page
@@ -727,6 +750,16 @@ module Site =
                             ]
                     ]
                 ]
+            let OSS () =
+                OSSTemplate()
+                    .FooterPlaceholder(PostTemplate.Footer().Doc())
+#if !DEBUG
+                    .ReleaseMin(".min")
+#endif
+                    .Doc()
+                |> Content.Page
+            let Error404 () =
+                Content.File("../Online/404.html", AllowOutsideRootFolder=true)
             let CONTACT () =
 //                let mapContactStyles = mapContactStyles()
                 ContactTemplate()
@@ -796,6 +829,10 @@ module Site =
                 Content.Text "Articles/configs reloaded."
             | Contact ->
                 CONTACT ()
+            | OSS ->
+                OSS ()
+            | Error404 ->
+                Error404 ()
             | Debug ->
                 Content.Page(
                     [
@@ -886,7 +923,6 @@ type Website() =
                         ) articles
                     then
                         Category category
-                //Categories
                 // Generate the RSS/Atom feeds
                 RSSFeed
                 AtomFeed
@@ -895,8 +931,8 @@ type Website() =
                     AtomFeedForUser user
                 //for job in jobs do
                 //    Job job
-                //// Generate 404 page
-                //Error404
+                // Generate 404 page
+                Error404
                 //// Generate legal pages
                 //CookiePolicy
                 //TermsOfUse
@@ -904,6 +940,7 @@ type Website() =
                 //Research
                 //Consulting
                 //Careers
+                OSS
             ]
 
 [<assembly: Website(typeof<Website>)>]
