@@ -54,22 +54,31 @@
         </div>
       </section>
       
-      <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+      <section class="relative py-20 2xl:py-40 overflow-hidden">
         <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto text-center">
-            <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">XML computation expressions: Playing around with extending the F# compiler</h2>
-            <div class="inline-flex mb-14 lg:mb-20 items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/denuziere.png" alt="Loic Denuziere" />
+            <h2 class="bg-opacity-25 bg-gray-900 mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">XML computation expressions: Playing around with extending the F# compiler</h2>
+          </div><img class="absolute top-0 left-0 w-full h-full object-cover" style="z-index:-10;" src="/img/category0.jpg" alt="" />
+        </div>
+      </section>
+      <section class="relative py-10 2xl:py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/denuziere.png" alt="Loic Denuziere" />
               <div class="flex-1 text-left">
-                <h4 class="mb-1 text-2xl font-bold text-gray-50">Loic Denuziere</h4>
-                <p class="text-white">Jun 30, 2013</p>
+                <h4 class="mb-1 text-2xl font-bold">Loic Denuziere</h4>
+                <p>Jun 30, 2013</p>
               </div>
               <div class="text-right ml-20">
-                <p class="mb-1 font-bold text-gray-50 text-xl">Reading time:</p>
-                <p class="text-white">9 mins</p>
+                <p class="mb-1 font-bold text-xl">Reading time:</p>
+                <p>9 mins</p>
               </div>
             </div>
           </div>
-          <div class="relative h-96 mb-20"><img class="w-full h-full object-cover" src="/img/category0.jpg" alt="" /></div>
+        </div>
+      </section>
+      <section class="py-20 2xl:py-40 bg-white overflow-hidden">
+        <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>It's been a couple months since <a href="https://groups.google.com/forum/?fromgroups=#!searchin/fsharp-opensource/xml/fsharp-opensource/lvqnyb1CZUA">this discussion</a> in the F# Open-Source mailing list about a unified F# EDSL for XML trees, but I've remained intrigued by this problem and wanting to improve on the solutions proposed. I found <a href="http://fssnip.net/hf">Tomas Petricek's computation expression-based solution</a>, in particular, quite nice in its conciseness and non-reliance on custom operators, which makes it much more intuitive. Its big problem, though, is its complete reliance on side-effects at every level.</p>
 <h2 id="so-much-impurity">So much impurity...</h2>
 <p>Now, I'm not saying that such an EDSL <em>must</em> be completely pure in order to be even considered. After all, WebSharper's own HTML EDSL relies on side-effects. But at a much smaller scale: for example, in the following code, the only side-effect is done by the <c>(-&lt;)</c> operator, which destructively adds children to a node.</p>

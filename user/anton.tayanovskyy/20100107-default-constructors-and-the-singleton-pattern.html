@@ -54,22 +54,31 @@
         </div>
       </section>
       
-      <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+      <section class="relative py-20 2xl:py-40 overflow-hidden">
         <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto text-center">
-            <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Default Constructors and the Singleton Pattern</h2>
-            <div class="inline-flex mb-14 lg:mb-20 items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/anton.tayanovskyy.png" alt="Anton Tayanovskyy" />
+            <h2 class="bg-opacity-25 bg-gray-900 mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Default Constructors and the Singleton Pattern</h2>
+          </div><img class="absolute top-0 left-0 w-full h-full object-cover" style="z-index:-10;" src="/img/category0.jpg" alt="" />
+        </div>
+      </section>
+      <section class="relative py-10 2xl:py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/anton.tayanovskyy.png" alt="Anton Tayanovskyy" />
               <div class="flex-1 text-left">
-                <h4 class="mb-1 text-2xl font-bold text-gray-50">Anton Tayanovskyy</h4>
-                <p class="text-white">Jan 07, 2010</p>
+                <h4 class="mb-1 text-2xl font-bold">Anton Tayanovskyy</h4>
+                <p>Jan 07, 2010</p>
               </div>
               <div class="text-right ml-20">
-                <p class="mb-1 font-bold text-gray-50 text-xl">Reading time:</p>
-                <p class="text-white">3 mins</p>
+                <p class="mb-1 font-bold text-xl">Reading time:</p>
+                <p>3 mins</p>
               </div>
             </div>
           </div>
-          <div class="relative h-96 mb-20"><img class="w-full h-full object-cover" src="/img/category0.jpg" alt="" /></div>
+        </div>
+      </section>
+      <section class="py-20 2xl:py-40 bg-white overflow-hidden">
+        <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>In this blog I will demonstrate a common F# idiom for passing values through the type system.</p>
 <p>The need for this usually comes as you are trying to trick F# into doing something advanced. Typically, you write a function F accepting a type paremeter 'T and expecting to use some functionality that 'T provides. Passing instances of 'T is not always a good option, as passing types is much cheaper syntactically (thanks to the type inferencer).</p>
 <p>This can be done by constraining 'T to implement an interface I. However, unlike Java, .NET interfaces cannot constrain static members. Thankfully, this can be resolved by default constructor constraints and on the type coupled with type initialization.</p>

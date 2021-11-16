@@ -54,22 +54,31 @@
         </div>
       </section>
       
-      <section class="py-20 2xl:py-40 bg-blue-800 overflow-hidden">
+      <section class="relative py-20 2xl:py-40 overflow-hidden">
         <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto text-center">
-            <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Serving SPAs</h2>
-            <div class="inline-flex mb-14 lg:mb-20 items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/granicz.png" alt="Adam Granicz" />
+            <h2 class="bg-opacity-25 bg-gray-900 mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Serving SPAs</h2>
+          </div><img class="absolute top-0 left-0 w-full h-full object-cover" style="z-index:-10;" src="/img/category3.jpg" alt="" />
+        </div>
+      </section>
+      <section class="relative py-10 2xl:py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/granicz.png" alt="Adam Granicz" />
               <div class="flex-1 text-left">
-                <h4 class="mb-1 text-2xl font-bold text-gray-50">Adam Granicz</h4>
-                <p class="text-white">Dec 29, 2017</p>
+                <h4 class="mb-1 text-2xl font-bold">Adam Granicz</h4>
+                <p>Dec 29, 2017</p>
               </div>
               <div class="text-right ml-20">
-                <p class="mb-1 font-bold text-gray-50 text-xl">Reading time:</p>
-                <p class="text-white">19 mins</p>
+                <p class="mb-1 font-bold text-xl">Reading time:</p>
+                <p>19 mins</p>
               </div>
             </div>
           </div>
-          <div class="relative h-96 mb-20"><img class="w-full h-full object-cover" src="/img/category3.jpg" alt="" /></div>
+        </div>
+      </section>
+      <section class="py-20 2xl:py-40 bg-white overflow-hidden">
+        <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>(This article is part of <a href="https://sergeytihon.com/2017/10/22/f-advent-calendar-in-english-2017/">F# Advent 2017</a> - thanks to <a href="https://sergeytihon.com/">Sergey Tihon</a> for organizing!)</p>
 <p>Consider a very typical scenario: you have a web application that serves an SPA. The SPA itself has several &quot;pages,&quot; each with its own client-side routed URLs (think of Gmail, for instance.) Then people copy some of these URLs from their &quot;session&quot; and send them to others, who in turn expect to find exactly what the sender saw. Except with most SPAs, the server-side knows nothing about the URLs generated on the client and usually throws you back to some initial SPA page. Implementing this properly requires you to share all or a subset of the URLs both on the server and on the client. With WebSharper, this is easy.</p>
 <h3 id="routing">Routing</h3>
