@@ -22,5 +22,3 @@ jobs:
           git config user.name "IntelliFactory CI"
           git commit -m "Update submodules"
           git push
-
-      
