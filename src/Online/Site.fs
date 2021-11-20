@@ -663,6 +663,7 @@ module Site =
                         .Articles(
                             articles
                             |> List.filter (fun art -> List.contains "fsadvent" art.Categories)
+                            |> List.sortBy (fun art -> -art.Date.Ticks)
                             |> List.map (fun art ->
                                 BlogsTemplate.FSAdventArticle()
                                     .ArticleDate(art.DateString)
