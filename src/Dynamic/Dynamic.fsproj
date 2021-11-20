@@ -5,6 +5,7 @@
     <StartAction>Program</StartAction>
     <StartProgram>$([System.Environment]::GetEnvironmentVariable(`WinDir`))\explorer.exe</StartProgram>
     <StartArguments>$(MSBuildThisFileDirectory)bin\html</StartArguments>
+    <RollForward>Major</RollForward>
   </PropertyGroup>
 
   <ItemGroup>
