@@ -2,4 +2,4 @@
 
 echo "Running dotnet build"
 
-dotnet build src/Website.sln -v d
+dotnet build src/Website.sln

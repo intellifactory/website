@@ -13,6 +13,7 @@ open WebSharper.UI.Templating
 
 type EndPoint =
     | [<EndPoint "/">] Home
+    | [<EndPoint "GET /jobs">] Jobs
     // The main blog page
     | [<EndPoint "GET /blogs">] Blogs
     // User-less blog articles
@@ -38,6 +39,7 @@ type AuthorTemplate = Template<"../Online/author.html", serverLoad=ServerLoad.Wh
 type CategoryTemplate = Template<"../Online/category.html", serverLoad=ServerLoad.WhenChanged>
 type OSSTemplate = Template<"../Online/oss.html", serverLoad=ServerLoad.WhenChanged>
 type Error404Template = Template<"../Online/404.html", serverLoad=ServerLoad.WhenChanged>
+type JobsTemplate = Template<"../Online/jobs.html", serverLoad=ServerLoad.WhenChanged>
 
 // Utilities to make XML construction somewhat sane
 [<AutoOpen>]
@@ -773,6 +775,18 @@ module Site =
 //                    .Cookie(Cookies.Banner false)
                     .Doc()
                 |> Content.Page
+            let JOBS () =
+//                let mapContactStyles = mapContactStyles()
+                JobsTemplate()
+#if !DEBUG
+                    .ReleaseMin(".min")
+#endif
+                    .MenubarPlaceholder(PostTemplate.Menubar().Doc())
+//                    .Map(client <@ ClientSideCode.TalksAndPresentations.GMapOffice(mapContactStyles) @>)
+                    .FooterPlaceholder(PostTemplate.Footer().Doc())
+//                    .Cookie(Cookies.Banner false)
+                    .Doc()
+                |> Content.Page
 
             match endpoint with
             | EndPoint.Home ->
@@ -830,6 +844,8 @@ module Site =
                 Content.Text "Articles/configs reloaded."
             | Contact ->
                 CONTACT ()
+            | Jobs ->
+                JOBS ()
             | OSS ->
                 OSS ()
             | Error404 ->
@@ -900,6 +916,8 @@ type Website() =
                 //for training in Site.trainings do
                 //    Courses training
                 //Trainings
+                // Jobs page
+                Jobs
                 // Generate contact page
                 Contact
                 //// Generate the main blog page
@@ -940,7 +958,6 @@ type Website() =
                 //PrivacyPolicy
                 //Research
                 //Consulting
-                //Careers
                 OSS
             ]
 

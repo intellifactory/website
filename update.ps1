@@ -31,6 +31,9 @@ xcopy website-template\public\oss.html src\Online\
 Write-Output "Copy 404.html to \src\Online\404.html"
 xcopy website-template\public\404.html src\Online\
 
+Write-Output "Copy jobs.html to \src\Online\jobs.html"
+xcopy website-template\public\jobs.html src\Online\
+
 Write-Output "Copy css\tailwind\tailwind.min.css to src\Online\wwwroot\css\tailwind\tailwind.min.css"
 xcopy website-template\public\css\tailwind\tailwind.min.css src\Online\wwwroot\css\tailwind\
 
