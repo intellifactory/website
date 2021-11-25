@@ -8,15 +8,15 @@
     <meta name="author" content=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;subset=latin"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"/>
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css"/>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png"/>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body class="antialiased bg-body text-body font-body">
     <div>
       <section class="overflow-x-hidden relative">
-        <div class="py-10 bg-gray-100">
-          <div class="container mx-auto px-4"><a class="text-3xl font-bold font-heading" href="#"><img class="h-9" src="/img/if-logo.png" alt="IntelliFactory" width="auto"/></a></div>
+        <div class="py-4 bg-gray-100">
+          <div class="container mx-auto px-4"><a class="text-3xl font-bold font-heading" href="/"><img class="h-16" src="/img/if-logo.png" alt="IntelliFactory" width="auto"/></a></div>
         </div>
         <div class="relative">
           <div class="relative py-20 md:py-32 bg-gray-50" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI2NDAiIHZpZXdCb3g9IjAgMCAxOTIwIDY0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTS0xNDAuMTI0IDIzMy4zMjFDLTEzMC41NDUgMTk2LjAxIC0xMTEuNTcxIDE1OS45NTggLTgzLjQ1NzUgMTMxLjA0NkMtNDguOTE0NiA5NS41MjM2IDMuNDY2NDYgNzUuMjk4NSA1My4xMzY2IDgyLjQ4NkMxMDkuNjk5IDkwLjY3MDkgMTUxLjk3OSAxMzYuNiAxNzAuNjk1IDE4NC41ODciIHN0cm9rZT0iI0Y1OTQ2MCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE3NzkuODggMjMzLjMyMUMxNzg5LjQ2IDE5Ni4wMSAxODA4LjQzIDE1OS45NTggMTgzNi41NCAxMzEuMDQ2QzE4NzEuMDkgOTUuNTIzNiAxOTIzLjQ3IDc1LjI5ODUgMTk3My4xNCA4Mi40ODZDMjAyOS43IDkwLjY3MDkgMjA3MS45OCAxMzYuNiAyMDkwLjcgMTg0LjU4NyIgc3Ryb2tlPSIjRjU5NDYwIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTEyMy41OSAtOTEuODY1NkMxMTI1LjcyIC01My40MDQ2IDExMTguNTIgLTEzLjMwNTQgMTEwMC40NiAyMi43NDY1QzEwNzguMjUgNjcuMDQyNyAxMDM0LjQzIDEwMi4xNDMgOTg0LjkwNSAxMTAuMjkyQzkyOC41MTIgMTE5LjU3MSA4NzQuMzM1IDg4LjU1NTEgODQyIDQ4LjQ2MTQiIHN0cm9rZT0iIzVDNzlEQyIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTIxMjAuODEgOTcwLjUyOUMyMDQxLjI4IDk1My42OTMgMTk2My41NSA5MTYuOTM0IDE5MDAuMDUgODYwLjI1OEMxODIyLjAzIDc5MC42MjEgMTc3NC42NyA2ODEuOTkyIDE3ODUuMzUgNTc2LjYwOUMxNzk3LjUxIDQ1Ni42MDQgMTg5MC41NSAzNjMuMzE0IDE5OTAuMDUgMzE5LjUyNCIgc3Ryb2tlPSIjQTY5MkZGIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTc1Ny43NSAxMTMyLjk3QzE1NjkuMjQgMTA5My4wNyAxMzg1LjAxIDEwMDUuOTQgMTIzNC41MiA4NzEuNjE0QzEwNDkuNjEgNzA2LjU2NCA5MzcuMzQyIDQ0OS4wOTkgOTYyLjY1NiAxOTkuMzI3Qzk5MS40ODMgLTg1LjEwMjIgMTIxMS45OSAtMzA2LjIxMiAxNDQ3LjgyIC00MTAiIHN0cm9rZT0iI0E2OTJGRiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+'); background-size: cover;" alt="">
