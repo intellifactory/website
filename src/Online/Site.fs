@@ -13,7 +13,7 @@ open WebSharper.UI.Templating
 
 type EndPoint =
     | [<EndPoint "/">] Home
-    | [<EndPoint "GET /jobs">] Jobs
+    | [<EndPoint "GET /careers">] Careers
     // The main blog page
     | [<EndPoint "GET /blogs">] Blogs
     // User-less blog articles
@@ -32,14 +32,7 @@ type EndPoint =
     | [<EndPoint "GET /oss">] OSS
     | [<EndPoint "GET /404">] Error404
 
-type PostTemplate = Template<"../Online/post.html", serverLoad=ServerLoad.WhenChanged>
-type ContactTemplate = Template<"../Online/contact.html", serverLoad=ServerLoad.WhenChanged>
-type BlogsTemplate = Template<"../Online/blogs.html", serverLoad=ServerLoad.WhenChanged>
-type AuthorTemplate = Template<"../Online/author.html", serverLoad=ServerLoad.WhenChanged>
-type CategoryTemplate = Template<"../Online/category.html", serverLoad=ServerLoad.WhenChanged>
-type OSSTemplate = Template<"../Online/oss.html", serverLoad=ServerLoad.WhenChanged>
-type Error404Template = Template<"../Online/404.html", serverLoad=ServerLoad.WhenChanged>
-type JobsTemplate = Template<"../Online/jobs.html", serverLoad=ServerLoad.WhenChanged>
+open Templates
 
 // Utilities to make XML construction somewhat sane
 [<AutoOpen>]
@@ -479,8 +472,60 @@ module Site =
         |> File.ReadAllText
         |> Doc.Verbatim
 
-    let ArticlePage (config: Config) articles (article: Article) =
+    let ArticlePage (config: Config) (articles: Article list) (article: Article) =
         let head = head()
+        let postUrl =
+            config.ServerUrl + article.Url
+            |> System.Web.HttpUtility.UrlEncode
+        let otherArticles =
+            let articlesByUser =
+                articles
+                // Compute user's articles except for the current one
+                |> List.filter (fun art -> art.User = article.User && art.Url <> article.Url)
+                // Sort latest-first
+                |> List.sortBy (fun art -> -art.Date.Ticks)
+                // Take at most 3
+                |> List.truncate 3
+            let articlesBlock articles =
+                articles
+                |> List.map (fun art ->
+                    PostTemplate.ArticleBlock()
+                        .ArticleUrl(art.Url)
+                        .AuthorBlogUrl(art.AuthorUrl)
+                        .AuthorName(art.AuthorName)
+                        .AuthorThumbnailUrl(sprintf "/img/avatar/%s.png" art.User)
+                        .Date(art.DateString)
+                        .MinutesToRead(string (int (Math.Ceiling art.TimeToRead)))
+                        .Title(art.Title)
+                        .Doc()
+                )
+                |> fun elems ->
+                    elems @ [
+                        PostTemplate.GitHubSourceBlock()
+                            .AuthorName(article.AuthorName)
+                            .SourceUrl(sprintf "%s/tree/master%s.md" config.GitHubRepo article.Url)
+                            .Doc()
+                    ]
+            if List.isEmpty articlesByUser then
+                let latestArticles =
+                    articles
+                    // Compute all other articles
+                    |> List.filter (fun art -> art.Url <> article.Url)
+                    // Sort by latest-first
+                    |> List.sortBy (fun art -> -art.Date.Ticks)
+                    // Take at most 3
+                    |> List.truncate 3
+                PostTemplate.NoOtherArticlesByAuthor()
+                    .Articles(
+                        articlesBlock latestArticles
+                    )
+                    .Doc()
+            else
+                PostTemplate.OtherArticlesByAuthor()
+                    .Articles(
+                        articlesBlock articlesByUser
+                    )
+                    .Doc()
         PostTemplate()
 #if !DEBUG
             .ReleaseMin(".min")
@@ -513,8 +558,11 @@ module Site =
 //            .AuthorUrl(article.AuthorUrl)
             .CategoryNo(string article.CategoryNumber)
 //            .ServerUrl(config.ServerUrl)
-            // Sidebar
-//            .Sidebar(BlogSidebar config articles article)
+            .ShareFacebookUrl(postUrl)
+            .ShareTwitterUrl(postUrl)
+            .ShareTwitterText(System.Web.HttpUtility.UrlEncode(article.Title))
+            .ShareLinkedInUrl(postUrl)
+            .OtherArticlesSection(otherArticles)
             .Doc()
           |> Content.Page
 
@@ -554,7 +602,7 @@ module Site =
                                     .Title(art.Title)
                                     .AuthorThumbnailUrl(sprintf "/img/avatar/%s.png" art.User)
                                     .ArticleUrl(art.Url)
-                                    .AuthorBlogUrl(Urls.USER_URL art.User)
+                                    .AuthorBlogUrl(art.AuthorUrl)
                                     .MinutesToRead(string (int (Math.Ceiling art.TimeToRead)))
                                     .Doc()
                             )
@@ -703,7 +751,7 @@ module Site =
                         p
                 let key = user, page
                 if articlesRef.Value.ContainsKey key then
-                    ArticlePage config.Value articlesRef.Value articlesRef.Value.[key]
+                    ArticlePage config.Value articles articlesRef.Value.[key]
                 else
                     Map.toList articlesRef.Value
                     |> List.map fst
@@ -844,7 +892,7 @@ module Site =
                 Content.Text "Articles/configs reloaded."
             | Contact ->
                 CONTACT ()
-            | Jobs ->
+            | Careers ->
                 JOBS ()
             | OSS ->
                 OSS ()
@@ -916,8 +964,8 @@ type Website() =
                 //for training in Site.trainings do
                 //    Courses training
                 //Trainings
-                // Jobs page
-                Jobs
+                // Careers page
+                Careers
                 // Generate contact page
                 Contact
                 //// Generate the main blog page

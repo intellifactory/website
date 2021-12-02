@@ -78,6 +78,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dynamic\Dynamic.fsproj" />
+    <ProjectReference Include="..\Templates\Templates.fsproj" />
   </ItemGroup>
 
   <ItemGroup>
