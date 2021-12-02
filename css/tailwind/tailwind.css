@@ -663,6 +663,10 @@ video {
   order: -9999;
 }
 
+.float-right {
+  float: right;
+}
+
 .m-1 {
   margin: 0.25rem;
 }
@@ -979,6 +983,10 @@ video {
 
 .table {
   display: table;
+}
+
+.flow-root {
+  display: flow-root;
 }
 
 .hidden {
@@ -1639,6 +1647,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-5 {
@@ -2688,7 +2700,7 @@ video {
   margin-top: 1em;
 }
 
-a {
+.markdown a {
   text-decoration: underline;
   color: rgb(71, 178, 228);
 }
