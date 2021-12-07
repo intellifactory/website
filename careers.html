@@ -178,26 +178,40 @@
             </div>
             <form class="mx-auto" id="JobSendFiles">
               <div class="mb-6">
-                <label class="block text-base mb-3 ml-6" for="">Name</label>
-                <input class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none" type="text" name="field-name" placeholder="Your name" />
+                <label class="block text-base mb-3 ml-6" for="name">Name</label>
+                <input class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none" type="text" name="name" placeholder="Your name" />
               </div>
               <div class="mb-6">
-                <label class="block text-base mb-3 ml-6" for="">Email</label>
-                <input class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none" type="text" name="field-name" placeholder="Your email address" />
+                <label class="block text-base mb-3 ml-6" for="email">Email</label>
+                <input class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none" type="text" name="email" placeholder="Your email address" />
               </div>
               <div class="mb-6">
-                <label class="block text-base mb-3 ml-6" for="">GitHub id <i class="text-italics">(optional)</i></label>
-                <input class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none" type="text" name="field-name" placeholder="Your GitHub username" />
+                <label class="block text-base mb-3 ml-6" for="github">GitHub id <i class="text-italics">(optional)</i></label>
+                <input class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none" type="text" name="github" placeholder="Your GitHub username" />
               </div>
               <div class="mb-6">
                 <label class="block text-base mb-3 ml-6" for="">Files</label>
-                <div class="border-dashed border-2 border-gray-400 py-12 max-w-xl flex flex-col justify-center items-center">
+                <div class="border-dashed border-2 border-gray-400 py-12 max-w-xl flex flex-col justify-center items-center" id="JobUploadArea">
                   <p class="mb-3 font-semibold text-gray-900 flex flex-wrap justify-center"><span>Drag and drop your</span> <span>files anywhere or</span></p>
-                  <input class="hidden" id="hidden-input" type="file" multiple="multiple" />
+                  <input class="hidden" id="hidden-input" type="file" accept="application/pdf" multiple="multiple" />
                   <button class="mt-2 rounded-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 focus:shadow-outline focus:outline-none" id="button">                    Upload a file</button>                  
                 </div>
               </div>
-              <div class="mt-12 mb-6 max-w-xl flow-root"><a class="px-6 py-4 bg-blue-500 hover:bg-blue-600 rounded-full text-lg text-white font-bold transition duration-200 float-right" href="#">Send</a></div>
+              <div id="JobFiles"></div>
+              <div class="mt-12 mb-6 max-w-xl flow-root"><a class="px-6 py-4 bg-blue-500 hover:bg-blue-600 rounded-full text-lg text-white font-bold transition duration-200 float-right" id="JobSend">Send</a></div>
+              <div class="modal hidden">
+                <div class="modal-container">
+                  <div class="modal-header">
+                    <h3 class="modal-title">Contact Us</h3>
+                  </div>
+                  <div class="modal-content">
+                    Your message has been successfully sent!
+                  </div>
+                  <div class="modal-footer">
+                    <button class="modal-button">Ok</button>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
         </div>

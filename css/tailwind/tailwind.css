@@ -2900,6 +2900,12 @@ nav ul > li {
   height: 1.5rem;
 }
 
+#JobFiles .fileName + span {
+  margin-left: 1.5rem;
+  cursor: pointer;
+  color: red;
+}
+
 @media (min-width: 640px) {
   .sm\:mt-0 {
     margin-top: 0px;
