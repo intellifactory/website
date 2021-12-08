@@ -730,7 +730,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
    {
     var emailInput,nameInput,githubInput,o,x,o$1,x$1,email,name,github,o$2,x$2,o$3,x$3,fd,r;
     ev.preventDefault();
-    emailInput=self.document.querySelector("#JobSendFiles form *[name=\"email\"]");
+    emailInput=self.document.querySelector("#JobSendFiles *[name=\"email\"]");
     nameInput=self.document.querySelector("#JobSendFiles *[name=\"name\"]");
     githubInput=self.document.querySelector("#JobSendFiles *[name=\"message\"]");
     emailInput.classList.remove("input-failed-validation");
