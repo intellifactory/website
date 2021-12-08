@@ -284,7 +284,7 @@ module Jobs =
                 ev.PreventDefault()
                 let emailInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"email\"]" :?> HTMLInputElement
                 let nameInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"name\"]" :?> HTMLInputElement
-                let githubInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"message\"]" :?> HTMLInputElement
+                let githubInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"github\"]" :?> HTMLInputElement
         
                 emailInput.ClassList.Remove("input-failed-validation")
                 emailInput.NextElementSibling
