@@ -282,7 +282,7 @@ module Jobs =
         if button <> null && button <> JS.Undefined then
             button.AddEventListener("click", System.Action<Dom.Event>(fun ev -> 
                 ev.PreventDefault()
-                let emailInput = JS.Document.QuerySelector "#JobSendFiles form *[name=\"email\"]" :?> HTMLInputElement
+                let emailInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"email\"]" :?> HTMLInputElement
                 let nameInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"name\"]" :?> HTMLInputElement
                 let githubInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"message\"]" :?> HTMLInputElement
         
