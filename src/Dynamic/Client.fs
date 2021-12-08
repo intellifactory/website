@@ -175,13 +175,6 @@ module Jobs =
     let singleMax = 5 * 1024 * 1024
     let button = JS.Document.GetElementById "JobSend"
     let files : UI.ListModel<string, string * Blob> = UI.ListModel.Create fst []
-    files.View.Map(fun items ->
-        files.Doc(fun key _ ->
-            div [] [span [attr.``class`` "fileName"] [text key]; span [on.click (fun _ _ -> files.RemoveByKey key)] [text "x"]]
-        )
-    )
-    |> Doc.EmbedView
-    |> Doc.RunById "JobFiles"
     let currentSize =
         files.View
         |> UI.View.Map (fun items ->
@@ -236,6 +229,13 @@ module Jobs =
     let SendJobAction () =
         let jobForm = JS.Document.GetElementById "JobSendFiles"
         if jobForm <> null && jobForm <> JS.Undefined then
+            files.View.Map(fun items ->
+                files.Doc(fun key _ ->
+                    div [] [span [attr.``class`` "fileName"] [text key]; span [on.click (fun _ _ -> files.RemoveByKey key)] [text "x"]]
+                )
+            )
+            |> Doc.EmbedView
+            |> Doc.RunById "JobFiles"
             jobForm.AddEventListener("submit", System.Action<Dom.Event>(fun ev ->
                 ev.PreventDefault()
             ))
@@ -282,7 +282,7 @@ module Jobs =
         if button <> null && button <> JS.Undefined then
             button.AddEventListener("click", System.Action<Dom.Event>(fun ev -> 
                 ev.PreventDefault()
-                let emailInput = JS.Document.QuerySelector "#JobSendFiles-form *[name=\"email\"]" :?> HTMLInputElement
+                let emailInput = JS.Document.QuerySelector "#JobSendFiles form *[name=\"email\"]" :?> HTMLInputElement
                 let nameInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"name\"]" :?> HTMLInputElement
                 let githubInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"message\"]" :?> HTMLInputElement
         
