@@ -732,7 +732,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
     ev.preventDefault();
     emailInput=self.document.querySelector("#JobSendFiles *[name=\"email\"]");
     nameInput=self.document.querySelector("#JobSendFiles *[name=\"name\"]");
-    githubInput=self.document.querySelector("#JobSendFiles *[name=\"message\"]");
+    githubInput=self.document.querySelector("#JobSendFiles *[name=\"github\"]");
     emailInput.classList.remove("input-failed-validation");
     o=(x=emailInput.nextElementSibling,x!==void 0?{
      $:1,
