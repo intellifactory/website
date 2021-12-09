@@ -752,7 +752,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
      ;
     else
      o$1.$0.classList.add("hidden");
-    fileInputError.classList.remove("hidden");
+    fileInputError.classList.add("hidden");
     email=emailInput.value;
     name=nameInput.value;
     github=githubInput.value;
@@ -779,23 +779,26 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
     return!emailInput.validity.typeMismatch&&Strings.Trim(name)!==""?(Jobs.button().setAttribute("disabled","disabled"),Jobs.button().classList.add("btn-disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("name",name),Strings.Trim(github)!==""?fd.append("github",github):void 0,Jobs.files().Iter(function(t)
     {
      fd.append("files",t[1],t[0]);
-    }),void(self.fetch("https://api.intellifactory.com/api/jobs",(r={},r.method="POST",r.body=fd,r)).then(function()
+    }),void(self.fetch("https://api.intellifactory.com/api/jobs",(r={},r.method="POST",r.body=fd,r)).then(function(resp)
     {
-     var modal;
-     modal=self.document.querySelector("#JobSendFiles .modal");
-     self.document.querySelector("#JobSendFiles .modal .modal-button").addEventListener("click",function()
+     var modal,modal$1,modalClose;
+     return resp.ok?(modal=self.document.querySelector("#JobSendFiles .modal"),(self.document.querySelector("#JobSendFiles .modal .modal-button").addEventListener("click",function()
      {
-      var modal$1;
-      modal$1=self.document.querySelector("#JobSendFiles .modal");
+      var modal$2;
+      modal$2=self.document.querySelector("#JobSendFiles .modal");
       emailInput.value="";
       nameInput.value="";
       githubInput.value="";
       Jobs.files().Clear();
-      modal$1.classList.add("hidden");
+      modal$2.classList.add("hidden");
       Jobs.button().removeAttribute("disabled");
       return Jobs.button().classList.remove("btn-disabled");
-     });
-     return modal.classList.remove("hidden");
+     }),modal.classList.remove("hidden"))):(modal$1=self.document.querySelector("#JobSendFiles .modal"),(modalClose=self.document.querySelector("#JobSendFiles .modal .modal-button"),(self.document.querySelector("#JobSendFiles .modal .modal-content").textContent="Sorry, we could not send your job application!",modalClose.addEventListener("click",function()
+     {
+      self.document.querySelector("#JobSendFiles .modal").classList.add("hidden");
+      Jobs.button().removeAttribute("disabled");
+      return Jobs.button().classList.remove("btn-disabled");
+     }),modal$1.classList.remove("hidden"))));
     }))["catch"](function()
     {
      var modal,modalClose;
@@ -804,13 +807,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
      self.document.querySelector("#JobSendFiles .modal .modal-content").textContent="Sorry, we could not send your job application!";
      modalClose.addEventListener("click",function()
      {
-      var modal$1;
-      modal$1=self.document.querySelector("#JobSendFiles .modal");
-      emailInput.value="";
-      nameInput.value="";
-      githubInput.value="";
-      Jobs.files().Clear();
-      modal$1.classList.add("hidden");
+      self.document.querySelector("#JobSendFiles .modal").classList.add("hidden");
       Jobs.button().removeAttribute("disabled");
       return Jobs.button().classList.remove("btn-disabled");
      });
