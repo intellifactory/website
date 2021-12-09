@@ -728,11 +728,12 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
   if(!Unchecked.Equals(Jobs.button(),null)&&!Unchecked.Equals(Jobs.button(),void 0))
    Jobs.button().addEventListener("click",function(ev)
    {
-    var emailInput,nameInput,githubInput,o,x,o$1,x$1,email,name,github,o$2,x$2,o$3,x$3,fd,r;
+    var emailInput,nameInput,githubInput,fileInputError,o,x,o$1,x$1,email,name,github,o$2,x$2,o$3,x$3,fd,r;
     ev.preventDefault();
     emailInput=self.document.querySelector("#JobSendFiles *[name=\"email\"]");
     nameInput=self.document.querySelector("#JobSendFiles *[name=\"name\"]");
     githubInput=self.document.querySelector("#JobSendFiles *[name=\"github\"]");
+    fileInputError=self.document.querySelector("#fileUploadError");
     emailInput.classList.remove("input-failed-validation");
     o=(x=emailInput.nextElementSibling,x!==void 0?{
      $:1,
@@ -751,6 +752,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
      ;
     else
      o$1.$0.classList.add("hidden");
+    fileInputError.classList.remove("hidden");
     email=emailInput.value;
     name=nameInput.value;
     github=githubInput.value;
@@ -772,6 +774,8 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
       }:null);
       o$3==null?void 0:o$3.$0.classList.remove("hidden");
      }
+    if(Jobs.files().get_Length()===0)
+     fileInputError.classList.remove("hidden");
     return!emailInput.validity.typeMismatch&&Strings.Trim(name)!==""?(Jobs.button().setAttribute("disabled","disabled"),Jobs.button().classList.add("btn-disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("name",name),Strings.Trim(github)!==""?fd.append("github",github):void 0,Jobs.files().Iter(function(t)
     {
      fd.append("files",t[1],t[0]);
@@ -1207,6 +1211,10 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
     return Unchecked.Equals($this.key(i),key);
    },this["var"].Get()));
    this.ObsoleteKey(key);
+  },
+  get_Length:function()
+  {
+   return Arrays.length(this["var"].Get());
   },
   Iter:function(fn)
   {
