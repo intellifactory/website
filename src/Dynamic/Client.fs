@@ -295,7 +295,7 @@ module Jobs =
                 nameInput.NextElementSibling
                 |> Optional.toOption
                 |> Option.iter (fun x -> x.ClassList.Add("hidden"))
-                fileInputError.ClassList.Remove("hidden")
+                fileInputError.ClassList.Add("hidden")
 
                 let email : string = emailInput.Value
                 let name : string = nameInput.Value
@@ -336,19 +336,33 @@ module Jobs =
                         JS.Fetch("https://api.intellifactory.com/api/jobs", options)
                     responsePromise
                         .Then(fun resp ->
-                            let modal = JS.Document.QuerySelector "#JobSendFiles .modal"
-                            let modalClose = JS.Document.QuerySelector "#JobSendFiles .modal .modal-button"
-                            modalClose.AddEventListener("click", System.Action<Dom.Event>(fun _ ->
+                            if resp.Ok then
                                 let modal = JS.Document.QuerySelector "#JobSendFiles .modal"
-                                emailInput.Value <- ""
-                                nameInput.Value <- ""
-                                githubInput.Value <- ""
-                                files.Clear()
-                                modal.ClassList.Add "hidden"
-                                button.RemoveAttribute("disabled")
-                                button.ClassList.Remove("btn-disabled")
-                            ))
-                            modal.ClassList.Remove "hidden"
+                                let modalClose = JS.Document.QuerySelector "#JobSendFiles .modal .modal-button"
+                                modalClose.AddEventListener("click", System.Action<Dom.Event>(fun _ ->
+                                    let modal = JS.Document.QuerySelector "#JobSendFiles .modal"
+                                    emailInput.Value <- ""
+                                    nameInput.Value <- ""
+                                    githubInput.Value <- ""
+                                    files.Clear()
+                                    modal.ClassList.Add "hidden"
+                                    button.RemoveAttribute("disabled")
+                                    button.ClassList.Remove("btn-disabled")
+                                ))
+                                modal.ClassList.Remove "hidden"
+                            else
+                                let modalContentText = "Sorry, we could not send your job application!"
+                                let modal = JS.Document.QuerySelector "#JobSendFiles .modal"
+                                let modalClose = JS.Document.QuerySelector "#JobSendFiles .modal .modal-button"
+                                let modalContent = JS.Document.QuerySelector "#JobSendFiles .modal .modal-content"
+                                modalContent.TextContent <- modalContentText
+                                modalClose.AddEventListener("click", System.Action<Dom.Event>(fun _ ->
+                                    let modal = JS.Document.QuerySelector "#JobSendFiles .modal"
+                                    modal.ClassList.Add "hidden"
+                                    button.RemoveAttribute("disabled")
+                                    button.ClassList.Remove("btn-disabled")
+                                ))
+                                modal.ClassList.Remove "hidden"
                         )
                         .Catch(fun _ ->
                             let modalContentText = "Sorry, we could not send your job application!"
@@ -358,10 +372,6 @@ module Jobs =
                             modalContent.TextContent <- modalContentText
                             modalClose.AddEventListener("click", System.Action<Dom.Event>(fun _ ->
                                 let modal = JS.Document.QuerySelector "#JobSendFiles .modal"
-                                emailInput.Value <- ""
-                                nameInput.Value <- ""
-                                githubInput.Value <- ""
-                                files.Clear()
                                 modal.ClassList.Add "hidden"
                                 button.RemoveAttribute("disabled")
                                 button.ClassList.Remove("btn-disabled")
