@@ -285,6 +285,7 @@ module Jobs =
                 let emailInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"email\"]" :?> HTMLInputElement
                 let nameInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"name\"]" :?> HTMLInputElement
                 let githubInput = JS.Document.QuerySelector "#JobSendFiles *[name=\"github\"]" :?> HTMLInputElement
+                let fileInputError = JS.Document.QuerySelector "#fileUploadError"
         
                 emailInput.ClassList.Remove("input-failed-validation")
                 emailInput.NextElementSibling
@@ -294,6 +295,7 @@ module Jobs =
                 nameInput.NextElementSibling
                 |> Optional.toOption
                 |> Option.iter (fun x -> x.ClassList.Add("hidden"))
+                fileInputError.ClassList.Remove("hidden")
 
                 let email : string = emailInput.Value
                 let name : string = nameInput.Value
@@ -309,6 +311,10 @@ module Jobs =
                     nameInput.NextElementSibling
                     |> Optional.toOption
                     |> Option.iter (fun x -> x.ClassList.Remove("hidden"))
+
+                if files.Length = 0 then
+                    // Validation for empty files
+                    fileInputError.ClassList.Remove("hidden")
 
                 if not emailInput.Validity?typeMismatch && name.Trim() <> "" then
                     button.SetAttribute("disabled", "disabled")
