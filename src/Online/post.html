@@ -1,11 +1,27 @@
-
+﻿
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1291321-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-1291321-1');
+    </script>
     <title>${Title}</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+    <meta name="description" content="${Description}"/>
+    <meta name="author" content="IntelliFactory"/>
+    <meta property="og:title" content="${Title}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="${ServerUrl}${PostUrl}" />
+    <meta property="og:image" content="${ServerUrl}/img/category${CategoryNo}.jpg" />
+    <meta property="og:description" content="${Description}" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@intellifactory" />
+    <meta property="twitter:title" content="${Title}" />
+    <meta property="twitter:description" content="${Description}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&subset=latin"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"/>
     <link rel="stylesheet" href="/css/tailwind/tailwind${ReleaseMin}.css"/>
@@ -28,11 +44,63 @@
           </div>
           <div class="hidden lg:block ml-auto mr-1">
             <ul class="flex items-center text-white space-x-10">
-              <li><a class="text-white font-bold text-lg" href="/">Home</a></li>
-              <li><a class="text-white font-bold text-lg" href="/oss">Open Source</a></li>
-              <li><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
-              <li><a class="text-white font-bold text-lg" href="/careers">Careers</a></li>
-              <li><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/">Home</a></li>
+              <li class="hoverable-mm"><a class="text-white font-bold text-lg">Open Source</a>
+                <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-700">
+                  <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://api.nuget.org/v3-flatcontainer/websharper.ui/5.0.0.120/icon"/>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">WebSharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Functional, reactive .NET web applications without writing JavaScript.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://websharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://avatars.githubusercontent.com/u/45857626?"/>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Bolero</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://fsbolero.io">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3 fill-current text-white" src="https://i.imgur.com/E6dfA3t.jpg"/>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">SiteFi</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center">
+                        <svg class="h-8 mb-3 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M2 4v14h14v-6l2-2v10H0V2h10L8 4H2zm10.3-.3l4 4L8 16H4v-4l8.3-8.3zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z"></path>
+                        </svg>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Cloudsharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/careers">Careers</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -65,16 +133,16 @@
       <section class="relative py-10 2xl:py-20 overflow-hidden">
         <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-flex items-center"><a href="${AuthorUrl}"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/${AuthorUsernameForAvatar}.png" alt="${AuthorName}"/></a>
+            <div class="inline-flex items-center flex-wrap"><a href="${AuthorUrl}"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/${AuthorUsernameForAvatar}.png" alt="${AuthorName}"/></a>
               <div class="flex-1 text-left"><a href="${AuthorUrl}">
                   <h4 class="mb-1 text-2xl font-bold">${AuthorName}</h4></a>
                 <p>${Date}</p>
               </div>
-              <div class="text-right ml-20">
+              <div class="text-right ml-20 flex-1 flex-basis-100">
                 <p class="mb-1 font-bold text-xl">Reading time:</p>
                 <p>${TimeToRead} mins</p>
               </div>
-              <div class="text-right ml-20 mt-3">
+              <div class="text-right ml-20 mt-3 flex-1 flex-basis-100">
                 <p class="mb-1 font-bold text-xl">Share via:</p>
                 <div><a class="inline-block mr-2" href="https://twitter.com/intent/tweet?text=${ShareTwitterText}&url=${ShareTwitterUrl}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#00acee">

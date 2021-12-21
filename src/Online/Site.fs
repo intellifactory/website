@@ -30,7 +30,7 @@ type EndPoint =
     | [<EndPoint "GET /contact">] Contact
     | [<EndPoint "GET /debug">] Debug
     | [<EndPoint "GET /oss">] OSS
-    | [<EndPoint "GET /404">] Error404
+    | [<EndPoint "GET /404.html">] Error404
 
 open Templates
 
@@ -370,13 +370,16 @@ module Site =
                             0
                     let language = Helpers.NULL_TO_EMPTY article.language
                     let identity =
-                        let raw = Helpers.NULL_TO_EMPTY article.identity
-                        let entries = raw.Split([| ',' |])
-                        match entries with
-                        | [| Helpers.NUMBER id1; Helpers.NUMBER id2 |] ->
-                            id1, id2
-                        | _ ->
-                            failwithf "Invalid identity found (%A)" entries
+                        if String.IsNullOrEmpty article.identity then
+                            -1, -1
+                        else
+                            let raw = Helpers.NULL_TO_EMPTY article.identity
+                            let entries = raw.Split([| ',' |])
+                            match entries with
+                            | [| Helpers.NUMBER id1; Helpers.NUMBER id2 |] ->
+                                id1, id2
+                            | _ ->
+                                failwithf "Invalid identity found (%A)" entries
                     let timeToRead =
                         let words = content.Split([|' '|]).Length
                         Math.Ceiling(float words / 200.) // Avarage WPM is 200
@@ -545,8 +548,8 @@ module Site =
 //            .SourceCodeUrl(sprintf "%s/tree/master%s.md" config.GitHubRepo article.Url)
             .Date(article.Date.ToString("MMM dd, yyyy"))
             .Title(article.Title)
-//            .Description(article.Abstract)
-//            .PageUrl(article.Url)
+            .Description(article.Abstract)
+            .PostUrl(article.Url)
             .AuthorName(article.AuthorName)
             .AuthorUsernameForAvatar(
                 let fname = Path.Combine (__SOURCE_DIRECTORY__, sprintf @"../Online/wwwroot/img/avatar/%s.png" article.User)
@@ -555,9 +558,9 @@ module Site =
                 else
                     "user"
             )
-//            .AuthorUrl(article.AuthorUrl)
+            .AuthorUrl(article.AuthorUrl)
             .CategoryNo(string article.CategoryNumber)
-//            .ServerUrl(config.ServerUrl)
+            .ServerUrl(config.ServerUrl)
             .ShareFacebookUrl(postUrl)
             .ShareTwitterUrl(postUrl)
             .ShareTwitterText(System.Web.HttpUtility.UrlEncode(article.Title))
@@ -584,7 +587,7 @@ module Site =
 
     [<Website>]
     let Main (config: Config ref) (identities1: Identities1 ref) (info: BlogInfoRaw ref) (articlesRef: Articles ref) =
-        Application.MultiPage (fun ctx endpoint ->
+        Application.MultiPage (fun (ctx: Context<_>) endpoint ->
             let articles =
                 !articlesRef
                 |> Map.toList
@@ -611,11 +614,14 @@ module Site =
                 else
                     BlogsTemplate.NoArticlesSection()
                         .Doc()
-            let CATEGORY ctx (category: string) =
+            let CATEGORY (category: string) =
                 let articles =
                     articles
                     |> List.filter (fun article -> List.contains category article.Categories)
                 CategoryTemplate()
+                    .ServerUrl((!config).ServerUrl)
+                    .PageUrl(ctx.Link (EndPoint.Category category))
+                    .Title(sprintf "%s - Filtered articles" category)
                     .Category(category)
                     .ArticlesSection(ARTICLES articles)
                     .MenubarPlaceholder(PostTemplate.Menubar().Doc())
@@ -625,12 +631,15 @@ module Site =
                     .FooterPlaceholder(PostTemplate.Footer().Doc())
                     .Doc()
                 |> Content.Page
-            let USER_ARTICLES ctx (user: string) =
+            let USER_ARTICLES (user: string) =
                 let articles =
                     articles
                     |> List.filter (fun article -> article.User = user)
                 let name = (!config).Users.[user]
                 AuthorTemplate()
+                    .ServerUrl((!config).ServerUrl)
+                    .PageUrl(ctx.Link (EndPoint.UserArticle (user, "")))
+                    .Title(sprintf "%s's blog" name)
                     .ArticlesSection(ARTICLES articles)
                     .AuthorName(name)
                     .AuthorUsernameForAvatar(user)
@@ -641,7 +650,7 @@ module Site =
 #endif
                     .Doc()
                 |> Content.Page
-            let BLOGS ctx =
+            let BLOGS (ctx: Context<_>) =
                 let authors =
                     articles
                     |> List.fold (fun (authors: Map<String, Article>) article ->
@@ -728,6 +737,8 @@ module Site =
                         )
                         .Doc()
                 BlogsTemplate()
+                    .ServerUrl((!config).ServerUrl)
+                    .PageUrl(ctx.Link EndPoint.Blogs)
                     .MenubarPlaceholder(PostTemplate.Menubar().Doc())
                     .FooterPlaceholder(PostTemplate.Footer().Doc())
                     .AuthorList(authors)
@@ -803,6 +814,9 @@ module Site =
                 ]
             let OSS () =
                 OSSTemplate()
+                    .ServerUrl((!config).ServerUrl)
+                    .PageUrl(ctx.Link EndPoint.OSS)
+                    .MenubarPlaceholder(PostTemplate.Menubar().Doc())
                     .FooterPlaceholder(PostTemplate.Footer().Doc())
 #if !DEBUG
                     .ReleaseMin(".min")
@@ -814,6 +828,8 @@ module Site =
             let CONTACT () =
 //                let mapContactStyles = mapContactStyles()
                 ContactTemplate()
+                    .ServerUrl((!config).ServerUrl)
+                    .PageUrl(ctx.Link EndPoint.Contact)
 #if !DEBUG
                     .ReleaseMin(".min")
 #endif
@@ -826,6 +842,8 @@ module Site =
             let JOBS () =
 //                let mapContactStyles = mapContactStyles()
                 JobsTemplate()
+                    .ServerUrl((!config).ServerUrl)
+                    .PageUrl(ctx.Link EndPoint.Blogs)
 #if !DEBUG
                     .ReleaseMin(".min")
 #endif
@@ -840,14 +858,14 @@ module Site =
             | EndPoint.Home ->
                 Content.Text "Home"
             | Category cat ->
-                CATEGORY ctx cat
+                CATEGORY cat
             | Blogs ->
                 BLOGS ctx
             | Article p ->
                 ARTICLE ("", p)
             // All articles by a given user
             | UserArticle (user, "") ->
-                USER_ARTICLES ctx user
+                USER_ARTICLES user
             | UserArticle (user, p) ->
                 ARTICLE (user, p)
             | AtomFeed ->

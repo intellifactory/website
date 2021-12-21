@@ -1,11 +1,27 @@
 
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1291321-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-1291321-1');
+    </script>
     <title>IntelliFactory blogs</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+    <meta name="description" content="IntelliFactory blogs"/>
+    <meta name="author" content="IntelliFactory"/>
+    <meta property="og:title" content="IntelliFactory blogs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="${ServerUrl}${PageUrl}" />
+    <meta property="og:image" content="${ServerUrl}/img/if-logo-long.png" />
+    <meta property="og:description" content="IntelliFactory blogs" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@intellifactory" />
+    <meta property="twitter:title" content="IntelliFactory blogs" />
+    <meta property="twitter:description" content="IntelliFactory blogs" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&subset=latin"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"/>
     <link rel="stylesheet" href="/css/tailwind/tailwind.min.css"/>
@@ -27,11 +43,63 @@
           </div>
           <div class="hidden lg:block ml-auto mr-1">
             <ul class="flex items-center text-white space-x-10">
-              <li><a class="text-white font-bold text-lg" href="/">Home</a></li>
-              <li><a class="text-white font-bold text-lg" href="/oss">Open Source</a></li>
-              <li><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
-              <li><a class="text-white font-bold text-lg" href="/careers">Careers</a></li>
-              <li><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/">Home</a></li>
+              <li class="hoverable-mm"><a class="text-white font-bold text-lg">Open Source</a>
+                <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-700">
+                  <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://api.nuget.org/v3-flatcontainer/websharper.ui/5.0.0.120/icon"/>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">WebSharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Functional, reactive .NET web applications without writing JavaScript.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://websharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://avatars.githubusercontent.com/u/45857626?"/>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Bolero</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://fsbolero.io">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3 fill-current text-white" src="https://i.imgur.com/E6dfA3t.jpg"/>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">SiteFi</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center">
+                        <svg class="h-8 mb-3 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M2 4v14h14v-6l2-2v10H0V2h10L8 4H2zm10.3-.3l4 4L8 16H4v-4l8.3-8.3zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z"></path>
+                        </svg>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Cloudsharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/careers">Careers</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -77,8 +145,8 @@
                 <ul>
                   <li class="flex pb-5 mb-8 border-b border-gray-50">
                     <div class="max-w">
-                      <h3 class="mb-3 text-lg font-bold font-heading">Author list</h3>
-                      <div class="flex flex-wrap space-x-1 gap-y-1" ws-hole="AuthorList"><a ws-template="AuthorFirst" href="${AuthorUrl}"><img class="ml-1 inline-block h-12 w-12 rounded-full ring-2 ring-white" src="${AuthorAvatarUrl}" alt="${AuthorName}"/></a>                        <a ws-template="AuthorOther" href="${AuthorUrl}"><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="${AuthorAvatarUrl}" alt="${AuthorName}"/></a><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/></div>
+                      <h3 class="mb-3 text-lg font-bold font-heading">Bloggers</h3>
+                      <div class="flex flex-wrap space-x-1 gap-y-1" ws-hole="AuthorList"><a ws-template="AuthorFirst" href="${AuthorUrl}"><img class="ml-1 inline-block h-12 w-12 rounded-full ring-2 ring-white" src="${AuthorAvatarUrl}" title="${AuthorName}"/></a>                        <a ws-template="AuthorOther" href="${AuthorUrl}"><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="${AuthorAvatarUrl}" alt="${AuthorName}"/></a><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/><img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/></div>
                     </div>
                   </li>
                   <li class="flex pb-5 mb-4">
