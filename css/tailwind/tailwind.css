@@ -797,6 +797,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
@@ -819,10 +823,6 @@ video {
 
 .mr-auto {
   margin-right: auto;
-}
-
-.-mr-20 {
-  margin-right: -5rem;
 }
 
 .-mr-24 {
@@ -1007,6 +1007,10 @@ video {
 
 .h-5 {
   height: 1.25rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-7 {
@@ -1428,6 +1432,10 @@ video {
   border-top-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1473,6 +1481,11 @@ video {
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgba(37, 37, 42, var(--tw-border-opacity));
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgba(30, 30, 34, var(--tw-border-opacity));
 }
 
 .border-blue-500 {
@@ -1560,6 +1573,11 @@ video {
   background-color: rgba(31, 64, 255, var(--tw-bg-opacity));
 }
 
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(18, 42, 147, var(--tw-bg-opacity));
+}
+
 .bg-blue-800 {
   --tw-bg-opacity: 1;
   background-color: rgba(12, 28, 98, var(--tw-bg-opacity));
@@ -1633,6 +1651,10 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.fill-current {
+  fill: currentColor;
 }
 
 .object-contain {
@@ -1796,6 +1818,10 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .pr-6 {
@@ -2135,6 +2161,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2172,369 +2203,9 @@ video {
   transition-duration: 200ms;
 }
 
-.stroke {
-  font-size: 30vw;
-  line-height: 1;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: rgba(0, 0, 0, 0.15);
-  -webkit-text-fill-color: transparent;
-  font-family: Impact, Charcoal, sans-serif;
-}
-
-.stroke-light {
-  font-size: 30vw;
-  line-height: 1;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
-  -webkit-text-fill-color: transparent;
-  font-family: Impact, Charcoal, sans-serif;
-}
-
-.h-39 {
-  height: 156px;
-}
-
-.w-39 {
-  width: 156px;
-}
-
-.clip-path-both {
-  -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-          clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-}
-
-.clip-path-left {
-  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.clip-path-right {
-  -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-}
-
-.clip-path-right-top {
-  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-}
-
-.clip-path-right-top-sm {
-  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-}
-
-.clip-path-right-badge {
-  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-}
-
-.clip-path-right-wide {
-  -webkit-clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-}
-
-.clip-path-left-top {
-  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.clip-path-left-wide {
-  -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.clip-path-left-small {
-  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.clip-path-right-small {
-  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-}
-
-.clip-path-triangle {
-  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-
-.triangle-bottom {
-  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-          clip-path: polygon(0 0, 50% 100%, 100% 0);
-}
-
-@media (min-width: 640px) {
-  .sm\:clip-path-both {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .sm\:clip-path-left {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .sm\:clip-path-right {
-    -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-  }
-
-  .sm\:clip-path-right-top {
-    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .sm\:clip-path-right-top-sm {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .sm\:clip-path-right-badge {
-    -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-  }
-
-  .sm\:clip-path-right-wide {
-    -webkit-clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-  }
-
-  .sm\:clip-path-left-top {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .sm\:clip-path-left-wide {
-    -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .sm\:clip-path-left-small {
-    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .sm\:clip-path-right-small {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .sm\:clip-path-triangle {
-    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-
-  .sm\:triangle-bottom {
-    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-            clip-path: polygon(0 0, 50% 100%, 100% 0);
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:clip-path-both {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .md\:clip-path-left {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .md\:clip-path-right {
-    -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-  }
-
-  .md\:clip-path-right-top {
-    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .md\:clip-path-right-top-sm {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .md\:clip-path-right-badge {
-    -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-  }
-
-  .md\:clip-path-right-wide {
-    -webkit-clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-  }
-
-  .md\:clip-path-left-top {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .md\:clip-path-left-wide {
-    -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .md\:clip-path-left-small {
-    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .md\:clip-path-right-small {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .md\:clip-path-triangle {
-    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-
-  .md\:triangle-bottom {
-    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-            clip-path: polygon(0 0, 50% 100%, 100% 0);
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:clip-path-both {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .lg\:clip-path-left {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .lg\:clip-path-right {
-    -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-  }
-
-  .lg\:clip-path-right-top {
-    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .lg\:clip-path-right-top-sm {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .lg\:clip-path-right-badge {
-    -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-  }
-
-  .lg\:clip-path-right-wide {
-    -webkit-clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-  }
-
-  .lg\:clip-path-left-top {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .lg\:clip-path-left-wide {
-    -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .lg\:clip-path-left-small {
-    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .lg\:clip-path-right-small {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .lg\:clip-path-triangle {
-    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-
-  .lg\:triangle-bottom {
-    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-            clip-path: polygon(0 0, 50% 100%, 100% 0);
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:clip-path-both {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .xl\:clip-path-left {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .xl\:clip-path-right {
-    -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-  }
-
-  .xl\:clip-path-right-top {
-    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  .xl\:clip-path-right-top-sm {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .xl\:clip-path-right-badge {
-    -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-  }
-
-  .xl\:clip-path-right-wide {
-    -webkit-clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-  }
-
-  .xl\:clip-path-left-top {
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .xl\:clip-path-left-wide {
-    -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .xl\:clip-path-left-small {
-    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .xl\:clip-path-right-small {
-    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  }
-
-  .xl\:clip-path-triangle {
-    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-
-  .xl\:triangle-bottom {
-    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-            clip-path: polygon(0 0, 50% 100%, 100% 0);
-  }
-}
-
-/* ------------------------------------
- * Make sure these style changes are carried to any update
- * of this generated file.
- */
+/**
+* This is a valid CSS file.
+**/
 
 .markdown p {
   margin-bottom: 1.5rem;
@@ -2856,7 +2527,6 @@ video {
   text-align: left;
   width: 100%;
   z-index: 1000;
-  background-color: #2c7a7b;
   top: 48;
   color: white;
 }
@@ -2881,7 +2551,8 @@ nav ul > li {
 }
 
 .hoverable:hover, .hoverable-mm:hover {
-  background-color: #2c7a7b;
+  --tw-bg-opacity: 1;
+  background-color: rgba(18, 42, 147, var(--tw-bg-opacity));
 }
 
 .hoverable-mm > a:after {
@@ -2917,8 +2588,28 @@ nav ul > li {
     margin-top: 0px;
   }
 
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:border-r-0 {
+    border-right-width: 0;
+  }
+
+  .sm\:border-r {
+    border-right-width: 1px;
+  }
+
+  .sm\:border-b-0 {
+    border-bottom-width: 0;
   }
 }
 
@@ -2981,6 +2672,10 @@ nav ul > li {
 
   .md\:max-w-sm {
     max-width: 24rem;
+  }
+
+  .md\:border-b-0 {
+    border-bottom-width: 0;
   }
 
   .md\:py-10 {
@@ -3244,6 +2939,14 @@ nav ul > li {
     border-bottom-left-radius: 0;
   }
 
+  .lg\:border-r {
+    border-right-width: 1px;
+  }
+
+  .lg\:border-b-0 {
+    border-bottom-width: 0;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -3262,6 +2965,10 @@ nav ul > li {
   .lg\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:pt-3 {
+    padding-top: 0.75rem;
   }
 
   .lg\:pt-10 {
@@ -3391,4 +3098,6 @@ nav ul > li {
     font-size: 6rem;
     line-height: 1;
   }
-} 
+}
+
+

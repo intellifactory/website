@@ -1,0 +1,657 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-1291321-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-1291321-1');
+    </script>
+    <title>Creating a WebSharper binding for Moment.js</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="IntelliFactory" />
+    <meta property="og:title" content="Creating a WebSharper binding for Moment.js" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://intellifactorylabs.com/user/btamas/20211221-wig-tutorial-momentjs" />
+    <meta property="og:image" content="https://intellifactorylabs.com/img/category3.jpg" />
+    <meta property="og:description" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@intellifactory" />
+    <meta property="twitter:title" content="Creating a WebSharper binding for Moment.js" />
+    <meta property="twitter:description" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;subset=latin" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/far.min.css"></link>
+<!--[if lte IE 11.0]>
+<![endif]-->
+<!--[if lte IE 9.0]>
+<![endif]-->
+
+    <script src="/js/main.js"></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <div>
+      <section class="px-4 lg:px-10 bg-gray-800 px-2">
+        <nav class="relative flex justify-between items-center py-2"><a class="text-2xl text-white font-bold" href="/"><span>Intelli</span>            <span class="text-blue-500 -ml-1">Factory</span></a>
+          <div class="lg:hidden">
+            <button class="p-2 navbar-burger">
+              <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
+                <rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect>
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:block ml-auto mr-1">
+            <ul class="flex items-center text-white space-x-10">
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/">Home</a></li>
+              <li class="hoverable-mm"><a class="text-white font-bold text-lg">Open Source</a>
+                <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-700">
+                  <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://api.nuget.org/v3-flatcontainer/websharper.ui/5.0.0.120/icon" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">WebSharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Functional, reactive .NET web applications without writing JavaScript.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://websharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://avatars.githubusercontent.com/u/45857626?" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Bolero</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://fsbolero.io">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3 fill-current text-white" src="https://i.imgur.com/E6dfA3t.jpg" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">SiteFi</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center">
+                        <svg class="h-8 mb-3 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M2 4v14h14v-6l2-2v10H0V2h10L8 4H2zm10.3-.3l4 4L8 16H4v-4l8.3-8.3zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z"></path>
+                        </svg>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Cloudsharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/careers">Careers</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+          <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+          <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+            <div class="flex items-center mb-16 pr-6"><a class="ml-10 text-2xl text-gray-800 font-bold" href="/"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" /></a></div>
+            <div>
+              <ul>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/">Home</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/oss">Open Source</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/blogs">Blogs</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/careers">Careers</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="mt-auto px-10">
+              <p class="mt-6 mb-4 text-lg text-center"><span>2004-2021 © IntelliFactory. All rights reserved.</span></p>
+            </div>
+          </nav>
+        </div>
+      </section>
+      
+      <section class="relative py-20 2xl:py-40 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2 class="bg-opacity-25 bg-gray-900 mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Creating a WebSharper binding for Moment.js</h2>
+          </div><img class="absolute top-0 left-0 w-full h-full object-cover" style="z-index:-10;" src="/img/category3.jpg" alt="" />
+        </div>
+      </section>
+      <section class="relative py-10 2xl:py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center flex-wrap"><a href="/user/btamas"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/btamas.png" alt="Tamas Banka" /></a>
+              <div class="flex-1 text-left"><a href="/user/btamas">
+                  <h4 class="mb-1 text-2xl font-bold">Tamas Banka</h4></a>
+                <p>Dec 21, 2021</p>
+              </div>
+              <div class="text-right ml-20 flex-1 flex-basis-100">
+                <p class="mb-1 font-bold text-xl">Reading time:</p>
+                <p>13 mins</p>
+              </div>
+              <div class="text-right ml-20 mt-3 flex-1 flex-basis-100">
+                <p class="mb-1 font-bold text-xl">Share via:</p>
+                <div><a class="inline-block mr-2" href="https://twitter.com/intent/tweet?text=Creating+a+WebSharper+binding+for+Moment.js&amp;url=https%3a%2f%2fintellifactorylabs.com%2fuser%2fbtamas%2f20211221-wig-tutorial-momentjs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#00acee">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                    </svg></a>                  <a class="inline-block mr-2" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fintellifactorylabs.com%2fuser%2fbtamas%2f20211221-wig-tutorial-momentjs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#0e76a8">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                    </svg></a>                  <a class="inline-block" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fintellifactorylabs.com%2fuser%2fbtamas%2f20211221-wig-tutorial-momentjs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#3b5998">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 2xl:py-40 bg-white overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><h1 id="creating-a-websharper-binding-for-moment.js">Creating a WebSharper binding for <code>Moment.js</code></h1>
+<p>Hello!
+In this blog I will show you how to create a WebSharper extension using WebSharper Interface Generator (WIG). For this tutorial I'm going to be binding <code>Moment.js</code>, a date parsing/formatting library.</p>
+<h2 id="first-steps">First steps</h2>
+<p>Let's create a WebSharper Extension project first. Make sure you have <code>WebSharper.Templates</code> installed, which you can do with:</p>
+<pre><code>dotnet new -i WebSharper.Templates
+</code></pre>
+<p>Using CLI:</p>
+<pre><code>dotnet new websharper-ext -o WebSharper.Moment
+</code></pre>
+<p>This made us a template project with the following files:</p>
+<ul>
+<li>Main.fs</li>
+<li>WebSharper.Moment.fsproj</li>
+<li>wsconfig.json</li>
+</ul>
+<p>For now, we work in <code>Main.fs</code>. As you can see too if you follow along, it created a template file where many WIG functionality is shown. For information about WIG, please visit the <a href="https://developers.websharper.com/docs/v4.x/fs/wig">documentation</a>. Now let's clean the file a bit:</p>
+<pre><code class="language-fs">namespace WebSharper.Moment
+
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.InterfaceGenerator
+
+module Definition =
+
+    let Assembly =
+        Assembly [
+            Namespace &quot;WebSharper.Moment&quot; [
+
+            ]
+        ]
+
+[&lt;Sealed&gt;]
+type Extension() =
+    interface IExtension with
+        member ext.Assembly =
+            Definition.Assembly
+
+[&lt;assembly: Extension(typeof&lt;Extension&gt;)&gt;]
+do ()
+
+</code></pre>
+<p>Nice! Let's get on with the binding now!</p>
+<h2 id="binding">Binding</h2>
+<p>We should get the required resources first. The <code>cdnjs</code> for Moment can be found <a href="https://cdnjs.com/libraries/moment.js">here</a>. We usually put this in the assemblies as <code>Resource</code> which will add a <code>script</code> tag to the html's head with this as <code>src</code>. Now in a regular case you would do this:</p>
+<pre><code class="language-fsharp">Assembly [
+    Namespace &quot;WebSharper.Moment.Resources&quot; [
+        Resource &quot;Js&quot; &quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js&quot;
+    ]
+    Namespace &quot;WebSharper.Moment&quot; [
+
+    ]
+]
+</code></pre>
+<p>But since we will do the binding for <code>Moment Timezone</code> too (<a href="https://momentjs.com/timezone/docs/">Moment Timezone</a>) which requires the default Moment.js. We do something like this:</p>
+<pre><code class="language-fsharp">module Res =
+    let Js =
+        Resource &quot;Js&quot; &quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js&quot;
+
+    let TzJs =
+        Resource &quot;TimezoneJs&quot; &quot;https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js&quot;
+        |&gt; Requires [Js]
+
+module Definition =
+    ...
+
+    let Assembly =
+        Assembly [
+            Namespace &quot;WebSharper.Moment.Resources&quot; [
+                Res.Js.AssemblyWide()
+                Res.TzJs
+            ]
+            ...
+        ]
+</code></pre>
+<p>Great! Let's move on to binding the <code>moment</code> object! Now I'm only going to cover the <a href="https://momentjs.com/docs/#/parsing/">Parse</a> tab in the Moment.js documentation in greater detail, there should be enough examples in it to get you ready for the rest.</p>
+<hr />
+<p>This part is mainly about how to construct a <code>moment</code> object. For making it easier to follow, I'm going to use the same structure as the documentation.</p>
+<h3 id="now">Now</h3>
+<p>There we can see 4 different constructors:</p>
+<ul>
+<li>unit</li>
+<li>undefined</li>
+<li>array (empty)</li>
+<li>object (empty)</li>
+</ul>
+<p>As <code>undefined</code> works the same as the <code>unit</code> constructor we don't worry about that and leave it out. Let's create a class for the moment object:</p>
+<pre><code class="language-fsharp">let Moment =
+    Class &quot;moment&quot;
+    |+&gt; Static [
+
+    ]
+    |+&gt; Instance [
+        
+    ]
+</code></pre>
+<p>This is how a template class looks like. One thing to note is that what <code>Class &quot;moment&quot;</code> does. What you give to <code>Class</code> will be what you want to see in the JavaScript output. In the F# code it is a tiny bit different, because WIG will make the first letter capital and when there are characters in the name like <code>.</code> or <code>+</code> it will switch them to <code>_</code>. Well you might ask &quot;Can't I explicitly give a name to use in F#?&quot;. WIG provides a method for that, it is done with <code>WithSourceName &quot;NewName&quot;</code>. Later on we will use this method but for now it is alright like this.</p>
+<p>Let's make the constructors for it:</p>
+<pre><code class="language-fsharp">let Moment =
+    Class &quot;moment&quot;
+    |+&gt; Static [
+        Constructor T&lt;unit&gt;
+        Constructor T&lt;int[]&gt;?d
+        Constructor T&lt;obj&gt;
+    ]
+    |+&gt; Instance [
+        
+    ]
+</code></pre>
+<p>As you can see for the <code>array</code> I used <code>int array</code> because I looked into what type it can be which is the same type of array you use with the native <code>Date(array)</code>. Also you might notice the <code>?d</code> part. It is makes the array a <code>named parameter</code> with the name <code>d</code>. We could also add comment to the method that is another helper functionality like the <code>?d</code>. We use <code>WithComment</code> for that:</p>
+<pre><code class="language-fsharp">Constructor T&lt;unit&gt;
+|&gt; WithComment &quot;Initialize with the current time.&quot;
+Constructor T&lt;int[]&gt;?d
+|&gt; WithComment &quot;Create a moment with an array of numbers that mirror the parameters passed to new Date().&quot;
+Constructor T&lt;obj&gt;
+|&gt; WithComment &quot;Create a moment by specifying some of the units in an object.&quot;
+</code></pre>
+<p>At last don't forget to add <code>Moment</code> or any of the other <code>CodeModel.Class</code> you define to the assemblies:</p>
+<pre><code class="language-fsharp">let Assembly =
+    Assembly [
+        Namespace &quot;WebSharper.Moment.Resources&quot; [
+            Res.Js.AssemblyWide()
+            Res.TzJs
+        ]
+        Namespace &quot;WebSharper.Moment&quot; [
+            Moment
+        ]
+    ]
+</code></pre>
+<h3 id="string">String</h3>
+<p>Same as before, we add a constructor with a string parameter:</p>
+<pre><code class="language-fsharp">Constructor (T&lt;string&gt;?d)
+|&gt; WithComment &quot;Check if the string matches known ISO 8601 formats, then fall back to new Date(string) if a known format is not found, or checking if the string matches with the JSON date.&quot;
+</code></pre>
+<h3 id="string-format">String + Format</h3>
+<p>There are quite a few constructors here. Now good thing is we don't have to define all of them if we make use of <code>optional parameters</code>. With the <code>!?</code> notation we do this:</p>
+<pre><code class="language-fsharp">Constructor (T&lt;string&gt;?d * T&lt;string&gt;?format * !?T&lt;bool&gt;?strict)
+|&gt; WithComment &quot;Parse with exact format (with an optional strict parameter).&quot;
+Constructor (T&lt;string&gt;?d * T&lt;string&gt;?format * T&lt;string&gt;?language * !?T&lt;bool&gt;?strict)
+|&gt; WithComment &quot;Parse with exact format (with optional locale and strict parameters).&quot;
+Constructor (T&lt;string&gt;?d * T&lt;string&gt;?format * T&lt;string[]&gt;?languages)
+|&gt; WithComment &quot;Parse with exact format (with optional locales).&quot;
+</code></pre>
+<p>Defining multiple parameters is done with <code>*</code> as you can see.</p>
+<h3 id="string-formats">String + Formats</h3>
+<p>Nothing out of the ordinary but note that the 3rd and the 4th parameters are both optional:</p>
+<pre><code class="language-fsharp">Constructor (T&lt;string&gt;?d * T&lt;string[]&gt;?formats * !?T&lt;bool&gt;?strict)
+|&gt; WithComment &quot;Parse with multiple format choices (with an optional strict parameter).&quot;
+Constructor (T&lt;string&gt;?d * T&lt;string[]&gt;?formats * T&lt;string&gt;?language * !?T&lt;bool&gt;?strict)
+|&gt; WithComment &quot;Parse with multiple format choices (with optional locale and strict parameter).&quot;
+</code></pre>
+<h3 id="special-formats">Special Formats</h3>
+<p>This is about using predefined formats. Their usage in JavaScript is as follows:</p>
+<pre><code class="language-js">var a = moment.ISO_8601
+var b = moment.HTML5_FMT.DATETIME_LOCAL
+var c = moment.HTML5_FMT.DATETIME_LOCAL_SECONDS
+...
+</code></pre>
+<p>The solution for binding this is</p>
+<ul>
+<li>make a read-only property for <code>ISO_8601</code> in the Moment class</li>
+<li>make a new class for <code>moment.HTML5_FMT</code> that has the properties mentioned in the <a href="https://momentjs.com/docs/#/parsing/special-formats/">documentation</a></li>
+</ul>
+<p>We can define <code>read-only</code> properties with <code>=?</code>:</p>
+<pre><code class="language-fsharp">let HTML5ConstantFormats =
+    Class &quot;moment.HTML5_FMT&quot;
+    |&gt; WithSourceName &quot;HTML5ConstantFormats&quot;
+    |+&gt; Static [
+        &quot;DATETIME_LOCAL&quot; =? T&lt;string&gt;
+        &quot;DATETIME_LOCAL_SECONDS&quot; =? T&lt;string&gt;
+        &quot;DATETIME_LOCAL_MS&quot; =? T&lt;string&gt;
+        &quot;DATE&quot; =? T&lt;string&gt;
+        &quot;TIME&quot; =? T&lt;string&gt;
+        &quot;TIME_SECONDS&quot; =? T&lt;string&gt;
+        &quot;TIME_MS&quot; =? T&lt;string&gt;
+        &quot;WEEK&quot; =? T&lt;string&gt;
+        &quot;MONTH&quot; =? T&lt;string&gt;
+    ]
+
+let Moment =
+    Class &quot;moment&quot;
+    |+&gt; Static [
+        &quot;ISO_8601&quot; =? T&lt;string&gt;
+        ...
+    ]
+    ...
+</code></pre>
+<p>Notice I used <code>WithSourceName</code> to give a better name for accessing it from F#.</p>
+<h3 id="object">Object</h3>
+<p>Constructor was defined <a href="#now">here</a> but let's talk about how to use it from F#. You can create objects with <code>New []</code> like this:</p>
+<pre><code class="language-fsharp">let myDate : obj = New [
+    &quot;hour&quot; =&gt; 15
+    &quot;minute&quot; =&gt; 10
+]
+
+let m = Moment(myDate)
+</code></pre>
+<h3 id="unix-timestamp">Unix Timestamp</h3>
+<p>Methods can be defined with <code>=&gt;</code> followed at some point by <code>^-&gt;</code>. Let's create the <code>unix</code> method:</p>
+<pre><code class="language-fsharp">let Moment =
+    Class &quot;moment&quot;
+    |+&gt; Static [
+        &quot;unix&quot; =&gt; T&lt;int&gt; ^-&gt; TSelf
+        |&gt; WithComment &quot;Create a moment from a Unix timestamp (seconds since the Unix Epoch).&quot;
+    ]
+</code></pre>
+<h3 id="date">Date</h3>
+<p><code>moment</code> also accepts the native <code>Date</code> as parameter:</p>
+<pre><code class="language-fsharp">Constructor (T&lt;Date&gt;?d)
+|&gt; WithComment &quot;Create a Moment with a pre-existing native Javascript Date object.&quot;
+</code></pre>
+<p>Note that it only works because we have <code>WebSharper.JavaScript</code> opened and in it there are bindings for native JavaScript objects.</p>
+<h3 id="array">Array</h3>
+<p>Also defined in <a href="#now">Now</a>.</p>
+<h3 id="asp.net-json-date">ASP .NET JSON Date</h3>
+<p>Same as in <a href="#string">String</a> (it just provides a different format by default).</p>
+<h3 id="moment-clone">Moment Clone</h3>
+<p>A constructor with <code>moment</code> parameter and an instance method that does the same:</p>
+<pre><code class="language-fsharp">let Moment =
+    Class &quot;moment&quot;
+    |+&gt; Static [
+        Constructor (TSelf?d)
+        |&gt; WithComment &quot;Copy constructor.&quot;
+        ...
+    ]
+    |+&gt; Instance [
+        &quot;clone&quot; =&gt; T&lt;unit&gt; ^-&gt; TSelf
+        |&gt; WithComment &quot;Returns the clone of the Moment object.&quot;
+    ]
+</code></pre>
+<h3 id="utc">UTC</h3>
+<p>Defining the <code>utc</code> method goes like this:</p>
+<pre><code class="language-fsharp">&quot;utc&quot; =&gt; T&lt;unit&gt; ^-&gt; TSelf
+|&gt; WithComment &quot;Current UTC time.&quot;
+&quot;utc&quot; =&gt; T&lt;int&gt;?d ^-&gt; TSelf
+|&gt; WithComment &quot;Create a moment by passing an the number of milliseconds since the Unix Epoch (Jan 1 1970 12AM UTC) in UTC.&quot;
+&quot;utc&quot; =&gt; T&lt;int[]&gt;?d ^-&gt; TSelf
+|&gt; WithComment &quot;Create a moment with an array of numbers that mirror the parameters passed to new Date() in UTC.&quot;
+&quot;utc&quot; =&gt; T&lt;string&gt;?d ^-&gt; TSelf
+|&gt; WithComment &quot;Check if the string matches known ISO 8601 formats, then fall back to new Date(string) if a known format is not found.&quot;
+&quot;utc&quot; =&gt; T&lt;string&gt;?d * T&lt;string&gt;?format * !?T&lt;bool&gt;?strict ^-&gt; TSelf
+|&gt; WithComment &quot;Create an UTC moment.&quot;
+&quot;utc&quot; =&gt; T&lt;string&gt;?d * T&lt;string[]&gt;?formats ^-&gt; TSelf
+|&gt; WithComment &quot;Create an UTC moment.&quot;
+&quot;utc&quot; =&gt; T&lt;string&gt;?d * T&lt;string&gt;?format * T&lt;string&gt;?language * !?T&lt;bool&gt;?strict ^-&gt; TSelf
+|&gt; WithComment &quot;Create an UTC moment.&quot;
+&quot;utc&quot; =&gt; T&lt;string&gt;?d * T&lt;string&gt;?format * T&lt;string[]&gt;?languages ^-&gt; TSelf
+|&gt; WithComment &quot;Create an UTC moment.&quot;
+&quot;utc&quot; =&gt; TSelf?d ^-&gt; TSelf
+|&gt; WithComment &quot;Create an UTC moment.&quot;
+&quot;utc&quot; =&gt; T&lt;Date&gt;?d ^-&gt; TSelf
+|&gt; WithComment &quot;Create an UTC moment.&quot;
+</code></pre>
+<h3 id="parsezone">parseZone</h3>
+<p>Static method, yet again with optional parameters:</p>
+<pre><code class="language-fsharp">&quot;parseZone&quot; =&gt; !?T&lt;string&gt;?d ^-&gt; TSelf
+|&gt; WithComment &quot;Parses the time and then sets the zone according to the input string.&quot;
+&quot;parseZone&quot; =&gt; T&lt;string&gt;?d * T&lt;string&gt;?format * !?T&lt;bool&gt;?strict ^-&gt; TSelf
+|&gt; WithComment &quot;Parses the time and format (with an optional strict parameter) and then sets the zone according to the input string.&quot;
+&quot;parseZone&quot; =&gt; T&lt;string&gt;?d * T&lt;string[]&gt;?formats ^-&gt; TSelf
+|&gt; WithComment &quot;Parses the time and formats and then sets the zone according to the input string.&quot;
+&quot;parseZone&quot; =&gt; T&lt;string&gt;?d * T&lt;string&gt;?format * T&lt;string&gt;?language * !?T&lt;bool&gt;?strict ^-&gt; TSelf
+|&gt; WithComment &quot;Parses the time, format and locale (with an optional strict parameter) and then sets the zone according to the input string.&quot;
+</code></pre>
+<h3 id="validation">Validation</h3>
+<p><code>moment().isValid()</code> checks if the moment instance is a valid date. It is a simple instance method:</p>
+<pre><code class="language-fsharp">&quot;isValid&quot; =&gt; T&lt;unit&gt; ^-&gt; T&lt;bool&gt;
+|&gt; WithComment &quot;Moment applies stricter initialization rules than the Date constructor.&quot;
+</code></pre>
+<p>This part also talks about <code>parsingFlags</code> method in detail so let's do that too! For this I will define the type of object it returns:</p>
+<pre><code class="language-fsharp">let ParsingFlags =
+    Class &quot;moment.parsingFlags&quot;
+    |&gt; WithSourceName &quot;ParsingFlags&quot;
+    |+&gt; Instance [
+        &quot;overflow&quot; =? T&lt;int&gt;
+        &quot;invalidMonth&quot; =? T&lt;string&gt;
+        &quot;empty&quot; =? T&lt;bool&gt;
+        &quot;nullInput&quot; =? T&lt;bool&gt;
+        &quot;invalidFormat&quot; =? T&lt;bool&gt;
+        &quot;userInvalidated&quot; =? T&lt;bool&gt;
+        &quot;meridiem&quot; =? T&lt;string&gt;
+        &quot;parsedDateParts&quot; =? T&lt;obj[]&gt;
+        &quot;unusedTokens&quot; =? T&lt;string[]&gt;
+        &quot;unusedInput&quot; =? T&lt;string[]&gt;
+    ]
+
+    ...
+
+let Moment =
+    Class &quot;moment&quot;
+    |+&gt; Static [
+        ...
+    ]
+    |+&gt; Instance [
+        &quot;parsingFlags&quot; =&gt; T&lt;unit&gt; ^-&gt; ParsingFlags
+    ]
+</code></pre>
+<h3 id="creation-data">Creation Data</h3>
+<p>Instance method, returns an object:</p>
+<pre><code class="language-fsharp">&quot;creationData&quot; =&gt; T&lt;unit&gt; ^-&gt; T&lt;obj&gt;
+</code></pre>
+<h3 id="defaults">Defaults</h3>
+<p>The only new thing here is the <code>int * string</code> constructor, the rest are internal things which we don't have to worry about:</p>
+<pre><code class="language-fsharp">Constructor (T&lt;int&gt;?d * T&lt;string&gt;?unit)
+|&gt; WithComment &quot;Create a moment by specifying the unit.&quot;
+</code></pre>
+<h2 id="testing">Testing</h2>
+<p>I don't think I have to say that it is recommended to do tests while binding to see if the extension is working as intended. For example we can create a WebSharper Single Page Application project for the tests:</p>
+<pre><code>dotnet new websharper-spa -lang f# -o WebSharper.Moment.Tests
+</code></pre>
+<p>Let's go to the project file it created and just before the <code>&lt;/Project&gt;</code> end tag, add this:</p>
+<pre><code class="language-xml">&lt;ItemGroup&gt;
+  &lt;Reference Include=&quot;WebSharper.Moment&quot;&gt;
+    &lt;HintPath&gt;..\WebSharper.Moment\bin\Debug\netstandard2.0\WebSharper.Moment.dll&lt;/HintPath&gt;
+  &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<p>This will include the dll of the binding when we do <code>open WebSharper.Moment</code> in the tests. You can do your own tests in this but I'm going to show you an example too. Let's modify <code>wwwroot/index.html</code> and <code>Client.fs</code> a bit:</p>
+<p><code>wwwroot/index.html</code>:</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;Moment js testing&lt;/h1&gt;
+    &lt;div id=&quot;main&quot; ws-children-template=&quot;Main&quot;&gt;
+        &lt;div ws-replace=&quot;SomeTest&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;Content/WebSharper.Moment.Tests.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<p><code>Client.fs</code>:</p>
+<pre><code class="language-fsharp">namespace WebSharper.Moment.Tests
+
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.JQuery
+open WebSharper.UI
+open WebSharper.UI.Html
+open WebSharper.UI.Client
+open WebSharper.UI.Templating
+open WebSharper.Moment
+
+[&lt;JavaScript&gt;]
+module Client =
+
+    type IndexTemplate = Template&lt;&quot;wwwroot/index.html&quot;, ClientLoad.FromDocument&gt;
+
+    [&lt;SPAEntryPoint&gt;]
+    let Main () =
+        let m = Moment().Format()
+
+        IndexTemplate.Main()
+            .SomeTest(
+                p [] [text m]
+            )
+            .Doc()
+        |&gt; Doc.RunById &quot;main&quot;
+
+</code></pre>
+<p>Opening <code>wwwroot/index.html</code> will show you the results.</p>
+<h2 id="final-words">Final words</h2>
+<p>Now that we finished binding the parsing part the rest shouldn't be much harder. You can try finishing it on your own and see if this little example binding helped. The project can be found on <a href="https://github.com/dotnet-websharper/moment">GitHub</a> if you want to take a look at it. Thank you for following along and have a nice day!</p>
+<p>Tamas Banka <a href="https://github.com/btamas2000">@btamas2000</a></p>
+</div></div>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-12">
+            <div class="lg:w-2/3 lg:pr-16 mb-2 lg:mb-8">
+              <h2 class="text-3xl md:text-4xl font-bold font-heading">Read more from </h2>
+            </div>
+            <div class="text-sm lg:text-base lg:w-1/3">
+              <p class="leading-loose text-blueGray-500"><span>Can’t find what you were looking for? </span>                <a class="text-blue-600 hover:text-blue-700" href="/contact">Drop us a line</a>.
+                              
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8"><a href="/user/btamas">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="/img/avatar/btamas.png" alt="Tamas Banka" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Tamas Banka</span></div>
+                </div></a>              <a href="/user/btamas/20211221-wig-tutorial-dayjs">
+                <h4 class="text-xl font-semibold">Creating a WebSharper binding for Day.js</h4></a>
+              <p class="text-sm md:text-base text-blueGray-400">20211221 · 36 min read</p>
+            </div><div class="w-full md:w-1/2 lg:w-1/4 p-4 mb-8 bg-gray-50 rounded-3xl"><a href="https://github.com/IntelliFactory/blogs/tree/master/user/btamas/20211221-wig-tutorial-momentjs.md">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Tamas Banka" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Found a typo?</span></div>
+                </div></a>
+              <h4 class="text-xl font-semibold">This blog post is hosted on GitHub <a href="https://github.com/IntelliFactory/blogs/tree/master/user/btamas/20211221-wig-tutorial-momentjs.md">here</a>. Feel free to file a ticket or send a PR.</h4>
+            </div>
+            
+            
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="2xl:py-20 py-5">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap -mx-4 border-b border-gray-100 pt-5 lg:pt-10">
+            <div class="w-full lg:w-3/5 px-4">
+              <div class="flex flex-wrap -mx-4">
+                <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">IntelliFactory</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/blogs">Blogs</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/careers">Careers</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
+                    <li class="mb-4 Cookies"><a class="hover:underline" href="/cookie-policy">Cookies</a></li>
+                    <li><a class="hover:underline" href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-1/3 px-4 mb-4">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Services</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/home#consulting">Consulting</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#development">Development</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#code-synthesis">AI-driven Code Synthesis</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#dsls">Domain-Specific Languages</a></li>
+                  </ul>
+                </div>
+                <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Open Source</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="https://websharper.com">WebSharper</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="https://fsbolero.io">Bolero</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="#">From our Lab</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+              <h3 class="mb-10 text-xl font-bold">Newsletter</h3>
+              <form method="post" id="newsletter-form">
+                <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full"><span class="inline-block pl-2 lg:pl-5">
+                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle>
+                      <circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle>
+                    </svg></span>
+                  <input id="newsletter-input" class="pl-4 py-2 focus:outline-none rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Your email address" />
+                  <button id="signup" class="ml-auto px-6 lg:px-8 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                </div>
+                <div id="newsletter-alert-list"></div>
+                <p class="text-gray-300">We will not spam you or give your details to anyone.</p>
+              </form>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center mb-8 lg:mb-0 pt-5">
+            <div class="w-full md:w-3/4 mb-8 md:mb-0">
+              <div class="md:flex items-center"><a class="inline-block text-gray-900 text-xl font-bold" href="#"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" width="auto" /></a>              <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                <p class="hidden lg:block text-sm"><span>© 2004-2021 IntelliFactory.</span>                <span class="text-gray-300">All rights reserved.</span></p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4">
+              <div class="md:flex items-center justify-end"><a class="inline-block mr-2" href="https://github.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://facebook.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#3b5998">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://twitter.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#00acee">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://www.linkedin.com/company/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#0e76a8">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                  </svg></a>              <a class="inline-block" href="https://vimeo.com/user15828007">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#86c9ef">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.82 11.419c-1.306 2.792-4.463 6.595-6.458 6.595-1.966 0-2.25-4.192-3.324-6.983-.527-1.372-.868-1.058-1.858-.364l-.604-.779c1.444-1.27 2.889-2.745 3.778-2.826.998-.096 1.615.587 1.845 2.051.305 1.924.729 4.91 1.472 4.91.577 0 2.003-2.369 2.076-3.215.13-1.24-.912-1.277-1.815-.89 1.43-4.689 7.383-3.825 4.888 1.501z"></path>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div>
+        
+        <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+        <script src="/js/Dynamic.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

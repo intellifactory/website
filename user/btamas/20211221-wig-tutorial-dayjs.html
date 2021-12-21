@@ -1,0 +1,936 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-1291321-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-1291321-1');
+    </script>
+    <title>Creating a WebSharper binding for Day.js</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="IntelliFactory" />
+    <meta property="og:title" content="Creating a WebSharper binding for Day.js" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://intellifactorylabs.com/user/btamas/20211221-wig-tutorial-dayjs" />
+    <meta property="og:image" content="https://intellifactorylabs.com/img/category3.jpg" />
+    <meta property="og:description" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@intellifactory" />
+    <meta property="twitter:title" content="Creating a WebSharper binding for Day.js" />
+    <meta property="twitter:description" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;subset=latin" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/far.min.css"></link>
+<!--[if lte IE 11.0]>
+<![endif]-->
+<!--[if lte IE 9.0]>
+<![endif]-->
+
+    <script src="/js/main.js"></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <div>
+      <section class="px-4 lg:px-10 bg-gray-800 px-2">
+        <nav class="relative flex justify-between items-center py-2"><a class="text-2xl text-white font-bold" href="/"><span>Intelli</span>            <span class="text-blue-500 -ml-1">Factory</span></a>
+          <div class="lg:hidden">
+            <button class="p-2 navbar-burger">
+              <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
+                <rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect>
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:block ml-auto mr-1">
+            <ul class="flex items-center text-white space-x-10">
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/">Home</a></li>
+              <li class="hoverable-mm"><a class="text-white font-bold text-lg">Open Source</a>
+                <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-700">
+                  <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://api.nuget.org/v3-flatcontainer/websharper.ui/5.0.0.120/icon" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">WebSharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Functional, reactive .NET web applications without writing JavaScript.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://websharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="https://avatars.githubusercontent.com/u/45857626?" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Bolero</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://fsbolero.io">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3 fill-current text-white" src="https://i.imgur.com/E6dfA3t.jpg" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">SiteFi</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center">
+                        <svg class="h-8 mb-3 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M2 4v14h14v-6l2-2v10H0V2h10L8 4H2zm10.3-.3l4 4L8 16H4v-4l8.3-8.3zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z"></path>
+                        </svg>
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Cloudsharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="text-white bold border-b-2 border-teal-300 hover:text-teal-900" href="https://cloudsharper.com">Find out more...</a>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/careers">Careers</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+          <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+          <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+            <div class="flex items-center mb-16 pr-6"><a class="ml-10 text-2xl text-gray-800 font-bold" href="/"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" /></a></div>
+            <div>
+              <ul>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/">Home</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/oss">Open Source</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/blogs">Blogs</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/careers">Careers</a></li>
+                <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="mt-auto px-10">
+              <p class="mt-6 mb-4 text-lg text-center"><span>2004-2021 © IntelliFactory. All rights reserved.</span></p>
+            </div>
+          </nav>
+        </div>
+      </section>
+      
+      <section class="relative py-20 2xl:py-40 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2 class="bg-opacity-25 bg-gray-900 mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Creating a WebSharper binding for Day.js</h2>
+          </div><img class="absolute top-0 left-0 w-full h-full object-cover" style="z-index:-10;" src="/img/category3.jpg" alt="" />
+        </div>
+      </section>
+      <section class="relative py-10 2xl:py-20 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center flex-wrap"><a href="/user/btamas"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/btamas.png" alt="Tamas Banka" /></a>
+              <div class="flex-1 text-left"><a href="/user/btamas">
+                  <h4 class="mb-1 text-2xl font-bold">Tamas Banka</h4></a>
+                <p>Dec 21, 2021</p>
+              </div>
+              <div class="text-right ml-20 flex-1 flex-basis-100">
+                <p class="mb-1 font-bold text-xl">Reading time:</p>
+                <p>36 mins</p>
+              </div>
+              <div class="text-right ml-20 mt-3 flex-1 flex-basis-100">
+                <p class="mb-1 font-bold text-xl">Share via:</p>
+                <div><a class="inline-block mr-2" href="https://twitter.com/intent/tweet?text=Creating+a+WebSharper+binding+for+Day.js&amp;url=https%3a%2f%2fintellifactorylabs.com%2fuser%2fbtamas%2f20211221-wig-tutorial-dayjs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#00acee">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                    </svg></a>                  <a class="inline-block mr-2" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fintellifactorylabs.com%2fuser%2fbtamas%2f20211221-wig-tutorial-dayjs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#0e76a8">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                    </svg></a>                  <a class="inline-block" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fintellifactorylabs.com%2fuser%2fbtamas%2f20211221-wig-tutorial-dayjs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#3b5998">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 2xl:py-40 bg-white overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><h1 id="creating-a-websharper-binding-for-day.js">Creating a WebSharper binding for <code>Day.js</code></h1>
+<p>Hello!
+In this blog I'm going to show you how to make an extension for WebSharper with WIG (WebSharper Interface Generator). WIG is a powerful tool in WebSharper and with that you can bind JavaScript libraries and access them from F# code. Let's get started!</p>
+<p>For this tutorial I will be binding <a href="https://day.js.org/en/">Day.js</a></p>
+<h2 id="first-steps">First steps</h2>
+<p>Let's create the template project first. You can use the following CLI command:</p>
+<pre><code class="language-bash">dotnet new websharper-ext -o YOUR-EXTENSION-NAME
+</code></pre>
+<p>In this case for example:</p>
+<pre><code class="language-bash">dotnet new websharper-ext -o WebSharper.DayJs
+</code></pre>
+<p>It created the WebSharper.DayJs folder with the following files:</p>
+<ul>
+<li><code>Main.fs</code></li>
+<li><code>WebSharper.DayJs.fsproj</code></li>
+<li><code>wsconfig.json</code></li>
+</ul>
+<p>We mainly work in <code>Main.fs</code></p>
+<h2 id="getting-to-know-wig">Getting to know WIG</h2>
+<p>When we open the <code>Main.fs</code> we'll see this:</p>
+<pre><code class="language-fs">namespace WebSharper.DayJs
+
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.InterfaceGenerator
+
+module Definition =
+
+    let I1 =
+        Interface &quot;I1&quot;
+        |+&gt; [
+                &quot;test1&quot; =&gt; T&lt;string&gt; ^-&gt; T&lt;string&gt;
+            ]
+
+    let I2 =
+        Generic -- fun t1 t2 -&gt;
+            Interface &quot;I2&quot;
+            |+&gt; [
+                    Generic - fun m1 -&gt; &quot;foo&quot; =&gt; m1 * t1 ^-&gt; t2
+                ]
+
+    let C1 =
+        Class &quot;C1&quot;
+        |+&gt; Instance [
+                &quot;foo&quot; =@ T&lt;int&gt;
+            ]
+        |+&gt; Static [
+                Constructor (T&lt;unit&gt; + T&lt;int&gt;)
+                &quot;mem&quot;   =&gt; (T&lt;unit&gt; + T&lt;int&gt; ^-&gt; T&lt;unit&gt;)
+                &quot;test2&quot; =&gt; (TSelf -* T&lt;int&gt; ^-&gt; T&lt;unit&gt;) * T&lt;string&gt; ^-&gt; T&lt;string&gt;
+                &quot;radius2&quot; =? T&lt;float&gt;
+                |&gt; WithSourceName &quot;R2&quot;
+            ]
+
+    let Assembly =
+        Assembly [
+            Namespace &quot;WebSharper.DayJs&quot; [
+                 I1
+                 I2
+                 C1
+            ]
+        ]
+
+[&lt;Sealed&gt;]
+type Extension() =
+    interface IExtension with
+        member ext.Assembly =
+            Definition.Assembly
+
+[&lt;assembly: Extension(typeof&lt;Extension&gt;)&gt;]
+do ()
+</code></pre>
+<p>This template shows some of the WIG syntax and stuff like <code>=&gt;</code>, <code>=?</code>. You can find what they mean in the <a href="https://developers.websharper.com/docs/v4.x/fs/wig">WebSharper WIG documentation</a>. For now I will just delete the unneeded parts:</p>
+<pre><code class="language-fs">namespace WebSharper.DayJs
+
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.InterfaceGenerator
+
+module Definition =
+
+    let Assembly =
+        Assembly [
+            Namespace &quot;WebSharper.DayJs&quot; [
+
+            ]
+        ]
+
+[&lt;Sealed&gt;]
+type Extension() =
+    interface IExtension with
+        member ext.Assembly =
+            Definition.Assembly
+
+[&lt;assembly: Extension(typeof&lt;Extension&gt;)&gt;]
+do ()
+
+</code></pre>
+<p>The <code>Assembly</code> part is very important. In there goes the classes that will be bound and resources that we need. You can give a <code>namespace</code> to each resource which in this case it's <code>WebSharper.DayJs</code>. Because of this I give a different name to the namespace on top of the file, usually <code>Something.Extension</code> so here:</p>
+<pre><code class="language-fsharp">namespace WebSharper.DayJs.Extension
+
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.InterfaceGenerator
+
+module Definition =
+    ...
+</code></pre>
+<p>Let's do some binding now!</p>
+<h2 id="binding-day.js">Binding <code>Day.js</code></h2>
+<p>First things first let's look for the <code>cdnjs</code> for Day.js. It can be found <a href="https://cdnjs.com/libraries/dayjs">here</a>. Let's copy the newest version's minified url. We want to put it in the assemblies like this:</p>
+<pre><code class="language-fsharp">let Assembly =
+    Assembly [
+        Namespace &quot;WebSharper.DayJs.Resources&quot; [
+            yield 
+                Resource &quot;DayJsCDN&quot; &quot;https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js&quot;
+        ]
+        Namespace &quot;WebSharper.DayJs&quot; [
+
+        ]
+    ]
+</code></pre>
+<p>Great! This will include a script tag with this source in the project you want to use <code>WebSharper.DayJs</code>. Now let's take a look at the <a href="https://day.js.org/docs/en/installation/installation">Day.js documentation</a>! After a quick look let's jump to the <b>Parse</b> tab ans start with binding.</p>
+<p>First is <code>Now</code> subtab which seems to be about the constructor. It accepts a native <code>Date</code> object and without parameters works too (It also accepts <code>undefined</code> but since it says it will translate to a unit constructor there is no need to put that in). Here's how we can bind it:</p>
+<pre><code class="language-fsharp">let DayJs =
+    Class &quot;dayjs&quot;
+    |&gt; WithSourceName &quot;DayJs&quot;
+    |+&gt; Static [
+        Constructor T&lt;unit&gt;
+        Constructor T&lt;Date&gt;
+    ]
+</code></pre>
+<p>Little explanation to this: the classname should be what you want to see in the JavaScript output. We can see <a href="https://day.js.org/docs/en/parse/now">here</a> that in JavaScript we make a <code>DayJs</code> object like this:</p>
+<pre><code class="language-js">var now = dayjs()
+</code></pre>
+<p>But with <code>WithSourceName</code> we can use it in the F# code like this:</p>
+<pre><code class="language-fsharp">let now = DayJs()
+</code></pre>
+<p>Moving on to the <code>String</code> subtab we can see it is also a constructor that accepts <code>ISO 8601</code> format strings but we just use plain string for it:</p>
+<pre><code class="language-fsharp">let DayJs =
+    Class &quot;dayjs&quot;
+    |&gt; WithSourceName &quot;DayJs&quot;
+    |+&gt; Static [
+        Constructor T&lt;unit&gt;
+        Constructor T&lt;Date&gt;
+        Constructor T&lt;string&gt;
+    ]
+</code></pre>
+<p>Next, in the <code>String + Format</code> we see that this constructor accepts multiple arguments, there are both required and optional parameters too. Note that</p>
+<ul>
+<li>First param: <code>string</code>, required</li>
+<li>Second param: either <code>string</code> or <code>string array</code>, required</li>
+<li>Third param: either <code>string</code> or <code>boolean</code>, optional</li>
+<li>Fourth param: <code>boolean</code> (only if the third param was <code>string</code>), optional</li>
+</ul>
+<p>With this in mind, the binding goes like this:</p>
+<pre><code class="language-fsharp">let DayJs =
+    Class &quot;dayjs&quot;
+    |&gt; WithSourceName &quot;DayJs&quot;
+    |+&gt; Static [
+        Constructor T&lt;unit&gt;
+        Constructor T&lt;Date&gt;
+        Constructor T&lt;string&gt;
+        Constructor (T&lt;string&gt; * (T&lt;string&gt; + !| T&lt;string&gt;) * !? T&lt;bool&gt;)
+        Constructor (T&lt;string&gt; * (T&lt;string&gt; + !| T&lt;string&gt;) * T&lt;string&gt; * !? T&lt;bool&gt;)
+    ]
+</code></pre>
+<p>Quick explanation: <code>Constructor</code> only accepts one parameter so when it needs more put them in brackets. <code>*</code> is used when there are multiple parameters, <code>+</code> is for the &quot;either&quot; case, <code>!?</code> means the parameter after that is optional and <code>!|</code> is used when the parameter is an array. For information about WIG notations, please visit the <a href="https://developers.websharper.com/docs/v4.x/fs/wig">WIG documentation</a>.</p>
+<p>There is one problem though. As you can see, this constructor depends on a plugin called <code>CustomParseFormat</code>. In JavaScript it should be used like this:</p>
+<pre><code class="language-js">var customParseFormat = require('dayjs/plugin/customParseFormat')
+
+dayjs.extend(customParseFormat)
+dayjs('12-25-1995', 'MM-DD-YYYY')
+</code></pre>
+<p>This is where this tutorial gets a little advanced. A possible solution to this uses <code>RequiresExternal</code>. It would look like this:</p>
+<pre><code class="language-fsharp">Constructor (T&lt;string&gt; * (T&lt;string&gt; + !| T&lt;string&gt;) * !? T&lt;bool&gt;)
+|&gt; RequiresExternal [T&lt;MY_RESOURCE_TYPE&gt;]
+</code></pre>
+<p>One thing to note is that the above mentioned <code>MY_RESOURCE_TYPE</code> has to implement the <code>IResource</code> interface. Let's make a WebSharper Library project for this!</p>
+<pre><code>dotnet new websharper-lib -lang f# -o WebSharper.DayJs.Helpers
+</code></pre>
+<p>After taking a look at <a href="https://github.com/dotnet-websharper/core">dotnet-websharper/core</a>, <a href="https://github.com/dotnet-websharper/core/blob/master/src/compiler/WebSharper.Core/Resources.fs">this</a> is the file we are looking for since WIG uses the <code>BaseResource</code> type in it. We can just copy the necessary code which implements the IResource:</p>
+<pre><code class="language-fsharp">namespace WebSharper.DayJs.Helpers
+
+open WebSharper
+open WebSharper.Core.Resources
+open System
+
+module DayJsHelpers =
+
+    let cleanLink dHttp (url: string) =
+        if dHttp &amp;&amp; url.StartsWith(&quot;//&quot;)
+            then &quot;http:&quot; + url
+            else url
+
+    let link dHttp (html: HtmlTextWriter) (url: string) =
+        if not (String.IsNullOrWhiteSpace(url)) then
+            html.AddAttribute(&quot;type&quot;, Core.ContentTypes.Text.Css.Text)
+            html.AddAttribute(&quot;rel&quot;, &quot;stylesheet&quot;)
+            html.AddAttribute(&quot;href&quot;, cleanLink dHttp url)
+            html.RenderBeginTag &quot;link&quot;
+            html.RenderEndTag()
+            html.WriteLine()
+
+    let script dHttp (html: HtmlTextWriter) isModule (url: string) =
+        if not (String.IsNullOrWhiteSpace(url)) then
+            html.AddAttribute(&quot;src&quot;, cleanLink dHttp url)
+            html.AddAttribute(&quot;type&quot;, if isModule then Core.ContentTypes.Text.Module.Text else Core.ContentTypes.Text.JavaScript.Text)
+            html.AddAttribute(&quot;charset&quot;, &quot;UTF-8&quot;)
+            html.RenderBeginTag &quot;script&quot;
+            html.RenderEndTag()
+
+    type Kind =
+        | Basic of string
+        | Complex of string * list&lt;string&gt;
+
+    let tryFindWebResource (t: Type) (spec: string) =
+        let ok name = name = spec || (name.StartsWith spec &amp;&amp; name.EndsWith spec)
+        t.Assembly.GetManifestResourceNames()
+        |&gt; Seq.tryFind ok
+
+    let tryGetUriFileName (u: string) =
+        if u.StartsWith &quot;http:&quot; || u.StartsWith &quot;https:&quot; || u.StartsWith &quot;//&quot; then
+            let parts = u.Split([| '/' |], StringSplitOptions.RemoveEmptyEntries)
+            Array.tryLast parts
+        else
+            None
+
+    type DayJsResource(kind: Kind) as this =
+        let self = this.GetType()
+        let name = self.FullName
+
+        new (spec: string) =
+            new DayJsResource(Basic spec)
+
+        new (b: string, x: string, [&lt;System.ParamArray&gt;] xs: string []) =
+            new DayJsResource(Complex(b, x :: List.ofArray xs))
+
+        member this.GetLocalName() =
+            name.Replace('+', '.').Split('`').[0]
+
+        interface IResource with
+            member this.Render ctx =
+                let dHttp = ctx.DefaultToHttp
+                let isLocal = ctx.GetSetting &quot;UseDownloadedResources&quot; |&gt; Option.exists (fun s -&gt; s.ToLower() = &quot;true&quot;)
+                let localFolder isCss f =
+                    ctx.WebRoot + 
+                    (if isCss then &quot;Content/WebSharper/&quot; else &quot;Scripts/WebSharper/&quot;) + this.GetLocalName() + &quot;/&quot; + f
+                match kind with
+                | Basic spec -&gt;
+                    let mt = 
+                        if spec.EndsWith &quot;.css&quot; then Css 
+                        elif spec.EndsWith &quot;.mjs&quot; then JsModule 
+                        else Js
+                    let r =
+                        match ctx.GetSetting name with
+                        | Some url -&gt; RenderLink url
+                        | None -&gt;
+                            match tryFindWebResource self spec with
+                            | Some e -&gt; Rendering.GetWebResourceRendering(ctx, self, e)
+                            | None -&gt;
+                                if isLocal then
+                                    match tryGetUriFileName spec with
+                                    | Some f -&gt;
+                                        RenderLink (localFolder (mt = Css) f)
+                                    | _ -&gt;
+                                        RenderLink spec
+                                else
+                                    RenderLink spec
+                    fun writer -&gt; r.Emit(writer, mt, dHttp)
+                | Complex (b, xs) -&gt;
+                    let b = defaultArg (ctx.GetSetting name) b
+                    let urls =
+                        xs |&gt; List.map (fun x -&gt;
+                            let url = b.TrimEnd('/') + &quot;/&quot; + x.TrimStart('/')
+                            url, url.EndsWith &quot;.css&quot;     
+                        )  
+                    let urls = 
+                        if isLocal then 
+                            urls |&gt; List.map (fun (u, isCss) -&gt;
+                                match tryGetUriFileName u with
+                                | Some f -&gt;
+                                    localFolder isCss f, isCss
+                                | _ -&gt;
+                                    u, isCss
+                            )
+                        else urls
+                    fun writer -&gt;
+                        for url, isCss in urls do
+                            if isCss then
+                                link dHttp (writer Styles) url
+                            else script dHttp (writer Scripts) false url
+</code></pre>
+<p>Basically what is important in this code is that one of its functionality is making a <code>script</code> element in the html's <code>head</code>. <a href="https://day.js.org/docs/en/plugin/loading-into-browser">Here</a> it is stated that we can use the <code>extend</code> method like this:</p>
+<pre><code class="language-js">dayjs.extend(window.dayjs_plugin_advancedFormat)
+</code></pre>
+<p>What we need is to write a script element with the above line, replacing <code>advancedFormat</code> with the appropriate plugin name. This method should do the job:</p>
+<pre><code class="language-fsharp">let extendScript (advFormat: string) (html: HtmlTextWriter) =
+    html.RenderBeginTag &quot;script&quot;
+    html.Write(sprintf &quot;dayjs.extend(window.dayjs_plugin_%s)&quot; advFormat)
+    html.RenderEndTag()
+</code></pre>
+<p>Well, how do we get the <code>advancedFormat</code>? Looking at the <a href="https://cdnjs.com/libraries/dayjs">CDNJS</a> links every link has this format: <code>https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js</code>. Using <code>System.String().Split()</code> we can get the name easily:</p>
+<pre><code class="language-fsharp">let splitCDN =
+    url.Split('/')
+    |&gt; Array.last
+    |&gt; fun x -&gt; x.Split('.')
+    |&gt; Array.head
+</code></pre>
+<p>Now let's extend the type with this logic:</p>
+<pre><code class="language-fsharp">interface IResource with
+    member this.Render ctx =
+        let dHttp = ctx.DefaultToHttp
+        let isLocal = ctx.GetSetting &quot;UseDownloadedResources&quot; |&gt; Option.exists (fun s -&gt; s.ToLower() = &quot;true&quot;)
+        let localFolder isCss f =
+            ctx.WebRoot + 
+            (if isCss then &quot;Content/WebSharper/&quot; else &quot;Scripts/WebSharper/&quot;) + this.GetLocalName() + &quot;/&quot; + f
+        match kind with
+        | Basic spec -&gt;
+            let mt = 
+                if spec.EndsWith &quot;.css&quot; then Css 
+                elif spec.EndsWith &quot;.mjs&quot; then JsModule 
+                else Js
+            match ctx.GetSetting name with
+            | Some url -&gt;
+                RenderLink url
+                |&gt; fun r -&gt;
+                    fun writer -&gt;
+                        let splitCDN =
+                            url.Split('/')
+                            |&gt; Array.last
+                            |&gt; fun x -&gt; x.Split('.')
+                            |&gt; Array.head
+                        r.Emit(writer, mt, dHttp)
+                        extendScript splitCDN (writer Scripts)
+            | None -&gt;
+                match tryFindWebResource self spec with
+                | Some e -&gt; Rendering.GetWebResourceRendering(ctx, self, e)
+                | None -&gt;
+                    if isLocal then
+                        match tryGetUriFileName spec with
+                        | Some f -&gt;
+                            RenderLink (localFolder (mt = Css) f)
+                        | _ -&gt;
+                            RenderLink spec
+                    else
+                        RenderLink spec
+                |&gt; fun r -&gt;
+                    fun writer -&gt;
+                        let splitCDN =
+                            spec.Split('/')
+                            |&gt; Array.last
+                            |&gt; fun x -&gt; x.Split('.')
+                            |&gt; Array.head
+                        r.Emit(writer, mt, dHttp)
+                        extendScript splitCDN (writer Scripts)
+        | Complex (b, xs) -&gt;
+            let b = defaultArg (ctx.GetSetting name) b
+            let urls =
+                xs |&gt; List.map (fun x -&gt;
+                    let url = b.TrimEnd('/') + &quot;/&quot; + x.TrimStart('/')
+                    url, url.EndsWith &quot;.css&quot;     
+                )  
+            let urls = 
+                if isLocal then 
+                    urls |&gt; List.map (fun (u, isCss) -&gt;
+                        match tryGetUriFileName u with
+                        | Some f -&gt;
+                            localFolder isCss f, isCss
+                        | _ -&gt;
+                            u, isCss
+                    )
+                else urls
+            fun writer -&gt;
+                for url, isCss in urls do
+                    if isCss then
+                        link dHttp (writer Styles) url
+                    else
+                        let splitCDN =
+                            url.Split('/')
+                            |&gt; Array.last
+                            |&gt; fun x -&gt; x.Split('.')
+                            |&gt; Array.head
+                        script dHttp (writer Scripts) false url
+                        extendScript splitCDN (writer Scripts)
+</code></pre>
+<p>Now to make the resource types we need:</p>
+<pre><code class="language-fsharp">type MainResource() =
+    inherit BaseResource(&quot;https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js&quot;)
+
+[&lt;Require(typeof&lt;MainResource&gt;)&gt;]
+type CustomParseFormatResource() =
+    inherit DayJsResource(&quot;https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/plugin/customParseFormat.min.js&quot;)
+</code></pre>
+<p>Jumping back to <code>WebSharper.DayJs/Main.fs</code> we have to make the following modifications:</p>
+<pre><code class="language-fsharp">let DayJs =
+    Class &quot;dayjs&quot;
+    |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.MainResource&gt;]
+    |&gt; WithSourceName &quot;DayJs&quot;
+    |+&gt; Static [
+        ...
+
+        Constructor (T&lt;string&gt; * (T&lt;string&gt; + !| T&lt;string&gt;) * !? T&lt;bool&gt;)
+        |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.CustomParseFormatResource&gt;]
+        Constructor (T&lt;string&gt; * (T&lt;string&gt; + !| T&lt;string&gt;) * T&lt;string&gt; * !? T&lt;bool&gt;)
+        |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.CustomParseFormatResource&gt;]
+        Constructor (T&lt;int&gt;)
+    ]
+
+let Assembly =
+    Assembly [
+        // Namespace &quot;WebSharper.DayJs.Resources&quot; [
+        //     // DayJsResources.CustomParseFormatResource
+            
+        // ]
+        Namespace &quot;WebSharper.DayJs&quot; [
+            FromStandardObject
+            FromStandardPluralObject
+            DayJs
+        ]
+    ]
+</code></pre>
+<p>Now for the final part let's modify the project file a bit. Add the following code to the end of the project file (just before the <code>&lt;/Project&gt;</code>):</p>
+<pre><code class="language-xml">&lt;ItemGroup&gt;
+  &lt;Reference Include=&quot;WebSharper.DayJs.Helpers&quot;&gt;
+    &lt;HintPath&gt;..\WebSharper.DayJs.Helpers\bin\Debug\netstandard2.0\WebSharper.DayJs.Helpers.dll&lt;/HintPath&gt;
+  &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<p>This will include the helpers' dll that is needed when we want to use the resources from it.</p>
+<p>Great! Now let's do some testing with it. Let's create a WebSharper SPA project for the tests, use the following CLI command:</p>
+<pre><code>dotnet new websharper-spa -lang f# -o WebSharper.DayJs.Tests
+</code></pre>
+<p>For the record, the directory structure should look something like this:</p>
+<ul>
+<li>WebSharper.DayJs</li>
+<li>WebSharper.DayJs.Helpers</li>
+<li>WebSharper.DayJs.Tests</li>
+</ul>
+<p>Add the same kind of changes to the test project file but with <code>WebSharper.DayJs.dll</code>:</p>
+<pre><code class="language-xml">&lt;ItemGroup&gt;
+  &lt;Reference Include=&quot;WebSharper.DayJs&quot;&gt;
+    &lt;HintPath&gt;..\WebSharper.DayJs\bin\Debug\netstandard2.0\WebSharper.DayJs.dll&lt;/HintPath&gt;
+  &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<p>Now let's delete the unnecessary parts from the tests' <code>Client.fs</code>! It should look like this:</p>
+<pre><code class="language-fsharp">namespace WebSharper.DayJs.Tests
+
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.JQuery
+open WebSharper.UI
+open WebSharper.UI.Client
+open WebSharper.UI.Templating
+
+[&lt;JavaScript&gt;]
+module Client =
+
+    type IndexTemplate = Template&lt;&quot;wwwroot/index.html&quot;, ClientLoad.FromDocument&gt;
+
+    [&lt;SPAEntryPoint&gt;]
+    let Main () =
+
+        IndexTemplate.Main()
+            .Doc()
+        |&gt; Doc.RunById &quot;main&quot;
+
+</code></pre>
+<p>I'll also modify the <code>index.html</code> a bit. My preference is that I move the index.html out of the <code>wwwroot</code> folder, delete the folder and modify these files accordingly:</p>
+<ul>
+<li>In <code>Client.fs</code> change <code>IndexTemplate</code>:
+<ul>
+<li>
+<pre><code class="language-fsharp">type IndexTemplate = Template&lt;&quot;index.html&quot;, ClientLoad.FromDocument&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>In <code>wsconfig.json</code> change <code>outputDir</code>:
+<ul>
+<li>
+<pre><code class="language-json">&quot;outputDir&quot;: &quot;Content&quot;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>Nice! Now let's print some dates as test! First we go to <code>index.html</code> and do something like this:</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;DayJs tests&lt;/h1&gt;
+    &lt;div id=&quot;main&quot; ws-children-template=&quot;Main&quot;&gt;
+        &lt;div ws-replace=&quot;DatesAsString&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;Content/WebSharper.DayJs.Tests.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<p>I won't go into too much detail on how to make WebSharper template html files, please visit the <a href="https://developers.websharper.com/docs/v4.x/fs/overview">WebSharper documentation</a>. Now go to the <code>Client.fs</code> and make the following changes:</p>
+<pre><code class="language-fsharp">open WebSharper.UI.Html
+open WebSharper.DayJs
+...
+
+    [&lt;SPAEntryPoint&gt;]
+    let Main () =
+
+        let someDate = DayJs(&quot;2019-01-25&quot;)
+        let formattedDate = DayJs(&quot;12-25-1995&quot;, &quot;asdfasdsadasdasd&quot;)
+
+        IndexTemplate.Main()
+            .DatesAsString(
+                Doc.Concat [
+                    p [] [text someDate]
+                    p [] [text formattedDate]
+                ]
+            )
+            .Doc()
+        |&gt; Doc.RunById &quot;main&quot;
+
+</code></pre>
+<p>The reason for <code>formattedDate</code>'s second parameter is that we'd like to test if the plugin is imported as well so this should give us <code>Invalid date</code> as a result.</p>
+<p>But this will not compile just yet because the type of both <code>someDate</code> and <code>formattedDate</code> is <code>DayJs</code> and <code>text</code> requires a <code>string</code> as parameter. So let's bind a function that converts DayJs objects to string. There it is, in the <a href="https://day.js.org/docs/en/display/as-string">Display/As String tab</a>. Add the <code>toString()</code> method:</p>
+<pre><code class="language-fsharp">let DayJs =
+    Class &quot;dayjs&quot;
+    |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.MainResource&gt;]
+    |&gt; WithSourceName &quot;DayJs&quot;
+    |+&gt; Static [
+        Constructor T&lt;unit&gt;
+        Constructor T&lt;Date&gt;
+        Constructor T&lt;string&gt;
+        Constructor (T&lt;string&gt; * (T&lt;string&gt; + !| T&lt;string&gt;) * !? T&lt;bool&gt;)
+        |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.CustomParseFormatResource&gt;]
+        Constructor (T&lt;string&gt; * (T&lt;string&gt; + !| T&lt;string&gt;) * T&lt;string&gt; * !? T&lt;bool&gt;)
+        |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.CustomParseFormatResource&gt;]
+        Constructor (T&lt;int&gt;)
+    ]
+    |+&gt; Instance [
+        &quot;toString&quot; =&gt; T&lt;unit&gt; ^-&gt; T&lt;string&gt;
+    ]
+</code></pre>
+<p>If we add the <code>.ToString()</code> to <code>someDate</code> and <code>formattedDate</code> in the tests it will now compile and if you open the <code>index.html</code> after build you will see one is a correct date while the other is invalid. This confirms that the binding is good so far.</p>
+<p>From now on I will only give explanations when we encounter problems where the solution has not yet been seen in this tutorial.</p>
+<hr />
+<p>In <a href="https://day.js.org/docs/en/parse/object">Parse/Object</a> we can see that the constructor can also accept an object that contains optional values like <code>year</code>, <code>month</code>, etc. When we have to bind something like this, use <code>Pattern.Config</code>:</p>
+<pre><code class="language-fsharp">let FromStandardObject =
+    Pattern.Config &quot;FromStandardObject&quot; {
+        Required = []
+        Optional = [
+            &quot;years&quot;, T&lt;int&gt;
+            &quot;months&quot;, T&lt;int&gt;
+            &quot;date&quot;, T&lt;int&gt;
+            &quot;hours&quot;, T&lt;int&gt;
+            &quot;minutes&quot;, T&lt;int&gt;
+            &quot;seconds&quot;, T&lt;int&gt;
+            &quot;milliseconds&quot;, T&lt;int&gt;
+        ]
+    }    
+</code></pre>
+<p>Add it to the constructor:</p>
+<pre><code class="language-fsharp">Constructor FromStandardObject
+|&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.ObjectSupport&gt;]
+</code></pre>
+<p>Also do not forget when you make new classes like with <code>Pattern.Config</code> to add it to the namespaces:</p>
+<pre><code class="language-fsharp">Namespace &quot;WebSharper.DayJs&quot; [
+    FromStandardObject
+    DayJs
+]
+</code></pre>
+<hr />
+<p>During the binding you might notice that some methods are present both as <code>static</code> and <code>instance</code>. Now if you define two methods that are essentially the same but one is static while the other is instance, WIG will give you a duplicate definition error. To work around this you can yet again use <code>WithSourceName</code>. For example for the <code>utc</code> method:</p>
+<pre><code class="language-fsharp">let DayJs =
+    Class &quot;dayjs&quot;
+    |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.MainResource&gt;]
+    |&gt; WithSourceName &quot;DayJs&quot;
+    |+&gt; Static [
+        ...
+        
+        &quot;utc&quot; =&gt; !? T&lt;bool&gt; ^-&gt; TSelf
+        |&gt; WithSourceName &quot;StaticUTC&quot;
+        |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.UTCResource&gt;]
+
+        ...
+    ]
+    |+&gt; Instance [
+        ...
+
+        &quot;utc&quot; =&gt; !? T&lt;bool&gt; ^-&gt; TSelf
+        |&gt; RequiresExternal [T&lt;WebSharper.DayJs.Helpers.DayJsHelpers.UTCResource&gt;]
+        
+        ...
+    ]
+</code></pre>
+<p>With this both methods have the same name in JavaScript but not in F# which is totally fine for us.</p>
+<hr />
+<p>Probably the last, more challenging problem is the handling of <code>locales</code>. In JavaScript the usage goes like this:</p>
+<pre><code class="language-js">require('dayjs/locale/de')
+dayjs.locale('de')
+dayjs.locale('en')
+</code></pre>
+<p>One idea would be to make a <code>Locale</code> Class which has properties like <code>EN</code> or <code>FR</code> which requires the its own locale url as source. That's what we will be going with but taking a look at Day.js' <a href="https://cdnjs.com/libraries/dayjs">cdnjs</a> page there are quite a lot of locales so let's make a generator for them:</p>
+<pre><code class="language-fsharp">let Locale =
+    Class &quot;Locale&quot;
+
+let mutable Resources : CodeModel.NamespaceEntity list = []
+
+let LocaleSetup (s: string) = 
+    let r =
+        Resource (s.ToUpperInvariant() + &quot;CDN&quot;) (sprintf &quot;https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/locale/%s.min.js&quot; s)
+    
+    Resources &lt;- List.append Resources [r]
+
+    (s.ToUpperInvariant()) =? TSelf
+    |&gt; Requires [r]
+    |&gt; WithGetterInline (sprintf &quot;'%s'&quot; s)
+
+let localeStrings =
+    [
+        &quot;af&quot;
+        &quot;am&quot;
+        &quot;ar-dz&quot;
+        ...
+    ]
+
+Locale
+|+&gt; Static (localeStrings |&gt; List.map (fun x -&gt; LocaleSetup x :&gt; CodeModel.IClassMember))
+|&gt; ignore
+</code></pre>
+<p>Now we just need to add the resources to the assemblies too:</p>
+<pre><code class="language-fsharp">let Assembly =
+    Assembly [
+        Namespace &quot;WebSharper.DayJs.Resources&quot; [
+            yield! Resources
+        ]
+        ...
+    ]
+</code></pre>
+<h2 id="final-words">Final Words</h2>
+<p>Thank you for following along! You can find the whole project on <a href="https://github.com/btamas2000/dayjs">my GitHub</a>. I encourage you to try making your own extension for WebSharper. These Extensions really show just how much you can do with WS and how powerful a tool WIG is. Have a great day!</p>
+<p>Tamas Banka
+<a href="https://github.com/btamas2000">@btamas2000</a></p>
+</div></div>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-12">
+            <div class="lg:w-2/3 lg:pr-16 mb-2 lg:mb-8">
+              <h2 class="text-3xl md:text-4xl font-bold font-heading">Read more from </h2>
+            </div>
+            <div class="text-sm lg:text-base lg:w-1/3">
+              <p class="leading-loose text-blueGray-500"><span>Can’t find what you were looking for? </span>                <a class="text-blue-600 hover:text-blue-700" href="/contact">Drop us a line</a>.
+                              
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8"><a href="/user/btamas">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="/img/avatar/btamas.png" alt="Tamas Banka" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Tamas Banka</span></div>
+                </div></a>              <a href="/user/btamas/20211221-wig-tutorial-momentjs">
+                <h4 class="text-xl font-semibold">Creating a WebSharper binding for Moment.js</h4></a>
+              <p class="text-sm md:text-base text-blueGray-400">20211221 · 13 min read</p>
+            </div><div class="w-full md:w-1/2 lg:w-1/4 p-4 mb-8 bg-gray-50 rounded-3xl"><a href="https://github.com/IntelliFactory/blogs/tree/master/user/btamas/20211221-wig-tutorial-dayjs.md">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Tamas Banka" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Found a typo?</span></div>
+                </div></a>
+              <h4 class="text-xl font-semibold">This blog post is hosted on GitHub <a href="https://github.com/IntelliFactory/blogs/tree/master/user/btamas/20211221-wig-tutorial-dayjs.md">here</a>. Feel free to file a ticket or send a PR.</h4>
+            </div>
+            
+            
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="2xl:py-20 py-5">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap -mx-4 border-b border-gray-100 pt-5 lg:pt-10">
+            <div class="w-full lg:w-3/5 px-4">
+              <div class="flex flex-wrap -mx-4">
+                <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">IntelliFactory</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/blogs">Blogs</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/careers">Careers</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
+                    <li class="mb-4 Cookies"><a class="hover:underline" href="/cookie-policy">Cookies</a></li>
+                    <li><a class="hover:underline" href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-1/3 px-4 mb-4">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Services</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/home#consulting">Consulting</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#development">Development</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#code-synthesis">AI-driven Code Synthesis</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#dsls">Domain-Specific Languages</a></li>
+                  </ul>
+                </div>
+                <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Open Source</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="https://websharper.com">WebSharper</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="https://fsbolero.io">Bolero</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="#">From our Lab</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+              <h3 class="mb-10 text-xl font-bold">Newsletter</h3>
+              <form method="post" id="newsletter-form">
+                <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full"><span class="inline-block pl-2 lg:pl-5">
+                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle>
+                      <circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle>
+                    </svg></span>
+                  <input id="newsletter-input" class="pl-4 py-2 focus:outline-none rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Your email address" />
+                  <button id="signup" class="ml-auto px-6 lg:px-8 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                </div>
+                <div id="newsletter-alert-list"></div>
+                <p class="text-gray-300">We will not spam you or give your details to anyone.</p>
+              </form>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center mb-8 lg:mb-0 pt-5">
+            <div class="w-full md:w-3/4 mb-8 md:mb-0">
+              <div class="md:flex items-center"><a class="inline-block text-gray-900 text-xl font-bold" href="#"><img class="h-7" src="/img/if-logo-long.png" alt="IntelliFactory" width="auto" /></a>              <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                <p class="hidden lg:block text-sm"><span>© 2004-2021 IntelliFactory.</span>                <span class="text-gray-300">All rights reserved.</span></p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4">
+              <div class="md:flex items-center justify-end"><a class="inline-block mr-2" href="https://github.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://facebook.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#3b5998">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://twitter.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#00acee">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://www.linkedin.com/company/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#0e76a8">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                  </svg></a>              <a class="inline-block" href="https://vimeo.com/user15828007">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#86c9ef">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.82 11.419c-1.306 2.792-4.463 6.595-6.458 6.595-1.966 0-2.25-4.192-3.324-6.983-.527-1.372-.868-1.058-1.858-.364l-.604-.779c1.444-1.27 2.889-2.745 3.778-2.826.998-.096 1.615.587 1.845 2.051.305 1.924.729 4.91 1.472 4.91.577 0 2.003-2.369 2.076-3.215.13-1.24-.912-1.277-1.815-.89 1.43-4.689 7.383-3.825 4.888 1.501z"></path>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div>
+        
+        <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+        <script src="/js/Dynamic.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

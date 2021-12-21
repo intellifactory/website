@@ -4,7 +4,27 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Fri, 10 Dec 2021 23:25:13 UTC</lastBuildDate>
+    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <item>
+      <title>Creating a WebSharper binding for Day.js</title>
+      <link>https://intellifactorylabs.com/user/btamas/20211221-wig-tutorial-dayjs</link>
+      <guid isPermaLink="false">btamas20211221-wig-tutorial-dayjs</guid>
+      <category>fsharp</category>
+      <category>websharper</category>
+      <category>wig</category>
+      <description></description>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 UTC</pubDate>
+    </item>
+    <item>
+      <title>Creating a WebSharper binding for Moment.js</title>
+      <link>https://intellifactorylabs.com/user/btamas/20211221-wig-tutorial-momentjs</link>
+      <guid isPermaLink="false">btamas20211221-wig-tutorial-momentjs</guid>
+      <category>fsharp</category>
+      <category>websharper</category>
+      <category>wig</category>
+      <description></description>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Variations for a WebSharper shopping cart</title>
       <link>https://intellifactorylabs.com/user/granicz/20201231-variations-for-a-websharper-shopping-cart</link>
