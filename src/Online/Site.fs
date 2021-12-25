@@ -13,6 +13,7 @@ open WebSharper.UI.Templating
 
 type EndPoint =
     | [<EndPoint "/">] Home
+    | [<EndPoint "/home">] HomeRedirect
     | [<EndPoint "GET /careers">] Careers
     // The main blog page
     | [<EndPoint "GET /blogs">] Blogs
@@ -864,6 +865,8 @@ module Site =
             match endpoint with
             | EndPoint.Home ->
                 REDIRECT_TO (ctx.Link Blogs)
+            | HomeRedirect ->
+                REDIRECT_TO (ctx.Link Blogs)
             | Category cat ->
                 CATEGORY cat
             | Blogs ->
@@ -992,6 +995,8 @@ type Website() =
             //    |> Seq.map (fun x -> x.Name.Replace(".html", ""))
             //    |> List.ofSeq
             [
+                Home
+                HomeRedirect
                 //// Generate the learning page
                 //for training in Site.trainings do
                 //    Courses training
