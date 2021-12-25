@@ -41,3 +41,9 @@ cp -rT website-template/public/css/tailwind/tailwind.min.css src/Online/wwwroot/
 
 echo "Copy css/tailwind/tailwind.css to /src/Online/wwwroot/css/tailwind/tailwind.css"
 cp -rT website-template/public/css/tailwind/tailwind.css src/Online/wwwroot/css/tailwind/tailwind.css
+
+echo "Copy templates image assets to /src/Online/wwwroot/images"
+cp -rT  website-template/src/assets/images src/Online/wwwroot/images
+
+echo "Copy templates css assets to /src/Online/wwwroot/css"
+cp -rT  website-template/src/assets/css src/Online/wwwroot/css

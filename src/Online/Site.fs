@@ -31,6 +31,8 @@ type EndPoint =
     | [<EndPoint "GET /debug">] Debug
     | [<EndPoint "GET /oss">] OSS
     | [<EndPoint "GET /404.html">] Error404
+    // Old URL format for blog articles
+    | [<EndPoint "GET /blog">] Redirect1 of id1:int * slug:string
 
 open Templates
 
@@ -746,7 +748,7 @@ module Site =
                     .Count(string <| List.length articles)
                     .Count_NewThisYear(
                         articles
-                        |> List.filter (fun article -> article.Date.Year = DateTime.Today.Day)
+                        |> List.filter (fun article -> article.Date.Year = DateTime.Today.Year)
                         |> List.length
                         |> string
                     )
@@ -768,6 +770,11 @@ module Site =
                     |> List.map fst
                     |> sprintf "Trying to find page \"%s\" (with key=\"%s\"), but it's not in %A" p page
                     |> Content.Text
+            let REDIRECT_TO (url: string) =
+                RedirectTemplate()
+                    .Url(url)
+                    .Doc()
+                |> Content.Page
             let ARTICLES_BY_USEROPT (userOpt: string option) =
                 articlesRef.Value |> Map.toList
                 // Filter by user, if given
@@ -856,7 +863,7 @@ module Site =
 
             match endpoint with
             | EndPoint.Home ->
-                Content.Text "Home"
+                REDIRECT_TO (ctx.Link Blogs)
             | Category cat ->
                 CATEGORY cat
             | Blogs ->
@@ -916,6 +923,13 @@ module Site =
                 OSS ()
             | Error404 ->
                 Error404 ()
+            | Redirect1 (id1, oldslug) ->
+                let user, datestring =
+                    if identities1.Value.ContainsKey id1 then
+                        identities1.Value.[id1]
+                    else
+                        failwithf "Unable to find user for id1=%d, with map=%A" id1 identities1.Value
+                REDIRECT_TO (Urls.OLD_TO_POST_URL (user, datestring, oldslug))
             | Debug ->
                 Content.Page(
                     [
@@ -988,9 +1002,9 @@ type Website() =
                 Contact
                 //// Generate the main blog page
                 Blogs
-                //// Generate redirection pages for the old article pages
-                //for (_, article) in articles do
-                //    Redirect1 (fst article.Identity, article.SlugWithoutDate)
+                // Generate redirection pages for the old article pages
+                for (_, article) in articles do
+                    Redirect1 (fst article.Identity, article.SlugWithoutDate)
                 // Generate articles
                 for ((user, slug), _) in articles do
                     if String.IsNullOrEmpty user then

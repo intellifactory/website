@@ -1,0 +1,184 @@
+.markdown ol,
+.markdown ul {
+  font-family: "DM Sans";
+  padding-top: unset;
+  padding-right: unset;
+  padding-bottom: unset;
+  padding-left: 1.5em
+}
+.markdown ol,
+.markdown ol[type="a"],
+.markdown ol[type="i"],
+.markdown ul,
+.markdown ul ul {
+  list-style-position: initial;
+  list-style-image: initial
+}
+.mega-menu,
+.modal.hidden {
+  display: none
+}
+.markdown p {
+  font-family: "DM Sans"
+}
+.markdown ol {
+  list-style-type: decimal
+}
+.markdown ol[type="a"] {
+  list-style-type: lower-latin
+}
+.markdown ol[type="i"] {
+  list-style-type: lower-roman
+}
+.markdown ul {
+  list-style-type: disc
+}
+.markdown ul ul {
+  list-style-type: circle
+}
+.markdown pre {
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  overflow-y: auto
+}
+.markdown blockquote {
+  margin-left: 0;
+  position: relative;
+  padding: 10px 20px 10px 50px;
+  background-color: #f1f5f7;
+  border-left: 4px solid #37517e;
+  font-size: 21px;
+  line-height: 1.6
+}
+.markdown blockquote p {
+  margin-bottom: unset;
+  margin-left: .75em
+}
+.markdown .quote p {
+  margin-bottom: unset
+}
+.markdown blockquote::before {
+  content: open-quote;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  speak: none;
+  text-transform: none;
+  position: absolute;
+  margin-left: -30px;
+  font-size: 3em;
+  transform: translateY(-55%) rotate(180deg)
+}
+.markdown table > tbody > tr > td,
+.markdown table > tbody > tr > th,
+.markdown table > tfoot > tr > td,
+.markdown table > tfoot > tr > th,
+.markdown table > thead > tr > td,
+.markdown table > thead > tr > th {
+  padding: 8px;
+  line-height: 1.42857;
+  vertical-align: top;
+  border-top: 1px solid #ddd
+}
+.markdown h1:not(:first-child),
+.markdown h2:not(:first-child),
+.markdown h3:not(:first-child),
+.markdown h4:not(:first-child),
+.markdown h5:not(:first-child),
+.markdown h6:not(:first-child) {
+  margin-top: 1em
+}
+.markdown a {
+  text-decoration-line: underline;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  color: #47b2e4
+}
+.bg-red-600 {
+  background-color: #dc2626
+}
+.error-alert,
+.input-failed-validation {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254,226,226,var(--tw-bg-opacity))
+}
+.text-red-100 {
+  color: #fee2e2
+}
+.error-alert {
+  --tw-text-opacity: 1;
+  --tw-border-opacity: 1;
+  border-top-color:  ;
+  color: rgba(6,78,59,var(--tw-text-opacity))
+}
+.input-failed-validation {
+  border-color: red
+}
+.text-red {
+  color: red
+}
+.mega-menu {
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1739C4;
+  top: 48;
+  color: white;
+}
+
+.mega-menu svg {
+  fill: white;
+  margin-right: 1.5rem;
+}
+
+nav ul > li {
+  height: 48px;
+  line-height: 48px;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.hoverable, .hoverable-mm {
+  padding-right: 1rem;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse) - 1rem) !important;
+  padding-left: 1rem;
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)) - 1rem) !important;
+}
+
+.hoverable:hover, .hoverable-mm:hover {
+  background-color: #1739C4;
+}
+.hoverable-mm > a:after {
+  content: "\25BC";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}
+
+.hoverable-mm:hover .mega-menu {
+  display: block;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+#JobFiles .fileName + span {
+  margin-left: 1.5rem;
+  cursor: pointer;
+  color: red
+}
+@media screen and (max-width:767px) {
+  .flex-basis-100 {
+    flex-basis: 100%
+  }
+}
+

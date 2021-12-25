@@ -11,3 +11,4 @@ type CategoryTemplate = Template<"../Online/category.html", serverLoad=ServerLoa
 type OSSTemplate = Template<"../Online/oss.html", serverLoad=ServerLoad.WhenChanged>
 type Error404Template = Template<"../Online/404.html", serverLoad=ServerLoad.WhenChanged>
 type JobsTemplate = Template<"../Online/jobs.html", serverLoad=ServerLoad.WhenChanged>
+type RedirectTemplate = Template<"../Online/redirect.html", serverLoad=ServerLoad.WhenChanged>

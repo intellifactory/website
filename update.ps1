@@ -39,3 +39,9 @@ xcopy website-template\public\css\tailwind\tailwind.min.css src\Online\wwwroot\c
 
 Write-Output "Copy css\tailwind\tailwind.css to src\Online\wwwroot\css\tailwind\tailwind.css"
 xcopy website-template\public\css\tailwind\tailwind.css src\Online\wwwroot\css\tailwind\
+
+Write-Output "Copy templates image assets to src\Online\wwwroot\images"
+xcopy website-template\src\assets\images\* src\Online\wwwroot\images\ /s /e
+
+Write-Output "Copy templates css assets to src\Online\wwwroot\css"
+xcopy website-template\src\assets\css\* src\Online\wwwroot\css\ /s /e

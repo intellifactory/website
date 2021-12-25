@@ -10,6 +10,12 @@
 /src/Online/wwwroot/assets/*
 /src/Online/wwwroot/img/avatar/orig/*
 /src/Online/wwwroot/js/Dynamic.*
+/src/Online/author.html
+/src/Online/category.html
+/src/Online/oss.html
+/src/Online/404.html
+/src/Online/jobs.html
+/src/*.html
 /_template/node_modules/*
 /_template/public/*
 /_template/src/.gitignore
@@ -26,3 +32,4 @@
 /robot-avatar-icons-2021-08-29-13-22-55-utc.zip
 /robot-avatar-icons-2021-08-29-13-22-55-utc/*
 /shuffle-*
+/adam
