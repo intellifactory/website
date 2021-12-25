@@ -3,11 +3,11 @@
   <channel>
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
-    <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <link>https://intellifactory.com</link>
+    <lastBuildDate>Sat, 25 Dec 2021 01:47:46 UTC</lastBuildDate>
     <item>
       <title>Try WebSharper: version info about extensions and some embedding improvements</title>
-      <link>https://intellifactorylabs.com/user/gansperger/20151006-try-websharper-version-info-about-extensions-and-some-embedding-improvements</link>
+      <link>https://intellifactory.com/user/gansperger/20151006-try-websharper-version-info-about-extensions-and-some-embedding-improvements</link>
       <guid isPermaLink="false">gansperger20151006-try-websharper-version-info-about-extensions-and-some-embedding-improvements</guid>
       <category>fsharp</category>
       <category>trywebsharper</category>
@@ -17,7 +17,7 @@
     </item>
     <item>
       <title>Try WebSharper: on-hover type info</title>
-      <link>https://intellifactorylabs.com/user/gansperger/20150918-try-websharper-on-hover-type-info</link>
+      <link>https://intellifactory.com/user/gansperger/20150918-try-websharper-on-hover-type-info</link>
       <guid isPermaLink="false">gansperger20150918-try-websharper-on-hover-type-info</guid>
       <category>fsharp</category>
       <category>trywebsharper</category>
@@ -27,7 +27,7 @@
     </item>
     <item>
       <title>Try WebSharper: update notes for snippets</title>
-      <link>https://intellifactorylabs.com/user/gansperger/20150826-try-websharper-update-notes-for-snippets</link>
+      <link>https://intellifactory.com/user/gansperger/20150826-try-websharper-update-notes-for-snippets</link>
       <guid isPermaLink="false">gansperger20150826-try-websharper-update-notes-for-snippets</guid>
       <category>fsharp</category>
       <category>trywebsharper</category>

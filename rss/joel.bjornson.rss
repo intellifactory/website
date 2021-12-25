@@ -3,11 +3,11 @@
   <channel>
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
-    <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <link>https://intellifactory.com</link>
+    <lastBuildDate>Sat, 25 Dec 2021 01:47:46 UTC</lastBuildDate>
     <item>
       <title>WebSharper Extensions for ExtJS 4</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20110724-websharper-extensions-for-extjs-4</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20110724-websharper-extensions-for-extjs-4</link>
       <guid isPermaLink="false">joel.bjornson20110724-websharper-extensions-for-extjs-4</guid>
       <category>extjs</category>
       <category>fsharp</category>
@@ -17,7 +17,7 @@
     </item>
     <item>
       <title>An asynchronous Slot machine</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20110715-an-asynchronous-slot-machine</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20110715-an-asynchronous-slot-machine</link>
       <guid isPermaLink="false">joel.bjornson20110715-an-asynchronous-slot-machine</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -26,7 +26,7 @@
     </item>
     <item>
       <title>Interfacing with dynamic JavaScript APIs in WebSharper</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20110621-interfacing-with-dynamic-javascript-apis-in-websharper</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20110621-interfacing-with-dynamic-javascript-apis-in-websharper</link>
       <guid isPermaLink="false">joel.bjornson20110621-interfacing-with-dynamic-javascript-apis-in-websharper</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -35,7 +35,7 @@
     </item>
     <item>
       <title>Building a Loading Icon Formlet Combinator</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20110518-building-a-loading-icon-formlet-combinator</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20110518-building-a-loading-icon-formlet-combinator</link>
       <guid isPermaLink="false">joel.bjornson20110518-building-a-loading-icon-formlet-combinator</guid>
       <category>formlets</category>
       <category>fsharp</category>
@@ -45,7 +45,7 @@
     </item>
     <item>
       <title>Creating Custom Formlet Controls</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20110516-creating-custom-formlet-controls</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20110516-creating-custom-formlet-controls</link>
       <guid isPermaLink="false">joel.bjornson20110516-creating-custom-formlet-controls</guid>
       <category>formlets</category>
       <category>fsharp</category>
@@ -55,7 +55,7 @@
     </item>
     <item>
       <title>Introducing formlets for jQueryUI</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20110311-introducing-formlets-for-jqueryui</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20110311-introducing-formlets-for-jqueryui</link>
       <guid isPermaLink="false">joel.bjornson20110311-introducing-formlets-for-jqueryui</guid>
       <category>formlets</category>
       <category>fsharp</category>
@@ -66,7 +66,7 @@
     </item>
     <item>
       <title>Creating a user sign-up form using WebSharper Formlets</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20110211-creating-a-user-sign-up-form-using-websharper-formlets</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20110211-creating-a-user-sign-up-form-using-websharper-formlets</link>
       <guid isPermaLink="false">joel.bjornson20110211-creating-a-user-sign-up-form-using-websharper-formlets</guid>
       <category>formlets</category>
       <category>fsharp</category>
@@ -76,7 +76,7 @@
     </item>
     <item>
       <title>Generalizing formlets</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20101202-generalizing-formlets</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20101202-generalizing-formlets</link>
       <guid isPermaLink="false">joel.bjornson20101202-generalizing-formlets</guid>
       <category>formlets</category>
       <category>fsharp</category>
@@ -86,7 +86,7 @@
     </item>
     <item>
       <title>Fun with dependent formlets</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20100618-fun-with-dependent-formlets</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20100618-fun-with-dependent-formlets</link>
       <guid isPermaLink="false">joel.bjornson20100618-fun-with-dependent-formlets</guid>
       <category>formlets</category>
       <category>fsharp</category>
@@ -96,7 +96,7 @@
     </item>
     <item>
       <title>More of Ext JS and WebSharper</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20100617-more-of-ext-js-and-websharper</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20100617-more-of-ext-js-and-websharper</link>
       <guid isPermaLink="false">joel.bjornson20100617-more-of-ext-js-and-websharper</guid>
       <category>extjs</category>
       <category>fsharp</category>
@@ -106,7 +106,7 @@
     </item>
     <item>
       <title>Reactive programming with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20100617-reactive-programming-with-websharper</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20100617-reactive-programming-with-websharper</link>
       <guid isPermaLink="false">joel.bjornson20100617-reactive-programming-with-websharper</guid>
       <category>fsharp</category>
       <category>reactive</category>
@@ -116,7 +116,7 @@
     </item>
     <item>
       <title>Writing Ext JS applications with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20100611-writing-ext-js-applications-with-websharper</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20100611-writing-ext-js-applications-with-websharper</link>
       <guid isPermaLink="false">joel.bjornson20100611-writing-ext-js-applications-with-websharper</guid>
       <category>extjs</category>
       <category>fsharp</category>
@@ -126,7 +126,7 @@
     </item>
     <item>
       <title>Creating web forms using WebSharper Formlets</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20091230-creating-web-forms-using-websharper-formlets</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20091230-creating-web-forms-using-websharper-formlets</link>
       <guid isPermaLink="false">joel.bjornson20091230-creating-web-forms-using-websharper-formlets</guid>
       <category>formlets</category>
       <category>fsharp</category>
@@ -136,7 +136,7 @@
     </item>
     <item>
       <title>Basic HTML construction with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/joel.bjornson/20091210-basic-html-construction-with-websharper</link>
+      <link>https://intellifactory.com/user/joel.bjornson/20091210-basic-html-construction-with-websharper</link>
       <guid isPermaLink="false">joel.bjornson20091210-basic-html-construction-with-websharper</guid>
       <category>fsharp</category>
       <category>websharper</category>

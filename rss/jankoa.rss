@@ -3,11 +3,11 @@
   <channel>
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
-    <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <link>https://intellifactory.com</link>
+    <lastBuildDate>Sat, 25 Dec 2021 01:47:46 UTC</lastBuildDate>
     <item>
       <title>WebSharper 4.5.8 released with Visual Studio 2019 support</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20190226-websharper-4-5-8-released-with-visual-studio-2019-support</link>
+      <link>https://intellifactory.com/user/jankoa/20190226-websharper-4-5-8-released-with-visual-studio-2019-support</link>
       <guid isPermaLink="false">jankoa20190226-websharper-4-5-8-released-with-visual-studio-2019-support</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -18,7 +18,7 @@
     </item>
     <item>
       <title>WebSharper 4.5.9 released with F# anonymous record support</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20190226-websharper-4-5-9-released-with-f-anonymous-record-support</link>
+      <link>https://intellifactory.com/user/jankoa/20190226-websharper-4-5-9-released-with-f-anonymous-record-support</link>
       <guid isPermaLink="false">jankoa20190226-websharper-4-5-9-released-with-f-anonymous-record-support</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -29,7 +29,7 @@
     </item>
     <item>
       <title>Create JavaScript libraries from your C# or F# code</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20180615-create-javascript-libraries-from-your-c-or-f-code</link>
+      <link>https://intellifactory.com/user/jankoa/20180615-create-javascript-libraries-from-your-c-or-f-code</link>
       <guid isPermaLink="false">jankoa20180615-create-javascript-libraries-from-your-c-or-f-code</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -39,7 +39,7 @@
     </item>
     <item>
       <title>WebSharper 4.2.4 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20180312-websharper-4-2-4-released</link>
+      <link>https://intellifactory.com/user/jankoa/20180312-websharper-4-2-4-released</link>
       <guid isPermaLink="false">jankoa20180312-websharper-4-2-4-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -50,7 +50,7 @@
     </item>
     <item>
       <title>Deploying a .NET Core WebSharper site in AWS Lambda</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20180221-deploying-a-net-core-websharper-site-in-aws-lambda</link>
+      <link>https://intellifactory.com/user/jankoa/20180221-deploying-a-net-core-websharper-site-in-aws-lambda</link>
       <guid isPermaLink="false">jankoa20180221-deploying-a-net-core-websharper-site-in-aws-lambda</guid>
       <category>aws</category>
       <category>csharp</category>
@@ -62,7 +62,7 @@
     </item>
     <item>
       <title>WebSharper 4.2-beta released with .NET Core/Standard support</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20180212-websharper-4-2-beta-released-with-net-core-standard-support</link>
+      <link>https://intellifactory.com/user/jankoa/20180212-websharper-4-2-beta-released-with-net-core-standard-support</link>
       <guid isPermaLink="false">jankoa20180212-websharper-4-2-beta-released-with-net-core-standard-support</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -73,7 +73,7 @@
     </item>
     <item>
       <title>WebSharper 4.1.2 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20180207-websharper-4-1-2-released</link>
+      <link>https://intellifactory.com/user/jankoa/20180207-websharper-4-1-2-released</link>
       <guid isPermaLink="false">jankoa20180207-websharper-4-1-2-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -84,7 +84,7 @@
     </item>
     <item>
       <title>WebSharper 4.1.6 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20180207-websharper-4-1-6-released</link>
+      <link>https://intellifactory.com/user/jankoa/20180207-websharper-4-1-6-released</link>
       <guid isPermaLink="false">jankoa20180207-websharper-4-1-6-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -95,7 +95,7 @@
     </item>
     <item>
       <title>WebSharper 4.1.1 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20180109-websharper-4-1-1-released</link>
+      <link>https://intellifactory.com/user/jankoa/20180109-websharper-4-1-1-released</link>
       <guid isPermaLink="false">jankoa20180109-websharper-4-1-1-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -106,7 +106,7 @@
     </item>
     <item>
       <title>WebSharper 4.1 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20171225-websharper-4-1-released</link>
+      <link>https://intellifactory.com/user/jankoa/20171225-websharper-4-1-released</link>
       <guid isPermaLink="false">jankoa20171225-websharper-4-1-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -117,7 +117,7 @@
     </item>
     <item>
       <title>Announcing WebSharper 4 Release Candidate</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20170908-announcing-websharper-4-release-candidate</link>
+      <link>https://intellifactory.com/user/jankoa/20170908-announcing-websharper-4-release-candidate</link>
       <guid isPermaLink="false">jankoa20170908-announcing-websharper-4-release-candidate</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -128,7 +128,7 @@
     </item>
     <item>
       <title>WebSharper 4 beta-10 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20170828-websharper-4-beta-10-released</link>
+      <link>https://intellifactory.com/user/jankoa/20170828-websharper-4-beta-10-released</link>
       <guid isPermaLink="false">jankoa20170828-websharper-4-beta-10-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -139,7 +139,7 @@
     </item>
     <item>
       <title>WebSharper 4 beta-9 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20170726-websharper-4-beta-9-released</link>
+      <link>https://intellifactory.com/user/jankoa/20170726-websharper-4-beta-9-released</link>
       <guid isPermaLink="false">jankoa20170726-websharper-4-beta-9-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -150,7 +150,7 @@
     </item>
     <item>
       <title>WebSharper 4 beta-7 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20170609-websharper-4-beta-7-released</link>
+      <link>https://intellifactory.com/user/jankoa/20170609-websharper-4-beta-7-released</link>
       <guid isPermaLink="false">jankoa20170609-websharper-4-beta-7-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -161,7 +161,7 @@
     </item>
     <item>
       <title>WebSharper 4 beta-6 bugfix released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20170412-websharper-4-beta-6-bugfix-released</link>
+      <link>https://intellifactory.com/user/jankoa/20170412-websharper-4-beta-6-bugfix-released</link>
       <guid isPermaLink="false">jankoa20170412-websharper-4-beta-6-bugfix-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -172,7 +172,7 @@
     </item>
     <item>
       <title>WebSharper 4 beta-6 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20170325-websharper-4-beta-6-released</link>
+      <link>https://intellifactory.com/user/jankoa/20170325-websharper-4-beta-6-released</link>
       <guid isPermaLink="false">jankoa20170325-websharper-4-beta-6-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -183,7 +183,7 @@
     </item>
     <item>
       <title>Distributed web applications in F# with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20161207-distributed-web-applications-in-f-with-websharper</link>
+      <link>https://intellifactory.com/user/jankoa/20161207-distributed-web-applications-in-f-with-websharper</link>
       <guid isPermaLink="false">jankoa20161207-distributed-web-applications-in-f-with-websharper</guid>
       <category>fsadvent</category>
       <category>fsharp</category>
@@ -195,7 +195,7 @@
     </item>
     <item>
       <title>The road to WebSharper 4</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20161207-the-road-to-websharper-4</link>
+      <link>https://intellifactory.com/user/jankoa/20161207-the-road-to-websharper-4</link>
       <guid isPermaLink="false">jankoa20161207-the-road-to-websharper-4</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -206,7 +206,7 @@
     </item>
     <item>
       <title>WebSharper 3.5.14 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20151030-websharper-3-5-14-released</link>
+      <link>https://intellifactory.com/user/jankoa/20151030-websharper-3-5-14-released</link>
       <guid isPermaLink="false">jankoa20151030-websharper-3-5-14-released</guid>
       <category>fsharp</category>
       <category>spa</category>
@@ -216,7 +216,7 @@
     </item>
     <item>
       <title>WebSharper 3.2.10 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20150625-websharper-3-2-10-released</link>
+      <link>https://intellifactory.com/user/jankoa/20150625-websharper-3-2-10-released</link>
       <guid isPermaLink="false">jankoa20150625-websharper-3-2-10-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -226,7 +226,7 @@
     </item>
     <item>
       <title>WebSharper 3.0 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20150416-websharper-3-0-released</link>
+      <link>https://intellifactory.com/user/jankoa/20150416-websharper-3-0-released</link>
       <guid isPermaLink="false">jankoa20150416-websharper-3-0-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -236,7 +236,7 @@
     </item>
     <item>
       <title>WebSharper-3.0.36-alpha released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20150225-websharper-3-0-36-alpha-released</link>
+      <link>https://intellifactory.com/user/jankoa/20150225-websharper-3-0-36-alpha-released</link>
       <guid isPermaLink="false">jankoa20150225-websharper-3-0-36-alpha-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -246,7 +246,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.28 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20150218-cloudsharper-0-9-28-released</link>
+      <link>https://intellifactory.com/user/jankoa/20150218-cloudsharper-0-9-28-released</link>
       <guid isPermaLink="false">jankoa20150218-cloudsharper-0-9-28-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -256,7 +256,7 @@
     </item>
     <item>
       <title>WebSharper.3.0.26-alpha released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20150210-websharper-3-0-26-alpha-released</link>
+      <link>https://intellifactory.com/user/jankoa/20150210-websharper-3-0-26-alpha-released</link>
       <guid isPermaLink="false">jankoa20150210-websharper-3-0-26-alpha-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -266,7 +266,7 @@
     </item>
     <item>
       <title>WebSharper 3.0.3-alpha released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141216-websharper-3-0-3-alpha-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141216-websharper-3-0-3-alpha-released</link>
       <guid isPermaLink="false">jankoa20141216-websharper-3-0-3-alpha-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -276,7 +276,7 @@
     </item>
     <item>
       <title>WebSharper 2.5.134 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141202-websharper-2-5-134-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141202-websharper-2-5-134-released</link>
       <guid isPermaLink="false">jankoa20141202-websharper-2-5-134-released</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -285,7 +285,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.22.2 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141117-cloudsharper-0-9-22-2-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141117-cloudsharper-0-9-22-2-released</link>
       <guid isPermaLink="false">jankoa20141117-cloudsharper-0-9-22-2-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -295,7 +295,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.22.1 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141029-cloudsharper-0-9-22-1-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141029-cloudsharper-0-9-22-1-released</link>
       <guid isPermaLink="false">jankoa20141029-cloudsharper-0-9-22-1-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -305,7 +305,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.22.0 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141028-cloudsharper-0-9-22-0-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141028-cloudsharper-0-9-22-0-released</link>
       <guid isPermaLink="false">jankoa20141028-cloudsharper-0-9-22-0-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -315,7 +315,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.20.2 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141009-cloudsharper-0-9-20-2-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141009-cloudsharper-0-9-20-2-released</link>
       <guid isPermaLink="false">jankoa20141009-cloudsharper-0-9-20-2-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -325,7 +325,7 @@
     </item>
     <item>
       <title>WebSharper 2.5.127 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141009-websharper-2-5-127-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141009-websharper-2-5-127-released</link>
       <guid isPermaLink="false">jankoa20141009-websharper-2-5-127-released</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -334,7 +334,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.20.1 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20141006-cloudsharper-0-9-20-1-released</link>
+      <link>https://intellifactory.com/user/jankoa/20141006-cloudsharper-0-9-20-1-released</link>
       <guid isPermaLink="false">jankoa20141006-cloudsharper-0-9-20-1-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -344,7 +344,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.20.0 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20140929-cloudsharper-0-9-20-0-released</link>
+      <link>https://intellifactory.com/user/jankoa/20140929-cloudsharper-0-9-20-0-released</link>
       <guid isPermaLink="false">jankoa20140929-cloudsharper-0-9-20-0-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -354,7 +354,7 @@
     </item>
     <item>
       <title>2048 game with F# + WebSharper</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20140916-2048-game-with-f-websharper</link>
+      <link>https://intellifactory.com/user/jankoa/20140916-2048-game-with-f-websharper</link>
       <guid isPermaLink="false">jankoa20140916-2048-game-with-f-websharper</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -364,7 +364,7 @@
     </item>
     <item>
       <title>WebSharper 2.5.124.61 released</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20140904-websharper-2-5-124-61-released</link>
+      <link>https://intellifactory.com/user/jankoa/20140904-websharper-2-5-124-61-released</link>
       <guid isPermaLink="false">jankoa20140904-websharper-2-5-124-61-released</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -373,7 +373,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.13.1</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20140701-cloudsharper-0-9-13-1</link>
+      <link>https://intellifactory.com/user/jankoa/20140701-cloudsharper-0-9-13-1</link>
       <guid isPermaLink="false">jankoa20140701-cloudsharper-0-9-13-1</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -383,7 +383,7 @@
     </item>
     <item>
       <title>Sencha Architect type provider for WebSharper updated</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20140520-sencha-architect-type-provider-for-websharper-updated</link>
+      <link>https://intellifactory.com/user/jankoa/20140520-sencha-architect-type-provider-for-websharper-updated</link>
       <guid isPermaLink="false">jankoa20140520-sencha-architect-type-provider-for-websharper-updated</guid>
       <category>extjs</category>
       <category>fsharp</category>
@@ -395,7 +395,7 @@
     </item>
     <item>
       <title>jQuery Mobile page reuse with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/jankoa/20130607-jquery-mobile-page-reuse-with-websharper</link>
+      <link>https://intellifactory.com/user/jankoa/20130607-jquery-mobile-page-reuse-with-websharper</link>
       <guid isPermaLink="false">jankoa20130607-jquery-mobile-page-reuse-with-websharper</guid>
       <category>fsharp</category>
       <category>jquerymobile</category>

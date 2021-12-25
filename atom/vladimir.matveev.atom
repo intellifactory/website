@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>IntelliFactory Blog</title>
   <subtitle>Building F# applications since 2004</subtitle>
-  <link href="https://intellifactorylabs.com" />
-  <updated>2021-12-21T20:08:10Z</updated>
+  <link href="https://intellifactory.com" />
+  <updated>2021-12-25T01:47:46Z</updated>
   <entry>
     <title>WebSharper at Kiev ALT.NET</title>
-    <link href="https://intellifactorylabs.com/user/vladimir.matveev/20110220-websharper-at-kiev-alt-net" />
+    <link href="https://intellifactory.com/user/vladimir.matveev/20110220-websharper-at-kiev-alt-net" />
     <id>vladimir.matveev20110220-websharper-at-kiev-alt-net</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title>WebSharper: Integration with ASP.NET MVC</title>
-    <link href="https://intellifactorylabs.com/user/vladimir.matveev/20101128-websharper-integration-with-asp-net-mvc" />
+    <link href="https://intellifactory.com/user/vladimir.matveev/20101128-websharper-integration-with-asp-net-mvc" />
     <id>vladimir.matveev20101128-websharper-integration-with-asp-net-mvc</id>
     <category>aspnet</category>
     <category>fsharp</category>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <title>WebScheme</title>
-    <link href="https://intellifactorylabs.com/user/vladimir.matveev/20101102-webscheme" />
+    <link href="https://intellifactory.com/user/vladimir.matveev/20101102-webscheme" />
     <id>vladimir.matveev20101102-webscheme</id>
     <category>fp</category>
     <category>fsharp</category>
@@ -37,7 +37,7 @@
   </entry>
   <entry>
     <title>Solving Zebra Puzzle</title>
-    <link href="https://intellifactorylabs.com/user/vladimir.matveev/20101005-solving-zebra-puzzle" />
+    <link href="https://intellifactory.com/user/vladimir.matveev/20101005-solving-zebra-puzzle" />
     <id>vladimir.matveev20101005-solving-zebra-puzzle</id>
     <category>fp</category>
     <category>fsharp</category>

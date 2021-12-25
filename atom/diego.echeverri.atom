@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>IntelliFactory Blog</title>
   <subtitle>Building F# applications since 2004</subtitle>
-  <link href="https://intellifactorylabs.com" />
-  <updated>2021-12-21T20:08:10Z</updated>
+  <link href="https://intellifactory.com" />
+  <updated>2021-12-25T01:47:46Z</updated>
   <entry>
     <title>Introducing WIG patterns</title>
-    <link href="https://intellifactorylabs.com/user/diego.echeverri/20101022-introducing-wig-patterns" />
+    <link href="https://intellifactory.com/user/diego.echeverri/20101022-introducing-wig-patterns" />
     <id>diego.echeverri20101022-introducing-wig-patterns</id>
     <category>dsl</category>
     <category>fsharp</category>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <title>Starting with WebSharper Interface Generator</title>
-    <link href="https://intellifactorylabs.com/user/diego.echeverri/20101007-starting-with-websharper-interface-generator" />
+    <link href="https://intellifactory.com/user/diego.echeverri/20101007-starting-with-websharper-interface-generator" />
     <id>diego.echeverri20101007-starting-with-websharper-interface-generator</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <title>Introducing WIG patterns</title>
-    <link href="https://intellifactorylabs.com/user/diego.echeverri/20100125-data-visualization-with-websharper" />
+    <link href="https://intellifactory.com/user/diego.echeverri/20100125-data-visualization-with-websharper" />
     <id>diego.echeverri20100125-data-visualization-with-websharper</id>
     <category>fsharp</category>
     <category>googlevisualization</category>

@@ -3,11 +3,11 @@
   <channel>
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
-    <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <link>https://intellifactory.com</link>
+    <lastBuildDate>Sat, 25 Dec 2021 01:47:46 UTC</lastBuildDate>
     <item>
       <title>Creating a WebSharper binding for Day.js</title>
-      <link>https://intellifactorylabs.com/user/btamas/20211221-wig-tutorial-dayjs</link>
+      <link>https://intellifactory.com/user/btamas/20211221-wig-tutorial-dayjs</link>
       <guid isPermaLink="false">btamas20211221-wig-tutorial-dayjs</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -17,7 +17,7 @@
     </item>
     <item>
       <title>Creating a WebSharper binding for Moment.js</title>
-      <link>https://intellifactorylabs.com/user/btamas/20211221-wig-tutorial-momentjs</link>
+      <link>https://intellifactory.com/user/btamas/20211221-wig-tutorial-momentjs</link>
       <guid isPermaLink="false">btamas20211221-wig-tutorial-momentjs</guid>
       <category>fsharp</category>
       <category>websharper</category>

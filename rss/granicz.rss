@@ -3,11 +3,11 @@
   <channel>
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
-    <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <link>https://intellifactory.com</link>
+    <lastBuildDate>Sat, 25 Dec 2021 01:47:46 UTC</lastBuildDate>
     <item>
       <title>Variations for a WebSharper shopping cart</title>
-      <link>https://intellifactorylabs.com/user/granicz/20201231-variations-for-a-websharper-shopping-cart</link>
+      <link>https://intellifactory.com/user/granicz/20201231-variations-for-a-websharper-shopping-cart</link>
       <guid isPermaLink="false">granicz20201231-variations-for-a-websharper-shopping-cart</guid>
       <category>fsadvent</category>
       <category>fsharp</category>
@@ -20,7 +20,7 @@
     </item>
     <item>
       <title>Converting a WebSharper HTML app to a client-server one</title>
-      <link>https://intellifactorylabs.com/user/granicz/20200116-converting-a-websharper-html-app-to-a-client-server-one</link>
+      <link>https://intellifactory.com/user/granicz/20200116-converting-a-websharper-html-app-to-a-client-server-one</link>
       <guid isPermaLink="false">granicz20200116-converting-a-websharper-html-app-to-a-client-server-one</guid>
       <category>blogging</category>
       <category>fsharp</category>
@@ -30,7 +30,7 @@
     </item>
     <item>
       <title>F# metablogging: introducing BlogEngine for your static markdown-based F# blog</title>
-      <link>https://intellifactorylabs.com/user/granicz/20191226-f-metablogging-introducing-blogengine-for-your-static-markdown-based-f-blog</link>
+      <link>https://intellifactory.com/user/granicz/20191226-f-metablogging-introducing-blogengine-for-your-static-markdown-based-f-blog</link>
       <guid isPermaLink="false">granicz20191226-f-metablogging-introducing-blogengine-for-your-static-markdown-based-f-blog</guid>
       <category>blogging</category>
       <category>fsadvent</category>
@@ -41,7 +41,7 @@
     </item>
     <item>
       <title>Your first Bolero project not compiling? Try this!</title>
-      <link>https://intellifactorylabs.com/user/granicz/20190905-your-first-bolero-project-not-compiling-try-this</link>
+      <link>https://intellifactory.com/user/granicz/20190905-your-first-bolero-project-not-compiling-try-this</link>
       <guid isPermaLink="false">granicz20190905-your-first-bolero-project-not-compiling-try-this</guid>
       <category>bolero</category>
       <category>fsharp</category>
@@ -51,7 +51,7 @@
     </item>
     <item>
       <title>Announcing Try F# on WebAssembly</title>
-      <link>https://intellifactorylabs.com/user/granicz/20181219-announcing-try-f-on-webassembly</link>
+      <link>https://intellifactory.com/user/granicz/20181219-announcing-try-f-on-webassembly</link>
       <guid isPermaLink="false">granicz20181219-announcing-try-f-on-webassembly</guid>
       <category>bolero</category>
       <category>fcs</category>
@@ -65,7 +65,7 @@
     </item>
     <item>
       <title>From enterprise to next-generation web: celebrating 11 years with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/granicz/20181210-from-enterprise-to-next-generation-web-celebrating-11-years-with-websharper</link>
+      <link>https://intellifactory.com/user/granicz/20181210-from-enterprise-to-next-generation-web-celebrating-11-years-with-websharper</link>
       <guid isPermaLink="false">granicz20181210-from-enterprise-to-next-generation-web-celebrating-11-years-with-websharper</guid>
       <category>fsadvent</category>
       <category>fsharp</category>
@@ -75,7 +75,7 @@
     </item>
     <item>
       <title>Part 2. Model-View-Update (MVU) style apps with WebSharper UI</title>
-      <link>https://intellifactorylabs.com/user/granicz/20180409-part-2-model-view-update-mvu-style-apps-with-websharper-ui</link>
+      <link>https://intellifactory.com/user/granicz/20180409-part-2-model-view-update-mvu-style-apps-with-websharper-ui</link>
       <guid isPermaLink="false">granicz20180409-part-2-model-view-update-mvu-style-apps-with-websharper-ui</guid>
       <category>elm</category>
       <category>fsharp</category>
@@ -87,7 +87,7 @@
     </item>
     <item>
       <title>First steps: Using HTML templates, accessing form values, and wiring events</title>
-      <link>https://intellifactorylabs.com/user/granicz/20180327-first-steps-using-html-templates-accessing-form-values-and-wiring-events</link>
+      <link>https://intellifactory.com/user/granicz/20180327-first-steps-using-html-templates-accessing-form-values-and-wiring-events</link>
       <guid isPermaLink="false">granicz20180327-first-steps-using-html-templates-accessing-form-values-and-wiring-events</guid>
       <category>fsharp</category>
       <category>templating</category>
@@ -98,7 +98,7 @@
     </item>
     <item>
       <title>Serving SPAs</title>
-      <link>https://intellifactorylabs.com/user/granicz/20171229-serving-spas</link>
+      <link>https://intellifactory.com/user/granicz/20171229-serving-spas</link>
       <guid isPermaLink="false">granicz20171229-serving-spas</guid>
       <category>fsadvent</category>
       <category>fsharp</category>
@@ -111,7 +111,7 @@
     </item>
     <item>
       <title>Simple reactive scenarios with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/granicz/20161231-simple-reactive-scenarios-with-websharper</link>
+      <link>https://intellifactory.com/user/granicz/20161231-simple-reactive-scenarios-with-websharper</link>
       <guid isPermaLink="false">granicz20161231-simple-reactive-scenarios-with-websharper</guid>
       <category>fsadvent</category>
       <category>fsharp</category>
@@ -124,7 +124,7 @@
     </item>
     <item>
       <title>A faster and slicker Try WebSharper</title>
-      <link>https://intellifactorylabs.com/user/granicz/20160406-a-faster-and-slicker-try-websharper</link>
+      <link>https://intellifactory.com/user/granicz/20160406-a-faster-and-slicker-try-websharper</link>
       <guid isPermaLink="false">granicz20160406-a-faster-and-slicker-try-websharper</guid>
       <category>fsharp</category>
       <category>trywebsharper</category>
@@ -134,7 +134,7 @@
     </item>
     <item>
       <title>WebSharper - a year in review</title>
-      <link>https://intellifactorylabs.com/user/granicz/20151226-websharper-a-year-in-review</link>
+      <link>https://intellifactory.com/user/granicz/20151226-websharper-a-year-in-review</link>
       <guid isPermaLink="false">granicz20151226-websharper-a-year-in-review</guid>
       <category>bootstrap</category>
       <category>cdn</category>
@@ -163,7 +163,7 @@
     </item>
     <item>
       <title>Data-aware workbooks and client-side data access with WebSharper.Data</title>
-      <link>https://intellifactorylabs.com/user/granicz/20151104-data-aware-workbooks-and-client-side-data-access-with-websharper-data</link>
+      <link>https://intellifactory.com/user/granicz/20151104-data-aware-workbooks-and-client-side-data-access-with-websharper-data</link>
       <guid isPermaLink="false">granicz20151104-data-aware-workbooks-and-client-side-data-access-with-websharper-data</guid>
       <category>data</category>
       <category>fsharp</category>
@@ -174,7 +174,7 @@
     </item>
     <item>
       <title>Announcing WebSharper 3.5 with pluggable HTML support</title>
-      <link>https://intellifactorylabs.com/user/granicz/20151007-announcing-websharper-3-5-with-pluggable-html-support</link>
+      <link>https://intellifactory.com/user/granicz/20151007-announcing-websharper-3-5-with-pluggable-html-support</link>
       <guid isPermaLink="false">granicz20151007-announcing-websharper-3-5-with-pluggable-html-support</guid>
       <category>fsharp</category>
       <category>ui.next</category>
@@ -184,7 +184,7 @@
     </item>
     <item>
       <title>Live F# coding and snippets with dependencies in Try WebSharper</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150901-live-f-coding-and-snippets-with-dependencies-in-try-websharper</link>
+      <link>https://intellifactory.com/user/granicz/20150901-live-f-coding-and-snippets-with-dependencies-in-try-websharper</link>
       <guid isPermaLink="false">granicz20150901-live-f-coding-and-snippets-with-dependencies-in-try-websharper</guid>
       <category>fsharp</category>
       <category>trywebsharper</category>
@@ -194,7 +194,7 @@
     </item>
     <item>
       <title>Try WebSharper: snippet versioning, gist import, and other enhancements now available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150819-try-websharper-snippet-versioning-gist-import-and-other-enhancements-now-available</link>
+      <link>https://intellifactory.com/user/granicz/20150819-try-websharper-snippet-versioning-gist-import-and-other-enhancements-now-available</link>
       <guid isPermaLink="false">granicz20150819-try-websharper-snippet-versioning-gist-import-and-other-enhancements-now-available</guid>
       <category>fsharp</category>
       <category>gist</category>
@@ -206,7 +206,7 @@
     </item>
     <item>
       <title>Share and embed Try WebSharper snippets</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150809-share-and-embed-try-websharper-snippets</link>
+      <link>https://intellifactory.com/user/granicz/20150809-share-and-embed-try-websharper-snippets</link>
       <guid isPermaLink="false">granicz20150809-share-and-embed-try-websharper-snippets</guid>
       <category>fsharp</category>
       <category>trywebsharper</category>
@@ -216,7 +216,7 @@
     </item>
     <item>
       <title>New WebSharper templates</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150806-new-websharper-templates</link>
+      <link>https://intellifactory.com/user/granicz/20150806-new-websharper-templates</link>
       <guid isPermaLink="false">granicz20150806-new-websharper-templates</guid>
       <category>fsharp</category>
       <category>templates</category>
@@ -226,7 +226,7 @@
     </item>
     <item>
       <title>Introducing Try WebSharper</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150804-introducing-try-websharper</link>
+      <link>https://intellifactory.com/user/granicz/20150804-introducing-try-websharper</link>
       <guid isPermaLink="false">granicz20150804-introducing-try-websharper</guid>
       <category>fsharp</category>
       <category>snippets</category>
@@ -236,7 +236,7 @@
     </item>
     <item>
       <title>Introducing WebSharper Warp</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150615-introducing-websharper-warp</link>
+      <link>https://intellifactory.com/user/granicz/20150615-introducing-websharper-warp</link>
       <guid isPermaLink="false">granicz20150615-introducing-websharper-warp</guid>
       <category>fsharp</category>
       <category>warp</category>
@@ -246,7 +246,7 @@
     </item>
     <item>
       <title>WebSharper 3.2 with support for scriptable applications, better resource management, and additional streamlined syntax</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150609-websharper-3-2-with-support-for-scriptable-applications-better-resource-management-and-additional-streamlined-syntax</link>
+      <link>https://intellifactory.com/user/granicz/20150609-websharper-3-2-with-support-for-scriptable-applications-better-resource-management-and-additional-streamlined-syntax</link>
       <guid isPermaLink="false">granicz20150609-websharper-3-2-with-support-for-scriptable-applications-better-resource-management-and-additional-streamlined-syntax</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -255,7 +255,7 @@
     </item>
     <item>
       <title>Deploying WebSharper apps to Azure via GitHub</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150515-deploying-websharper-apps-to-azure-via-github</link>
+      <link>https://intellifactory.com/user/granicz/20150515-deploying-websharper-apps-to-azure-via-github</link>
       <guid isPermaLink="false">granicz20150515-deploying-websharper-apps-to-azure-via-github</guid>
       <category>azure</category>
       <category>github</category>
@@ -265,7 +265,7 @@
     </item>
     <item>
       <title>WebSharper site enhancements</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150428-websharper-site-enhancements</link>
+      <link>https://intellifactory.com/user/granicz/20150428-websharper-site-enhancements</link>
       <guid isPermaLink="false">granicz20150428-websharper-site-enhancements</guid>
       <category>websharper</category>
       <category>website</category>
@@ -274,7 +274,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.30 with WebSharper 3 templates</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150417-cloudsharper-0-9-30-with-websharper-3-templates</link>
+      <link>https://intellifactory.com/user/granicz/20150417-cloudsharper-0-9-30-with-websharper-3-templates</link>
       <guid isPermaLink="false">granicz20150417-cloudsharper-0-9-30-with-websharper-3-templates</guid>
       <category>cloudsharper</category>
       <category>templates</category>
@@ -284,7 +284,7 @@
     </item>
     <item>
       <title>WebSharper forum enhancements</title>
-      <link>https://intellifactorylabs.com/user/granicz/20150328-websharper-forum-enhancements</link>
+      <link>https://intellifactory.com/user/granicz/20150328-websharper-forum-enhancements</link>
       <guid isPermaLink="false">granicz20150328-websharper-forum-enhancements</guid>
       <category>fpish</category>
       <category>websharper</category>
@@ -294,7 +294,7 @@
     </item>
     <item>
       <title>WebSharper 3 alpha now under Apache 2</title>
-      <link>https://intellifactorylabs.com/user/granicz/20141203-websharper-3-alpha-now-under-apache-2</link>
+      <link>https://intellifactory.com/user/granicz/20141203-websharper-3-alpha-now-under-apache-2</link>
       <guid isPermaLink="false">granicz20141203-websharper-3-alpha-now-under-apache-2</guid>
       <category>release</category>
       <category>websharper</category>
@@ -303,7 +303,7 @@
     </item>
     <item>
       <title>Self-hosted WebSharper application template available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20141113-self-hosted-websharper-application-template-available</link>
+      <link>https://intellifactory.com/user/granicz/20141113-self-hosted-websharper-application-template-available</link>
       <guid isPermaLink="false">granicz20141113-self-hosted-websharper-application-template-available</guid>
       <category>websharper</category>
       <description>A new Visual Studio template has been added to the latest Visual Studio installer called "Self-Hosted Client-Server Application," and you can use this template to build OWIN-based self-hosted applications that can be deployed via an .exe file and without requiring an installed web container (IIS, etc.) on the serving machine.</description>
@@ -311,7 +311,7 @@
     </item>
     <item>
       <title>Upcoming CloudSharper features in Q3</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140701-upcoming-cloudsharper-features-in-q3</link>
+      <link>https://intellifactory.com/user/granicz/20140701-upcoming-cloudsharper-features-in-q3</link>
       <guid isPermaLink="false">granicz20140701-upcoming-cloudsharper-features-in-q3</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -320,7 +320,7 @@
     </item>
     <item>
       <title>Program F# with CloudSharper everywhere</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140515-program-f-with-cloudsharper-everywhere</link>
+      <link>https://intellifactory.com/user/granicz/20140515-program-f-with-cloudsharper-everywhere</link>
       <guid isPermaLink="false">granicz20140515-program-f-with-cloudsharper-everywhere</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -330,7 +330,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.9</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140325-cloudsharper-0-9-9</link>
+      <link>https://intellifactory.com/user/granicz/20140325-cloudsharper-0-9-9</link>
       <guid isPermaLink="false">granicz20140325-cloudsharper-0-9-9</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -340,7 +340,7 @@
     </item>
     <item>
       <title>CloudSharper Local alpha 0.9.8</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140314-cloudsharper-local-alpha-0-9-8</link>
+      <link>https://intellifactory.com/user/granicz/20140314-cloudsharper-local-alpha-0-9-8</link>
       <guid isPermaLink="false">granicz20140314-cloudsharper-local-alpha-0-9-8</guid>
       <category>cloudsharper</category>
       <category>websharper</category>
@@ -349,7 +349,7 @@
     </item>
     <item>
       <title>CloudSharper Local alpha 0.9.7</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140306-cloudsharper-local-alpha-0-9-7</link>
+      <link>https://intellifactory.com/user/granicz/20140306-cloudsharper-local-alpha-0-9-7</link>
       <guid isPermaLink="false">granicz20140306-cloudsharper-local-alpha-0-9-7</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -359,7 +359,7 @@
     </item>
     <item>
       <title>Update: Server exited with code 0</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140218-update-server-exited-with-code-0</link>
+      <link>https://intellifactory.com/user/granicz/20140218-update-server-exited-with-code-0</link>
       <guid isPermaLink="false">granicz20140218-update-server-exited-with-code-0</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -368,7 +368,7 @@
     </item>
     <item>
       <title>Update: Showing compiler errors</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140217-update-showing-compiler-errors</link>
+      <link>https://intellifactory.com/user/granicz/20140217-update-showing-compiler-errors</link>
       <guid isPermaLink="false">granicz20140217-update-showing-compiler-errors</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -377,7 +377,7 @@
     </item>
     <item>
       <title>CloudSharper Local alpha available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140213-cloudsharper-local-alpha-available</link>
+      <link>https://intellifactory.com/user/granicz/20140213-cloudsharper-local-alpha-available</link>
       <guid isPermaLink="false">granicz20140213-cloudsharper-local-alpha-available</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -387,7 +387,7 @@
     </item>
     <item>
       <title>WebSharper 2.5.93 - improved numeric performance</title>
-      <link>https://intellifactorylabs.com/user/granicz/20140206-websharper-2-5-93-improved-numeric-performance</link>
+      <link>https://intellifactory.com/user/granicz/20140206-websharper-2-5-93-improved-numeric-performance</link>
       <guid isPermaLink="false">granicz20140206-websharper-2-5-93-improved-numeric-performance</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -396,7 +396,7 @@
     </item>
     <item>
       <title>WebSharper 2.5 Release Notes</title>
-      <link>https://intellifactorylabs.com/user/granicz/20131221-websharper-2-5-release-notes</link>
+      <link>https://intellifactory.com/user/granicz/20131221-websharper-2-5-release-notes</link>
       <guid isPermaLink="false">granicz20131221-websharper-2-5-release-notes</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -405,7 +405,7 @@
     </item>
     <item>
       <title>WebSharper: From F# power features to JavaScript interop</title>
-      <link>https://intellifactorylabs.com/user/granicz/20130322-websharper-from-f-power-features-to-javascript-interop</link>
+      <link>https://intellifactory.com/user/granicz/20130322-websharper-from-f-power-features-to-javascript-interop</link>
       <guid isPermaLink="false">granicz20130322-websharper-from-f-power-features-to-javascript-interop</guid>
       <category>fsharp</category>
       <category>mlocjs</category>
@@ -415,7 +415,7 @@
     </item>
     <item>
       <title>CUFP 2013 - Call for Presentations</title>
-      <link>https://intellifactorylabs.com/user/granicz/20130310-cufp-2013-call-for-presentations</link>
+      <link>https://intellifactory.com/user/granicz/20130310-cufp-2013-call-for-presentations</link>
       <guid isPermaLink="false">granicz20130310-cufp-2013-call-for-presentations</guid>
       <category>clojure</category>
       <category>erlang</category>
@@ -429,7 +429,7 @@
     </item>
     <item>
       <title>Free WebSharper MVP licenses</title>
-      <link>https://intellifactorylabs.com/user/granicz/20130226-free-websharper-mvp-licenses</link>
+      <link>https://intellifactory.com/user/granicz/20130226-free-websharper-mvp-licenses</link>
       <guid isPermaLink="false">granicz20130226-free-websharper-mvp-licenses</guid>
       <category>free</category>
       <category>fsharp</category>
@@ -440,7 +440,7 @@
     </item>
     <item>
       <title>Replacing a dead RAID5 drive on an HP Microserver running Ubuntu</title>
-      <link>https://intellifactorylabs.com/user/granicz/20121230-replacing-a-dead-raid5-drive-on-an-hp-microserver-running-ubuntu</link>
+      <link>https://intellifactory.com/user/granicz/20121230-replacing-a-dead-raid5-drive-on-an-hp-microserver-running-ubuntu</link>
       <guid isPermaLink="false">granicz20121230-replacing-a-dead-raid5-drive-on-an-hp-microserver-running-ubuntu</guid>
       <category>drive</category>
       <category>raid</category>
@@ -451,7 +451,7 @@
     </item>
     <item>
       <title>Running the jQuery Mobile WebSharper sample</title>
-      <link>https://intellifactorylabs.com/user/granicz/20121230-running-the-jquery-mobile-websharper-sample</link>
+      <link>https://intellifactory.com/user/granicz/20121230-running-the-jquery-mobile-websharper-sample</link>
       <guid isPermaLink="false">granicz20121230-running-the-jquery-mobile-websharper-sample</guid>
       <category>fsharp</category>
       <category>jquerymobile</category>
@@ -461,7 +461,7 @@
     </item>
     <item>
       <title>Last day to register to Tech Mesh 2012</title>
-      <link>https://intellifactorylabs.com/user/granicz/20121203-last-day-to-register-to-tech-mesh-2012</link>
+      <link>https://intellifactory.com/user/granicz/20121203-last-day-to-register-to-tech-mesh-2012</link>
       <guid isPermaLink="false">granicz20121203-last-day-to-register-to-tech-mesh-2012</guid>
       <category>clojure</category>
       <category>clojurescript</category>
@@ -478,7 +478,7 @@
     </item>
     <item>
       <title>CUFP 2012 - Call for Presentations</title>
-      <link>https://intellifactorylabs.com/user/granicz/20120602-cufp-2012-call-for-presentations</link>
+      <link>https://intellifactory.com/user/granicz/20120602-cufp-2012-call-for-presentations</link>
       <guid isPermaLink="false">granicz20120602-cufp-2012-call-for-presentations</guid>
       <category>clojure</category>
       <category>commercial</category>
@@ -495,7 +495,7 @@
     </item>
     <item>
       <title>Looking for technical reviewers for Expert F# 3.0</title>
-      <link>https://intellifactorylabs.com/user/granicz/20120525-looking-for-technical-reviewers-for-expert-f-3-0</link>
+      <link>https://intellifactory.com/user/granicz/20120525-looking-for-technical-reviewers-for-expert-f-3-0</link>
       <guid isPermaLink="false">granicz20120525-looking-for-technical-reviewers-for-expert-f-3-0</guid>
       <category>book</category>
       <category>expertfsharp</category>
@@ -506,7 +506,7 @@
     </item>
     <item>
       <title>WebSharper 2.4 Q2 available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20120426-websharper-2-4-q2-available</link>
+      <link>https://intellifactory.com/user/granicz/20120426-websharper-2-4-q2-available</link>
       <guid isPermaLink="false">granicz20120426-websharper-2-4-q2-available</guid>
       <category>fsharp</category>
       <category>release</category>
@@ -516,7 +516,7 @@
     </item>
     <item>
       <title>WebSharper 2.4 Q2 Beta out</title>
-      <link>https://intellifactorylabs.com/user/granicz/20120416-websharper-2-4-q2-beta-out</link>
+      <link>https://intellifactory.com/user/granicz/20120416-websharper-2-4-q2-beta-out</link>
       <guid isPermaLink="false">granicz20120416-websharper-2-4-q2-beta-out</guid>
       <category>fsharp</category>
       <category>release</category>
@@ -526,7 +526,7 @@
     </item>
     <item>
       <title>WebSharper 2.3 Q3 released</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110924-websharper-2-3-q3-released</link>
+      <link>https://intellifactory.com/user/granicz/20110924-websharper-2-3-q3-released</link>
       <guid isPermaLink="false">granicz20110924-websharper-2-3-q3-released</guid>
       <category>fsharp</category>
       <category>mobile</category>
@@ -536,7 +536,7 @@
     </item>
     <item>
       <title>WebSharper at CUFP 2011</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110915-websharper-at-cufp-2011</link>
+      <link>https://intellifactory.com/user/granicz/20110915-websharper-at-cufp-2011</link>
       <guid isPermaLink="false">granicz20110915-websharper-at-cufp-2011</guid>
       <category>cufp</category>
       <category>fsharp</category>
@@ -547,7 +547,7 @@
     </item>
     <item>
       <title>WebSharper 2.3 - targeting enterprise applications</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110715-websharper-2-3-targeting-enterprise-applications</link>
+      <link>https://intellifactory.com/user/granicz/20110715-websharper-2-3-targeting-enterprise-applications</link>
       <guid isPermaLink="false">granicz20110715-websharper-2-3-targeting-enterprise-applications</guid>
       <category>enterprise</category>
       <category>fsharp</category>
@@ -557,7 +557,7 @@
     </item>
     <item>
       <title>Expiring WebSharper Professional trials</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110513-expiring-websharper-professional-trials</link>
+      <link>https://intellifactory.com/user/granicz/20110513-expiring-websharper-professional-trials</link>
       <guid isPermaLink="false">granicz20110513-expiring-websharper-professional-trials</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -566,7 +566,7 @@
     </item>
     <item>
       <title>Announcing WebSharper Professional 2.2</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110506-announcing-websharper-professional-2-2</link>
+      <link>https://intellifactory.com/user/granicz/20110506-announcing-websharper-professional-2-2</link>
       <guid isPermaLink="false">granicz20110506-announcing-websharper-professional-2-2</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -575,7 +575,7 @@
     </item>
     <item>
       <title>Announcing ApiStack.net</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110422-announcing-apistack-net</link>
+      <link>https://intellifactory.com/user/granicz/20110422-announcing-apistack-net</link>
       <guid isPermaLink="false">granicz20110422-announcing-apistack-net</guid>
       <category>apistack.net</category>
       <category>fsharp</category>
@@ -585,7 +585,7 @@
     </item>
     <item>
       <title>WebSharper RC2 Extension updates</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110404-websharper-rc2-extension-updates</link>
+      <link>https://intellifactory.com/user/granicz/20110404-websharper-rc2-extension-updates</link>
       <guid isPermaLink="false">granicz20110404-websharper-rc2-extension-updates</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -594,7 +594,7 @@
     </item>
     <item>
       <title>WebSharper 2.1 Professional RC2 released</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110326-websharper-2-1-professional-rc2-released</link>
+      <link>https://intellifactory.com/user/granicz/20110326-websharper-2-1-professional-rc2-released</link>
       <guid isPermaLink="false">granicz20110326-websharper-2-1-professional-rc2-released</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -603,7 +603,7 @@
     </item>
     <item>
       <title>Formlets for jQuery UI available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110310-formlets-for-jquery-ui-available</link>
+      <link>https://intellifactory.com/user/granicz/20110310-formlets-for-jquery-ui-available</link>
       <guid isPermaLink="false">granicz20110310-formlets-for-jquery-ui-available</guid>
       <category>fsharp</category>
       <category>jqueryui</category>
@@ -613,7 +613,7 @@
     </item>
     <item>
       <title>WebSharper 2 Professional RC1</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110304-websharper-2-professional-rc1</link>
+      <link>https://intellifactory.com/user/granicz/20110304-websharper-2-professional-rc1</link>
       <guid isPermaLink="false">granicz20110304-websharper-2-professional-rc1</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -622,7 +622,7 @@
     </item>
     <item>
       <title>More WebSharper talks in February</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110224-more-websharper-talks-in-february</link>
+      <link>https://intellifactory.com/user/granicz/20110224-more-websharper-talks-in-february</link>
       <guid isPermaLink="false">granicz20110224-more-websharper-talks-in-february</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -631,7 +631,7 @@
     </item>
     <item>
       <title>Sencha Touch for WebSharper available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110222-sencha-touch-for-websharper-available</link>
+      <link>https://intellifactory.com/user/granicz/20110222-sencha-touch-for-websharper-available</link>
       <guid isPermaLink="false">granicz20110222-sencha-touch-for-websharper-available</guid>
       <category>fsharp</category>
       <category>senchatouch</category>
@@ -641,7 +641,7 @@
     </item>
     <item>
       <title>New WebSharper extensions available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110205-new-websharper-extensions-available</link>
+      <link>https://intellifactory.com/user/granicz/20110205-new-websharper-extensions-available</link>
       <guid isPermaLink="false">granicz20110205-new-websharper-extensions-available</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -650,7 +650,7 @@
     </item>
     <item>
       <title>WebSharper 2.1 Beta 5 available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110203-websharper-2-1-beta-5-available</link>
+      <link>https://intellifactory.com/user/granicz/20110203-websharper-2-1-beta-5-available</link>
       <guid isPermaLink="false">granicz20110203-websharper-2-1-beta-5-available</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -659,7 +659,7 @@
     </item>
     <item>
       <title>WebSharper proposal for MIX 2011</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110125-websharper-proposal-for-mix-2011</link>
+      <link>https://intellifactory.com/user/granicz/20110125-websharper-proposal-for-mix-2011</link>
       <guid isPermaLink="false">granicz20110125-websharper-proposal-for-mix-2011</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -668,7 +668,7 @@
     </item>
     <item>
       <title>WebSharper Beta 4 released</title>
-      <link>https://intellifactorylabs.com/user/granicz/20110105-websharper-beta-4-released</link>
+      <link>https://intellifactory.com/user/granicz/20110105-websharper-beta-4-released</link>
       <guid isPermaLink="false">granicz20110105-websharper-beta-4-released</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -677,7 +677,7 @@
     </item>
     <item>
       <title>Talk: Introducing WebSharper Sitelets</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101221-talk-introducing-websharper-sitelets</link>
+      <link>https://intellifactory.com/user/granicz/20101221-talk-introducing-websharper-sitelets</link>
       <guid isPermaLink="false">granicz20101221-talk-introducing-websharper-sitelets</guid>
       <category>fsharp</category>
       <category>sitelets</category>
@@ -687,7 +687,7 @@
     </item>
     <item>
       <title>Visual Studio book with F# chapter</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101220-visual-studio-book-with-f-chapter</link>
+      <link>https://intellifactory.com/user/granicz/20101220-visual-studio-book-with-f-chapter</link>
       <guid isPermaLink="false">granicz20101220-visual-studio-book-with-f-chapter</guid>
       <category>book</category>
       <category>fsharp</category>
@@ -697,7 +697,7 @@
     </item>
     <item>
       <title>WebSharper 2.0 Beta Bundle</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101217-websharper-2-0-beta-bundle</link>
+      <link>https://intellifactory.com/user/granicz/20101217-websharper-2-0-beta-bundle</link>
       <guid isPermaLink="false">granicz20101217-websharper-2-0-beta-bundle</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -706,7 +706,7 @@
     </item>
     <item>
       <title>WebSharper 2.0 Beta2 released</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101215-websharper-2-0-beta2-released</link>
+      <link>https://intellifactory.com/user/granicz/20101215-websharper-2-0-beta2-released</link>
       <guid isPermaLink="false">granicz20101215-websharper-2-0-beta2-released</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -715,7 +715,7 @@
     </item>
     <item>
       <title>Introducing WebSharper 2.0 at LWSUG</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101126-introducing-websharper-2-0-at-lwsug</link>
+      <link>https://intellifactory.com/user/granicz/20101126-introducing-websharper-2-0-at-lwsug</link>
       <guid isPermaLink="false">granicz20101126-introducing-websharper-2-0-at-lwsug</guid>
       <category>fsharp</category>
       <category>sitelets</category>
@@ -725,7 +725,7 @@
     </item>
     <item>
       <title>WebSharper 2.0 Beta available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101126-websharper-2-0-beta-available</link>
+      <link>https://intellifactory.com/user/granicz/20101126-websharper-2-0-beta-available</link>
       <guid isPermaLink="false">granicz20101126-websharper-2-0-beta-available</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -734,7 +734,7 @@
     </item>
     <item>
       <title>WebSharper talk at Sinergija 2010</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101115-websharper-talk-at-sinergija-2010</link>
+      <link>https://intellifactory.com/user/granicz/20101115-websharper-talk-at-sinergija-2010</link>
       <guid isPermaLink="false">granicz20101115-websharper-talk-at-sinergija-2010</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -743,7 +743,7 @@
     </item>
     <item>
       <title>Announcing the London WebSharper User Group</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101103-announcing-the-london-websharper-user-group</link>
+      <link>https://intellifactory.com/user/granicz/20101103-announcing-the-london-websharper-user-group</link>
       <guid isPermaLink="false">granicz20101103-announcing-the-london-websharper-user-group</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -752,7 +752,7 @@
     </item>
     <item>
       <title>F# MVP Award - 2010</title>
-      <link>https://intellifactorylabs.com/user/granicz/20101006-f-mvp-award-2010</link>
+      <link>https://intellifactory.com/user/granicz/20101006-f-mvp-award-2010</link>
       <guid isPermaLink="false">granicz20101006-f-mvp-award-2010</guid>
       <category>fsharp</category>
       <category>mvp</category>
@@ -762,7 +762,7 @@
     </item>
     <item>
       <title>Tutorial: Implementing a shopping cart with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100930-tutorial-implementing-a-shopping-cart-with-websharper</link>
+      <link>https://intellifactory.com/user/granicz/20100930-tutorial-implementing-a-shopping-cart-with-websharper</link>
       <guid isPermaLink="false">granicz20100930-tutorial-implementing-a-shopping-cart-with-websharper</guid>
       <category>fsharp</category>
       <category>tutorial</category>
@@ -772,7 +772,7 @@
     </item>
     <item>
       <title>CUFP 2010 - Call for Participation</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100909-cufp-2010-call-for-participation</link>
+      <link>https://intellifactory.com/user/granicz/20100909-cufp-2010-call-for-participation</link>
       <guid isPermaLink="false">granicz20100909-cufp-2010-call-for-participation</guid>
       <category>conference</category>
       <category>cufp</category>
@@ -781,7 +781,7 @@
     </item>
     <item>
       <title>WebSharper available in Visual Studio Gallery</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100806-websharper-available-in-visual-studio-gallery</link>
+      <link>https://intellifactory.com/user/granicz/20100806-websharper-available-in-visual-studio-gallery</link>
       <guid isPermaLink="false">granicz20100806-websharper-available-in-visual-studio-gallery</guid>
       <category>fsharp</category>
       <category>vs</category>
@@ -791,7 +791,7 @@
     </item>
     <item>
       <title>Expert F# 2.0 - what's new?</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100805-expert-f-2-0-what-s-new</link>
+      <link>https://intellifactory.com/user/granicz/20100805-expert-f-2-0-what-s-new</link>
       <guid isPermaLink="false">granicz20100805-expert-f-2-0-what-s-new</guid>
       <category>book</category>
       <category>fsharp</category>
@@ -800,7 +800,7 @@
     </item>
     <item>
       <title>ML 2010 Workshop - Final Call for Presentations</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100625-ml-2010-workshop-final-call-for-presentations</link>
+      <link>https://intellifactory.com/user/granicz/20100625-ml-2010-workshop-final-call-for-presentations</link>
       <guid isPermaLink="false">granicz20100625-ml-2010-workshop-final-call-for-presentations</guid>
       <category>conference</category>
       <category>fsharp</category>
@@ -810,7 +810,7 @@
     </item>
     <item>
       <title>F# Training Courses in CA Announced</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100608-f-training-courses-in-ca-announced</link>
+      <link>https://intellifactory.com/user/granicz/20100608-f-training-courses-in-ca-announced</link>
       <guid isPermaLink="false">granicz20100608-f-training-courses-in-ca-announced</guid>
       <category>fsharp</category>
       <description>We are pleased to announce the availability of our standard training courses,  now enhanced to follow the latest F# release, in California!  The first in our three-part series, F# Programming I, is scheduled to start from July 6 in San Francisco and Los Angeles, with Part II and III following.</description>
@@ -818,7 +818,7 @@
     </item>
     <item>
       <title>WebSharper 2010 Standard is available</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100522-websharper-2010-standard-is-available</link>
+      <link>https://intellifactory.com/user/granicz/20100522-websharper-2010-standard-is-available</link>
       <guid isPermaLink="false">granicz20100522-websharper-2010-standard-is-available</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -827,7 +827,7 @@
     </item>
     <item>
       <title>F# Development and Sales Jobs in London, California, and Budapest</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100308-f-development-and-sales-jobs-in-london-california-and-budapest</link>
+      <link>https://intellifactory.com/user/granicz/20100308-f-development-and-sales-jobs-in-london-california-and-budapest</link>
       <guid isPermaLink="false">granicz20100308-f-development-and-sales-jobs-in-london-california-and-budapest</guid>
       <category>fsharp</category>
       <category>jobs</category>
@@ -836,7 +836,7 @@
     </item>
     <item>
       <title>Call for Presentations - CUFP 2010</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100305-call-for-presentations-cufp-2010</link>
+      <link>https://intellifactory.com/user/granicz/20100305-call-for-presentations-cufp-2010</link>
       <guid isPermaLink="false">granicz20100305-call-for-presentations-cufp-2010</guid>
       <category>conference</category>
       <category>cufp</category>
@@ -845,7 +845,7 @@
     </item>
     <item>
       <title>Call for Presentations - ML 2010</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100305-call-for-presentations-ml-2010</link>
+      <link>https://intellifactory.com/user/granicz/20100305-call-for-presentations-ml-2010</link>
       <guid isPermaLink="false">granicz20100305-call-for-presentations-ml-2010</guid>
       <category>conference</category>
       <category>fsharp</category>
@@ -856,7 +856,7 @@
     </item>
     <item>
       <title>WebSharper 2010 Standard coming soon</title>
-      <link>https://intellifactorylabs.com/user/granicz/20100210-websharper-2010-standard-coming-soon</link>
+      <link>https://intellifactory.com/user/granicz/20100210-websharper-2010-standard-coming-soon</link>
       <guid isPermaLink="false">granicz20100210-websharper-2010-standard-coming-soon</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -865,7 +865,7 @@
     </item>
     <item>
       <title>WebSharper 0.4.62 is available - with dependent formlets-flowlets-third-party extensions-and more!</title>
-      <link>https://intellifactorylabs.com/user/granicz/20091223-websharper-0-4-62-is-available-with-dependent-formlets-flowlets-third-party-extensions-and-more</link>
+      <link>https://intellifactory.com/user/granicz/20091223-websharper-0-4-62-is-available-with-dependent-formlets-flowlets-third-party-extensions-and-more</link>
       <guid isPermaLink="false">granicz20091223-websharper-0-4-62-is-available-with-dependent-formlets-flowlets-third-party-extensions-and-more</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -874,7 +874,7 @@
     </item>
     <item>
       <title>Rapid prototyping of DSLs in F# - Part III</title>
-      <link>https://intellifactorylabs.com/user/granicz/20090710-rapid-prototyping-of-dsls-in-f-part-iii</link>
+      <link>https://intellifactory.com/user/granicz/20090710-rapid-prototyping-of-dsls-in-f-part-iii</link>
       <guid isPermaLink="false">granicz20090710-rapid-prototyping-of-dsls-in-f-part-iii</guid>
       <category>dsl</category>
       <category>fsharp</category>
@@ -884,7 +884,7 @@
     </item>
     <item>
       <title>Rapid prototyping of DSLs in F# - Part II</title>
-      <link>https://intellifactorylabs.com/user/granicz/20090622-rapid-prototyping-of-dsls-in-f-part-ii</link>
+      <link>https://intellifactory.com/user/granicz/20090622-rapid-prototyping-of-dsls-in-f-part-ii</link>
       <guid isPermaLink="false">granicz20090622-rapid-prototyping-of-dsls-in-f-part-ii</guid>
       <category>dsl</category>
       <category>fsharp</category>
@@ -894,7 +894,7 @@
     </item>
     <item>
       <title>Parsing with active patterns</title>
-      <link>https://intellifactorylabs.com/user/granicz/20090523-parsing-with-active-patterns</link>
+      <link>https://intellifactory.com/user/granicz/20090523-parsing-with-active-patterns</link>
       <guid isPermaLink="false">granicz20090523-parsing-with-active-patterns</guid>
       <category>activepatterns</category>
       <category>fsharp</category>
@@ -904,7 +904,7 @@
     </item>
     <item>
       <title>F# May 2009 CTP and VS 2010 Beta1</title>
-      <link>https://intellifactorylabs.com/user/granicz/20090522-f-may-2009-ctp-and-vs-2010-beta1</link>
+      <link>https://intellifactory.com/user/granicz/20090522-f-may-2009-ctp-and-vs-2010-beta1</link>
       <guid isPermaLink="false">granicz20090522-f-may-2009-ctp-and-vs-2010-beta1</guid>
       <category>fsharp</category>
       <description>A few comments on the May 2009 CTP and the adoption of F#.</description>
@@ -912,7 +912,7 @@
     </item>
     <item>
       <title>FP-BUD May Meetup</title>
-      <link>https://intellifactorylabs.com/user/granicz/20090520-fp-bud-may-meetup</link>
+      <link>https://intellifactory.com/user/granicz/20090520-fp-bud-may-meetup</link>
       <guid isPermaLink="false">granicz20090520-fp-bud-may-meetup</guid>
       <category>functional</category>
       <category>meetup</category>
@@ -921,7 +921,7 @@
     </item>
     <item>
       <title>Welcome to the IntelliFactory corporate blogs!</title>
-      <link>https://intellifactorylabs.com/user/granicz/20090520-welcome-to-the-intellifactory-corporate-blogs</link>
+      <link>https://intellifactory.com/user/granicz/20090520-welcome-to-the-intellifactory-corporate-blogs</link>
       <guid isPermaLink="false">granicz20090520-welcome-to-the-intellifactory-corporate-blogs</guid>
       <category>corporate</category>
       <category>fsharp</category>
@@ -930,7 +930,7 @@
     </item>
     <item>
       <title>A Logo interpreter under 400 lines</title>
-      <link>https://intellifactorylabs.com/user/granicz/20061124-a-logo-interpreter-under-400-lines</link>
+      <link>https://intellifactory.com/user/granicz/20061124-a-logo-interpreter-under-400-lines</link>
       <guid isPermaLink="false">granicz20061124-a-logo-interpreter-under-400-lines</guid>
       <category>fsharp</category>
       <category>logo</category>

@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>IntelliFactory Blog</title>
   <subtitle>Building F# applications since 2004</subtitle>
-  <link href="https://intellifactorylabs.com" />
-  <updated>2021-12-21T20:08:10Z</updated>
+  <link href="https://intellifactory.com" />
+  <updated>2021-12-25T01:47:46Z</updated>
   <entry>
     <title>WebSharper UI.Next Version 0.1.31.32</title>
-    <link href="https://intellifactorylabs.com/user/sfowler/20140819-websharper-ui-next-version-0-1-31-32" />
+    <link href="https://intellifactory.com/user/sfowler/20140819-websharper-ui-next-version-0-1-31-32" />
     <id>sfowler20140819-websharper-ui-next-version-0-1-31-32</id>
     <category>fsharp</category>
     <category>ui.next</category>
@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <title>WebSharper UI.Next: Animating Single-Page Applications</title>
-    <link href="https://intellifactorylabs.com/user/sfowler/20140801-websharper-ui-next-animating-single-page-applications" />
+    <link href="https://intellifactory.com/user/sfowler/20140801-websharper-ui-next-animating-single-page-applications" />
     <id>sfowler20140801-websharper-ui-next-animating-single-page-applications</id>
     <category>animation</category>
     <category>fsharp</category>
@@ -28,7 +28,7 @@
   </entry>
   <entry>
     <title>Structuring Web Applications with WebSharper.UI.Next</title>
-    <link href="https://intellifactorylabs.com/user/sfowler/20140722-structuring-web-applications-with-websharper-ui-next" />
+    <link href="https://intellifactory.com/user/sfowler/20140722-structuring-web-applications-with-websharper-ui-next" />
     <id>sfowler20140722-structuring-web-applications-with-websharper-ui-next</id>
     <category>fsharp</category>
     <category>reactivedom</category>
@@ -40,7 +40,7 @@
   </entry>
   <entry>
     <title>WebSharper.UI.Next: An Introduction</title>
-    <link href="https://intellifactorylabs.com/user/sfowler/20140714-websharper-ui-next-an-introduction" />
+    <link href="https://intellifactory.com/user/sfowler/20140714-websharper-ui-next-an-introduction" />
     <id>sfowler20140714-websharper-ui-next-an-introduction</id>
     <category>dataflow</category>
     <category>dom</category>

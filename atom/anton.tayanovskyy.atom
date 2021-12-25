@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>IntelliFactory Blog</title>
   <subtitle>Building F# applications since 2004</subtitle>
-  <link href="https://intellifactorylabs.com" />
-  <updated>2021-12-21T20:08:10Z</updated>
+  <link href="https://intellifactory.com" />
+  <updated>2021-12-25T01:47:46Z</updated>
   <entry>
     <title>WebSharper.UI.Next: Declarative Animation</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20140721-websharper-ui-next-declarative-animation" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20140721-websharper-ui-next-declarative-animation" />
     <id>anton.tayanovskyy20140721-websharper-ui-next-declarative-animation</id>
     <category>animation</category>
     <category>d3</category>
@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <title>WebSharper: What's New (June 2014)</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20140605-websharper-what-s-new-june-2014" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20140605-websharper-what-s-new-june-2014" />
     <id>anton.tayanovskyy20140605-websharper-what-s-new-june-2014</id>
     <category>frontend</category>
     <category>fsharp</category>
@@ -29,7 +29,7 @@
   </entry>
   <entry>
     <title>WebSharper available for testing on Xamarin &amp; MonoDevelop</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20140409-websharper-available-for-testing-on-xamarin-monodevelop" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20140409-websharper-available-for-testing-on-xamarin-monodevelop" />
     <id>anton.tayanovskyy20140409-websharper-available-for-testing-on-xamarin-monodevelop</id>
     <category>fsharp</category>
     <category>mono</category>
@@ -41,7 +41,7 @@
   </entry>
   <entry>
     <title>WebSharper 2.5.98</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20140221-websharper-2-5-98" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20140221-websharper-2-5-98" />
     <id>anton.tayanovskyy20140221-websharper-2-5-98</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -50,7 +50,7 @@
   </entry>
   <entry>
     <title>Deterministic parallelism with logging</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20140206-deterministic-parallelism-with-logging" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20140206-deterministic-parallelism-with-logging" />
     <id>anton.tayanovskyy20140206-deterministic-parallelism-with-logging</id>
     <category>fsharp</category>
     <category>futures</category>
@@ -60,7 +60,7 @@
   </entry>
   <entry>
     <title>Chocolatey</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20130507-chocolatey" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20130507-chocolatey" />
     <id>anton.tayanovskyy20130507-chocolatey</id>
     <category>automation</category>
     <category>chocolatey</category>
@@ -70,7 +70,7 @@
   </entry>
   <entry>
     <title>Generating VSIX and VSTemplate packages in F#</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20130313-generating-vsix-and-vstemplate-packages-in-f" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20130313-generating-vsix-and-vstemplate-packages-in-f" />
     <id>anton.tayanovskyy20130313-generating-vsix-and-vstemplate-packages-in-f</id>
     <category>build</category>
     <category>extensions</category>
@@ -83,7 +83,7 @@
   </entry>
   <entry>
     <title>WebSharper 2.5.2-alpha on AppHarbor</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20130306-websharper-2-5-2-alpha-on-appharbor" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20130306-websharper-2-5-2-alpha-on-appharbor" />
     <id>anton.tayanovskyy20130306-websharper-2-5-2-alpha-on-appharbor</id>
     <category>appharbor</category>
     <category>fsharp</category>
@@ -93,7 +93,7 @@
   </entry>
   <entry>
     <title>Upcoming WebSharper Changes</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20130305-upcoming-websharper-changes" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20130305-upcoming-websharper-changes" />
     <id>anton.tayanovskyy20130305-upcoming-websharper-changes</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -102,7 +102,7 @@
   </entry>
   <entry>
     <title>An F# Web Server From Sockets and Up</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20111107-an-f-web-server-from-sockets-and-up" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20111107-an-f-web-server-from-sockets-and-up" />
     <id>anton.tayanovskyy20111107-an-f-web-server-from-sockets-and-up</id>
     <category>fsharp</category>
     <category>performance</category>
@@ -113,7 +113,7 @@
   </entry>
   <entry>
     <title>A Faster and Leaner WebSharper 2.4 is Coming</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20110928-a-faster-and-leaner-websharper-2-4-is-coming" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20110928-a-faster-and-leaner-websharper-2-4-is-coming" />
     <id>anton.tayanovskyy20110928-a-faster-and-leaner-websharper-2-4-is-coming</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -122,7 +122,7 @@
   </entry>
   <entry>
     <title>WebSharper 2.3</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20110713-websharper-2-3" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20110713-websharper-2-3" />
     <id>anton.tayanovskyy20110713-websharper-2-3</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -131,7 +131,7 @@
   </entry>
   <entry>
     <title>The Sad State of fshtmldoc – Can We Do Better?</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20110210-the-sad-state-of-fshtmldoc-can-we-do-better" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20110210-the-sad-state-of-fshtmldoc-can-we-do-better" />
     <id>anton.tayanovskyy20110210-the-sad-state-of-fshtmldoc-can-we-do-better</id>
     <category>fsharp</category>
     <summary>An F# documentation generator based on Mono.Cecil can be much faster and more reliable than fshtmldoc.</summary>
@@ -139,7 +139,7 @@
   </entry>
   <entry>
     <title>Home-made Regular Expressions in F#</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20110209-home-made-regular-expressions-in-f" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20110209-home-made-regular-expressions-in-f" />
     <id>anton.tayanovskyy20110209-home-made-regular-expressions-in-f</id>
     <category>fsharp</category>
     <summary>F# fits nicely the task of implementing a regex engine. I give it a go with the Thompson NFA algorithm, as explained in a lucid article by Russ Cox.</summary>
@@ -147,7 +147,7 @@
   </entry>
   <entry>
     <title>WebSharper sitelets: building a two-page website</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20110128-websharper-sitelets-building-a-two-page-website" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20110128-websharper-sitelets-building-a-two-page-website" />
     <id>anton.tayanovskyy20110128-websharper-sitelets-building-a-two-page-website</id>
     <category>fsharp</category>
     <category>sitelets</category>
@@ -157,7 +157,7 @@
   </entry>
   <entry>
     <title>WebSharper Sitelets Continued: Developing a Blog Service</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20110128-websharper-sitelets-continued-developing-a-blog-service" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20110128-websharper-sitelets-continued-developing-a-blog-service" />
     <id>anton.tayanovskyy20110128-websharper-sitelets-continued-developing-a-blog-service</id>
     <category>fsharp</category>
     <category>sitelets</category>
@@ -168,7 +168,7 @@
   </entry>
   <entry>
     <title>Optimizing JavaScript with F#</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20100629-optimizing-javascript-with-f" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20100629-optimizing-javascript-with-f" />
     <id>anton.tayanovskyy20100629-optimizing-javascript-with-f</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -177,7 +177,7 @@
   </entry>
   <entry>
     <title>WebSharper: Towards Automated JavaScript Bindings</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20100614-websharper-towards-automated-javascript-bindings" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20100614-websharper-towards-automated-javascript-bindings" />
     <id>anton.tayanovskyy20100614-websharper-towards-automated-javascript-bindings</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -186,7 +186,7 @@
   </entry>
   <entry>
     <title>WebSharper 0.4.74</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20100125-websharper-0-4-74" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20100125-websharper-0-4-74" />
     <id>anton.tayanovskyy20100125-websharper-0-4-74</id>
     <category>fsharp</category>
     <category>websharper</category>
@@ -195,7 +195,7 @@
   </entry>
   <entry>
     <title>Default Constructors and the Singleton Pattern</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20100107-default-constructors-and-the-singleton-pattern" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20100107-default-constructors-and-the-singleton-pattern" />
     <id>anton.tayanovskyy20100107-default-constructors-and-the-singleton-pattern</id>
     <category>dotnet</category>
     <category>fsharp</category>
@@ -204,7 +204,7 @@
   </entry>
   <entry>
     <title>Foldr or FoldBack on Infinite F# Sequences</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20091211-foldr-or-foldback-on-infinite-f-sequences" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20091211-foldr-or-foldback-on-infinite-f-sequences" />
     <id>anton.tayanovskyy20091211-foldr-or-foldback-on-infinite-f-sequences</id>
     <category>algorithms</category>
     <category>fp</category>
@@ -215,7 +215,7 @@
   </entry>
   <entry>
     <title>Generic Workflow Builders (Monads) in F#</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20091210-generic-workflow-builders-monads-in-f" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20091210-generic-workflow-builders-monads-in-f" />
     <id>anton.tayanovskyy20091210-generic-workflow-builders-monads-in-f</id>
     <category>fp</category>
     <category>fsharp</category>
@@ -225,7 +225,7 @@
   </entry>
   <entry>
     <title>WGET in F#</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20091209-wget-in-f" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20091209-wget-in-f" />
     <id>anton.tayanovskyy20091209-wget-in-f</id>
     <category>dotnet</category>
     <category>fsharp</category>
@@ -234,7 +234,7 @@
   </entry>
   <entry>
     <title>The Execution Speed of Early vs Late Binding in .NET</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20091208-the-execution-speed-of-early-vs-late-binding-in-net" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20091208-the-execution-speed-of-early-vs-late-binding-in-net" />
     <id>anton.tayanovskyy20091208-the-execution-speed-of-early-vs-late-binding-in-net</id>
     <category>dotnet</category>
     <category>fsharp</category>
@@ -244,7 +244,7 @@
   </entry>
   <entry>
     <title>WebSharper - Write F# and Run JavaScript</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20091208-websharper-write-f-and-run-javascript" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20091208-websharper-write-f-and-run-javascript" />
     <id>anton.tayanovskyy20091208-websharper-write-f-and-run-javascript</id>
     <category>euler</category>
     <category>fsharp</category>
@@ -254,7 +254,7 @@
   </entry>
   <entry>
     <title>.NET Composite Formatting with Keyword Expansion</title>
-    <link href="https://intellifactorylabs.com/user/anton.tayanovskyy/20091202-net-composite-formatting-with-keyword-expansion" />
+    <link href="https://intellifactory.com/user/anton.tayanovskyy/20091202-net-composite-formatting-with-keyword-expansion" />
     <id>anton.tayanovskyy20091202-net-composite-formatting-with-keyword-expansion</id>
     <category>dotnet</category>
     <category>fsharp</category>

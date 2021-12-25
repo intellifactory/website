@@ -3,11 +3,11 @@
   <channel>
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
-    <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <link>https://intellifactory.com</link>
+    <lastBuildDate>Sat, 25 Dec 2021 01:47:46 UTC</lastBuildDate>
     <item>
       <title>Announcing Formlets for jQuery Mobile</title>
-      <link>https://intellifactorylabs.com/user/ramon.snir/20110909-announcing-formlets-for-jquery-mobile</link>
+      <link>https://intellifactory.com/user/ramon.snir/20110909-announcing-formlets-for-jquery-mobile</link>
       <guid isPermaLink="false">ramon.snir20110909-announcing-formlets-for-jquery-mobile</guid>
       <category>formlets</category>
       <category>fsharp</category>

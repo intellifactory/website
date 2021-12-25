@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>IntelliFactory Blog</title>
   <subtitle>Building F# applications since 2004</subtitle>
-  <link href="https://intellifactorylabs.com" />
-  <updated>2021-12-21T20:08:10Z</updated>
+  <link href="https://intellifactory.com" />
+  <updated>2021-12-25T01:47:46Z</updated>
   <entry>
     <title>TinyMCE Extension for WebSharper Released</title>
-    <link href="https://intellifactorylabs.com/user/maciej.lopatka/20110722-tinymce-extension-for-websharper-released" />
+    <link href="https://intellifactory.com/user/maciej.lopatka/20110722-tinymce-extension-for-websharper-released" />
     <id>maciej.lopatka20110722-tinymce-extension-for-websharper-released</id>
     <category>fsharp</category>
     <category>tinymce</category>

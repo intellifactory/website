@@ -3,11 +3,11 @@
   <channel>
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
-    <link>https://intellifactorylabs.com</link>
-    <lastBuildDate>Tue, 21 Dec 2021 20:08:10 UTC</lastBuildDate>
+    <link>https://intellifactory.com</link>
+    <lastBuildDate>Sat, 25 Dec 2021 01:47:46 UTC</lastBuildDate>
     <item>
       <title>Bolero 0.13 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20200523-bolero-0-13-released</link>
+      <link>https://intellifactory.com/user/denuziere/20200523-bolero-0-13-released</link>
       <guid isPermaLink="false">denuziere20200523-bolero-0-13-released</guid>
       <category>bolero</category>
       <category>fsharp</category>
@@ -18,7 +18,7 @@
     </item>
     <item>
       <title>Bolero 0.12 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20200323-bolero-0-12-released</link>
+      <link>https://intellifactory.com/user/denuziere/20200323-bolero-0-12-released</link>
       <guid isPermaLink="false">denuziere20200323-bolero-0-12-released</guid>
       <category>bolero</category>
       <category>fsharp</category>
@@ -28,7 +28,7 @@
     </item>
     <item>
       <title>Bolero 0.9 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20190924-bolero-0-9-released</link>
+      <link>https://intellifactory.com/user/denuziere/20190924-bolero-0-9-released</link>
       <guid isPermaLink="false">denuziere20190924-bolero-0-9-released</guid>
       <category>bolero</category>
       <category>fsharp</category>
@@ -38,7 +38,7 @@
     </item>
     <item>
       <title>Bolero 0.7 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20190805-bolero-0-7-released</link>
+      <link>https://intellifactory.com/user/denuziere/20190805-bolero-0-7-released</link>
       <guid isPermaLink="false">denuziere20190805-bolero-0-7-released</guid>
       <category>blazor</category>
       <category>bolero</category>
@@ -50,7 +50,7 @@
     </item>
     <item>
       <title>Bolero 0.5 released for Blazor 3.0-preview</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20190530-bolero-0-5-released-for-blazor-3-0-preview</link>
+      <link>https://intellifactory.com/user/denuziere/20190530-bolero-0-5-released-for-blazor-3-0-preview</link>
       <guid isPermaLink="false">denuziere20190530-bolero-0-5-released-for-blazor-3-0-preview</guid>
       <category>blazor</category>
       <category>bolero</category>
@@ -62,7 +62,7 @@
     </item>
     <item>
       <title>Bolero 0.4 released with remote authentication</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20190417-bolero-0-4-released-with-remote-authentication</link>
+      <link>https://intellifactory.com/user/denuziere/20190417-bolero-0-4-released-with-remote-authentication</link>
       <guid isPermaLink="false">denuziere20190417-bolero-0-4-released-with-remote-authentication</guid>
       <category>blazor</category>
       <category>bolero</category>
@@ -74,7 +74,7 @@
     </item>
     <item>
       <title>Bolero 0.3 released with HTML template hot reloading</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20190213-bolero-0-3-released-with-html-template-hot-reloading</link>
+      <link>https://intellifactory.com/user/denuziere/20190213-bolero-0-3-released-with-html-template-hot-reloading</link>
       <guid isPermaLink="false">denuziere20190213-bolero-0-3-released-with-html-template-hot-reloading</guid>
       <category>bolero</category>
       <category>fsharp</category>
@@ -85,7 +85,7 @@
     </item>
     <item>
       <title>Bolero 0.2 released with improved routing</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20190123-bolero-0-2-released-with-improved-routing</link>
+      <link>https://intellifactory.com/user/denuziere/20190123-bolero-0-2-released-with-improved-routing</link>
       <guid isPermaLink="false">denuziere20190123-bolero-0-2-released-with-improved-routing</guid>
       <category>bolero</category>
       <category>fsharp</category>
@@ -96,7 +96,7 @@
     </item>
     <item>
       <title>Announcing Bolero: F# tools for WebAssembly</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20181213-announcing-bolero-f-tools-for-webassembly</link>
+      <link>https://intellifactory.com/user/denuziere/20181213-announcing-bolero-f-tools-for-webassembly</link>
       <guid isPermaLink="false">denuziere20181213-announcing-bolero-f-tools-for-webassembly</guid>
       <category>bolero</category>
       <category>fsharp</category>
@@ -107,7 +107,7 @@
     </item>
     <item>
       <title>WebSharper 4.5.5 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20181031-websharper-4-5-5-released</link>
+      <link>https://intellifactory.com/user/denuziere/20181031-websharper-4-5-5-released</link>
       <guid isPermaLink="false">denuziere20181031-websharper-4-5-5-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -118,7 +118,7 @@
     </item>
     <item>
       <title>WebSharper 4.5.4 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20181025-websharper-4-5-4-released</link>
+      <link>https://intellifactory.com/user/denuziere/20181025-websharper-4-5-4-released</link>
       <guid isPermaLink="false">denuziere20181025-websharper-4-5-4-released</guid>
       <category>cors</category>
       <category>csharp</category>
@@ -130,7 +130,7 @@
     </item>
     <item>
       <title>WebSharper 4.5.2 released with new AspNetCore API</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180914-websharper-4-5-2-released-with-new-aspnetcore-api</link>
+      <link>https://intellifactory.com/user/denuziere/20180914-websharper-4-5-2-released-with-new-aspnetcore-api</link>
       <guid isPermaLink="false">denuziere20180914-websharper-4-5-2-released-with-new-aspnetcore-api</guid>
       <category>aspnetcore</category>
       <category>csharp</category>
@@ -143,7 +143,7 @@
     </item>
     <item>
       <title>WebSharper.React: new and improved!</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180829-websharper-react-new-and-improved</link>
+      <link>https://intellifactory.com/user/denuziere/20180829-websharper-react-new-and-improved</link>
       <guid isPermaLink="false">denuziere20180829-websharper-react-new-and-improved</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -154,7 +154,7 @@
     </item>
     <item>
       <title>WebSharper 4.5 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180809-websharper-4-5-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180809-websharper-4-5-released</link>
       <guid isPermaLink="false">denuziere20180809-websharper-4-5-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -165,7 +165,7 @@
     </item>
     <item>
       <title>WebSharper 4.4.1 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180731-websharper-4-4-1-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180731-websharper-4-4-1-released</link>
       <guid isPermaLink="false">denuziere20180731-websharper-4-4-1-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -176,7 +176,7 @@
     </item>
     <item>
       <title>WebSharper 4.4 released with Web Workers and Promises</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180711-websharper-4-4-released-with-web-workers-and-promises</link>
+      <link>https://intellifactory.com/user/denuziere/20180711-websharper-4-4-released-with-web-workers-and-promises</link>
       <guid isPermaLink="false">denuziere20180711-websharper-4-4-released-with-web-workers-and-promises</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -189,7 +189,7 @@
     </item>
     <item>
       <title>WebSharper 4.3 released with pure .NET Core support</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180627-websharper-4-3-released-with-pure-net-core-support</link>
+      <link>https://intellifactory.com/user/denuziere/20180627-websharper-4-3-released-with-pure-net-core-support</link>
       <guid isPermaLink="false">denuziere20180627-websharper-4-3-released-with-pure-net-core-support</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -201,7 +201,7 @@
     </item>
     <item>
       <title>WebSharper 4.2.10 and UI 4.2.6 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180504-websharper-4-2-10-and-ui-4-2-6-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180504-websharper-4-2-10-and-ui-4-2-6-released</link>
       <guid isPermaLink="false">denuziere20180504-websharper-4-2-10-and-ui-4-2-6-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -212,7 +212,7 @@
     </item>
     <item>
       <title>WebSharper 4.2.9 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180417-websharper-4-2-9-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180417-websharper-4-2-9-released</link>
       <guid isPermaLink="false">denuziere20180417-websharper-4-2-9-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -223,7 +223,7 @@
     </item>
     <item>
       <title>WebSharper.UI 4.2.4 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180329-websharper-ui-4-2-4-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180329-websharper-ui-4-2-4-released</link>
       <guid isPermaLink="false">denuziere20180329-websharper-ui-4-2-4-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -234,7 +234,7 @@
     </item>
     <item>
       <title>WebSharper 4.2.8 released with in-document template binding</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180326-websharper-4-2-8-released-with-in-document-template-binding</link>
+      <link>https://intellifactory.com/user/denuziere/20180326-websharper-4-2-8-released-with-in-document-template-binding</link>
       <guid isPermaLink="false">denuziere20180326-websharper-4-2-8-released-with-in-document-template-binding</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -246,7 +246,7 @@
     </item>
     <item>
       <title>WebSharper 4 for ASP.NET MVC: new and improved</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180321-websharper-4-for-asp-net-mvc-new-and-improved</link>
+      <link>https://intellifactory.com/user/denuziere/20180321-websharper-4-for-asp-net-mvc-new-and-improved</link>
       <guid isPermaLink="false">denuziere20180321-websharper-4-for-asp-net-mvc-new-and-improved</guid>
       <category>aspnetmvc</category>
       <category>csharp</category>
@@ -256,7 +256,7 @@
     </item>
     <item>
       <title>Clear and simple reactive code with WebSharper.UI's V</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180228-clear-and-simple-reactive-code-with-websharper-ui-s-v</link>
+      <link>https://intellifactory.com/user/denuziere/20180228-clear-and-simple-reactive-code-with-websharper-ui-s-v</link>
       <guid isPermaLink="false">denuziere20180228-clear-and-simple-reactive-code-with-websharper-ui-s-v</guid>
       <category>fsharp</category>
       <category>reactive</category>
@@ -267,7 +267,7 @@
     </item>
     <item>
       <title>WebSharper 4.2 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180226-websharper-4-2-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180226-websharper-4-2-released</link>
       <guid isPermaLink="false">denuziere20180226-websharper-4-2-released</guid>
       <category>aspnetcore</category>
       <category>csharp</category>
@@ -278,7 +278,7 @@
     </item>
     <item>
       <title>WebSharper 4.1.7 and 4.2.2-beta released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180220-websharper-4-1-7-and-4-2-2-beta-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180220-websharper-4-1-7-and-4-2-2-beta-released</link>
       <guid isPermaLink="false">denuziere20180220-websharper-4-1-7-and-4-2-2-beta-released</guid>
       <category>csharp</category>
       <category>fsharp</category>
@@ -288,7 +288,7 @@
     </item>
     <item>
       <title>WebSharper 4.1.3 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180117-websharper-4-1-3-released</link>
+      <link>https://intellifactory.com/user/denuziere/20180117-websharper-4-1-3-released</link>
       <guid isPermaLink="false">denuziere20180117-websharper-4-1-3-released</guid>
       <category>websharper</category>
       <description>This is a small bugfix release</description>
@@ -296,7 +296,7 @@
     </item>
     <item>
       <title>A simple OAuth application</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180112-a-simple-oauth-application</link>
+      <link>https://intellifactory.com/user/denuziere/20180112-a-simple-oauth-application</link>
       <guid isPermaLink="false">denuziere20180112-a-simple-oauth-application</guid>
       <category>authentication</category>
       <category>oauth</category>
@@ -306,7 +306,7 @@
     </item>
     <item>
       <title>Password-less authentication with WebSharper.OAuth</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20180109-password-less-authentication-with-websharper-oauth</link>
+      <link>https://intellifactory.com/user/denuziere/20180109-password-less-authentication-with-websharper-oauth</link>
       <guid isPermaLink="false">denuziere20180109-password-less-authentication-with-websharper-oauth</guid>
       <category>authentication</category>
       <category>oauth</category>
@@ -316,7 +316,7 @@
     </item>
     <item>
       <title>WebSharper 3.6.7 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20160113-websharper-3-6-7-released</link>
+      <link>https://intellifactory.com/user/denuziere/20160113-websharper-3-6-7-released</link>
       <guid isPermaLink="false">denuziere20160113-websharper-3-6-7-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -328,7 +328,7 @@
     </item>
     <item>
       <title>WebSharper 3.6.6 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20151215-websharper-3-6-6-released</link>
+      <link>https://intellifactory.com/user/denuziere/20151215-websharper-3-6-6-released</link>
       <guid isPermaLink="false">denuziere20151215-websharper-3-6-6-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -339,7 +339,7 @@
     </item>
     <item>
       <title>WebSharper 3.6 released with CDN support</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20151123-websharper-3-6-released-with-cdn-support</link>
+      <link>https://intellifactory.com/user/denuziere/20151123-websharper-3-6-released-with-cdn-support</link>
       <guid isPermaLink="false">denuziere20151123-websharper-3-6-released-with-cdn-support</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -350,7 +350,7 @@
     </item>
     <item>
       <title>WebSharper 3.5.16 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20151112-websharper-3-5-16-released</link>
+      <link>https://intellifactory.com/user/denuziere/20151112-websharper-3-5-16-released</link>
       <guid isPermaLink="false">denuziere20151112-websharper-3-5-16-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -361,7 +361,7 @@
     </item>
     <item>
       <title>WebSharper 3.5.13 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20151028-websharper-3-5-13-released</link>
+      <link>https://intellifactory.com/user/denuziere/20151028-websharper-3-5-13-released</link>
       <guid isPermaLink="false">denuziere20151028-websharper-3-5-13-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -372,7 +372,7 @@
     </item>
     <item>
       <title>WebSharper 3.5.9 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20151021-websharper-3-5-9-released</link>
+      <link>https://intellifactory.com/user/denuziere/20151021-websharper-3-5-9-released</link>
       <guid isPermaLink="false">denuziere20151021-websharper-3-5-9-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -383,7 +383,7 @@
     </item>
     <item>
       <title>Announcing WebSharper.Suave</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20151001-announcing-websharper-suave</link>
+      <link>https://intellifactory.com/user/denuziere/20151001-announcing-websharper-suave</link>
       <guid isPermaLink="false">denuziere20151001-announcing-websharper-suave</guid>
       <category>fsharp</category>
       <category>suave</category>
@@ -394,7 +394,7 @@
     </item>
     <item>
       <title>WebSharper 3.4.19 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150924-websharper-3-4-19-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150924-websharper-3-4-19-released</link>
       <guid isPermaLink="false">denuziere20150924-websharper-3-4-19-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -408,7 +408,7 @@
     </item>
     <item>
       <title>WebSharper.UI.Next 3.4.19 with OnAfterRender</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150908-websharper-ui-next-3-4-19-with-onafterrender</link>
+      <link>https://intellifactory.com/user/denuziere/20150908-websharper-ui-next-3-4-19-with-onafterrender</link>
       <guid isPermaLink="false">denuziere20150908-websharper-ui-next-3-4-19-with-onafterrender</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -421,7 +421,7 @@
     </item>
     <item>
       <title>WebSharper 3.4.14 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150902-websharper-3-4-14-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150902-websharper-3-4-14-released</link>
       <guid isPermaLink="false">denuziere20150902-websharper-3-4-14-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -435,7 +435,7 @@
     </item>
     <item>
       <title>WebSharper 3.4 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150803-websharper-3-4-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150803-websharper-3-4-released</link>
       <guid isPermaLink="false">denuziere20150803-websharper-3-4-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -446,7 +446,7 @@
     </item>
     <item>
       <title>WebSharper UI.Next 3.4: the new HTML syntax</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150803-websharper-ui-next-3-4-the-new-html-syntax</link>
+      <link>https://intellifactory.com/user/denuziere/20150803-websharper-ui-next-3-4-the-new-html-syntax</link>
       <guid isPermaLink="false">denuziere20150803-websharper-ui-next-3-4-the-new-html-syntax</guid>
       <category>fsharp</category>
       <category>html</category>
@@ -459,7 +459,7 @@
     </item>
     <item>
       <title>WebSharper 3.3 released with client-side JSON serialization</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150722-websharper-3-3-released-with-client-side-json-serialization</link>
+      <link>https://intellifactory.com/user/denuziere/20150722-websharper-3-3-released-with-client-side-json-serialization</link>
       <guid isPermaLink="false">denuziere20150722-websharper-3-3-released-with-client-side-json-serialization</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -471,7 +471,7 @@
     </item>
     <item>
       <title>WebSharper 3.2.22 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150714-websharper-3-2-22-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150714-websharper-3-2-22-released</link>
       <guid isPermaLink="false">denuziere20150714-websharper-3-2-22-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -483,7 +483,7 @@
     </item>
     <item>
       <title>WebSharper 3.1 published</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150523-websharper-3-1-published</link>
+      <link>https://intellifactory.com/user/denuziere/20150523-websharper-3-1-published</link>
       <guid isPermaLink="false">denuziere20150523-websharper-3-1-published</guid>
       <category>aspnetmvc</category>
       <category>fsharp</category>
@@ -496,7 +496,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.31 published</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150521-cloudsharper-0-9-31-published</link>
+      <link>https://intellifactory.com/user/denuziere/20150521-cloudsharper-0-9-31-published</link>
       <guid isPermaLink="false">denuziere20150521-cloudsharper-0-9-31-published</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -507,7 +507,7 @@
     </item>
     <item>
       <title>WebSharper: From Zero to an Azure-deployed Web Application</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150512-websharper-from-zero-to-an-azure-deployed-web-application</link>
+      <link>https://intellifactory.com/user/denuziere/20150512-websharper-from-zero-to-an-azure-deployed-web-application</link>
       <guid isPermaLink="false">denuziere20150512-websharper-from-zero-to-an-azure-deployed-web-application</guid>
       <category>azure</category>
       <category>deployment</category>
@@ -521,7 +521,7 @@
     </item>
     <item>
       <title>WebSharper 3.0.59 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150506-websharper-3-0-59-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150506-websharper-3-0-59-released</link>
       <guid isPermaLink="false">denuziere20150506-websharper-3-0-59-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -532,7 +532,7 @@
     </item>
     <item>
       <title>WebSharper 3.0 RC released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150318-websharper-3-0-rc-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150318-websharper-3-0-rc-released</link>
       <guid isPermaLink="false">denuziere20150318-websharper-3-0-rc-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -543,7 +543,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.29 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150302-cloudsharper-0-9-29-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150302-cloudsharper-0-9-29-released</link>
       <guid isPermaLink="false">denuziere20150302-cloudsharper-0-9-29-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -553,7 +553,7 @@
     </item>
     <item>
       <title>WebSharper 3.0-alpha for Xamarin Studio / MonoDevelop is now available!</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150225-websharper-3-0-alpha-for-xamarin-studio-monodevelop-is-now-available</link>
+      <link>https://intellifactory.com/user/denuziere/20150225-websharper-3-0-alpha-for-xamarin-studio-monodevelop-is-now-available</link>
       <guid isPermaLink="false">denuziere20150225-websharper-3-0-alpha-for-xamarin-studio-monodevelop-is-now-available</guid>
       <category>fsharp</category>
       <category>monodevelop</category>
@@ -564,7 +564,7 @@
     </item>
     <item>
       <title>Upcoming in WebSharper 3.0: serving REST APIs, easy as pie!</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150213-upcoming-in-websharper-3-0-serving-rest-apis-easy-as-pie</link>
+      <link>https://intellifactory.com/user/denuziere/20150213-upcoming-in-websharper-3-0-serving-rest-apis-easy-as-pie</link>
       <guid isPermaLink="false">denuziere20150213-upcoming-in-websharper-3-0-serving-rest-apis-easy-as-pie</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -573,7 +573,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.27 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150211-cloudsharper-0-9-27-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150211-cloudsharper-0-9-27-released</link>
       <guid isPermaLink="false">denuziere20150211-cloudsharper-0-9-27-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -583,7 +583,7 @@
     </item>
     <item>
       <title>WebSharper 3.0.15-alpha released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150129-websharper-3-0-15-alpha-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150129-websharper-3-0-15-alpha-released</link>
       <guid isPermaLink="false">denuziere20150129-websharper-3-0-15-alpha-released</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -594,7 +594,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.26 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150113-cloudsharper-0-9-26-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150113-cloudsharper-0-9-26-released</link>
       <guid isPermaLink="false">denuziere20150113-cloudsharper-0-9-26-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -604,7 +604,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.25 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150109-cloudsharper-0-9-25-released</link>
+      <link>https://intellifactory.com/user/denuziere/20150109-cloudsharper-0-9-25-released</link>
       <guid isPermaLink="false">denuziere20150109-cloudsharper-0-9-25-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -614,7 +614,7 @@
     </item>
     <item>
       <title>WebSharper 3.0.8-alpha published</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20150108-websharper-3-0-8-alpha-published</link>
+      <link>https://intellifactory.com/user/denuziere/20150108-websharper-3-0-8-alpha-published</link>
       <guid isPermaLink="false">denuziere20150108-websharper-3-0-8-alpha-published</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -623,7 +623,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.23 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20141216-cloudsharper-0-9-23-released</link>
+      <link>https://intellifactory.com/user/denuziere/20141216-cloudsharper-0-9-23-released</link>
       <guid isPermaLink="false">denuziere20141216-cloudsharper-0-9-23-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -633,7 +633,7 @@
     </item>
     <item>
       <title>News from WebSharper 3.0: NuGet, Visual Studio, Mono, upcoming features and API changes</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20141208-news-from-websharper-3-0-nuget-visual-studio-mono-upcoming-features-and-api-changes</link>
+      <link>https://intellifactory.com/user/denuziere/20141208-news-from-websharper-3-0-nuget-visual-studio-mono-upcoming-features-and-api-changes</link>
       <guid isPermaLink="false">denuziere20141208-news-from-websharper-3-0-nuget-visual-studio-mono-upcoming-features-and-api-changes</guid>
       <category>fsharp</category>
       <category>javascript</category>
@@ -645,7 +645,7 @@
     </item>
     <item>
       <title>WebSharper migration to GitHub complete!</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20141206-websharper-migration-to-github-complete</link>
+      <link>https://intellifactory.com/user/denuziere/20141206-websharper-migration-to-github-complete</link>
       <guid isPermaLink="false">denuziere20141206-websharper-migration-to-github-complete</guid>
       <category>bitbucket</category>
       <category>fsharp</category>
@@ -656,7 +656,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.20.3 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20141015-cloudsharper-0-9-20-3-released</link>
+      <link>https://intellifactory.com/user/denuziere/20141015-cloudsharper-0-9-20-3-released</link>
       <guid isPermaLink="false">denuziere20141015-cloudsharper-0-9-20-3-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -666,7 +666,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.19.3 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140924-cloudsharper-0-9-19-3-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140924-cloudsharper-0-9-19-3-released</link>
       <guid isPermaLink="false">denuziere20140924-cloudsharper-0-9-19-3-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -676,7 +676,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.19.2</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140919-cloudsharper-0-9-19-2</link>
+      <link>https://intellifactory.com/user/denuziere/20140919-cloudsharper-0-9-19-2</link>
       <guid isPermaLink="false">denuziere20140919-cloudsharper-0-9-19-2</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -686,7 +686,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.19.1 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140912-cloudsharper-0-9-19-1-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140912-cloudsharper-0-9-19-1-released</link>
       <guid isPermaLink="false">denuziere20140912-cloudsharper-0-9-19-1-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -696,7 +696,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.19 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140912-cloudsharper-0-9-19-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140912-cloudsharper-0-9-19-released</link>
       <guid isPermaLink="false">denuziere20140912-cloudsharper-0-9-19-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -706,7 +706,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.17.1 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140901-cloudsharper-0-9-17-1-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140901-cloudsharper-0-9-17-1-released</link>
       <guid isPermaLink="false">denuziere20140901-cloudsharper-0-9-17-1-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -716,7 +716,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.17 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140821-cloudsharper-0-9-17-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140821-cloudsharper-0-9-17-released</link>
       <guid isPermaLink="false">denuziere20140821-cloudsharper-0-9-17-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -726,7 +726,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.16.1 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140819-cloudsharper-0-9-16-1-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140819-cloudsharper-0-9-16-1-released</link>
       <guid isPermaLink="false">denuziere20140819-cloudsharper-0-9-16-1-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -736,7 +736,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.16 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140815-cloudsharper-0-9-16-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140815-cloudsharper-0-9-16-released</link>
       <guid isPermaLink="false">denuziere20140815-cloudsharper-0-9-16-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -746,7 +746,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.15.2 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140808-cloudsharper-0-9-15-2-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140808-cloudsharper-0-9-15-2-released</link>
       <guid isPermaLink="false">denuziere20140808-cloudsharper-0-9-15-2-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -756,7 +756,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.14 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140710-cloudsharper-0-9-14-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140710-cloudsharper-0-9-14-released</link>
       <guid isPermaLink="false">denuziere20140710-cloudsharper-0-9-14-released</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -766,7 +766,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.13 with workspace cloud sharing!</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140619-cloudsharper-0-9-13-with-workspace-cloud-sharing</link>
+      <link>https://intellifactory.com/user/denuziere/20140619-cloudsharper-0-9-13-with-workspace-cloud-sharing</link>
       <guid isPermaLink="false">denuziere20140619-cloudsharper-0-9-13-with-workspace-cloud-sharing</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -776,7 +776,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.12</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140612-cloudsharper-0-9-12</link>
+      <link>https://intellifactory.com/user/denuziere/20140612-cloudsharper-0-9-12</link>
       <guid isPermaLink="false">denuziere20140612-cloudsharper-0-9-12</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -786,7 +786,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.11.2</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140606-cloudsharper-0-9-11-2</link>
+      <link>https://intellifactory.com/user/denuziere/20140606-cloudsharper-0-9-11-2</link>
       <guid isPermaLink="false">denuziere20140606-cloudsharper-0-9-11-2</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -796,7 +796,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.11.1</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140603-cloudsharper-0-9-11-1</link>
+      <link>https://intellifactory.com/user/denuziere/20140603-cloudsharper-0-9-11-1</link>
       <guid isPermaLink="false">denuziere20140603-cloudsharper-0-9-11-1</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -806,7 +806,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.11</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140602-cloudsharper-0-9-11</link>
+      <link>https://intellifactory.com/user/denuziere/20140602-cloudsharper-0-9-11</link>
       <guid isPermaLink="false">denuziere20140602-cloudsharper-0-9-11</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -816,7 +816,7 @@
     </item>
     <item>
       <title>WebSharper Binding for Leaflet released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140522-websharper-binding-for-leaflet-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140522-websharper-binding-for-leaflet-released</link>
       <guid isPermaLink="false">denuziere20140522-websharper-binding-for-leaflet-released</guid>
       <category>fsharp</category>
       <category>leaflet</category>
@@ -827,7 +827,7 @@
     </item>
     <item>
       <title>CloudSharper Local alpha 0.9.10.2</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140516-cloudsharper-local-alpha-0-9-10-2</link>
+      <link>https://intellifactory.com/user/denuziere/20140516-cloudsharper-local-alpha-0-9-10-2</link>
       <guid isPermaLink="false">denuziere20140516-cloudsharper-local-alpha-0-9-10-2</guid>
       <category>cloud</category>
       <category>cloudsharper</category>
@@ -839,7 +839,7 @@
     </item>
     <item>
       <title>CloudSharper Local alpha 0.9.10.1 released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140512-cloudsharper-local-alpha-0-9-10-1-released</link>
+      <link>https://intellifactory.com/user/denuziere/20140512-cloudsharper-local-alpha-0-9-10-1-released</link>
       <guid isPermaLink="false">denuziere20140512-cloudsharper-local-alpha-0-9-10-1-released</guid>
       <category>cloud</category>
       <category>cloudsharper</category>
@@ -851,7 +851,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.9.2</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140404-cloudsharper-0-9-9-2</link>
+      <link>https://intellifactory.com/user/denuziere/20140404-cloudsharper-0-9-9-2</link>
       <guid isPermaLink="false">denuziere20140404-cloudsharper-0-9-9-2</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -861,7 +861,7 @@
     </item>
     <item>
       <title>CloudSharper 0.9.9.1</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140325-cloudsharper-0-9-9-1</link>
+      <link>https://intellifactory.com/user/denuziere/20140325-cloudsharper-0-9-9-1</link>
       <guid isPermaLink="false">denuziere20140325-cloudsharper-0-9-9-1</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -871,7 +871,7 @@
     </item>
     <item>
       <title>F# query expressions and composability</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140226-f-query-expressions-and-composability</link>
+      <link>https://intellifactory.com/user/denuziere/20140226-f-query-expressions-and-composability</link>
       <guid isPermaLink="false">denuziere20140226-f-query-expressions-and-composability</guid>
       <category>composability</category>
       <category>fsharp</category>
@@ -883,7 +883,7 @@
     </item>
     <item>
       <title>CloudSharper Local alpha 0.9.6</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140219-cloudsharper-local-alpha-0-9-6</link>
+      <link>https://intellifactory.com/user/denuziere/20140219-cloudsharper-local-alpha-0-9-6</link>
       <guid isPermaLink="false">denuziere20140219-cloudsharper-local-alpha-0-9-6</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -892,7 +892,7 @@
     </item>
     <item>
       <title>CloudSharper Local alpha 0.9.5</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140217-cloudsharper-local-alpha-0-9-5</link>
+      <link>https://intellifactory.com/user/denuziere/20140217-cloudsharper-local-alpha-0-9-5</link>
       <guid isPermaLink="false">denuziere20140217-cloudsharper-local-alpha-0-9-5</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -901,7 +901,7 @@
     </item>
     <item>
       <title>CloudSharper Updates - Friday, February 14, 2014</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20140214-cloudsharper-updates-friday-february-14-2014</link>
+      <link>https://intellifactory.com/user/denuziere/20140214-cloudsharper-updates-friday-february-14-2014</link>
       <guid isPermaLink="false">denuziere20140214-cloudsharper-updates-friday-february-14-2014</guid>
       <category>cloudsharper</category>
       <category>fsharp</category>
@@ -910,7 +910,7 @@
     </item>
     <item>
       <title>XML computation expressions: Playing around with extending the F# compiler</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20130630-xml-computation-expressions-playing-around-with-extending-the-f-compiler</link>
+      <link>https://intellifactory.com/user/denuziere/20130630-xml-computation-expressions-playing-around-with-extending-the-f-compiler</link>
       <guid isPermaLink="false">denuziere20130630-xml-computation-expressions-playing-around-with-extending-the-f-compiler</guid>
       <category>ce</category>
       <category>compiler</category>
@@ -922,7 +922,7 @@
     </item>
     <item>
       <title>New FPish feature: E-mail notification</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20130320-new-fpish-feature-e-mail-notification</link>
+      <link>https://intellifactory.com/user/denuziere/20130320-new-fpish-feature-e-mail-notification</link>
       <guid isPermaLink="false">denuziere20130320-new-fpish-feature-e-mail-notification</guid>
       <category>fpish</category>
       <description>FPish can now alert you by e-mail of responses to your FPish submissions!</description>
@@ -930,7 +930,7 @@
     </item>
     <item>
       <title>WebSharper for Windows 8 Desktop</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20130308-websharper-for-windows-8-desktop</link>
+      <link>https://intellifactory.com/user/denuziere/20130308-websharper-for-windows-8-desktop</link>
       <guid isPermaLink="false">denuziere20130308-websharper-for-windows-8-desktop</guid>
       <category>fsharp</category>
       <category>websharper</category>
@@ -941,7 +941,7 @@
     </item>
     <item>
       <title>Building UIs for WebSharper with ExtJS Architect</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20121126-building-uis-for-websharper-with-extjs-architect</link>
+      <link>https://intellifactory.com/user/denuziere/20121126-building-uis-for-websharper-with-extjs-architect</link>
       <guid isPermaLink="false">denuziere20121126-building-uis-for-websharper-with-extjs-architect</guid>
       <category>extjs</category>
       <category>fsharp</category>
@@ -951,7 +951,7 @@
     </item>
     <item>
       <title>Latest FPish enhancements</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20120423-latest-fpish-enhancements</link>
+      <link>https://intellifactory.com/user/denuziere/20120423-latest-fpish-enhancements</link>
       <guid isPermaLink="false">denuziere20120423-latest-fpish-enhancements</guid>
       <category>fpish</category>
       <description>We recently rolled out a few enhancements on FPish. The main highlights are blog comments and tweet functionality.</description>
@@ -959,7 +959,7 @@
     </item>
     <item>
       <title>FPish now hosts blogs!</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20111024-fpish-now-hosts-blogs</link>
+      <link>https://intellifactory.com/user/denuziere/20111024-fpish-now-hosts-blogs</link>
       <guid isPermaLink="false">denuziere20111024-fpish-now-hosts-blogs</guid>
       <category>fpish</category>
       <description>Since the beginning FPish has allowed Authors to aggregate their blogs. We are now going a step further by allowing you to write blog articles on FPish.</description>
@@ -967,7 +967,7 @@
     </item>
     <item>
       <title>WebSharper Extensions for Bing Maps 7.0 Updated</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20110804-websharper-extensions-for-bing-maps-7-0-updated</link>
+      <link>https://intellifactory.com/user/denuziere/20110804-websharper-extensions-for-bing-maps-7-0-updated</link>
       <guid isPermaLink="false">denuziere20110804-websharper-extensions-for-bing-maps-7-0-updated</guid>
       <category>bing</category>
       <category>maps</category>
@@ -977,7 +977,7 @@
     </item>
     <item>
       <title>Color the Wind - a 2D Canvas demo with WebSharper</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20110704-color-the-wind-a-2d-canvas-demo-with-websharper</link>
+      <link>https://intellifactory.com/user/denuziere/20110704-color-the-wind-a-2d-canvas-demo-with-websharper</link>
       <guid isPermaLink="false">denuziere20110704-color-the-wind-a-2d-canvas-demo-with-websharper</guid>
       <category>demoscene</category>
       <category>fsharp</category>
@@ -987,7 +987,7 @@
     </item>
     <item>
       <title>WebSharper / O3D sample: Snooker game</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20110616-websharper-o3d-sample-snooker-game</link>
+      <link>https://intellifactory.com/user/denuziere/20110616-websharper-o3d-sample-snooker-game</link>
       <guid isPermaLink="false">denuziere20110616-websharper-o3d-sample-snooker-game</guid>
       <category>fsharp</category>
       <category>o3d</category>
@@ -998,7 +998,7 @@
     </item>
     <item>
       <title>O3D Extension for WebSharper available</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20110606-o3d-extension-for-websharper-available</link>
+      <link>https://intellifactory.com/user/denuziere/20110606-o3d-extension-for-websharper-available</link>
       <guid isPermaLink="false">denuziere20110606-o3d-extension-for-websharper-available</guid>
       <category>fsharp</category>
       <category>o3d</category>
@@ -1009,7 +1009,7 @@
     </item>
     <item>
       <title>DHTMLX Touch for WebSharper available</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20110412-dhtmlx-touch-for-websharper-available</link>
+      <link>https://intellifactory.com/user/denuziere/20110412-dhtmlx-touch-for-websharper-available</link>
       <guid isPermaLink="false">denuziere20110412-dhtmlx-touch-for-websharper-available</guid>
       <category>dhtmlx</category>
       <category>fsharp</category>
@@ -1019,7 +1019,7 @@
     </item>
     <item>
       <title>WebGL and glMatrix Extensions for WebSharper Released</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20110401-webgl-and-glmatrix-extensions-for-websharper-released</link>
+      <link>https://intellifactory.com/user/denuziere/20110401-webgl-and-glmatrix-extensions-for-websharper-released</link>
       <guid isPermaLink="false">denuziere20110401-webgl-and-glmatrix-extensions-for-websharper-released</guid>
       <category>fsharp</category>
       <category>webgl</category>
@@ -1029,7 +1029,7 @@
     </item>
     <item>
       <title>Bing Maps 7.0 Extension for WebSharper</title>
-      <link>https://intellifactorylabs.com/user/denuziere/20110324-bing-maps-7-0-extension-for-websharper</link>
+      <link>https://intellifactory.com/user/denuziere/20110324-bing-maps-7-0-extension-for-websharper</link>
       <guid isPermaLink="false">denuziere20110324-bing-maps-7-0-extension-for-websharper</guid>
       <category>bingmaps</category>
       <category>fsharp</category>

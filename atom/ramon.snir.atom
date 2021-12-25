@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>IntelliFactory Blog</title>
   <subtitle>Building F# applications since 2004</subtitle>
-  <link href="https://intellifactorylabs.com" />
-  <updated>2021-12-21T20:08:10Z</updated>
+  <link href="https://intellifactory.com" />
+  <updated>2021-12-25T01:47:46Z</updated>
   <entry>
     <title>Announcing Formlets for jQuery Mobile</title>
-    <link href="https://intellifactorylabs.com/user/ramon.snir/20110909-announcing-formlets-for-jquery-mobile" />
+    <link href="https://intellifactory.com/user/ramon.snir/20110909-announcing-formlets-for-jquery-mobile" />
     <id>ramon.snir20110909-announcing-formlets-for-jquery-mobile</id>
     <category>formlets</category>
     <category>fsharp</category>
