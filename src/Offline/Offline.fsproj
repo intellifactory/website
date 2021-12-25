@@ -17,6 +17,13 @@
   <ItemGroup>
     <NeededForBuild Include="../Online/post.html" />
     <NeededForBuild Include="../Online/contact.html" />
+    <NeededForBuild Include="../Online/blogs.html" />
+	<NeededForBuild Include="../Online/author.html" />
+	<NeededForBuild Include="../Online/category.html" />
+	<NeededForBuild Include="../Online/oss.html" />
+	<NeededForBuild Include="../Online/404.html" />
+	<NeededForBuild Include="../Online/jobs.html" />
+	<NeededForBuild Include="../Online/redirect.html" />
   </ItemGroup>
 
   <Target Name="CopyFilesBeforeBuild" BeforeTargets="Build">
@@ -30,6 +37,7 @@
     <ExtraFiles Include="../Online/wwwroot/img/**" linkBase="img" />
     <ExtraFiles Include="../Online/wwwroot/assets/**" linkBase="assets" />
     <ExtraFiles Include="../Online/wwwroot/legal/**" linkBase="legal" />
+    <ExtraFiles Include="../Online/wwwroot/images/**" linkBase="images" />
   </ItemGroup>
     
   <Target Name="CopyFiles" AfterTargets="Build">

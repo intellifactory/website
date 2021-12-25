@@ -15,6 +15,14 @@
 /src/Online/oss.html
 /src/Online/404.html
 /src/Online/jobs.html
+/src/Offline/author.html
+/src/Offline/category.html
+/src/Offline/oss.html
+/src/Offline/404.html
+/src/Offline/jobs.html
+/src/Offline/blogs.html
+/src/Offline/contact.html
+/src/Offline/redirect.html
 /src/*.html
 /_template/node_modules/*
 /_template/public/*
