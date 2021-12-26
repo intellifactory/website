@@ -4,7 +4,20 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Sun, 26 Dec 2021 02:51:37 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 26 Dec 2021 15:22:22 UTC</lastBuildDate>
+    <item>
+      <title>Reactive forms with WebSharper.Forms</title>
+      <link>https://intellifactory.com/user/jooseppi12/20211224-reactive-forms-with-websharper-forms</link>
+      <guid isPermaLink="false">jooseppi1220211224-reactive-forms-with-websharper-forms</guid>
+      <category>forms</category>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>reactive</category>
+      <category>ui</category>
+      <category>websharper</category>
+      <description></description>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Creating a WebSharper binding for Day.js</title>
       <link>https://intellifactory.com/user/btamas/20211221-wig-tutorial-dayjs</link>

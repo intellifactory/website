@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>IntelliFactory Blog</title>
+  <subtitle>Building F# applications since 2004</subtitle>
+  <link href="https://intellifactory.com" />
+  <updated>2021-12-26T15:22:22Z</updated>
+  <entry>
+    <title>Reactive forms with WebSharper.Forms</title>
+    <link href="https://intellifactory.com/user/jooseppi12/20211224-reactive-forms-with-websharper-forms" />
+    <id>jooseppi1220211224-reactive-forms-with-websharper-forms</id>
+    <category>forms</category>
+    <category>fsadvent</category>
+    <category>fsharp</category>
+    <category>reactive</category>
+    <category>ui</category>
+    <category>websharper</category>
+    <summary></summary>
+    <updated>2021-12-24T00:00:00Z</updated>
+  </entry>
+</feed>
