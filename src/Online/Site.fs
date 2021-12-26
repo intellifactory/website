@@ -591,6 +591,10 @@ module Site =
     [<Website>]
     let Main (config: Config ref) (identities1: Identities1 ref) (info: BlogInfoRaw ref) (articlesRef: Articles ref) =
         Application.MultiPage (fun (ctx: Context<_>) endpoint ->
+            // Prepend a slash if string doesn't start with one.
+            // Needed to compensate for different `ctx.Link` behavior on offline vs online sitelets.
+            let FIX (s: string) =
+                if String.IsNullOrEmpty s then "/" elif s.StartsWith "/" then s else "/" + s
             let articles =
                 !articlesRef
                 |> Map.toList
@@ -623,7 +627,7 @@ module Site =
                     |> List.filter (fun article -> List.contains category article.Categories)
                 CategoryTemplate()
                     .ServerUrl((!config).ServerUrl)
-                    .PageUrl(ctx.Link (EndPoint.Category category))
+                    .PageUrl(FIX <| ctx.Link (EndPoint.Category category))
                     .Title(sprintf "%s - Filtered articles" category)
                     .Category(category)
                     .ArticlesSection(ARTICLES articles)
@@ -641,7 +645,7 @@ module Site =
                 let name = (!config).Users.[user]
                 AuthorTemplate()
                     .ServerUrl((!config).ServerUrl)
-                    .PageUrl(ctx.Link (EndPoint.UserArticle (user, "")))
+                    .PageUrl(FIX <| ctx.Link (EndPoint.UserArticle (user, "")))
                     .Title(sprintf "%s's blog" name)
                     .ArticlesSection(ARTICLES articles)
                     .AuthorName(name)
@@ -653,7 +657,7 @@ module Site =
 #endif
                     .Doc()
                 |> Content.Page
-            let BLOGS (ctx: Context<_>) =
+            let BLOGS () =
                 let authors =
                     articles
                     |> List.fold (fun (authors: Map<String, Article>) article ->
@@ -741,7 +745,7 @@ module Site =
                         .Doc()
                 BlogsTemplate()
                     .ServerUrl((!config).ServerUrl)
-                    .PageUrl(ctx.Link EndPoint.Blogs)
+                    .PageUrl(FIX <| ctx.Link EndPoint.Blogs)
                     .MenubarPlaceholder(PostTemplate.Menubar().Doc())
                     .FooterPlaceholder(PostTemplate.Footer().Doc())
                     .AuthorList(authors)
@@ -823,7 +827,7 @@ module Site =
             let OSS () =
                 OSSTemplate()
                     .ServerUrl((!config).ServerUrl)
-                    .PageUrl(ctx.Link EndPoint.OSS)
+                    .PageUrl(FIX <| ctx.Link EndPoint.OSS)
                     .MenubarPlaceholder(PostTemplate.Menubar().Doc())
                     .FooterPlaceholder(PostTemplate.Footer().Doc())
 #if !DEBUG
@@ -837,7 +841,7 @@ module Site =
 //                let mapContactStyles = mapContactStyles()
                 ContactTemplate()
                     .ServerUrl((!config).ServerUrl)
-                    .PageUrl(ctx.Link EndPoint.Contact)
+                    .PageUrl(FIX <| ctx.Link EndPoint.Contact)
 #if !DEBUG
                     .ReleaseMin(".min")
 #endif
@@ -851,7 +855,7 @@ module Site =
 //                let mapContactStyles = mapContactStyles()
                 JobsTemplate()
                     .ServerUrl((!config).ServerUrl)
-                    .PageUrl(ctx.Link EndPoint.Blogs)
+                    .PageUrl(FIX <| ctx.Link EndPoint.Careers)
 #if !DEBUG
                     .ReleaseMin(".min")
 #endif
@@ -864,13 +868,13 @@ module Site =
 
             match endpoint with
             | EndPoint.Home ->
-                REDIRECT_TO (ctx.Link Blogs)
+                REDIRECT_TO "/blogs"
             | HomeRedirect ->
-                REDIRECT_TO (ctx.Link Blogs)
+                REDIRECT_TO "/blogs"
             | Category cat ->
                 CATEGORY cat
             | Blogs ->
-                BLOGS ctx
+                BLOGS ()
             | Article p ->
                 ARTICLE ("", p)
             // All articles by a given user
