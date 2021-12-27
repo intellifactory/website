@@ -757,8 +757,8 @@ module Site =
                         |> List.length
                         |> string
                     )
-                    .RSSFeedUrl("/rss")
-                    .AtomFeedUrl("/atom")
+                    .RSSFeedUrl("/feed.rss")
+                    .AtomFeedUrl("/feed.atom")
                     .Feature_FSAdvent(fsadvent)
                     .ArticlesSection(ARTICLES articles)
                     .Doc()
