@@ -757,6 +757,8 @@ module Site =
                         |> List.length
                         |> string
                     )
+                    .RSSFeedUrl("/rss")
+                    .AtomFeedUrl("/atom")
                     .Feature_FSAdvent(fsadvent)
                     .ArticlesSection(ARTICLES articles)
                     .Doc()
@@ -783,7 +785,8 @@ module Site =
             let ARTICLES_BY_USEROPT (userOpt: string option) =
                 articlesRef.Value |> Map.toList
                 // Filter by user, if given
-                |> List.filter (fun ((user, _), _) -> if userOpt.IsSome then user = userOpt.Value else true)
+                |> List.filter (fun ((user, _), _) ->
+                    if userOpt.IsSome && not (String.IsNullOrEmpty userOpt.Value) then user = userOpt.Value else true)
                 |> List.sortByDescending (fun (_, article: Article) -> article.Date.Ticks)
             let ATOM_FEED userOpt =
                 let ns = XNamespace.Get "http://www.w3.org/2005/Atom"
