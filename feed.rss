@@ -4,7 +4,19 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Mon, 27 Dec 2021 18:36:23 UTC</lastBuildDate>
+    <lastBuildDate>Tue, 28 Dec 2021 20:18:05 UTC</lastBuildDate>
+    <item>
+      <title>Client-Server Routing with WebSharper</title>
+      <link>https://intellifactory.com/user/jankoa/20211228-client-server-routing-with-websharper</link>
+      <guid isPermaLink="false">jankoa20211228-client-server-routing-with-websharper</guid>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>routing</category>
+      <category>ui</category>
+      <category>websharper</category>
+      <description></description>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Reactive forms with WebSharper.Forms</title>
       <link>https://intellifactory.com/user/jooseppi12/20211224-reactive-forms-with-websharper-forms</link>

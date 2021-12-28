@@ -4,7 +4,19 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Mon, 27 Dec 2021 18:36:23 UTC</lastBuildDate>
+    <lastBuildDate>Tue, 28 Dec 2021 20:18:05 UTC</lastBuildDate>
+    <item>
+      <title>Client-Server Routing with WebSharper</title>
+      <link>https://intellifactory.com/user/jankoa/20211228-client-server-routing-with-websharper</link>
+      <guid isPermaLink="false">jankoa20211228-client-server-routing-with-websharper</guid>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>routing</category>
+      <category>ui</category>
+      <category>websharper</category>
+      <description></description>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>WebSharper 4.5.8 released with Visual Studio 2019 support</title>
       <link>https://intellifactory.com/user/jankoa/20190226-websharper-4-5-8-released-with-visual-studio-2019-support</link>
