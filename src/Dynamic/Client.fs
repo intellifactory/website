@@ -316,7 +316,7 @@ module Jobs =
                     // Validation for empty files
                     fileInputError.ClassList.Remove("hidden")
 
-                if not emailInput.Validity?typeMismatch && name.Trim() <> "" then
+                if not emailInput.Validity?typeMismatch && name.Trim() <> "" && files.Length <> 0 then
                     button.SetAttribute("disabled", "disabled")
                     button.ClassList.Add("btn-disabled")
                     let fd = FormData()
