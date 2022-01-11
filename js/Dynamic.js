@@ -776,7 +776,7 @@ if(!p.closest){p.closest=function(s){var e=this;while(e&&e.nodeType==1){if(e.mat
      }
     if(Jobs.files().get_Length()===0)
      fileInputError.classList.remove("hidden");
-    return!emailInput.validity.typeMismatch&&Strings.Trim(name)!==""?(Jobs.button().setAttribute("disabled","disabled"),Jobs.button().classList.add("btn-disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("name",name),Strings.Trim(github)!==""?fd.append("github",github):void 0,Jobs.files().Iter(function(t)
+    return!emailInput.validity.typeMismatch&&Strings.Trim(name)!==""&&Jobs.files().get_Length()!==0?(Jobs.button().setAttribute("disabled","disabled"),Jobs.button().classList.add("btn-disabled"),fd=new Global.FormData(),fd.append("email",email),fd.append("name",name),Strings.Trim(github)!==""?fd.append("github",github):void 0,Jobs.files().Iter(function(t)
     {
      fd.append("files",t[1],t[0]);
     }),void(self.fetch("https://api.intellifactory.com/api/jobs",(r={},r.method="POST",r.body=fd,r)).then(function(resp)
