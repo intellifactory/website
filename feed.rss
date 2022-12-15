@@ -4,7 +4,19 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Tue, 11 Jan 2022 17:15:25 UTC</lastBuildDate>
+    <lastBuildDate>Thu, 15 Dec 2022 20:16:38 UTC</lastBuildDate>
+    <item>
+      <title>Dart in F#, differently</title>
+      <link>https://intellifactory.com/user/jooseppi12/20221215-dart-in-fsharp-differently</link>
+      <guid isPermaLink="false">jooseppi1220221215-dart-in-fsharp-differently</guid>
+      <category>canvas</category>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>ui</category>
+      <category>websharper</category>
+      <description></description>
+      <pubDate>Thu, 15 Dec 2022 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Content-managed WebSharper apps with custom web controls and templating</title>
       <link>https://intellifactory.com/user/granicz/20211230-ContentManagedWebSharperAppsWithCustomWebControlsAndTemplating</link>
