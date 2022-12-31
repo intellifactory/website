@@ -159,9 +159,7 @@
       </section>
       <section class="py-20 bg-white overflow-hidden">
         <div class="container px-4 mx-auto">
-          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><blockquote>
-<p>This post is part of F# Advent 2022, a huge thanks to Sergey Tihon for organizing!</p>
-<p>If you are burning to read more, here is a list of my other F# Advent articles.</p>
+          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>This post is part of F# Advent 2022, a huge thanks to Sergey Tihon for organizing! If you are burning to read more, here is a list of my other F# Advent articles:</p>
 <ul>
 <li><p>2021 - <a href="https://intellifactory.com/user/granicz/20211230-ContentManagedWebSharperAppsWithCustomWebControlsAndTemplating">Content-managed WebSharper apps with custom web controls and templating</a></p>
 </li>
@@ -178,7 +176,6 @@
 <li><p>2015 - <a href="https://intellifactory.com/user/granicz/20151226-websharper-a-year-in-review">WebSharper - a year in review</a></p>
 </li>
 </ul>
-</blockquote>
 <hr />
 <p>WebSharper has always been about making F# web programming fun and super-productive. It encourages you to think outside the box of seasonal JavaScript libraries and gives you a fundamentally better, more robust and type-safe F# (and C#) toolset to get things done.</p>
 <p>In this post, I will illustrate a handful of the many ways WebSharper will make you a better F#/C#/.NET full-stack web developer. A common theme as we go along will be externalizing the presentation layer and <strong>putting your design into HTML template files</strong>, and not into your source code. This avoids unnecessary recompilation and makes your design iterations much-much shorter. It's a tough habit to break if you are used to inline HTML, but once you master templating with WebSharper, there is no going back.</p>
@@ -553,7 +550,7 @@ async {
 <p>Whether you make an SPA out of it or just keep it as a self-serving sitelet, you can easily deploy your app into Azure or the web host of your choice by copying the output folder. You can also switch the RPC/server-side into a microservice and deploy the UI and the backend separately. In this case, you should enable CORS and change the RPC call to an HTTP request.</p>
 <hr />
 <h2 id="news-the-upcoming-websharper-7">News: the upcoming WebSharper 7</h2>
-<p>This post wouldn't be complete without a couple WebSharper announcements. First off, WebSharper turned 15 this year - and a huge thanks to our users and contributors for making it better and better! Each major version we released feels like a new project, and WebSharper 6 is still less than a year old.</p>
+<p>This post wouldn't be complete without a couple WebSharper announcements. First off, WebSharper turned 15 this year - a huge thanks to our users and contributors for making it better and better! Each major version we released feels like a new project, and WebSharper 6 is still less than a year old.</p>
 <p>Back in 2018, I wrote an article <a href="https://intellifactory.com/user/granicz/20181210-from-enterprise-to-next-generation-web-celebrating-11-years-with-websharper">for the 11th year mark</a>, which outlines a lot of the direction we have been pursuing ever since - opening up a WASM-based execution with <a href="https://fsbolero.io">Bolero</a> and building further on WASM AOT. That article also walks through an app that you can cross-compile to JavaScript and run on WASM at the same time, requiring minimal code changes - given that WebSharper and Bolero share the same HTML notation and templating capabilities.</p>
 <p>To further align WebSharper and Bolero, we will be rolling out a new, experimental DOM/HTML construction library using the (more efficient) computation expression (CE)-based syntax Bolero switched to earlier. This is a minor enhancement and will be available in addition to the standard WebSharper.UI reactive representation.</p>
 <p>A more significant update is coming to the JavaScript output that WebSharper generates - going from the &quot;works very efficiently but don't look at it&quot; to modern, ESM-based modular output, with extra attention on preserving .NET semantics in the generated code. This opens up the possibility of deep integration with all modern JavaScript libraries, including but not limited to Lit, React, Vue, Svelte, SolidJS, etc., working with custom web controls and shadow DOM, and integrating with TypeScript.</p>
