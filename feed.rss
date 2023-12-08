@@ -4,7 +4,19 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Sat, 31 Dec 2022 05:06:38 UTC</lastBuildDate>
+    <lastBuildDate>Fri, 08 Dec 2023 20:35:38 UTC</lastBuildDate>
+    <item>
+      <title>Showcasing Feliz.Engine with WebSharper.React</title>
+      <link>https://intellifactory.com/user/gygerg/20231208-showcasing-feliz-engine-with-websharper-react</link>
+      <guid isPermaLink="false">gygerg20231208-showcasing-feliz-engine-with-websharper-react</guid>
+      <category>feliz</category>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>proxy</category>
+      <category>websharper</category>
+      <description>A quick showcase of WebSharper proxying and Feliz.Engine by implementing a Feliz-like API for WebSharper.React.</description>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Full-stack F# with charting, reactive forms, and more under 300 LOC with WebSharper</title>
       <link>https://intellifactory.com/user/granicz/20221229-full-stack-fsharp-with-charting-reactive-forms-and-more-under-300-loc-with-websharper</link>

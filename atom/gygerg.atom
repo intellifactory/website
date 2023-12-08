@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>IntelliFactory Blog</title>
+  <subtitle>Building F# applications since 2004</subtitle>
+  <link href="https://intellifactory.com" />
+  <updated>2023-12-08T20:35:38Z</updated>
+  <entry>
+    <title>Showcasing Feliz.Engine with WebSharper.React</title>
+    <link href="https://intellifactory.com/user/gygerg/20231208-showcasing-feliz-engine-with-websharper-react" />
+    <id>gygerg20231208-showcasing-feliz-engine-with-websharper-react</id>
+    <category>feliz</category>
+    <category>fsadvent</category>
+    <category>fsharp</category>
+    <category>proxy</category>
+    <category>websharper</category>
+    <summary>A quick showcase of WebSharper proxying and Feliz.Engine by implementing a Feliz-like API for WebSharper.React.</summary>
+    <updated>2023-12-08T00:00:00Z</updated>
+  </entry>
+</feed>
