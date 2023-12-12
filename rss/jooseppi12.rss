@@ -4,7 +4,18 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Fri, 08 Dec 2023 20:43:53 UTC</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2023 22:24:40 UTC</lastBuildDate>
+    <item>
+      <title>Proxying with WebSharper</title>
+      <link>https://intellifactory.com/user/jooseppi12/20231211-proxying-with-websharper</link>
+      <guid isPermaLink="false">jooseppi1220231211-proxying-with-websharper</guid>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>proxy</category>
+      <category>websharper</category>
+      <description>Using the Validus library in WebSharper projects</description>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Dart in F#, differently</title>
       <link>https://intellifactory.com/user/jooseppi12/20221215-dart-in-fsharp-differently</link>
