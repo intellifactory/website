@@ -4,7 +4,21 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Tue, 12 Dec 2023 23:01:07 UTC</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jan 2024 00:02:30 UTC</lastBuildDate>
+    <item>
+      <title>A new fullstack SPA template for WebSharper and what's next</title>
+      <link>https://intellifactory.com/user/granicz/20240102-A-new-fullstack-SPA-template-for-WebSharper-and-whats-next</link>
+      <guid isPermaLink="false">granicz20240102-A-new-fullstack-SPA-template-for-WebSharper-and-whats-next</guid>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>fullstack</category>
+      <category>tailwind</category>
+      <category>template</category>
+      <category>vite</category>
+      <category>websharper</category>
+      <description></description>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Full-stack F# with charting, reactive forms, and more under 300 LOC with WebSharper</title>
       <link>https://intellifactory.com/user/granicz/20221229-full-stack-fsharp-with-charting-reactive-forms-and-more-under-300-loc-with-websharper</link>
