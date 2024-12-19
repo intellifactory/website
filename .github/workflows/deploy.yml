@@ -27,6 +27,7 @@ jobs:
         with:
           dotnet-version: '5.0.x'
       - run: |
+          dotnet --version
           bash ./install.sh
           bash ./build.sh
 
