@@ -4,7 +4,19 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Wed, 03 Jan 2024 00:17:56 UTC</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2024 10:19:28 UTC</lastBuildDate>
+    <item>
+      <title>Football with F# - Part 1</title>
+      <link>https://intellifactory.com/user/jooseppi12/20241218-football-with-fsharp-part-1</link>
+      <guid isPermaLink="false">jooseppi1220241218-football-with-fsharp-part-1</guid>
+      <category>datatable</category>
+      <category>fsadvent</category>
+      <category>fsharp</category>
+      <category>ui</category>
+      <category>websharper</category>
+      <description></description>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 UTC</pubDate>
+    </item>
     <item>
       <title>Proxying with WebSharper</title>
       <link>https://intellifactory.com/user/jooseppi12/20231211-proxying-with-websharper</link>

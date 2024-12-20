@@ -170,7 +170,7 @@
 <ul>
 <li><p>Bolero.HotReload, the HTML template hot reload library, had been blocked from upgrade by a dependency; it is now available again for the latest Bolero.</p>
 </li>
-<li><p><code>Cmd.ofRemote</code> and its cousin <code>Cmd.performRemote</code> have been deprecated. We felt that these function names were misleading, because they are only useful when calling <em>authorized</em> remote functions. Remote functions without user authorization can be simply called with <code>Cmd.ofAsync</code> or <code>Cmd.performAsync</code>.<br />
+<li><p><code>Cmd.ofRemote</code> and its cousin <code>Cmd.performRemote</code> have been deprecated. We felt that these function names were misleading, because they are only useful when calling <em>authorized</em> remote functions. Remote functions without user authorization can be simply called with <code>Cmd.ofAsync</code> or <code>Cmd.performAsync</code>.  <br />
 The new functions <code>Cmd.ofAuthorized</code> or <code>Cmd.performAuthorized</code> should now be used instead. They are identical to the previous <code>*Remote</code>, except that instead of passing the response as a custom type <code>RemoteResponse&lt;'T&gt;</code>, they use a simple <code>option&lt;'T&gt;</code>, which is <code>Some</code> on success and <code>None</code> in case of authorization failure.</p>
 </li>
 </ul>

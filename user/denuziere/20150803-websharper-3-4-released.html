@@ -233,7 +233,7 @@ let MyWebsite =
 <p>We completely redesigned the HTML embedded language for WebSharper UI.Next. We will post another blog entry soon to fully describe the new design, but here are the main take-aways:</p>
 <ul>
 <li>Element and attribute combinators are now lowercase, for a hopefully more natural-looking syntax.</li>
-<li>The type <code>Doc</code> can be used for both client-side and server-side markup. Some features are only available on one side, such as UI.Next reactive elements for the client and conversion to a <code>Content&lt;_&gt;</code> for the server. To use these features, you need to open <code>WebSharper.UI.Next.Client</code> or <code>WebSharper.UI.Next.Server</code>, respectively.<br />
+<li>The type <code>Doc</code> can be used for both client-side and server-side markup. Some features are only available on one side, such as UI.Next reactive elements for the client and conversion to a <code>Content&lt;_&gt;</code> for the server. To use these features, you need to open <code>WebSharper.UI.Next.Client</code> or <code>WebSharper.UI.Next.Server</code>, respectively.  <br />
 A template for client-server UI.Next applications has also been added to the Visual Studio and Xamarin Studio extensions.</li>
 </ul>
 <p>Our goal for WebSharper 4.0 is to obsolete the current <code>Html.Client</code> and <code>Html.Server</code>, and to merge WebSharper.UI.Next into WebSharper under a new name. <code>Doc</code> will be the unique way to deal with HTML content, both on the client and the server side.</p>
@@ -242,7 +242,7 @@ A template for client-server UI.Next applications has also been added to the Vis
 <h2 id="cross-site-features-for-rpc-functions">Cross-site features for RPC functions</h2>
 <p>WebSharper 3.4 integrates several features related to cross-site requests to RPC functions:</p>
 <ul>
-<li>Protection against Cross-Site Request Forgery using a cookie-to-header token. This protection is active by default and completely automatic.<br />
+<li>Protection against Cross-Site Request Forgery using a cookie-to-header token. This protection is active by default and completely automatic.  <br />
 If you need to deactivate it, in particular to be able to call RPC functions from a PhoneGap mobile application, you can simply call <code>DisableCsrfProtection()</code> from module <code>WebSharper.Web.Remoting</code> at the top-level on the server side.</li>
 <li>Management of allowed CORS origins. In module <code>WebSharper.Web.Remoting</code>, the functions <code>AddAllowedOrigin</code> and associated can be called at the top-level on the server side to add CORS origins accepted by the RPC handler. In particular, PhoneGap applications need to add <code>file://</code> as an allowed origin.</li>
 </ul>

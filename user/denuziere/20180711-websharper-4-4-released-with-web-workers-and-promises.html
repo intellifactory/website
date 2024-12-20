@@ -160,7 +160,7 @@
       <section class="py-20 bg-white overflow-hidden">
         <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>We are happy to announce the release of WebSharper 4.4.0.</p>
-<p>You can try it by installing the project templates for .NET Core SDK by running: <code>dotnet new -i WebSharper.Templates::4.4.0.255</code><br />
+<p>You can try it by installing the project templates for .NET Core SDK by running: <code>dotnet new -i WebSharper.Templates::4.4.0.255</code>  <br />
 or by downloading the templates for Visual Studio 2017 <a href="http://websharper.com/installers/WebSharper.4.4.0.255.vsix">here</a>.</p>
 <p>The main highlight of this release is the new Web Workers feature.</p>
 <p>Web Workers are a browser feature that allows running JavaScript code in parallel of the main UI thread, taking advantage of concurrency for resource-intensive computations.</p>
@@ -216,7 +216,7 @@ worker.PostMessage(&quot;Hello, worker!&quot;);
 <li><a href="https://github.com/dotnet-websharper/core/issues/939">#939</a>: Add JavaScript Promises support. This includes:
 <ul>
 <li>Add a proxy for the <code>Promise&lt;'T&gt;</code> class.</li>
-<li>Add a <code>Promise</code> module with functions <code>AsAysnc</code>, <code>OfAsync</code>, <code>AsTask</code> and <code>OfTask</code>.<br />
+<li>Add a <code>Promise</code> module with functions <code>AsAysnc</code>, <code>OfAsync</code>, <code>AsTask</code> and <code>OfTask</code>.  <br />
 The <code>As*</code> functions handle rejected promises as follows: if the rejection value is an <code>Error</code>, then it is used directly as the exception raised from the Async / Task. Otherwise, it is wrapped as the <code>Reason</code> property of a <code>NonStandardPromiseRejectionException</code>.</li>
 <li>Add the above functions as extension methods to their respective relevant classes.</li>
 <li>Add a <code>promise</code> computation expression.</li>
@@ -241,7 +241,7 @@ The <code>As*</code> functions handle rejected promises as follows: if the rejec
 <li><a href="https://github.com/dotnet-websharper/core/issues/978">#978</a>: Give a better error if a Bundle is missing a project reference.</li>
 <li><a href="https://github.com/dotnet-websharper/core/issues/983">#983</a>: Fix <code>dotnet build</code> on a C# project failing to find FSharp.Core.</li>
 <li>WebSharper.Testing: reference QUnit via <code>https</code>.</li>
-<li><a href="https://github.com/dotnet-websharper/core/issues/987">#987</a>: Change the assemblies <code>WebSharper.Compiler</code>, <code>WebSharper.Compiler.CSharp</code> and <code>WebSharper.Compiler.FSharp</code> to reference <code>FSharp.Core</code> 4.4.1.0 rather than 4.5.0.0. This fixes assembly loading issues in the Roslyn analyzer.<br />
+<li><a href="https://github.com/dotnet-websharper/core/issues/987">#987</a>: Change the assemblies <code>WebSharper.Compiler</code>, <code>WebSharper.Compiler.CSharp</code> and <code>WebSharper.Compiler.FSharp</code> to reference <code>FSharp.Core</code> 4.4.1.0 rather than 4.5.0.0. This fixes assembly loading issues in the Roslyn analyzer.  <br />
 As a consequence, we reduced the minimum dependency of the WebSharper.Compiler packages on FSharp.Core from &gt;= 4.5.0 to &gt;= 4.1.0.</li>
 </ul>
 <p>Happy coding!</p>
