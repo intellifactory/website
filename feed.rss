@@ -4,11 +4,11 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Fri, 20 Dec 2024 22:57:55 UTC</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2024 23:04:25 UTC</lastBuildDate>
     <item>
       <title>Building mobile apps with F# and WebSharper</title>
-      <link>https://intellifactory.com/user/got17/20241221-Building-mobile-apps-with-F#-and-WebSharper</link>
-      <guid isPermaLink="false">got1720241221-Building-mobile-apps-with-F#-and-WebSharper</guid>
+      <link>https://intellifactory.com/user/got17/20241221-building-mobile-apps-with-fsharp-and-websharper</link>
+      <guid isPermaLink="false">got1720241221-building-mobile-apps-with-fsharp-and-websharper</guid>
       <category>android</category>
       <category>capacitor</category>
       <category>fsadvent</category>
