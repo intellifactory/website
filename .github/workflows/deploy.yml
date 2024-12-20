@@ -11,7 +11,7 @@ on:
       - completed
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -29,13 +29,12 @@ jobs:
       - run: |
           dotnet --version
           dotnet --list-runtimes
-          bash ./install.sh
-          bash ./build.sh
+          ./install.ps1
+          ./build.ps1
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build
 
