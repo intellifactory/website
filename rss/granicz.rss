@@ -4,11 +4,11 @@
     <title>IntelliFactory Blog</title>
     <description>Building F# applications since 2004</description>
     <link>https://intellifactory.com</link>
-    <lastBuildDate>Sat, 28 Dec 2024 00:47:51 UTC</lastBuildDate>
+    <lastBuildDate>Sat, 28 Dec 2024 00:56:05 UTC</lastBuildDate>
     <item>
       <title>IntelliLogo</title>
-      <link>https://intellifactory.com/user/granicz/20241222-intellilogo</link>
-      <guid isPermaLink="false">granicz20241222-intellilogo</guid>
+      <link>https://intellifactory.com/user/granicz/20241228-intellilogo</link>
+      <guid isPermaLink="false">granicz20241228-intellilogo</guid>
       <category>fsadvent</category>
       <category>fsharp</category>
       <category>lexing</category>
@@ -16,7 +16,7 @@
       <category>parsing</category>
       <category>websharper</category>
       <description></description>
-      <pubDate>Sun, 22 Dec 2024 00:00:00 UTC</pubDate>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 UTC</pubDate>
     </item>
     <item>
       <title>A new fullstack SPA template for WebSharper and what's next</title>
