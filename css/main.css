@@ -182,3 +182,6 @@ nav ul > li {
   }
 }
 
+.markdown img {
+  max-height: 640px;
+}
