@@ -159,7 +159,7 @@
       </section>
       <section class="py-20 bg-white overflow-hidden">
         <div class="container px-4 mx-auto">
-          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>I want to write my own bookmark &quot;manager&quot;. Really the most important part is, I want to be able to access sites quickly while I'm on my phone, as the browser's bookmark manager doesn't really cut it for me. On my computer, I do use <a href="1">buku</a>. For someone who spends most of their time in the terminal, it's amazing. But that does not really translate to a good experience on mobile. So I want to build a quick prototype, where I can see what I really need on a mobile to conveniently access my bookmarks. To achieve this I'm going to use WebSharper's Offline Sitelets to generate static pages. You can check out the source code <a href="https://github.com/Jooseppi12/fsadvent2025">here</a> and <a href="https://jooseppi12.github.io/fsadvent2025">here</a> is a deployed version of the project.</p>
+          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>I want to write my own bookmark &quot;manager&quot;. Really the most important part is, I want to be able to access sites quickly while I'm on my phone, as the browser's bookmark manager doesn't really cut it for me. On my computer, I do use <a href="https://github.com/jarun/buku">buku</a>. For someone who spends most of their time in the terminal, it's amazing. But that does not really translate to a good experience on mobile. So I want to build a quick prototype, where I can see what I really need on a mobile to conveniently access my bookmarks. To achieve this I'm going to use WebSharper's Offline Sitelets to generate static pages. You can check out the source code <a href="https://github.com/Jooseppi12/fsadvent2025">here</a> and <a href="https://jooseppi12.github.io/fsadvent2025">here</a> is a deployed version of the project.</p>
 <h2 id="the-storage-format">The storage format</h2>
 <p>Eventually this will probably be generated from buku's internal database, but for the quick prototype, I'm just going to use a really simple structure to hold the minimal information I need.</p>
 <pre><code class="language-fsharp">type Bookmark =
@@ -265,7 +265,7 @@
 <pre><code class="language-fsharp">client &lt;@ Client.Search () @&gt;
 </code></pre>
 <p>With this WebSharper knows the boundary between code that requires functionality from the browser and the rest of the code that is generated on compile time. As the Offline Sitelet during compilation emulates a server behind, it really is a normal WebSharper Sitelet, that on the compilation generates static html from certain, specified endpoints, but more on that below.</p>
-<p><img src="https://i.imgur.com/1wlNfQW.png" alt="List view" /></p>
+<p><img src="https://i.imgur.com/YkBLSsM.png" alt="List view" /></p>
 <h2 id="static-code-generation">Static code generation</h2>
 <pre><code class="language-fsharp">module Site =
     [&lt;Website&gt;]
