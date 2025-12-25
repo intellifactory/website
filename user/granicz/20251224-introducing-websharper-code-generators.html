@@ -1,0 +1,949 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-1291321-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-1291321-1');
+    </script>
+    <title>Introducing WebSharper source code generators</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="IntelliFactory" />
+    <meta property="og:title" content="Introducing WebSharper source code generators" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://intellifactory.com/user/granicz/20251224-introducing-websharper-code-generators" />
+    <meta property="og:image" content="https://intellifactory.com/img/category3.jpg" />
+    <meta property="og:description" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@intellifactory" />
+    <meta property="twitter:title" content="Introducing WebSharper source code generators" />
+    <meta property="twitter:description" content="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;subset=latin" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="/css/tailwind/tailwind.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" type="text/javascript" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/languages/fsharp.min.js" type="text/javascript" charset="UTF-8"></script><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/far.min.css"></link>
+<!--[if lte IE 11.0]>
+<![endif]-->
+<!--[if lte IE 9.0]>
+<![endif]-->
+
+    <script src="/js/main.js"></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <div>
+      <section class="px-4 lg:px-10 bg-gray-800 px-2">
+        <nav class="relative flex justify-between items-center py-2"><a class="text-2xl text-white font-bold" href="/"><span>Intelli</span>            <span class="text-blue-500 -ml-1">Factory</span></a>
+          <div class="lg:hidden">
+            <button class="p-2 navbar-burger">
+              <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
+                <rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect>
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:block ml-auto mr-1">
+            <ul class="flex items-center text-white space-x-10">
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/">Home</a></li>
+              <li class="hoverable-mm"><a class="text-white font-bold text-lg">Open Source</a>
+                <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-700">
+                  <div class="container mx-auto w-full flex flex-wrap justify-between mx-2">
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="/images/websharper.png" alt="WebSharper" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">WebSharper</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Functional, reactive .NET web applications without writing JavaScript.</p>
+                      <div class="flex items-center py-3"><a href="https://websharper.com" target="_blank"><img src="/images/category3-small.jpg" /></a></div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="/images/bolero.png" alt="Bolero" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">Bolero</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Future-proof web applications running on WebAssembly instead of JavaScript.</p>
+                      <div class="flex items-center py-3"><a href="https://fsbolero.io" target="_blank"><img src="/images/category6-small.jpg" /></a></div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3 fill-current text-white" src="/images/sitefi.jpg" alt="SiteFi" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">SiteFi</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">.NET static web apps, markdown-based, multi-user blogs and documentation sites.</p>
+                      <div class="flex items-center py-3"><a href="https://github.com/granicz/SiteFi" target="_blank"><img src="/images/category4-small.jpg" /></a></div>
+                    </ul>
+                    <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 pb-6 pt-6 lg:pt-3">
+                      <div class="flex items-center"><img class="h-8 mb-3 mr-3" src="/images/if-logo.png" alt="IntelliFactory" />
+                        <h3 class="font-bold text-xl text-white text-bold mb-2">IntelliFactory Labs</h3>
+                      </div>
+                      <p class="text-gray-100 text-sm">Miscellaneous F# tools and other material. Some relics here and there.</p>
+                      <div class="flex items-center py-3">
+                        <svg class="h-6 pr-3 mr-1 fill-current text-teal-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                          <path d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"></path>
+                        </svg><a class="font-bold" href="https://github.com/IntelliFactory" target="_blank">GitHub</a>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/blogs">Blogs</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/careers">Careers</a></li>
+              <li class="hoverable"><a class="text-white font-bold text-lg" href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+          <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+          <nav class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+            <div class="flex items-center mb-16 pr-6"><a class="ml-10 text-2xl text-gray-800 font-bold" href="/"><img class="h-7" src="/images/if-logo-long.png" alt="IntelliFactory" /></a></div>
+            <div class="hamburger">
+              <ul>
+                <li class="mb-1 px-10 table"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/">Home</a></li>
+                <li class="mb-1 px-10 table"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl">Open Source</a>
+                  <ul class="inline table">
+                    <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="https://websharper.com">WebSharper</a></li>
+                    <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="https://fsbolero.io">Bolero</a></li>
+                    <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="https://github.com/granicz/SiteFi">SiteFi</a></li>
+                    <li class="mb-1 px-10"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="https://github.com/IntelliFactory">IF Labs</a></li>
+                  </ul>
+                </li>
+                <li class="mb-1 px-10 table"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/blogs">Blogs</a></li>
+                <li class="mb-1 px-10 table"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/careers">Careers</a></li>
+                <li class="mb-1 px-10 table"><a class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="mt-auto px-10">
+              <p class="mt-6 mb-4 text-lg text-center"><span>2004-2021 © IntelliFactory. All rights reserved.</span></p>
+            </div>
+          </nav>
+        </div>
+      </section>
+      
+      <section class="relative py-20 2xl:py-40 overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2 class="bg-opacity-25 bg-gray-900 mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">Introducing WebSharper source code generators</h2>
+          </div><img class="absolute top-0 left-0 w-full h-full object-cover" style="z-index:-10;" src="/img/category3.jpg" alt="" />
+        </div>
+      </section>
+      <section class="relative py-10 overflow-hidden bg-blueGray-100">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center flex-wrap"><a href="/user/granicz"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/granicz.png" alt="Adam Granicz" /></a>
+              <div class="flex-1 text-left"><a href="/user/granicz">
+                  <h4 class="mb-1 text-2xl font-bold">Adam Granicz</h4></a>
+                <p>Dec 24, 2025</p>
+              </div>
+              <div class="text-right ml-20 flex-1 flex-basis-100">
+                <p class="mb-1 font-bold text-xl">Reading time:</p>
+                <p>42 mins</p>
+              </div>
+              <div class="text-right ml-20 mt-3 flex-1 flex-basis-100">
+                <p class="mb-1 font-bold text-xl">Share via:</p>
+                <div><a class="inline-block mr-2" href="https://twitter.com/intent/tweet?text=Introducing+WebSharper+source+code+generators&amp;url=https%3a%2f%2fintellifactory.com%2fuser%2fgranicz%2f20251224-introducing-websharper-code-generators">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#00acee">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                    </svg></a>                  <a class="inline-block mr-2" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fintellifactory.com%2fuser%2fgranicz%2f20251224-introducing-websharper-code-generators">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#0e76a8">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                    </svg></a>                  <a class="inline-block" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fintellifactory.com%2fuser%2fgranicz%2f20251224-introducing-websharper-code-generators">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#3b5998">
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-white overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto markdown"><div ws-preserve=""><p>One of the major new features of the upcoming <a href="https://websharper.com">WebSharper 10</a> is F# source code generators (SCGs), with an initial, rudimentary documentation available <a href="https://docs.websharper.com/metaprogramming/fsharp-code-generators">here</a>. While we haven't yet formally announced WebSharper 10, those who keep a closer look at the <a href="https://github.com/orgs/dotnet-websharper/packages">WebSharper developer NuGet feed</a> could spot the first non-RC <code>10.0.0.x</code> releases. In this article, I will use the current latest release, <code>10.0.0.652</code>, and you can also follow along by checking out the <a href="https://github.com/granicz/Tabler">sources for this article</a>.</p>
+<blockquote>
+<h3 id="try-it">Try it!</h3>
+<p>(You will need the latest <code>dotnet</code> CLI,  <code>node</code> and <code>npm</code> installed on your system.)</p>
+<ol>
+<li><p>Clone the repo: <code>git clone https://github.com/granicz/Tabler</code></p>
+</li>
+<li><p>cd into the test app folder: <code>cd Tabler\MyApp</code></p>
+</li>
+<li><p>Build and run it: <code>dotnet run</code></p>
+</li>
+<li><p>Navigate to <code>https://localhost:5000</code>, (change port as needed and reported by the self-hosted <code>.exe</code>)</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="tabler-a-scg-for-annotated-csv-files-to-tables">Tabler - a SCG for annotated CSV files to tables</h2>
+<p>I will demonstrate WebSharper SCGs with a simple CSV to HTML converter. But instead of blindly turning raw data to HTML tables, we'll generate F# code - types that model the structure of the data and UI code that constructs a table rendering. To help code generation we'll add annotations to the CSV header, and codename the code generator for this transformation &quot;Tabler&quot;.</p>
+<p>Armed with Tabler, we can embed annotated CSV source files directly in WebSharper projects, with generated code appearing with every compilation.</p>
+<figure style="text-align: center;">
+  <img src="../../assets/tabler-solution-tree.png"
+       alt="Solution tree"
+       style="max-height: 400px; height: 100%; margin: 0 auto;" />
+  <figcaption style="font-size: 0.9em; opacity: 0.7;">
+    Figure 1: Tabler-generated file in VS
+  </figcaption>
+</figure>
+<p>A sample annotated CSV file looks like this:</p>
+<pre><code class="language-csv"># MyApp.Employees.Data = Person list {
+#   &quot;First Name&quot;  -&gt; FirstName: string
+#   &quot;Last Name&quot;   -&gt; LastName: string
+#   &quot;Age&quot;		  -&gt; Age: int
+#   &quot;Department&quot;  -&gt; Department: union
+#   &quot;Start Date&quot;  -&gt; StartDate: date
+# }
+First Name, Last Name, Age, Department, Start Date
+Anna,Kovacs,29,Engineering,2021-04-12
+Mark,Stevens,41,Finance,2016-09-01
+Lucia,Ramirez,34,Marketing,2019-02-18
+Peter,Nagy,38,Operations,2017-06-05
+Sofia,Morales,26,Customer Support,2023-01-09
+Daniel,Weber,45,Human Resources,2014-11-24
+Emily,Chen,31,Product Management,2020-08-17
+Robert,Klein,52,Legal,2010-03-22
+Isabel,Fernandez,28,Design,2022-05-30
+Thomas,OConnor,36,Sales,2018-10-08
+</code></pre>
+<p>Note the header block inside the commented lines. This section defines a fully qualified name <code>MyApp.Employees.Data</code> for the data that follows, names each row/record as <code>Person</code>, and describes a mapping from column headers (<code>&quot;First Name&quot;</code>) to an identifier*type pair. Here, for the type, there are four built-in types, which are straightforward to extend later: strings, numbers, dates, and unions. Unions provide a closed set of values extracted from the dataset, and can be used to model a finite set of possible values in a type-safe manner.</p>
+<p>From the header metainfo we want to generate an F# record type to represent <code>Person</code> records/rows, along with a constructor helper. If any of the record fields are unions, their values are collected into a DU with a mapping function between DU values and data values.</p>
+<p>So for the above CSV snippet, we expect to generate the following code:</p>
+<pre><code class="language-fsharp">namespace MyApp
+
+module Employees =
+    open System
+    
+    type Department = 
+        | CustomerSupport
+        | Design
+        | Engineering
+        | Finance
+        | HumanResources
+        | Legal
+        | Marketing
+        | Operations
+        | ProductManagement
+        | Sales
+    
+        override this.ToString() =
+            match this with
+                | CustomerSupport -&gt; &quot;Customer Support&quot;
+                | Design -&gt; &quot;Design&quot;
+                | Engineering -&gt; &quot;Engineering&quot;
+                | Finance -&gt; &quot;Finance&quot;
+                | HumanResources -&gt; &quot;Human Resources&quot;
+                | Legal -&gt; &quot;Legal&quot;
+                | Marketing -&gt; &quot;Marketing&quot;
+                | Operations -&gt; &quot;Operations&quot;
+                | ProductManagement -&gt; &quot;Product Management&quot;
+                | Sales -&gt; &quot;Sales&quot;
+    
+    type Person =
+        {
+            FirstName: string
+            LastName: string
+            Age: int
+            Department: Department
+            StartDate: DateTime
+        }
+    
+        static member Create (firstName, lastName, age, department, startDate) =
+            {
+                FirstName = firstName
+                LastName = lastName
+                Age = age
+                Department = department
+                StartDate = startDate
+            }
+    
+</code></pre>
+<h2 id="rendering-tables">Rendering tables</h2>
+<p>Since the main use of Tabler is compile-time code generation to render HTML tables from raw CSV data, it is important that these tables can be styled according to the host page's theme.</p>
+<p>We can accomplish this using WebSharper.UI templating. First, we assume that there is an HTML template file that contains the template markup for our table. For simplicity, we use a hardcoded name <code>Main.html</code> and generate a UI type provider call to generate a strongly-typed representation of the template under <code>MainTemplate</code>:</p>
+<pre><code class="language-fsharp">namespace MyApp
+
+open WebSharper.UI.Templating
+
+type MainTemplate=Template&lt;&quot;Main.html&quot;, ClientLoad.FromDocument&gt;
+
+module Employees =
+    ...
+</code></pre>
+<p>From here, we assume that there are various inner templates defined in the master template file. For example, since we used <code>MyApp.Employees.Data</code> in the CSV header, we require:</p>
+<ul>
+<li><p><code>EmployeesTable_HeaderColumn</code> (=&gt; a single header column) with a single <code>Header</code> placeholder, to represent a header cell.</p>
+</li>
+<li><p><code>Employee</code> (=&gt; a table row, and note the singular case) with placeholders whose names match the field names declared in the CSV header block. For instance, for <code>&quot;First name&quot;</code>, we declared <code>FirstName</code>, so this field needs to be present in the inner template, along all others.</p>
+</li>
+<li><p><code>Employees</code> (=&gt; the full table) with a <code>HeaderRow</code>, <code>Data</code>, <code>Count</code> placeholders - this template gives the presentation artifact of the entire table. <code>HeaderRow</code> will be automatically populated by injecting all column headers (using the <code>EmployeesTable_HeaderColumn</code> template we saw above), <code>Data</code> will receive all rows (using <code>Employee</code>), and <code>Count</code> will be populated by the number of rows processed.</p>
+</li>
+</ul>
+<p>So the final bit of the generated code, related to constructing these template-based blocks for the entire table, looks like this:</p>
+<pre><code class="language-fsharp">module Employees =
+    ...
+
+    let headerColumn (col: string) =
+        MainTemplate.EmployeesTable_HeaderColumn()
+            .Header(col)
+            .Doc()
+    
+    let row (person:Person) =
+        MainTemplate.Employee()
+            .FirstName(person.FirstName)
+            .LastName(person.LastName)
+            .Age(string person.Age)
+            .Department(person.Department.ToString())
+            .StartDate(person.StartDate.ToShortDateString())
+            .Doc()
+    
+    let Data =
+        MainTemplate.Employees()
+            .HeaderRow([
+                headerColumn &quot;First Name&quot;
+                headerColumn &quot;Last Name&quot;
+                headerColumn &quot;Age&quot;
+                headerColumn &quot;Department&quot;
+                headerColumn &quot;Start Date&quot;
+            ])
+            .Data([
+                row &lt;| Person.Create (&quot;Anna&quot;, &quot;Kovacs&quot;, 29, Department.Engineering, DateTime.Parse &quot;2021-04-12&quot;)
+                ...
+            ])
+            .Count(string 10)
+            .Doc()
+</code></pre>
+<h2 id="the-scg">The SCG</h2>
+<p>Now that we have seen the code we want to generate, it's time to write our SCG. This will go into a separate project (<code>Tabler</code> in the <a href="https://github.com/granicz/Tabler">linked repository</a>), which we will reference in our main app project.</p>
+<p>SCGs declare one or more file extensions, for which they are activated in the compilation pipeline, so for every file added to a SCG-enhanced project with those file extensions, source code is generated (one or more F# files) and added to the list of source files to be compiled. Next to this, there is a single entrypoint <code>Generate</code> to implement, which will be called with each input file and some meta information about the compilation context.</p>
+<p>The skeleton of our <code>.table</code> SCG looks like this:</p>
+<pre><code class="language-fsharp">namespace Tabler
+
+open System.IO
+open WebSharper
+
+type TableSourceGenerator() =
+    interface ISourceGenerator with
+        member this.Generate (gen: GenerateCall) : string array option =
+            let file = gen.FilePath
+            File.ReadAllLines(file)
+            |&gt; Reader.ParseAll
+            |&gt; function
+                | Ok res -&gt;
+                    ...
+                    Some ...
+                | Error e -&gt;
+                    ...
+                    IDE.error gen pos e.Message
+                    None
+
+[&lt;assembly:FSharpSourceGenerator(&quot;table&quot;, typeof&lt;TableSourceGenerator&gt;)&gt;]
+do ()
+</code></pre>
+<h2 id="our-csv-reader">Our CSV reader</h2>
+<p>Since we enhance CSV syntax with our custom comment header, we need to write a parser for it. I decided to go with a simple line-based parser and utilize <code>Result</code> values to weave each parsing step together, enabling me to handle syntax errors precisely.</p>
+<p>First, I build a simple computation expression (CE) to compose <code>Result</code> values:</p>
+<pre><code class="language-fsharp">    type ResultBuilder() =
+        member _.Bind(x, f) =
+            match x with
+            | Ok v    -&gt; f v
+            | Error e -&gt; Error e
+
+        member _.Return(x) = Ok x
+        member _.ReturnFrom(x) = x
+
+    let result = ResultBuilder()
+</code></pre>
+<p>Next, my line-based parser functions will all yield either an error that pinpoints what's wrong and where in the syntax, or a custom value that contains all the parsed data.</p>
+<p>So my <code>ParseError</code> and a <code>Cursor</code> type to keep track of parsing position within a line looks like this:</p>
+<pre><code class="language-fsharp">    type ParseError =
+        {
+            Message: string
+            StartLine: int
+            StartColumn: int
+            Length: int
+        }
+
+    type Cursor =
+        {
+            Text: string
+            LineNumber: int
+            Column: int
+        }
+</code></pre>
+<p>Equally unimpressive is my built-in CSV field type and a helper to construct errors:</p>
+<pre><code class="language-fsharp">    type FieldType =
+        | String
+        | Int
+        | Union
+        | Date
+
+    let error msg (line, col, length) =
+        Error { Message = msg; StartLine = line; StartColumn = col; Length = length }
+</code></pre>
+<p>The heart of the main parser functions is <code>tryMatch</code> - a function that tries to match a given regex against a <code>Cursor</code> value:</p>
+<pre><code class="language-fsharp">    let tryMatch (lineNo, rxName, rx: Regex) (c: Cursor) =
+        let m = rx.Match(c.Text, c.Column)
+        if m.Success &amp;&amp; m.Index = c.Column then
+            Ok (m, { c with Column = c.Column + m.Length })
+        else
+            error $&quot;Expected {rxName}&quot; (lineNo, c.Column, 1)
+</code></pre>
+<p>Using this helper, we can extract the information from the first header line:</p>
+<pre><code class="language-fsharp">    type DataHeader =
+        {
+            QuantifiedName: string
+            TypeName: string
+        }
+
+    let ParseHeaderLine (line: string, lineNo) =
+        let c0 = { Text = line; LineNumber = lineNo; Column = 0 }
+        // # MyApp.Employees = Person list {
+        result {
+            let! (_, c1) = tryMatch (lineNo, &quot;whitespace&quot;, Regex @&quot;\s*#\s*&quot;) c0
+            let! (qn, c2) = tryMatch (lineNo, &quot;target identifier&quot;, Regex @&quot;(?&lt;q&gt;(?:[A-Za-z_][A-Za-z0-9_]*\.)*[A-Za-z_][A-Za-z0-9_]*)&quot;) c1
+            let! (_, c3) = tryMatch (lineNo, &quot;=&quot;, Regex @&quot;\s*=\s*&quot;) c2
+            let! (item, c4) = tryMatch (lineNo, &quot;item identifier&quot;, Regex @&quot;[A-Za-z_][A-Za-z0-9_]*&quot;) c3
+            let! (_, c5) = tryMatch (lineNo, &quot;'list'&quot;, Regex @&quot;\s+list\s+&quot;) c4
+            let! (_, _)  = tryMatch (lineNo, &quot;'{'&quot;, Regex @&quot;\{\s*$&quot;) c5
+            return
+                {
+                    DataHeader.QuantifiedName = qn.Groups[&quot;q&quot;].Value
+                    DataHeader.TypeName = item.Value
+                }
+        }
+</code></pre>
+<p>At any token, if we fail to match what's expected, <code>tryMatch</code> will provide a meaningful message given the supplied names and line info.</p>
+<p>Parsing the label-to-field mappings and the CSV data is just building up similar primitives:</p>
+<pre><code class="language-fsharp">    type DataColumn =
+        {
+            ColumnName: string
+            FieldName: string
+            FieldType: FieldType
+        }
+
+    type ParsedData =
+        {
+            Header: DataHeader
+            Columns: DataColumn list
+            CsvHead: string list
+            CsvRows: string list list
+        }
+
+    let ParseMappingLine (line: string, lineNo) =
+        let c0 = { Text = line; LineNumber = lineNo; Column = 0 }
+        // #    &quot;First Name&quot; -&gt; FirstName: string
+        result {
+            let! (_, c1) = tryMatch (lineNo, &quot;whitespace&quot;, Regex @&quot;\s*#\s*&quot;) c0
+            let! (q, c2) = tryMatch (lineNo, &quot;column name&quot;, Regex &quot;\&quot;(?&lt;col&gt;[^\&quot;]*)\&quot;&quot;) c1
+            let! (_, c3) = tryMatch (lineNo, &quot;-&gt;&quot;, Regex @&quot;\s*-&gt;\s*&quot;) c2
+            let! (f, c4) = tryMatch (lineNo, &quot;field name&quot;, Regex @&quot;[A-Za-z_][A-Za-z0-9_]*&quot;) c3
+            let! (_, c5) = tryMatch (lineNo, &quot;:&quot;, Regex @&quot;\s*:\s*&quot;) c4
+            let! (t, _)  = tryMatch (lineNo, &quot;field type&quot;, Regex @&quot;[A-Za-z_][A-Za-z0-9_]*&quot;) c5
+            let! tt =
+                match t.Value.ToLower() with
+                | &quot;string&quot; -&gt;
+                    Ok FieldType.String
+                | &quot;int&quot; -&gt;
+                    Ok FieldType.Int
+                | &quot;union&quot; -&gt;
+                    Ok FieldType.Union
+                | &quot;date&quot; -&gt;
+                    Ok FieldType.Date
+                | _ -&gt;
+                    error $&quot;Valid field type expected, got {t.Value}&quot; (lineNo, c5.Column, t.Value.Length) 
+            return
+                {
+                    DataColumn.ColumnName = q.Groups[&quot;col&quot;].Value
+                    DataColumn.FieldName = f.Value
+                    DataColumn.FieldType = tt
+                }
+        }
+
+    let ParseCloserLine (line: string, lineNo) =
+        let c0 = { Text = line; LineNumber = lineNo; Column = 0 }
+        // # }
+        result {
+            let! (_, c1) = tryMatch (lineNo, &quot;whitespace&quot;, Regex @&quot;\s*#\s*&quot;) c0
+            let! (_, c2) = tryMatch (lineNo, &quot;}&quot;, Regex @&quot;}\s*$&quot;) c1
+            return true
+        }
+
+    let splitCsvLine (line: string) =
+        line.Split(',')
+        |&gt; Array.map (fun s -&gt; s.Trim())
+        |&gt; Array.toList
+
+    let ParseSchemaBlock (lines: (int * string) list) =
+        result {
+            match lines with
+            | [] -&gt;
+                return! error &quot;Expected header line&quot; (0, 0, 0)
+            | (ln, line) :: rest -&gt;
+                let! header = ParseHeaderLine (line, ln)
+                let rec parseMappings acc remaining =
+                    result {
+                        match remaining with
+                        | [] -&gt;
+                            return! error &quot;Unexpected end of file in schema block&quot; (ln, 0, 0)
+                        | (ln, line) :: tail -&gt;
+                            match ParseCloserLine (line, ln) with
+                            | Ok _ -&gt;
+                                return List.rev acc, tail
+                            | Error _ -&gt;
+                                let! col = ParseMappingLine (line, ln)
+                                return! parseMappings (col :: acc) tail
+                    }
+                let! columns, restLines = parseMappings [] rest
+                return header, columns, restLines
+        }
+
+    let ParseCsv (lines: (int * string) list) =
+        result {
+            match lines with
+            | [] -&gt;
+                return! error &quot;Expected CSV header&quot; (0, 0, 0)
+            | (_, headerLine) :: rows -&gt;
+                let csvHeader = splitCsvLine headerLine
+                let csvRows =
+                    rows
+                    |&gt; List.map (fun (_, l) -&gt; splitCsvLine l)
+                return csvHeader, csvRows
+        }
+
+    let ParseAll (lines: string array) =
+        let lines =
+            lines
+            |&gt; Array.mapi (fun i l -&gt; i + 1, l)
+            |&gt; Array.toList
+            |&gt; List.filter (fun (_, l) -&gt; not (System.String.IsNullOrWhiteSpace l))
+        result {
+            let! header, columns, rest = ParseSchemaBlock lines
+            let! csvHeader, csvRows = ParseCsv rest
+            return
+                {
+                    Header  = header
+                    Columns = columns
+                    CsvHead = csvHeader
+                    CsvRows = csvRows
+                }
+        }
+</code></pre>
+<h2 id="code-generator">Code generator</h2>
+<p>There are a number of ways to generate F# code programmatically, ranging from simple string writing to using various AST representations and pretty-printing with proper code formatting to F# code.</p>
+<p>For this article, I decided to go with the simplest form: generating F# code by concatenating strings.</p>
+<p>This needs a simple abstraction to keep track of indentation levels:</p>
+<pre><code class="language-fsharp">module PP =
+    open System
+    open System.Text
+
+    type IndentedStringBuilder(s: string) =
+        let sb = new StringBuilder(s)
+    
+        new () = IndentedStringBuilder(&quot;&quot;)
+
+        member val TAB_SIZE = 4 with get, set
+        member val CURRENT_INDENT = 0 with get, set
+
+        member this.AddIndent () = this.CURRENT_INDENT &lt;- this.CURRENT_INDENT + 1
+
+        member this.RemoveIndent () =
+            if this.CURRENT_INDENT &gt; 0 then
+                this.CURRENT_INDENT &lt;- this.CURRENT_INDENT - 1
+            else
+                this.CURRENT_INDENT &lt;- 0
+
+        member this.AddLine ind s =
+            let tab = String.init this.TAB_SIZE (fun _ -&gt; &quot; &quot;)
+            let indent = String.init (this.CURRENT_INDENT+ind) (fun _ -&gt; tab)
+            sb.AppendLine (sprintf &quot;%s%s&quot; indent s) |&gt; ignore
+
+        member __.AddString ind (s: string) =
+            for line in s.Split([| System.Environment.NewLine; &quot;\r&quot;; &quot;\n&quot;|], StringSplitOptions.None) do
+                __.AddLine ind line
+
+        member __.StringOf() =
+            sb.ToString()
+
+        member pp.EMPTY_LINE () =
+            pp.AddLine 0 &quot;&quot;
+
+        member pp.NAMESPACE ns =
+            pp.AddLine 0 &lt;| sprintf &quot;namespace %s&quot; ns
+
+        member pp.OPEN ns =
+            pp.AddLine 0 &lt;| sprintf &quot;open %s&quot; ns
+
+        member pp.OPEN_TYPE ns =
+            pp.AddLine 0 &lt;| sprintf &quot;open type %s&quot; ns
+
+        member pp.ATTRIBUTE att =
+            pp.AddLine 0 &lt;| sprintf &quot;[&lt;%s&gt;]&quot; att
+
+        member pp.MODULE recu mo =
+            if recu then
+                pp.AddLine 0 &lt;| sprintf &quot;and %s =&quot; mo
+            else
+                pp.AddLine 0 &lt;| sprintf &quot;module %s =&quot; mo
+            pp.AddIndent()
+
+        member pp.MODULE_NOT_INDENTED mo =
+            pp.AddLine 0 &lt;| sprintf &quot;module %s&quot; mo
+
+        member pp.MODULE_END () =
+            pp.RemoveIndent()
+
+        member pp.TYPE_RECORD recu ty fields =
+            if recu then
+                pp.AddLine 0 &lt;| sprintf &quot;and %s =&quot; ty
+            else
+                pp.AddLine 0 &lt;| sprintf &quot;type %s =&quot; ty
+            pp.AddLine 1 &quot;{&quot;
+            for (f, v) in fields do
+                pp.AddLine 2 &lt;| sprintf &quot;%s: %s&quot; f v
+            pp.AddLine 1 &quot;}&quot;
+
+    type IndentedCodeFileBuilder(fname, content) =
+        let isb = IndentedStringBuilder(content)
+
+        new (fname) = IndentedCodeFileBuilder(fname, &quot;&quot;)
+
+        member this.Builder = isb
+
+        member this.OutputCodeFileOf() =
+            {
+                BaseFilename = fname
+                Content = isb.StringOf()
+            }
+</code></pre>
+<p>Using <code>IndentedCodeFileBuilder</code>, I can now generate the skeleton code for a <code>ParsedData</code> value:</p>
+<pre><code class="language-fsharp">namespace Tabler
+
+open PP
+open Reader
+open Helpers
+
+module CodeGen =
+    type UnionValues =
+        {
+            Column: DataColumn
+            Values: string list
+        }
+
+    let ExtractUnionValues (data: ParsedData) : UnionValues list =
+        // Compute all raw values for each union column
+        ...
+
+    let Generate (data: Reader.ParsedData) = [
+        let cfb = IndentedCodeFileBuilder(&quot;Data.fs&quot;)
+        let pp = cfb.Builder
+
+        let nss = data.Header.QuantifiedName.Split([|'.'|])
+        let ns, m, v = nss.[0], nss.[1], nss.[2]
+        pp.NAMESPACE ns
+        pp.EMPTY_LINE()
+        pp.OPEN &quot;WebSharper.UI.Templating&quot;
+        pp.EMPTY_LINE()
+        pp.AddLine 0 $&quot;type MainTemplate=Template&lt;\&quot;Main.html\&quot;, ClientLoad.FromDocument&gt;&quot;
+        pp.EMPTY_LINE()
+        pp.MODULE false (capitalize m)
+        pp.OPEN &quot;System&quot;
+        pp.EMPTY_LINE()
+        // Print types for each union
+        ExtractUnionValues data
+        |&gt; List.iter (fun union -&gt;
+            pp.AddLine 0 $&quot;type {union.Column.FieldName} = &quot;
+            union.Values
+            |&gt; List.iter (fun uv -&gt;
+                pp.AddLine 1 $&quot;| {toPascalCase uv}&quot;
+            )
+            pp.EMPTY_LINE()
+            pp.AddLine 1 $&quot;override this.ToString() =&quot;
+            pp.AddLine 2 $&quot;match this with&quot;
+            union.Values
+            |&gt; List.iter (fun uv -&gt;
+                pp.AddLine 3 $&quot;| {toPascalCase uv} -&gt; \&quot;{uv}\&quot;&quot;
+            )
+            pp.EMPTY_LINE()
+        )
+        // Print main type
+        pp.AddLine 0 $&quot;type {capitalize data.Header.TypeName} =&quot;
+        pp.AddLine 1 &quot;{&quot;
+        data.Columns
+        |&gt; List.iter (fun col -&gt;
+            let colTy =
+                match col.FieldType with
+                | FieldType.String -&gt;
+                    &quot;string&quot;
+                | FieldType.Int -&gt;
+                    &quot;int&quot;
+                | FieldType.Union -&gt;
+                    capitalize col.FieldName
+                | FieldType.Date -&gt;
+                    &quot;DateTime&quot;
+            pp.AddLine 2 $&quot;{capitalize col.FieldName}: {colTy}&quot;
+        )
+        pp.AddLine 1 &quot;}&quot;
+        pp.EMPTY_LINE()
+        // Create member
+        let pars =
+            data.Columns
+            |&gt; List.map (fun c -&gt; lowerFirst c.FieldName)
+            |&gt; String.concat &quot;, &quot;
+        pp.AddLine 1 $&quot;static member Create ({pars}) =&quot;
+        pp.AddLine 2 &quot;{&quot;
+        data.Columns
+        |&gt; List.iter (fun c -&gt;
+            pp.AddLine 3 $&quot;{capitalize c.FieldName} = {lowerFirst c.FieldName}&quot;
+        )
+        pp.AddLine 2 &quot;}&quot;
+        pp.EMPTY_LINE()
+        //
+        pp.AddLine 0 $&quot;let headerColumn (col: string) =&quot;
+        pp.AddLine 1 $&quot;MainTemplate.{capitalize m}Table_HeaderColumn()&quot;
+        pp.AddLine 2 $&quot;.Header(col)&quot;
+        pp.AddLine 2 $&quot;.Doc()&quot;
+        pp.EMPTY_LINE()
+        //
+        pp.AddLine 0 $&quot;let row ({lowerFirst data.Header.TypeName}:{capitalize data.Header.TypeName}) =&quot;
+        pp.AddLine 1 $&quot;MainTemplate.{capitalize (singularize m)}()&quot;
+        data.Columns
+        |&gt; List.iter (fun c -&gt;
+            match c.FieldType with
+            | FieldType.String -&gt;
+                pp.AddLine 2 $&quot;.{capitalize c.FieldName}({lowerFirst data.Header.TypeName}.{capitalize c.FieldName})&quot;
+            | FieldType.Int -&gt;
+                pp.AddLine 2 $&quot;.{capitalize c.FieldName}(string {lowerFirst data.Header.TypeName}.{capitalize c.FieldName})&quot;
+            | FieldType.Union -&gt;
+                pp.AddLine 2 $&quot;.{capitalize c.FieldName}({lowerFirst data.Header.TypeName}.{capitalize c.FieldName}.ToString())&quot;
+            | FieldType.Date -&gt;
+                pp.AddLine 2 $&quot;.{capitalize c.FieldName}({lowerFirst data.Header.TypeName}.{capitalize c.FieldName}.ToShortDateString())&quot;
+        )
+        pp.AddLine 2 $&quot;.Doc()&quot;
+        pp.EMPTY_LINE()
+        pp.AddLine 0 $&quot;let {capitalize v} =&quot;
+        pp.AddLine 1 $&quot;MainTemplate.{capitalize m}()&quot;
+        pp.AddLine 2 $&quot;.HeaderRow([&quot;
+        data.Columns
+        |&gt; List.iter (fun c -&gt;
+            pp.AddLine 3 $&quot;headerColumn \&quot;{c.ColumnName}\&quot;&quot;
+        )
+        pp.AddLine 2 $&quot;])&quot;
+        pp.AddLine 2 $&quot;.Data([&quot;
+        data.CsvRows
+        |&gt; List.iter (fun row -&gt;
+            let vs =
+                List.zip data.Columns row
+                |&gt; List.map (fun (c, row) -&gt;
+                    match c.FieldType with
+                    | FieldType.String -&gt;
+                        $&quot;\&quot;{row}\&quot;&quot;
+                    | FieldType.Int -&gt;
+                        $&quot;{row}&quot;
+                    | FieldType.Union -&gt;
+                        $&quot;{capitalize c.FieldName}.{toPascalCase row}&quot;
+                    | FieldType.Date -&gt;
+                        $&quot;DateTime.Parse \&quot;{row}\&quot;&quot;
+                )
+                |&gt; String.concat &quot;, &quot;
+            pp.AddLine 3 $&quot;row &lt;| {capitalize data.Header.TypeName}.Create ({vs})&quot;
+        )
+        pp.AddLine 2 &quot;])&quot;
+        pp.AddLine 2 $&quot;.Count(string {data.CsvRows.Length})&quot;
+        pp.AddLine 2 &quot;.Doc()&quot;
+        pp.EMPTY_LINE()
+        pp.AddLine 0 $&quot;let DataCount = {data.CsvRows.Length}&quot;
+        yield cfb.OutputCodeFileOf()
+    ]
+</code></pre>
+<p>There are a few helpers (<code>capitalize</code>, <code>lowerFirst</code>, <code>singularize</code>, <code>toPascalCase</code>) to deal with minor code generation details, feel free to check the <a href="https://github.com/granicz/Tabler">source repository</a> for these.</p>
+<h2 id="completing-the-scg">Completing the SCG</h2>
+<p>Now with all the pieces we need, we are ready to complete the SCG's <code>Generate</code> method:</p>
+<pre><code class="language-fsharp">member this.Generate (gen: GenerateCall) : string array option =
+    let file = gen.FilePath
+    IDE.debug gen &lt;| sprintf &quot;Processing %s...\n&quot; file
+    File.ReadAllLines(file)
+    |&gt; Reader.ParseAll
+    |&gt; function
+        | Ok res -&gt;
+            // TODO: Sanity check to make sure all CSV rows contain enough columns
+            // ...
+            // Sanity check: the quantified name of the data source needs to be X.Y.Z
+            let qn = res.Header.QuantifiedName
+            if qn.Split([|'.'|]) |&gt; Array.length &lt;&gt; 3 then
+                IDE.error gen (file, (1, 0), (1, qn.Length)) &quot;Quantified name needs to be of the format X.Y.Z&quot;
+                None
+            else
+                CodeGen.Generate res
+                |&gt; List.map (fun cf -&gt;
+                    // Gets the parent folder of the original .table file
+                    let outputPath = Path.GetDirectoryName(file)
+                    let outputFile = Path.Combine(outputPath, file+&quot;_&quot;+cf.BaseFilename) |&gt; Path.GetFullPath
+                    let outputPath = Path.GetDirectoryName(outputFile)
+                    if not (Directory.Exists(outputPath)) then
+                        Directory.CreateDirectory(outputPath) |&gt; ignore
+                    // Write generated file
+                    File.WriteAllText(outputFile, cf.Content)
+                    outputFile
+                )
+                |&gt; List.toArray
+                |&gt; Some
+        | Error e -&gt;
+            let pos = (file, (e.StartLine, e.StartColumn), (e.StartLine, e.StartColumn+e.Length))
+            IDE.error gen pos e.Message
+            None
+</code></pre>
+<p><code>Generate</code> is expected to return an optional list of generated code filenames, and they need to be written on disk for the compiler to process them. The caller process (the WebSharper compiler) will treat a <code>None</code> value as a no-op, and otherwise it will generate a <code>.props</code> file that links these files to the source file, causing them to show up as nested artifacts in Visual Studio's Solution Explorer.</p>
+<h2 id="ide-error-reporting">IDE error reporting</h2>
+<p>You can also recover from various errors that may happen during processing an input file. You can signal these back to the build process using specially printed messages, and if you work inside Visual Studio or your other favorite IDE, these will surface as errors, and clicking on them will navigate you to the offending position.</p>
+<p>Note that SCG errors only surface after a compilation attempt. If you need continuous as-you-type error checking in a custom source/DSL/data files, you will need to implement an IDE plugin, in addition to the SCG.</p>
+<h2 id="building-on-scgs-the-rise-of-dsls">Building on SCGs - the rise of DSLs</h2>
+<p>With WebSharper 10, we'll be soon introducing more tools that focus on enlisting domain-specific languages (DSLs) in your WebSharper applications. You can already implement your own full-blown DSLs using <code>WebSharper.FsLexYacc</code> (a WebSharper runtime for F#'s <code>fslex</code> and <code>fsyacc</code> tools, repository <a href="https://github.com/dotnet-websharper/FsLexYacc.Runtime">here</a>), and now with WebSharper SCGs, nothing stops you from using them inside your WebSharper applications.</p>
+<p>One of the upcoming releases that I am excited about is a project we codenamed Warp, building on but also reinventing with a much larger scope some of the interactive web development toolset we
+developed years ago as part of the now archived <code>WebSharper.Warp</code> library (<a href="https://github.com/dotnet-websharper/warp">repository</a>).</p>
+<p>With Warp, we are aiming to ship a feature-rich specification DSL for WebSharper applications. Initially, this will cover fullstack applications only, and later more syntax will be added for SPAs, HTML applications, and other project types (microservices, etc.)</p>
+<p>These will be introduced continuously in early 2026 Q1, so keep checking back often!</p>
+<h2 id="happy-holidays">Happy holidays!</h2>
+<p>Thanks to Sergey Tihon for organizing F# Advent and to everyone who participated!</p>
+<p>Happy coding!</p>
+</div></div>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-12">
+            <div class="lg:w-2/3 lg:pr-16 mb-2 lg:mb-8">
+              <h2 class="text-3xl md:text-4xl font-bold font-heading">Read more from </h2>
+            </div>
+            <div class="text-sm lg:text-base lg:w-1/3">
+              <p class="leading-loose text-blueGray-500"><span>Can’t find what you were looking for? </span>                <a class="text-blue-600 hover:text-blue-700" href="/contact">Drop us a line</a>.
+                              
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8"><a href="/user/granicz">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="/img/avatar/granicz.png" alt="Adam Granicz" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Adam Granicz</span></div>
+                </div></a>              <a href="/user/granicz/20241228-intellilogo">
+                <h4 class="text-xl font-semibold">IntelliLogo</h4></a>
+              <p class="text-sm md:text-base text-blueGray-400">20241228 · 26 min read</p>
+            </div><div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8"><a href="/user/granicz">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="/img/avatar/granicz.png" alt="Adam Granicz" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Adam Granicz</span></div>
+                </div></a>              <a href="/user/granicz/20240102-A-new-fullstack-SPA-template-for-WebSharper-and-whats-next">
+                <h4 class="text-xl font-semibold">A new fullstack SPA template for WebSharper and what&#39;s next</h4></a>
+              <p class="text-sm md:text-base text-blueGray-400">20240102 · 11 min read</p>
+            </div><div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8"><a href="/user/granicz">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="/img/avatar/granicz.png" alt="Adam Granicz" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Adam Granicz</span></div>
+                </div></a>              <a href="/user/granicz/20221229-full-stack-fsharp-with-charting-reactive-forms-and-more-under-300-loc-with-websharper">
+                <h4 class="text-xl font-semibold">Full-stack F# with charting, reactive forms, and more under 300 LOC with WebSharper</h4></a>
+              <p class="text-sm md:text-base text-blueGray-400">20221229 · 30 min read</p>
+            </div><div class="w-full md:w-1/2 lg:w-1/4 p-4 mb-8 bg-gray-50 rounded-3xl"><a href="https://github.com/IntelliFactory/blogs/tree/master/user/granicz/20251224-introducing-websharper-code-generators.md">
+                <div class="inline-flex items-center"><img class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Adam Granicz" />
+                  <div class="flex-1 text-left"><span class="text-lg font-bold text-blueGray-400">Found a typo?</span></div>
+                </div></a>
+              <h4 class="text-xl font-semibold">This blog post is hosted on GitHub <a href="https://github.com/IntelliFactory/blogs/tree/master/user/granicz/20251224-introducing-websharper-code-generators.md">here</a>. Feel free to file a ticket or send a PR.</h4>
+            </div>
+            
+            
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="2xl:pt-16 xl:pb-8 py-5 bg-blueGray-50">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap border-b border-gray-100 pt-5 lg:pt-10">
+            <div class="w-full lg:w-3/5 px-4">
+              <div class="flex flex-wrap px-5 pb-4">
+                <div class="w-1/2 lg:w-1/3 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">IntelliFactory</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/blogs">Blogs</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/careers">Careers</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-1/3 px-4 mb-4">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Services</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="/home#consulting">Consulting</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#trainings">Trainings</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#code-synthesis">AI-driven Code Synthesis</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="/home#dsls">Domain-Specific Languages</a></li>
+                  </ul>
+                </div>
+                <div class="w-1/2 lg:w-1/3 px-4 mb-12">
+                  <h3 class="mb-8 lg:mb-10 text-xl font-bold font-heading">Open Source</h3>
+                  <ul class="text-lg">
+                    <li class="mb-4"><a class="hover:underline" href="https://websharper.com">WebSharper</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="https://fsbolero.io">Bolero</a></li>
+                    <li class="mb-4"><a class="hover:underline" href="#">From our Lab</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+              <h3 class="mb-10 text-xl font-bold">Newsletter</h3>
+              <form method="post" id="newsletter-form">
+                <div class="md:max-w-sm mb-8 flex items-center bg-white border border-gray-100 rounded-full"><span class="inline-block pl-2 lg:pl-5">
+                    <svg width="37" height="37" viewbox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="18.5" cy="18.5" r="9.5" fill="#1F40FF" fill-opacity="0.15"></circle>
+                      <circle cx="18.5" cy="18.5" r="18.5" fill="#1F40FF" fill-opacity="0.06"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5" fill="#282C36"></circle>
+                    </svg></span>
+                  <input id="newsletter-input" class="pl-4 py-2 focus:outline-none rounded-full placeholder-gray-900 font-bold" type="email" placeholder="Your email address" />
+                  <button id="signup" class="ml-auto px-6 lg:px-8 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Ok</button>
+                </div>
+                <div id="newsletter-alert-list"></div>
+                <p class="text-gray-300">We will not spam you or give your details to anyone.</p>
+              </form>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center mb-8 lg:mb-0 pt-5">
+            <div class="hidden md:block w-full md:w-3/4 mb-8 md:mb-0">
+              <div class="md:flex items-center"><a class="inline-block text-gray-900 text-xl font-bold" href="#"><img class="h-7" src="/images/if-logo-long.png" alt="IntelliFactory" width="auto" /></a>              <span class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50"></span>
+                <p class="hidden lg:block text-sm text-gray-300"><span class="text-gray-700">Copyright © 2004-2021 IntelliFactory.</span>                All rights reserved. Made with
+                                  <img width="16" height="20" style="display:inline;vertical-align:middle;" alt="Love" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/32px-Love_Heart_SVG.svg.png" />                in 100% F#.
+                                
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4">
+              <div class="md:flex items-center justify-end"><a class="inline-block mr-2" href="https://github.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://facebook.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#3b5998">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://twitter.com/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#00acee">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                  </svg></a>              <a class="inline-block mr-2" href="https://www.linkedin.com/company/intellifactory">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#0e76a8">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                  </svg></a>              <a class="inline-block" href="https://vimeo.com/user15828007">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="#86c9ef">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.82 11.419c-1.306 2.792-4.463 6.595-6.458 6.595-1.966 0-2.25-4.192-3.324-6.983-.527-1.372-.868-1.058-1.858-.364l-.604-.779c1.444-1.27 2.889-2.745 3.778-2.826.998-.096 1.615.587 1.845 2.051.305 1.924.729 4.91 1.472 4.91.577 0 2.003-2.369 2.076-3.215.13-1.24-.912-1.277-1.815-.89 1.43-4.689 7.383-3.825 4.888 1.501z"></path>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div>
+        
+        <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
+<script src="../../Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof IntelliFactory !=='undefined') {
+  IntelliFactory.Runtime.ScriptBasePath = '../../Scripts/';
+  IntelliFactory.Runtime.Start();
+}
+</script>
+
+        <script src="/js/Dynamic.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
